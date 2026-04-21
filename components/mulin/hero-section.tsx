@@ -11,10 +11,10 @@ const HERO_IMG =
   'https://images.squarespace-cdn.com/content/v1/5e6713bbf2132f62e71a5389/1588878556739-1VFN907TT7784A0YKJ26/DSC_0369.jpg?format=2500w'
 
 const stats = [
-  { value: '200+', label: 'Species' },
-  { value: 'CO₂', label: 'Absorbing' },
-  { value: '100%', label: 'Seasonal' },
-  { value: '12yr', label: 'Expertise' },
+  { value: 'Youth', label: 'Empowerment' },
+  { value: 'Climate', label: 'Education' },
+  { value: 'Action', label: 'Not Paralysis' },
+  { value: 'Global', label: 'Mission' },
 ]
 
 export function HeroSection() {
@@ -170,7 +170,7 @@ export function HeroSection() {
           className="inline-flex items-center gap-2.5 px-5 py-2 border border-gold/45 text-gold text-[10px] uppercase tracking-[0.26em] rounded-full mb-10 opacity-0 font-sans"
         >
           <span className="w-1 h-1 rounded-full bg-gold" />
-          Biophilic Design Studio
+          Entrepreneur · Environment Educator · Climate Change
           <span className="w-1 h-1 rounded-full bg-gold" />
         </span>
 
@@ -181,24 +181,24 @@ export function HeroSection() {
             className="block opacity-0"
             style={{ fontSize: 'clamp(3.2rem, 7.5vw, 7rem)' }}
           >
-            Breathe Life Into
+            Climate Anxiety &amp;
           </span>
           <span
             ref={heading2Ref}
             className="block italic text-gold opacity-0"
             style={{ fontSize: 'clamp(3.2rem, 7.5vw, 7rem)' }}
           >
-            Every Space
+            Environmental Education
           </span>
         </h1>
 
         {/* Subheading */}
         <p
           ref={subheadingRef}
-          className="font-sans font-light text-white/60 max-w-lg mx-auto mb-10 leading-relaxed opacity-0"
+          className="font-sans font-light text-white/60 max-w-xl mx-auto mb-10 leading-relaxed opacity-0"
           style={{ fontSize: 'clamp(0.88rem, 1.2vw, 1.05rem)' }}
         >
-          Climate-conscious indoor plant design — curated for the spaces where you live, breathe, and create.
+          Empowering Action, Not Paralysis — equipping individuals, particularly youth, with the knowledge, skills, and emotional resilience to transform climate anxiety into constructive climate action.
         </p>
 
         {/* CTAs */}
@@ -207,16 +207,16 @@ export function HeroSection() {
           className="flex flex-wrap items-center justify-center gap-4 mb-14 opacity-0"
         >
           <a
-            href="#services"
+            href="#mission"
             className="px-8 py-[14px] bg-sage text-white rounded-full text-sm tracking-[0.07em] font-medium hover:bg-sage-dark transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_32px_rgba(74,103,65,0.45)]"
           >
-            Explore Services
+            Our Mission
           </a>
           <a
-            href="#customize"
+            href="#founder"
             className="px-8 py-[14px] border border-white/35 text-white rounded-full text-sm tracking-[0.07em] font-medium hover:border-white/70 hover:bg-white/8 transition-all duration-300 hover:-translate-y-0.5 backdrop-blur-sm"
           >
-            Get a Consultation
+            Meet the Founder
           </a>
         </div>
 

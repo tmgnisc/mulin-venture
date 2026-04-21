@@ -12,6 +12,7 @@ import { BentoServices } from '@/components/mulin/bento-services'
 import { BiophilicSection } from '@/components/mulin/biophilic-section'
 import { JournalSection } from '@/components/mulin/journal-section'
 import { CTABanner } from '@/components/mulin/cta-banner'
+import { FounderSection } from '@/components/mulin/founder-section'
 import { InstagramGallery } from '@/components/mulin/instagram-gallery'
 import { TestimonialsSection } from '@/components/mulin/testimonials-section'
 import { Footer } from '@/components/mulin/footer'
@@ -61,13 +62,16 @@ export default function MulinVenturePage() {
         {/* Section 7: Botanical Journal */}
         <JournalSection />
 
-        {/* Section 8: CTA Banner */}
+        {/* Section 8: Founder */}
+        <FounderSection />
+
+        {/* Section 9: CTA Banner */}
         <CTABanner />
 
-        {/* Section 9: Instagram Gallery */}
+        {/* Section 10: Instagram Gallery */}
         <InstagramGallery />
 
-        {/* Section 10: Testimonials */}
+        {/* Section 11: Testimonials */}
         <TestimonialsSection />
       </main>
 
