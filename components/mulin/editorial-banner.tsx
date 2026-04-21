@@ -42,26 +42,26 @@ export function EditorialBanner() {
 
       {/* Content */}
       <div className="relative z-10 text-center px-[clamp(20px,5vw,80px)]" data-aos="fade-up">
-        <p 
+        <p
           className="font-serif font-light italic text-white leading-tight"
           style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)' }}
         >
-          Horticulture as Art.
+          From Anxiety to Action.
         </p>
-        <p 
+        <p
           className="font-serif font-light italic text-gold leading-tight"
           style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)' }}
         >
-          Harmony.
+          Resilience Through Education.
         </p>
         <p className="font-sans text-sm text-white/60 mt-8 tracking-wide">
-          — Mulin Venture, est. 2019
+          — Climate Anxiety &amp; Environmental Education Mission
         </p>
-        <a 
-          href="#services" 
+        <a
+          href="#mission"
           className="inline-block mt-8 text-gold text-sm tracking-wide hover:text-gold-light transition-colors underline underline-offset-4"
         >
-          View Our Portfolio →
+          Explore Our Mission →
         </a>
       </div>
     </section>

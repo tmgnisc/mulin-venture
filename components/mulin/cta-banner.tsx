@@ -4,65 +4,71 @@ import { TropicalLeaf, MonsteraLeaf } from './svg-assets'
 
 export function CTABanner() {
   return (
-    <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
-      {/* Background */}
-      <div 
-        className="absolute inset-0"
-        style={{
-          background: 'linear-gradient(135deg, #1A2416 0%, #0D160B 100%)',
-        }}
-      />
+    <section
+      className="relative overflow-hidden px-[clamp(20px,5vw,80px)] py-[clamp(24px,4vw,46px)]"
+      style={{ background: 'linear-gradient(180deg, #EEF2EF 0%, #E7ECE8 100%)' }}
+    >
+      <div className="mx-auto w-full max-w-[1280px]" data-aos="fade-up">
+        <div className="mx-auto max-w-[860px] text-center">
+          <h2 className="font-serif text-moss mb-6" style={{ fontSize: 'clamp(2.5rem, 5vw, 5rem)' }}>
+            Bring Nature Into Your Habitat
+          </h2>
 
-      {/* Grain Texture */}
-      <div 
-        className="absolute inset-0 opacity-30 animate-grain"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
-          backgroundSize: '200px 200px',
-        }}
-      />
+          <p className="font-sans font-light text-moss/60 max-w-[620px] mx-auto mb-12 leading-relaxed text-[clamp(1rem,1.35vw,1.25rem)]">
+            Start your botanical journey today. Every plant we create is a unique expression
+            of your space and style.
+          </p>
+        </div>
 
-      {/* Floating Botanical Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-10 left-[10%] animate-gentle-float" style={{ animationDelay: '0s' }}>
-          <TropicalLeaf className="w-16 h-32 text-sage/20 rotate-[-15deg]" />
-        </div>
-        <div className="absolute bottom-20 right-[15%] animate-gentle-float" style={{ animationDelay: '2s' }}>
-          <MonsteraLeaf className="w-20 h-24 text-gold/15 rotate-[20deg]" />
-        </div>
-        <div className="absolute top-1/3 right-[5%] animate-gentle-float" style={{ animationDelay: '1s' }}>
-          <TropicalLeaf className="w-12 h-24 text-sage/15 rotate-[45deg]" />
-        </div>
-        <div className="absolute bottom-1/4 left-[5%] animate-gentle-float" style={{ animationDelay: '3s' }}>
-          <MonsteraLeaf className="w-16 h-20 text-gold/10 rotate-[-30deg]" />
-        </div>
-      </div>
-
-      {/* Content */}
-      <div className="relative z-10 text-center px-[clamp(20px,5vw,80px)] py-20" data-aos="fade-up">
-        <h2 
-          className="font-serif text-white mb-6"
-          style={{ fontSize: 'clamp(2.5rem, 5vw, 5rem)' }}
-        >
-          Bring Nature Into Your Habitat
-        </h2>
-        <p className="font-sans font-light text-white/70 max-w-xl mx-auto mb-10 leading-relaxed">
-          Start your botanical journey today. Every plant we create is a unique expression 
-          of your space and style.
-        </p>
-        <div className="flex flex-wrap items-center justify-center gap-4">
-          <a
-            href="#customize"
-            className="px-8 py-4 bg-gold text-moss rounded-full text-sm tracking-[0.05em] font-medium hover:bg-gold-light transition-all duration-300 hover:-translate-y-0.5"
+        <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
+          <article
+            className="group rounded-2xl border border-moss/8 bg-white/80 p-7 shadow-[0_10px_24px_rgba(16,28,20,0.06)] backdrop-blur-sm transform-gpu will-change-transform transition-all duration-1000 ease-[cubic-bezier(0.19,1,0.22,1)] hover:-translate-y-2 hover:border-sage/35 hover:shadow-[0_16px_30px_rgba(16,28,20,0.10)]"
+            data-aos="fade-up"
+            data-aos-delay="0"
           >
-            Customize Now
-          </a>
-          <a
-            href="#services"
-            className="px-8 py-4 border border-white text-white rounded-full text-sm tracking-[0.05em] font-medium hover:bg-white/10 transition-all duration-300 hover:-translate-y-0.5"
+            <span className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-full border border-moss/12 bg-[#f3f5f1] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:border-sage/30 group-hover:bg-sage/10">
+              <TropicalLeaf className="h-4 w-4 text-sage/75 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105 group-hover:text-sage/90" />
+            </span>
+            <h3 className="mb-3 font-serif text-[clamp(1.15rem,1.5vw,1.4rem)] text-moss">
+              Climate Change Education
+            </h3>
+            <p className="font-sans font-light leading-relaxed text-moss/65">
+              Interactive sessions help students understand climate science, impacts, and
+              real-world solutions.
+            </p>
+          </article>
+
+          <article
+            className="group rounded-2xl border border-moss/8 bg-white/80 p-7 shadow-[0_10px_24px_rgba(16,28,20,0.06)] backdrop-blur-sm transform-gpu will-change-transform transition-all duration-1000 ease-[cubic-bezier(0.19,1,0.22,1)] hover:-translate-y-2 hover:border-gold/40 hover:shadow-[0_16px_30px_rgba(16,28,20,0.10)]"
+            data-aos="fade-up"
+            data-aos-delay="100"
           >
-            Browse Plants
-          </a>
+            <span className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-full border border-moss/12 bg-[#f3f5f1] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:border-gold/30 group-hover:bg-gold/10">
+              <MonsteraLeaf className="h-4 w-4 text-[#8E8A74] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105 group-hover:text-[#7A755F]" />
+            </span>
+            <h3 className="mb-3 font-serif text-[clamp(1.15rem,1.5vw,1.4rem)] text-moss">Waste Auditing</h3>
+            <p className="font-sans font-light leading-relaxed text-moss/65">
+              Hands-on training in waste auditing techniques helps teams measure and reduce
+              school waste.
+            </p>
+          </article>
+
+          <article
+            className="group rounded-2xl border border-moss/8 bg-white/80 p-7 shadow-[0_10px_24px_rgba(16,28,20,0.06)] backdrop-blur-sm transform-gpu will-change-transform transition-all duration-1000 ease-[cubic-bezier(0.19,1,0.22,1)] hover:-translate-y-2 hover:border-moss/25 hover:shadow-[0_16px_30px_rgba(16,28,20,0.10)]"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <span className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-full border border-moss/12 bg-[#f3f5f1] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:border-moss/25 group-hover:bg-moss/10">
+              <TropicalLeaf className="h-4 w-4 text-moss/60 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105 group-hover:text-moss/75" />
+            </span>
+            <h3 className="mb-3 font-serif text-[clamp(1.15rem,1.5vw,1.4rem)] text-moss">
+              School Green Programs
+            </h3>
+            <p className="font-sans font-light leading-relaxed text-moss/65">
+              We co-design simple school initiatives that support segregation, recycling, and
+              long-term eco habits.
+            </p>
+          </article>
         </div>
       </div>
     </section>
