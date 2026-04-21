@@ -5,7 +5,7 @@ import { TropicalLeaf, MonsteraLeaf } from './svg-assets'
 export function CTABanner() {
   return (
     <section
-      className="relative overflow-hidden px-[clamp(20px,5vw,80px)] py-[clamp(64px,10vw,110px)]"
+      className="relative overflow-hidden px-[clamp(20px,5vw,80px)] py-[clamp(24px,4vw,46px)]"
       style={{ background: 'linear-gradient(180deg, #EEF2EF 0%, #E7ECE8 100%)' }}
     >
       <div className="mx-auto w-full max-w-[1280px]" data-aos="fade-up">
