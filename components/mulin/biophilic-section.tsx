@@ -8,7 +8,7 @@ export function BiophilicSection() {
     <section id="about" className="pt-[clamp(8px,2.2vw,28px)] pb-[clamp(20px,4vw,52px)] bg-cream">
       <div className="max-w-[1320px] mx-auto px-[clamp(20px,5vw,80px)]">
         <div
-          className="bg-cream-dark rounded-[20px] overflow-hidden grid grid-cols-1 lg:grid-cols-2 items-stretch"
+          className="bg-cream-dark rounded-[20px] overflow-hidden grid grid-cols-1 lg:grid-cols-2 items-stretch shadow-[0_20px_60px_rgba(38,52,33,0.18)]"
           data-aos="fade-up"
         >
           {/* Left - Background Image */}
