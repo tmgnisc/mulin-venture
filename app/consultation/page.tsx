@@ -7,6 +7,7 @@ import { Footer } from '@/components/mulin/footer'
 export default function ConsultationPage() {
   const [formData, setFormData] = useState({
     fullName: '',
+    organizationName: '',
     email: '',
     phone: '',
     serviceType: '',
@@ -23,6 +24,7 @@ export default function ConsultationPage() {
     // TODO: connect to backend or form service.
     setFormData({
       fullName: '',
+      organizationName: '',
       email: '',
       phone: '',
       serviceType: '',
@@ -51,7 +53,7 @@ export default function ConsultationPage() {
 
             <form
               onSubmit={handleSubmit}
-              className="grid grid-cols-1 gap-5 rounded-2xl border border-ink/10 bg-white/70 p-6 backdrop-blur-sm md:grid-cols-2 md:p-8"
+              className="mx-auto grid w-full max-w-4xl grid-cols-1 gap-5 rounded-2xl border border-ink/10 bg-white/70 p-6 backdrop-blur-sm md:grid-cols-2 md:p-8"
             >
               <label className="text-sm text-ink/80">
                 Full Name
@@ -63,6 +65,18 @@ export default function ConsultationPage() {
                   required
                   className="mt-2 w-full rounded-xl border border-ink/15 bg-white px-4 py-3 text-sm text-ink outline-none transition focus:border-sage"
                   placeholder="Your name"
+                />
+              </label>
+
+              <label className="text-sm text-ink/80">
+                Organization Name
+                <input
+                  type="text"
+                  name="organizationName"
+                  value={formData.organizationName}
+                  onChange={handleChange}
+                  className="mt-2 w-full rounded-xl border border-ink/15 bg-white px-4 py-3 text-sm text-ink outline-none transition focus:border-sage"
+                  placeholder="Your organization"
                 />
               </label>
 
