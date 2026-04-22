@@ -12,12 +12,20 @@ const navLinks = [
     dropdownItems: [
       { label: 'LEED Certification', href: '#leed-certification' },
       { label: 'WELL Certification', href: '#well-certification' },
+      { label: 'Sustainable Building Design', href: '#sustainable-building-design' },
+      { label: 'Air Quality', href: '#air-quality', comingSoon: true },
+      { label: 'Water Safety', href: '#water-safety', comingSoon: true },
+      { label: 'Light Optimization', href: '#light-optimization', comingSoon: true },
+      { label: 'Soil Health', href: '#soil-health', comingSoon: true },
+      { label: 'Noise Mapping', href: '#noise-mapping', comingSoon: true },
     ],
   },
   {
     label: 'Products',
     href: '#products',
     dropdownItems: [
+      { label: 'Green Wall Systems', href: '#green-wall-systems' },
+      { label: 'Roof Gardens', href: '#roof-gardens', comingSoon: true },
     ],
   },
   { label: 'Community', href: '#community' },
