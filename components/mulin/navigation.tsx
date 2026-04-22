@@ -12,20 +12,12 @@ const navLinks = [
     dropdownItems: [
       { label: 'LEED Certification', href: '#leed-certification' },
       { label: 'WELL Certification', href: '#well-certification' },
-      { label: 'Sustainable Building Design', href: '#sustainable-building-design' },
-      { label: 'Air Quality', href: '#air-quality', comingSoon: true },
-      { label: 'Water Safety', href: '#water-safety', comingSoon: true },
-      { label: 'Light Optimization', href: '#light-optimization', comingSoon: true },
-      { label: 'Soil Health', href: '#soil-health', comingSoon: true },
-      { label: 'Noise Mapping', href: '#noise-mapping', comingSoon: true },
     ],
   },
   {
     label: 'Products',
     href: '#products',
     dropdownItems: [
-      { label: 'Green Wall Systems', href: '#green-wall-systems' },
-      { label: 'Roof Gardens', href: '#roof-gardens', comingSoon: true },
     ],
   },
   { label: 'Community', href: '#community' },
@@ -67,7 +59,7 @@ export function Navigation() {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <a
-              href="#"
+              href="/"
               className={`flex items-center gap-3 transition-colors duration-300 ${scrolled ? 'text-ink' : 'text-white'
                 }`}
             >
@@ -137,13 +129,13 @@ export function Navigation() {
 
             {/* CTA Button */}
             <a
-              href="#customize"
+              href="/consultation"
               className={`hidden lg:inline-flex items-center px-[22px] py-[10px] rounded-full text-sm tracking-[0.05em] border transition-all duration-300 ${scrolled
                 ? 'border-ink text-ink hover:bg-sage-dark hover:text-white hover:border-transparent'
                 : 'border-white text-white hover:bg-sage-dark hover:text-white hover:border-transparent'
                 }`}
             >
-              Start Customizing →
+              Request Consultation →
             </a>
 
             {/* Mobile Menu Button */}
