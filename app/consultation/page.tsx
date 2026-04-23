@@ -6,6 +6,8 @@ import { Navigation } from '@/components/mulin/navigation'
 import { Footer } from '@/components/mulin/footer'
 
 export default function ConsultationPage() {
+  const FORMSUBMIT_ENDPOINT = 'https://formsubmit.co/ajax/02637af1753c4993443bc52af9edff68'
+
   const [formData, setFormData] = useState({
     fullName: '',
     organizationName: '',
@@ -14,23 +16,78 @@ export default function ConsultationPage() {
     serviceType: '',
     message: '',
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitMessage, setSubmitMessage] = useState('')
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    // TODO: connect to backend or form service.
-    setFormData({
-      fullName: '',
-      organizationName: '',
-      email: '',
-      phone: '',
-      serviceType: '',
-      message: '',
-    })
+    setIsSubmitting(true)
+    setSubmitMessage('')
+
+    const serviceLabelMap: Record<string, string> = {
+      'leed-certification': 'LEED Certification',
+      'well-certification': 'WELL Certification',
+      'sustainable-building-design': 'Sustainable Building Design',
+      'green-wall-systems': 'Green Wall Systems',
+      'roof-gardens': 'Roof Gardens',
+    }
+    const selectedService = serviceLabelMap[formData.serviceType] || 'General Inquiry'
+    const submissionSummary = [
+      `Full Name: ${formData.fullName}`,
+      `Organization Name: ${formData.organizationName || 'N/A'}`,
+      `Email: ${formData.email}`,
+      `Phone: ${formData.phone || 'N/A'}`,
+      `Service: ${selectedService}`,
+      '',
+      'Project Details (User Message):',
+      formData.message,
+    ].join('\n')
+
+    try {
+      const response = await fetch(FORMSUBMIT_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          _subject: `New Consultation Request: ${selectedService}`,
+          _template: 'basic',
+          _captcha: false,
+          _replyto: formData.email,
+          submissionSummary,
+          'Full Name': formData.fullName,
+          'Organization Name': formData.organizationName || 'N/A',
+          Email: formData.email,
+          Phone: formData.phone || 'N/A',
+          Service: selectedService,
+          Message: formData.message,
+        }),
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to submit consultation request')
+      }
+
+      setSubmitMessage('Consultation request sent successfully.')
+      setFormData({
+        fullName: '',
+        organizationName: '',
+        email: '',
+        phone: '',
+        serviceType: '',
+        message: '',
+      })
+    } catch {
+      setSubmitMessage('Failed to send request. Please try again.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const container: Variants = {
@@ -174,10 +231,14 @@ export default function ConsultationPage() {
               <motion.div variants={item} className="md:col-span-2">
                 <button
                   type="submit"
+                  disabled={isSubmitting}
                   className="inline-flex rounded-full bg-sage-dark px-7 py-3 text-sm tracking-[0.05em] text-white shadow-[0_10px_22px_rgba(31,58,52,0.28)] transition hover:-translate-y-0.5 hover:bg-moss"
                 >
-                  Submit Consultation
+                  {isSubmitting ? 'Sending...' : 'Submit Consultation'}
                 </button>
+                {submitMessage ? (
+                  <p className="mt-3 text-sm text-ink/75">{submitMessage}</p>
+                ) : null}
               </motion.div>
             </motion.form>
           </div>
