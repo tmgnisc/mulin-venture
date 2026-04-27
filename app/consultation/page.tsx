@@ -1,12 +1,13 @@
 'use client'
 
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { motion, type Variants } from 'framer-motion'
+import ReCAPTCHA from 'react-google-recaptcha'
 import { Navigation } from '@/components/mulin/navigation'
 import { Footer } from '@/components/mulin/footer'
 
 export default function ConsultationPage() {
-  const FORMSUBMIT_ENDPOINT = 'https://formsubmit.co/ajax/02637af1753c4993443bc52af9edff68'
+  const recaptchaSiteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY
 
   const [formData, setFormData] = useState({
     fullName: '',
@@ -18,6 +19,8 @@ export default function ConsultationPage() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitMessage, setSubmitMessage] = useState('')
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null)
+  const recaptchaRef = useRef<ReCAPTCHA | null>(null)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
@@ -26,47 +29,29 @@ export default function ConsultationPage() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+
+    if (!recaptchaSiteKey) {
+      setSubmitMessage('reCAPTCHA is not configured. Please contact support.')
+      return
+    }
+
+    if (!recaptchaToken) {
+      setSubmitMessage('Please complete the reCAPTCHA check before submitting.')
+      return
+    }
+
     setIsSubmitting(true)
     setSubmitMessage('')
 
-    const serviceLabelMap: Record<string, string> = {
-      'leed-certification': 'LEED Certification',
-      'well-certification': 'WELL Certification',
-      'sustainable-building-design': 'Sustainable Building Design',
-      'green-wall-systems': 'Green Wall Systems',
-      'roof-gardens': 'Roof Gardens',
-    }
-    const selectedService = serviceLabelMap[formData.serviceType] || 'General Inquiry'
-    const submissionSummary = [
-      `Full Name: ${formData.fullName}`,
-      `Organization Name: ${formData.organizationName || 'N/A'}`,
-      `Email: ${formData.email}`,
-      `Phone: ${formData.phone || 'N/A'}`,
-      `Service: ${selectedService}`,
-      '',
-      'Project Details (User Message):',
-      formData.message,
-    ].join('\n')
-
     try {
-      const response = await fetch(FORMSUBMIT_ENDPOINT, {
+      const response = await fetch('/api/consultation', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          Accept: 'application/json',
         },
         body: JSON.stringify({
-          _subject: `New Consultation Request: ${selectedService}`,
-          _template: 'basic',
-          _captcha: false,
-          _replyto: formData.email,
-          submissionSummary,
-          'Full Name': formData.fullName,
-          'Organization Name': formData.organizationName || 'N/A',
-          Email: formData.email,
-          Phone: formData.phone || 'N/A',
-          Service: selectedService,
-          Message: formData.message,
+          ...formData,
+          recaptchaToken,
         }),
       })
 
@@ -83,8 +68,12 @@ export default function ConsultationPage() {
         serviceType: '',
         message: '',
       })
+      setRecaptchaToken(null)
+      recaptchaRef.current?.reset()
     } catch {
       setSubmitMessage('Failed to send request. Please try again.')
+      recaptchaRef.current?.reset()
+      setRecaptchaToken(null)
     } finally {
       setIsSubmitting(false)
     }
@@ -229,6 +218,21 @@ export default function ConsultationPage() {
               </motion.label>
 
               <motion.div variants={item} className="md:col-span-2">
+                <div className="mb-4">
+                  {recaptchaSiteKey ? (
+                    <ReCAPTCHA
+                      ref={recaptchaRef}
+                      sitekey={recaptchaSiteKey}
+                      onChange={(token) => setRecaptchaToken(token)}
+                      onExpired={() => setRecaptchaToken(null)}
+                      onErrored={() => setRecaptchaToken(null)}
+                    />
+                  ) : (
+                    <p className="text-sm text-red-700">
+                      reCAPTCHA site key is missing. Set `NEXT_PUBLIC_RECAPTCHA_SITE_KEY`.
+                    </p>
+                  )}
+                </div>
                 <button
                   type="submit"
                   disabled={isSubmitting}
