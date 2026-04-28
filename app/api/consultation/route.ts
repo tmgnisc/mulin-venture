@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
+import nodemailer from 'nodemailer'
 
-const FORMSUBMIT_ENDPOINT = 'https://formsubmit.co/ajax/02637af1753c4993443bc52af9edff68'
 const RECAPTCHA_VERIFY_ENDPOINT = 'https://www.google.com/recaptcha/api/siteverify'
 
 type ConsultationPayload = {
@@ -17,6 +17,8 @@ type RecaptchaVerifyResponse = {
   success: boolean
 }
 
+export const runtime = 'nodejs'
+
 const serviceLabelMap: Record<string, string> = {
   'leed-certification': 'LEED Certification',
   'well-certification': 'WELL Certification',
@@ -27,9 +29,21 @@ const serviceLabelMap: Record<string, string> = {
 
 export async function POST(request: Request) {
   const recaptchaSecretKey = process.env.RECAPTCHA_SECRET_KEY
-  if (!recaptchaSecretKey) {
+  const smtpHost = process.env.SMTP_HOST
+  const smtpPortValue = process.env.SMTP_PORT
+  const smtpUser = process.env.SMTP_USER
+  const smtpPass = process.env.SMTP_PASS
+  const mailFrom = process.env.MAIL_FROM || smtpUser
+  const mailTo = process.env.MAIL_TO
+
+  if (!recaptchaSecretKey || !smtpHost || !smtpPortValue || !smtpUser || !smtpPass || !mailFrom || !mailTo) {
     return NextResponse.json({ ok: false, error: 'Server configuration error.' }, { status: 500 })
   }
+  const smtpPort = Number.parseInt(smtpPortValue, 10)
+  if (!Number.isFinite(smtpPort)) {
+    return NextResponse.json({ ok: false, error: 'Server configuration error.' }, { status: 500 })
+  }
+  const smtpSecure = process.env.SMTP_SECURE === 'true' || smtpPort === 465
 
   let body: ConsultationPayload
   try {
@@ -97,30 +111,23 @@ export async function POST(request: Request) {
   ].join('\n')
 
   try {
-    const forwardResponse = await fetch(FORMSUBMIT_ENDPOINT, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
+    const transporter = nodemailer.createTransport({
+      host: smtpHost,
+      port: smtpPort,
+      secure: smtpSecure,
+      auth: {
+        user: smtpUser,
+        pass: smtpPass,
       },
-      body: JSON.stringify({
-        _subject: `New Consultation Request: ${selectedService}`,
-        _template: 'basic',
-        _captcha: false,
-        _replyto: email,
-        submissionSummary,
-        'Full Name': fullName,
-        'Organization Name': organizationName || 'N/A',
-        Email: email,
-        Phone: phone || 'N/A',
-        Service: selectedService,
-        Message: message,
-      }),
     })
 
-    if (!forwardResponse.ok) {
-      return NextResponse.json({ ok: false, error: 'Failed to send consultation request.' }, { status: 502 })
-    }
+    await transporter.sendMail({
+      from: mailFrom,
+      to: mailTo,
+      replyTo: email,
+      subject: `New Consultation Request: ${selectedService}`,
+      text: submissionSummary,
+    })
   } catch {
     return NextResponse.json({ ok: false, error: 'Failed to send consultation request.' }, { status: 502 })
   }
