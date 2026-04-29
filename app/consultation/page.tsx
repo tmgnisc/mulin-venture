@@ -1,13 +1,13 @@
 'use client'
 
-import { useRef, useState } from 'react'
+import { useState } from 'react'
 import { motion, type Variants } from 'framer-motion'
-import ReCAPTCHA from 'react-google-recaptcha'
+// import ReCAPTCHA from 'react-google-recaptcha'
 import { Navigation } from '@/components/mulin/navigation'
 import { Footer } from '@/components/mulin/footer'
 
 export default function ConsultationPage() {
-  const recaptchaSiteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY
+  // const recaptchaSiteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY
 
   const [formData, setFormData] = useState({
     fullName: '',
@@ -19,8 +19,8 @@ export default function ConsultationPage() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitMessage, setSubmitMessage] = useState('')
-  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null)
-  const recaptchaRef = useRef<ReCAPTCHA | null>(null)
+  // const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null)
+  // const recaptchaRef = useRef<ReCAPTCHA | null>(null)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
@@ -30,15 +30,15 @@ export default function ConsultationPage() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
-    if (!recaptchaSiteKey) {
-      setSubmitMessage('reCAPTCHA is not configured. Please contact support.')
-      return
-    }
+    // if (!recaptchaSiteKey) {
+    //   setSubmitMessage('reCAPTCHA is not configured. Please contact support.')
+    //   return
+    // }
 
-    if (!recaptchaToken) {
-      setSubmitMessage('Please complete the reCAPTCHA check before submitting.')
-      return
-    }
+    // if (!recaptchaToken) {
+    //   setSubmitMessage('Please complete the reCAPTCHA check before submitting.')
+    //   return
+    // }
 
     setIsSubmitting(true)
     setSubmitMessage('')
@@ -51,7 +51,7 @@ export default function ConsultationPage() {
         },
         body: JSON.stringify({
           ...formData,
-          recaptchaToken,
+          // recaptchaToken,
         }),
       })
 
@@ -68,12 +68,12 @@ export default function ConsultationPage() {
         serviceType: '',
         message: '',
       })
-      setRecaptchaToken(null)
-      recaptchaRef.current?.reset()
+      // setRecaptchaToken(null)
+      // recaptchaRef.current?.reset()
     } catch {
       setSubmitMessage('Failed to send request. Please try again.')
-      recaptchaRef.current?.reset()
-      setRecaptchaToken(null)
+      // recaptchaRef.current?.reset()
+      // setRecaptchaToken(null)
     } finally {
       setIsSubmitting(false)
     }
@@ -218,7 +218,7 @@ export default function ConsultationPage() {
               </motion.label>
 
               <motion.div variants={item} className="md:col-span-2">
-                <div className="mb-4">
+                {/* <div className="mb-4">
                   {recaptchaSiteKey ? (
                     <ReCAPTCHA
                       ref={recaptchaRef}
@@ -232,7 +232,7 @@ export default function ConsultationPage() {
                       reCAPTCHA site key is missing. Set `NEXT_PUBLIC_RECAPTCHA_SITE_KEY`.
                     </p>
                   )}
-                </div>
+                </div> */}
                 <button
                   type="submit"
                   disabled={isSubmitting}

@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 
 import { sendConsultationMail } from '@/lib/mail/mail-service'
 
-const RECAPTCHA_VERIFY_ENDPOINT = 'https://www.google.com/recaptcha/api/siteverify'
+// const RECAPTCHA_VERIFY_ENDPOINT = 'https://www.google.com/recaptcha/api/siteverify'
 
 type ConsultationPayload = {
   fullName?: string
@@ -11,12 +11,12 @@ type ConsultationPayload = {
   phone?: string
   serviceType?: string
   message?: string
-  recaptchaToken?: string
+  // recaptchaToken?: string
 }
 
-type RecaptchaVerifyResponse = {
-  success: boolean
-}
+// type RecaptchaVerifyResponse = {
+//   success: boolean
+// }
 
 const serviceLabelMap: Record<string, string> = {
   'leed-certification': 'LEED Certification',
@@ -27,10 +27,10 @@ const serviceLabelMap: Record<string, string> = {
 }
 
 export async function handleConsultationPost(request: Request) {
-  const recaptchaSecretKey = process.env.RECAPTCHA_SECRET_KEY
-  if (!recaptchaSecretKey) {
-    return NextResponse.json({ ok: false, error: 'Server configuration error.' }, { status: 500 })
-  }
+  // const recaptchaSecretKey = process.env.RECAPTCHA_SECRET_KEY
+  // if (!recaptchaSecretKey) {
+  //   return NextResponse.json({ ok: false, error: 'Server configuration error.' }, { status: 500 })
+  // }
 
   let body: ConsultationPayload
   try {
@@ -45,45 +45,45 @@ export async function handleConsultationPost(request: Request) {
   const phone = body.phone?.trim() || ''
   const serviceType = body.serviceType?.trim()
   const message = body.message?.trim()
-  const recaptchaToken = body.recaptchaToken?.trim()
+  // const recaptchaToken = body.recaptchaToken?.trim()
 
-  if (!fullName || !email || !serviceType || !message || !recaptchaToken) {
+  if (!fullName || !email || !serviceType || !message) {
     return NextResponse.json({ ok: false, error: 'Missing required fields.' }, { status: 400 })
   }
 
-  const ipHeader = request.headers.get('x-forwarded-for')
-  const remoteIp = ipHeader ? ipHeader.split(',')[0]?.trim() : ''
+  // const ipHeader = request.headers.get('x-forwarded-for')
+  // const remoteIp = ipHeader ? ipHeader.split(',')[0]?.trim() : ''
 
-  const verifyBody = new URLSearchParams({
-    secret: recaptchaSecretKey,
-    response: recaptchaToken,
-  })
-  if (remoteIp) {
-    verifyBody.set('remoteip', remoteIp)
-  }
+  // const verifyBody = new URLSearchParams({
+  //   secret: recaptchaSecretKey,
+  //   response: recaptchaToken,
+  // })
+  // if (remoteIp) {
+  //   verifyBody.set('remoteip', remoteIp)
+  // }
 
-  let verifyResult: RecaptchaVerifyResponse
-  try {
-    const verifyResponse = await fetch(RECAPTCHA_VERIFY_ENDPOINT, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      body: verifyBody,
-    })
+  // let verifyResult: RecaptchaVerifyResponse
+  // try {
+  //   const verifyResponse = await fetch(RECAPTCHA_VERIFY_ENDPOINT, {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/x-www-form-urlencoded',
+  //     },
+  //     body: verifyBody,
+  //   })
 
-    if (!verifyResponse.ok) {
-      return NextResponse.json({ ok: false, error: 'Captcha verification service unavailable.' }, { status: 502 })
-    }
+  //   if (!verifyResponse.ok) {
+  //     return NextResponse.json({ ok: false, error: 'Captcha verification service unavailable.' }, { status: 502 })
+  //   }
 
-    verifyResult = (await verifyResponse.json()) as RecaptchaVerifyResponse
-  } catch {
-    return NextResponse.json({ ok: false, error: 'Captcha verification failed.' }, { status: 502 })
-  }
+  //   verifyResult = (await verifyResponse.json()) as RecaptchaVerifyResponse
+  // } catch {
+  //   return NextResponse.json({ ok: false, error: 'Captcha verification failed.' }, { status: 502 })
+  // }
 
-  if (!verifyResult.success) {
-    return NextResponse.json({ ok: false, error: 'Captcha verification failed.' }, { status: 403 })
-  }
+  // if (!verifyResult.success) {
+  //   return NextResponse.json({ ok: false, error: 'Captcha verification failed.' }, { status: 403 })
+  // }
 
   const selectedService = serviceLabelMap[serviceType] || 'General Inquiry'
 
