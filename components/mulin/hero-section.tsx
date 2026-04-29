@@ -162,31 +162,31 @@ export function HeroSection() {
       </div>
 
       {/* ── Layer 5: Center content ─────────────────────── */}
-      <div className="relative z-10 text-center px-[clamp(20px,5vw,80px)] max-w-5xl mx-auto">
+      <div className="relative z-10 mx-auto max-w-5xl px-[clamp(16px,5vw,80px)] text-center">
 
         {/* Label pill */}
         <span
           ref={labelRef}
-          className="inline-flex items-center gap-2.5 px-5 py-2 border border-gold/45 text-gold text-[10px] uppercase tracking-[0.26em] rounded-full mb-10 opacity-0 font-sans"
+          className="mb-6 inline-flex max-w-full items-center gap-2 rounded-full border border-gold/45 px-3 py-2 text-center font-sans text-[9px] uppercase tracking-[0.14em] text-gold opacity-0 sm:mb-8 sm:gap-2.5 sm:px-5 sm:text-[10px] sm:tracking-[0.26em]"
         >
           <span className="w-1 h-1 rounded-full bg-gold" />
-          Entrepreneur · Environment Educator · Climate Change
+          <span className="break-words">Entrepreneur · Environment Educator · Climate Change</span>
           <span className="w-1 h-1 rounded-full bg-gold" />
         </span>
 
         {/* Heading */}
-        <h1 className="font-serif font-light text-white leading-[1.04] mb-8">
+        <h1 className="mb-6 font-serif font-light leading-[1.08] text-white sm:mb-8 sm:leading-[1.04]">
           <span
             ref={heading1Ref}
             className="block opacity-0"
-            style={{ fontSize: 'clamp(3.2rem, 7.5vw, 7rem)' }}
+            style={{ fontSize: 'clamp(1.9rem, 9.2vw, 7rem)' }}
           >
             Climate Anxiety &amp;
           </span>
           <span
             ref={heading2Ref}
             className="block italic text-gold opacity-0"
-            style={{ fontSize: 'clamp(3.2rem, 7.5vw, 7rem)' }}
+            style={{ fontSize: 'clamp(1.9rem, 9.2vw, 7rem)' }}
           >
             Environmental Education
           </span>
@@ -195,8 +195,8 @@ export function HeroSection() {
         {/* Subheading */}
         <p
           ref={subheadingRef}
-          className="font-sans font-light text-white/60 max-w-xl mx-auto mb-10 leading-relaxed opacity-0"
-          style={{ fontSize: 'clamp(0.88rem, 1.2vw, 1.05rem)' }}
+          className="mx-auto mb-8 max-w-[92%] font-sans font-light leading-relaxed text-white/70 opacity-0 sm:mb-10 sm:max-w-xl"
+          style={{ fontSize: 'clamp(0.92rem, 3.4vw, 1.05rem)' }}
         >
           Empowering Action, Not Paralysis — equipping individuals, particularly youth, with the knowledge, skills, and emotional resilience to transform climate anxiety into constructive climate action.
         </p>
@@ -204,17 +204,17 @@ export function HeroSection() {
         {/* CTAs */}
         <div
           ref={buttonsRef}
-          className="flex flex-wrap items-center justify-center gap-4 mb-14 opacity-0"
+          className="mb-10 flex flex-col items-stretch justify-center gap-3 opacity-0 sm:mb-14 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4"
         >
           <a
             href="#mission"
-            className="px-8 py-[14px] bg-sage text-white rounded-full text-sm tracking-[0.07em] font-medium hover:bg-sage-dark transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_32px_rgba(74,103,65,0.45)]"
+            className="rounded-full bg-sage px-6 py-3 text-center text-sm font-medium tracking-[0.06em] text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-sage-dark hover:shadow-[0_12px_32px_rgba(74,103,65,0.45)] sm:px-8 sm:py-[14px] sm:tracking-[0.07em]"
           >
             Our Mission
           </a>
           <a
             href="#founder"
-            className="px-8 py-[14px] border border-white/35 text-white rounded-full text-sm tracking-[0.07em] font-medium hover:border-white/70 hover:bg-white/8 transition-all duration-300 hover:-translate-y-0.5 backdrop-blur-sm"
+            className="rounded-full border border-white/35 px-6 py-3 text-center text-sm font-medium tracking-[0.06em] text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-white/70 hover:bg-white/8 sm:px-8 sm:py-[14px] sm:tracking-[0.07em]"
           >
             Meet the Founder
           </a>
@@ -223,16 +223,16 @@ export function HeroSection() {
         {/* Nature stats strip */}
         <div
           ref={statsRef}
-          className="inline-flex items-center rounded-full border border-white/10 bg-white/5 backdrop-blur-md px-2 py-2 opacity-0"
+          className="mx-auto grid w-full max-w-[360px] grid-cols-2 rounded-3xl border border-white/10 bg-white/5 px-2 py-2 opacity-0 backdrop-blur-md sm:inline-flex sm:w-auto sm:max-w-none sm:grid-cols-none sm:items-center sm:rounded-full"
         >
           {stats.map((stat, i) => (
-            <div key={i} className="flex items-center">
-              <div className="px-5 text-center">
+            <div key={i} className="flex items-center justify-center">
+              <div className="px-3 py-2 text-center sm:px-5 sm:py-0">
                 <div className="font-serif text-white/90 text-base leading-none mb-0.5">{stat.value}</div>
                 <div className="font-sans text-white/38 text-[8.5px] uppercase tracking-[0.22em]">{stat.label}</div>
               </div>
               {i < stats.length - 1 && (
-                <div className="w-px h-6 bg-white/12" />
+                <div className="hidden h-6 w-px bg-white/12 sm:block" />
               )}
             </div>
           ))}
@@ -244,22 +244,22 @@ export function HeroSection() {
       {/* Bottom-right — largest, closest to viewer */}
       <div
         ref={leafFrontRightRef}
-        className="absolute -bottom-16 -right-14 z-[15] pointer-events-none will-change-transform"
+        className="pointer-events-none absolute -right-20 -bottom-24 z-[15] will-change-transform sm:-right-14 sm:-bottom-16"
         style={{ opacity: 0.28 }}
       >
-        <MonsteraLeaf className="w-[340px] h-[480px] text-sage-dark" />
+        <MonsteraLeaf className="h-[300px] w-[220px] text-sage-dark sm:h-[480px] sm:w-[340px]" />
       </div>
       {/* Bottom-left — tropical frond */}
       <div
         ref={leafFrontLeftRef}
-        className="absolute -bottom-10 -left-10 z-[15] pointer-events-none will-change-transform"
+        className="pointer-events-none absolute -bottom-16 -left-16 z-[15] will-change-transform sm:-bottom-10 sm:-left-10"
         style={{ opacity: 0.2 }}
       >
-        <TropicalLeaf className="w-28 h-[380px] text-sage" />
+        <TropicalLeaf className="h-[250px] w-20 text-sage sm:h-[380px] sm:w-28" />
       </div>
 
       {/* ── Scroll indicator ────────────────────────────── */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 animate-scroll-bounce">
+      <div className="absolute bottom-5 left-1/2 z-20 hidden -translate-x-1/2 flex-col items-center gap-2 animate-scroll-bounce sm:flex">
         <span className="font-sans text-[9px] uppercase tracking-[0.28em] text-white/35">Scroll</span>
         <ArrowDown className="w-4 h-4 text-white/35" />
       </div>
