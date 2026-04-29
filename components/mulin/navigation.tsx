@@ -121,11 +121,6 @@ export function Navigation() {
                             className="flex items-center justify-between gap-3 rounded-xl px-3 py-2 text-[13px] tracking-[0.03em] text-ink transition-colors duration-200 hover:bg-sage/10 hover:text-sage-dark"
                           >
                             <span>{item.label}</span>
-                            {item.comingSoon && (
-                              <span className="rounded-md bg-ink/10 px-2 py-1 text-[11px] text-ink/70">
-                                Coming Soon
-                              </span>
-                            )}
                           </a>
                         ))}
                       </div>
