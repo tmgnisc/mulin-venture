@@ -1,35 +1,40 @@
 'use client'
 
 import { useState } from 'react'
+import { zodResolver } from '@hookform/resolvers/zod'
 import { motion, type Variants } from 'framer-motion'
+import { useForm } from 'react-hook-form'
+import { toast } from 'sonner'
 // import ReCAPTCHA from 'react-google-recaptcha'
 import { Navigation } from '@/components/mulin/navigation'
 import { Footer } from '@/components/mulin/footer'
+import { consultationSchema, consultationServiceTypes, type ConsultationFormValues } from '@/lib/schema'
 
 export default function ConsultationPage() {
   // const recaptchaSiteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY
 
-  const [formData, setFormData] = useState({
-    fullName: '',
-    organizationName: '',
-    email: '',
-    phone: '',
-    serviceType: '',
-    message: '',
-  })
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitMessage, setSubmitMessage] = useState('')
   // const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null)
   // const recaptchaRef = useRef<ReCAPTCHA | null>(null)
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-  }
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm<ConsultationFormValues>({
+    resolver: zodResolver(consultationSchema),
+    defaultValues: {
+      fullName: '',
+      organizationName: '',
+      email: '',
+      phone: '',
+      serviceType: consultationServiceTypes[0],
+      message: '',
+    },
+  })
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-
+  const onSubmit = async (values: ConsultationFormValues) => {
     // if (!recaptchaSiteKey) {
     //   setSubmitMessage('reCAPTCHA is not configured. Please contact support.')
     //   return
@@ -41,7 +46,6 @@ export default function ConsultationPage() {
     // }
 
     setIsSubmitting(true)
-    setSubmitMessage('')
 
     try {
       const response = await fetch('/api/consultation', {
@@ -50,7 +54,7 @@ export default function ConsultationPage() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          ...formData,
+          ...values,
           // recaptchaToken,
         }),
       })
@@ -59,25 +63,30 @@ export default function ConsultationPage() {
         throw new Error('Failed to submit consultation request')
       }
 
-      setSubmitMessage('Consultation request sent successfully.')
-      setFormData({
+      toast.success('Consultation request sent successfully.', { duration: 12000 })
+      reset({
         fullName: '',
         organizationName: '',
         email: '',
         phone: '',
-        serviceType: '',
+        serviceType: consultationServiceTypes[0],
         message: '',
       })
       // setRecaptchaToken(null)
       // recaptchaRef.current?.reset()
     } catch {
-      setSubmitMessage('Failed to send request. Please try again.')
+      toast.error('Failed to send request. Please try again.', { duration: 12000 })
       // recaptchaRef.current?.reset()
       // setRecaptchaToken(null)
     } finally {
       setIsSubmitting(false)
     }
   }
+
+  const filterFullName = (value: string) => value.replace(/[^A-Za-z '-]/g, '')
+  const filterBusinessName = (value: string) => value.replace(/[^A-Za-z0-9&.,' -]/g, '')
+  const filterEmail = (value: string) => value.replace(/[^\x20-\x7E]/g, '').replace(/\s/g, '')
+  const filterPhone = (value: string) => value.replace(/[^\d+ -]/g, '')
 
   const container: Variants = {
     hidden: { opacity: 0 },
@@ -129,7 +138,7 @@ export default function ConsultationPage() {
             </motion.div>
 
             <motion.form
-              onSubmit={handleSubmit}
+              onSubmit={handleSubmit(onSubmit)}
               variants={container}
               initial="hidden"
               whileInView="show"
@@ -137,84 +146,89 @@ export default function ConsultationPage() {
               className="mx-auto grid w-full max-w-4xl grid-cols-1 gap-5 rounded-3xl border border-white/50 bg-white/82 p-6 shadow-[0_24px_60px_rgba(17,31,24,0.16)] backdrop-blur-md md:grid-cols-2 md:p-8"
             >
               <motion.label variants={item} className="text-sm text-ink/80">
-                Full Name
+                Full Name <span className="text-red-700">*</span>
                 <input
                   type="text"
-                  name="fullName"
-                  value={formData.fullName}
-                  onChange={handleChange}
-                  required
+                  {...register('fullName', {
+                    onChange: (event) => {
+                      event.target.value = filterFullName(event.target.value)
+                    },
+                  })}
                   className="mt-2 w-full rounded-xl border border-ink/15 bg-white/95 px-4 py-3 text-sm text-ink outline-none transition focus:border-sage focus:ring-2 focus:ring-sage/15"
                   placeholder="Your name"
                 />
+                {errors.fullName ? <p className="mt-1 text-xs text-red-700">{errors.fullName.message}</p> : null}
               </motion.label>
 
               <motion.label variants={item} className="text-sm text-ink/80">
                 Organization Name
                 <input
                   type="text"
-                  name="organizationName"
-                  value={formData.organizationName}
-                  onChange={handleChange}
+                  {...register('organizationName', {
+                    onChange: (event) => {
+                      event.target.value = filterBusinessName(event.target.value)
+                    },
+                  })}
                   className="mt-2 w-full rounded-xl border border-ink/15 bg-white/95 px-4 py-3 text-sm text-ink outline-none transition focus:border-sage focus:ring-2 focus:ring-sage/15"
                   placeholder="Your organization"
                 />
+                {errors.organizationName ? <p className="mt-1 text-xs text-red-700">{errors.organizationName.message}</p> : null}
               </motion.label>
 
               <motion.label variants={item} className="text-sm text-ink/80">
-                Email
+                Email <span className="text-red-700">*</span>
                 <input
                   type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
+                  {...register('email', {
+                    onChange: (event) => {
+                      event.target.value = filterEmail(event.target.value)
+                    },
+                  })}
                   className="mt-2 w-full rounded-xl border border-ink/15 bg-white/95 px-4 py-3 text-sm text-ink outline-none transition focus:border-sage focus:ring-2 focus:ring-sage/15"
                   placeholder="you@example.com"
                 />
+                {errors.email ? <p className="mt-1 text-xs text-red-700">{errors.email.message}</p> : null}
               </motion.label>
 
               <motion.label variants={item} className="text-sm text-ink/80">
                 Phone
                 <input
                   type="tel"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
+                  {...register('phone', {
+                    onChange: (event) => {
+                      event.target.value = filterPhone(event.target.value)
+                    },
+                  })}
                   className="mt-2 w-full rounded-xl border border-ink/15 bg-white/95 px-4 py-3 text-sm text-ink outline-none transition focus:border-sage focus:ring-2 focus:ring-sage/15"
                   placeholder="+977..."
                 />
+                {errors.phone ? <p className="mt-1 text-xs text-red-700">{errors.phone.message}</p> : null}
               </motion.label>
 
               <motion.label variants={item} className="text-sm text-ink/80">
-                Service
+                Service <span className="text-red-700">*</span>
                 <select
-                  name="serviceType"
-                  value={formData.serviceType}
-                  onChange={handleChange}
-                  required
+                  {...register('serviceType')}
                   className="mt-2 w-full rounded-xl border border-ink/15 bg-white/95 px-4 py-3 text-sm text-ink outline-none transition focus:border-sage focus:ring-2 focus:ring-sage/15"
                 >
-                  <option value="">Choose a service</option>
                   <option value="leed-certification">LEED Certification</option>
                   <option value="well-certification">WELL Certification</option>
                   <option value="sustainable-building-design">Sustainable Building Design</option>
                   <option value="green-wall-systems">Green Wall Systems</option>
                   <option value="roof-gardens">Roof Gardens</option>
                 </select>
+                {errors.serviceType ? <p className="mt-1 text-xs text-red-700">{errors.serviceType.message}</p> : null}
               </motion.label>
 
               <motion.label variants={item} className="text-sm text-ink/80 md:col-span-2">
-                Project Details
+                Project Details <span className="text-red-700">*</span>
                 <textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
+                  {...register('message')}
                   rows={5}
                   className="mt-2 w-full rounded-xl border border-ink/15 bg-white/95 px-4 py-3 text-sm text-ink outline-none transition focus:border-sage focus:ring-2 focus:ring-sage/15"
                   placeholder="Tell us about your space, timeline, and goals..."
                 />
+                {errors.message ? <p className="mt-1 text-xs text-red-700">{errors.message.message}</p> : null}
               </motion.label>
 
               <motion.div variants={item} className="md:col-span-2">
@@ -240,9 +254,6 @@ export default function ConsultationPage() {
                 >
                   {isSubmitting ? 'Sending...' : 'Submit Consultation'}
                 </button>
-                {submitMessage ? (
-                  <p className="mt-3 text-sm text-ink/75">{submitMessage}</p>
-                ) : null}
               </motion.div>
             </motion.form>
           </div>

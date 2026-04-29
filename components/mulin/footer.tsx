@@ -59,31 +59,31 @@ export function Footer() {
           {/* Brand Column */}
           <div>
             <p className="font-sans font-light text-sm leading-relaxed mb-6">
-              Crafting bespoke indoor plant arrangements with hand-made vessels. 
+              Crafting bespoke indoor plant arrangements with hand-made vessels.
               Every piece is designed with intention and delivered with care.
             </p>
             <div className="flex gap-4">
-              <a 
-                href="https://instagram.com" 
-                target="_blank" 
+              <a
+                href="https://instagram.com"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-white/50 hover:text-gold transition-colors"
                 aria-label="Instagram"
               >
                 <InstagramIcon className="w-5 h-5" />
               </a>
-              <a 
-                href="https://pinterest.com" 
-                target="_blank" 
+              <a
+                href="https://pinterest.com"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-white/50 hover:text-gold transition-colors"
                 aria-label="Pinterest"
               >
                 <PinterestIcon className="w-5 h-5" />
               </a>
-              <a 
-                href="https://tiktok.com" 
-                target="_blank" 
+              <a
+                href="https://tiktok.com"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-white/50 hover:text-gold transition-colors"
                 aria-label="TikTok"
@@ -101,7 +101,7 @@ export function Footer() {
             <ul className="space-y-3">
               {shopLinks.map((link) => (
                 <li key={link.label}>
-                  <a 
+                  <a
                     href={link.href}
                     className="font-sans text-sm hover:text-gold transition-colors"
                   >
@@ -120,7 +120,7 @@ export function Footer() {
             <ul className="space-y-3">
               {companyLinks.map((link) => (
                 <li key={link.label}>
-                  <a 
+                  <a
                     href={link.href}
                     className="font-sans text-sm hover:text-gold transition-colors"
                   >
@@ -136,7 +136,7 @@ export function Footer() {
             <h4 className="font-sans text-xs uppercase tracking-[0.2em] text-white mb-6">
               Get In Touch
             </h4>
-            
+
             {/* Newsletter Form */}
             <form onSubmit={handleSubmit} className="mb-6">
               <div className="flex items-center border-b border-white/30 pb-2">
@@ -148,7 +148,7 @@ export function Footer() {
                   className="flex-1 bg-transparent font-sans text-sm text-white placeholder:text-white/40 outline-none"
                   aria-label="Email address"
                 />
-                <button 
+                <button
                   type="submit"
                   className="text-white/50 hover:text-gold transition-colors"
                   aria-label="Subscribe"
@@ -160,7 +160,7 @@ export function Footer() {
 
             <div className="space-y-2">
               <p className="font-sans text-sm">Kathmandu, Nepal</p>
-              <a 
+              <a
                 href="mailto:hello@mulinventure.com"
                 className="font-sans text-sm hover:text-gold transition-colors"
               >
@@ -174,16 +174,13 @@ export function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
         <div className="max-w-[1320px] mx-auto px-[clamp(20px,5vw,80px)] py-6">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-            <p className="font-sans text-xs text-white/40">
-              © 2026 Mulin Venture. All rights reserved. 
+          <div className="flex items-center justify-center">
+            <p className="text-center font-sans text-xs text-white/40">
+              © 2026 Mulin Venture. All rights reserved.
               <span className="mx-2">|</span>
               <a href="#" className="hover:text-gold transition-colors">Privacy</a>
               <span className="mx-2">|</span>
               <a href="#" className="hover:text-gold transition-colors">Terms</a>
-            </p>
-            <p className="font-sans text-xs text-white/40">
-              Made with 🌿 in Kathmandu
             </p>
           </div>
         </div>

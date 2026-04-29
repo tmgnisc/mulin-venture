@@ -1,18 +1,9 @@
 import { NextResponse } from 'next/server'
 
 import { sendConsultationMail } from '@/lib/mail/mail-service'
+import { consultationSchema } from '@/lib/schema'
 
 // const RECAPTCHA_VERIFY_ENDPOINT = 'https://www.google.com/recaptcha/api/siteverify'
-
-type ConsultationPayload = {
-  fullName?: string
-  organizationName?: string
-  email?: string
-  phone?: string
-  serviceType?: string
-  message?: string
-  // recaptchaToken?: string
-}
 
 // type RecaptchaVerifyResponse = {
 //   success: boolean
@@ -32,24 +23,27 @@ export async function handleConsultationPost(request: Request) {
   //   return NextResponse.json({ ok: false, error: 'Server configuration error.' }, { status: 500 })
   // }
 
-  let body: ConsultationPayload
+  let body: unknown
   try {
-    body = (await request.json()) as ConsultationPayload
+    body = await request.json()
   } catch {
     return NextResponse.json({ ok: false, error: 'Invalid JSON body.' }, { status: 400 })
   }
 
-  const fullName = body.fullName?.trim()
-  const organizationName = body.organizationName?.trim() || ''
-  const email = body.email?.trim()
-  const phone = body.phone?.trim() || ''
-  const serviceType = body.serviceType?.trim()
-  const message = body.message?.trim()
-  // const recaptchaToken = body.recaptchaToken?.trim()
-
-  if (!fullName || !email || !serviceType || !message) {
-    return NextResponse.json({ ok: false, error: 'Missing required fields.' }, { status: 400 })
+  const parsed = consultationSchema.safeParse(body)
+  if (!parsed.success) {
+    return NextResponse.json(
+      {
+        ok: false,
+        error: 'Validation failed.',
+        fields: parsed.error.flatten().fieldErrors,
+      },
+      { status: 400 }
+    )
   }
+
+  const { fullName, organizationName = '', email, phone = '', serviceType, message } = parsed.data
+  // const recaptchaToken = body.recaptchaToken?.trim()
 
   // const ipHeader = request.headers.get('x-forwarded-for')
   // const remoteIp = ipHeader ? ipHeader.split(',')[0]?.trim() : ''
