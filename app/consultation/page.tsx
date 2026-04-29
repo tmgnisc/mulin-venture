@@ -161,7 +161,7 @@ export default function ConsultationPage() {
               </motion.label>
 
               <motion.label variants={item} className="text-sm text-ink/80">
-                Organization Name
+                Organization Name <span className="text-red-700">*</span>
                 <input
                   type="text"
                   {...register('organizationName', {
@@ -191,7 +191,7 @@ export default function ConsultationPage() {
               </motion.label>
 
               <motion.label variants={item} className="text-sm text-ink/80">
-                Phone
+                Phone <span className="text-red-700">*</span>
                 <input
                   type="tel"
                   {...register('phone', {
