@@ -1,11 +1,12 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { SproutIcon, MenuIcon, CloseIcon } from './svg-assets'
 
 const navLinks = [
-  { label: 'Research', href: '#research' },
+  { label: 'Research', href: '/research' },
   {
     label: 'Services',
     href: '#services',
@@ -66,7 +67,7 @@ export function Navigation() {
         <nav className="max-w-[1320px] mx-auto px-[clamp(20px,5vw,80px)] py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <a
+            <Link
               href="/"
               className={`flex items-center gap-3 transition-colors duration-300 ${scrolled ? 'text-ink' : 'text-white'
                 }`}
@@ -80,36 +81,63 @@ export function Navigation() {
               />
               <span className="font-serif font-semibold text-xl tracking-[0.15em]">MULIN</span>
               <SproutIcon className="w-5 h-5" />
-            </a>
+            </Link>
 
             {/* Desktop Nav Links */}
             <div className="hidden lg:flex items-center gap-8">
               {navLinks.map((link) => (
                 <div key={link.label} className="relative group">
-                  <a
-                    href={link.href}
-                    className={`relative inline-flex items-center gap-1 text-[13px] tracking-[0.08em] font-normal transition-colors duration-300 group-hover:text-sage ${scrolled ? 'text-ink' : 'text-white'
-                      }`}
-                  >
-                    {link.label}
-                    {link.dropdownItems && (
-                      <svg
-                        viewBox="0 0 20 20"
-                        aria-hidden="true"
-                        className="h-3 w-3 rotate-180 transition-transform duration-200 group-hover:rotate-0"
-                        fill="none"
-                      >
-                        <path
-                          d="M5 12L10 7L15 12"
-                          stroke="currentColor"
-                          strokeWidth="1.8"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    )}
-                    <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-sage transition-all duration-300 group-hover:w-full" />
-                  </a>
+                  {link.href.startsWith('/') ? (
+                    <Link
+                      href={link.href}
+                      className={`relative inline-flex items-center gap-1 text-[13px] tracking-[0.08em] font-normal transition-colors duration-300 group-hover:text-sage ${scrolled ? 'text-ink' : 'text-white'
+                        }`}
+                    >
+                      {link.label}
+                      {link.dropdownItems && (
+                        <svg
+                          viewBox="0 0 20 20"
+                          aria-hidden="true"
+                          className="h-3 w-3 rotate-180 transition-transform duration-200 group-hover:rotate-0"
+                          fill="none"
+                        >
+                          <path
+                            d="M5 12L10 7L15 12"
+                            stroke="currentColor"
+                            strokeWidth="1.8"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      )}
+                      <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-sage transition-all duration-300 group-hover:w-full" />
+                    </Link>
+                  ) : (
+                    <a
+                      href={link.href}
+                      className={`relative inline-flex items-center gap-1 text-[13px] tracking-[0.08em] font-normal transition-colors duration-300 group-hover:text-sage ${scrolled ? 'text-ink' : 'text-white'
+                        }`}
+                    >
+                      {link.label}
+                      {link.dropdownItems && (
+                        <svg
+                          viewBox="0 0 20 20"
+                          aria-hidden="true"
+                          className="h-3 w-3 rotate-180 transition-transform duration-200 group-hover:rotate-0"
+                          fill="none"
+                        >
+                          <path
+                            d="M5 12L10 7L15 12"
+                            stroke="currentColor"
+                            strokeWidth="1.8"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      )}
+                      <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-sage transition-all duration-300 group-hover:w-full" />
+                    </a>
+                  )}
 
                   {link.dropdownItems && (
                     <div className="pointer-events-none absolute left-1/2 top-full z-50 w-56 -translate-x-1/2 pt-3 opacity-0 transition-opacity duration-200 group-hover:pointer-events-auto group-hover:opacity-100">
@@ -131,7 +159,7 @@ export function Navigation() {
             </div>
 
             {/* CTA Button */}
-            <a
+            <Link
               href="/consultation"
               className={`hidden lg:inline-flex items-center px-[22px] py-[10px] rounded-full text-sm tracking-[0.05em] border transition-all duration-300 ${scrolled
                 ? 'border-ink text-ink hover:bg-sage-dark hover:text-white hover:border-transparent'
@@ -139,7 +167,7 @@ export function Navigation() {
                 }`}
             >
               Request Consultation →
-            </a>
+            </Link>
 
             {/* Mobile Menu Button */}
             <button
@@ -174,20 +202,37 @@ export function Navigation() {
           {/* Nav Links */}
           <div className="flex-1 flex flex-col items-center justify-center gap-8">
             {navLinks.map((link, index) => (
-              <a
-                key={link.label}
-                href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className="font-serif text-4xl text-white hover:text-gold transition-colors duration-300"
-                style={{
-                  transitionDelay: mobileMenuOpen ? `${index * 80}ms` : '0ms',
-                  transform: mobileMenuOpen ? 'translateY(0)' : 'translateY(20px)',
-                  opacity: mobileMenuOpen ? 1 : 0,
-                  transition: 'transform 0.4s ease, opacity 0.4s ease, color 0.3s ease',
-                }}
-              >
-                {link.label}
-              </a>
+              link.href.startsWith('/') ? (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="font-serif text-4xl text-white hover:text-gold transition-colors duration-300"
+                  style={{
+                    transitionDelay: mobileMenuOpen ? `${index * 80}ms` : '0ms',
+                    transform: mobileMenuOpen ? 'translateY(0)' : 'translateY(20px)',
+                    opacity: mobileMenuOpen ? 1 : 0,
+                    transition: 'transform 0.4s ease, opacity 0.4s ease, color 0.3s ease',
+                  }}
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="font-serif text-4xl text-white hover:text-gold transition-colors duration-300"
+                  style={{
+                    transitionDelay: mobileMenuOpen ? `${index * 80}ms` : '0ms',
+                    transform: mobileMenuOpen ? 'translateY(0)' : 'translateY(20px)',
+                    opacity: mobileMenuOpen ? 1 : 0,
+                    transition: 'transform 0.4s ease, opacity 0.4s ease, color 0.3s ease',
+                  }}
+                >
+                  {link.label}
+                </a>
+              )
             ))}
           </div>
 
