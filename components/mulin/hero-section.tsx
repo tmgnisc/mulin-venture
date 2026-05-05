@@ -1,14 +1,14 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { ArrowDown, MonsteraLeaf, TropicalLeaf } from './svg-assets'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const HERO_IMG =
-  'https://images.squarespace-cdn.com/content/v1/5e6713bbf2132f62e71a5389/1588878556739-1VFN907TT7784A0YKJ26/DSC_0369.jpg?format=2500w'
+const HERO_IMG = '/leaf.jpg'
+const HERO_VIDEO = '/videos/video.mp4'
 
 const stats = [
   { value: 'Youth', label: 'Empowerment' },
@@ -30,6 +30,17 @@ export function HeroSection() {
   const subheadingRef = useRef<HTMLParagraphElement>(null)
   const buttonsRef = useRef<HTMLDivElement>(null)
   const statsRef = useRef<HTMLDivElement>(null)
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const [videoReady, setVideoReady] = useState(false)
+  const [videoDelayPassed, setVideoDelayPassed] = useState(false)
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      setVideoDelayPassed(true)
+    }, 2500)
+
+    return () => window.clearTimeout(timer)
+  }, [])
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -52,7 +63,6 @@ export function HeroSection() {
       }
 
       /* ── Parallax layer 0: background photo (slowest) ── */
-      // container extends ±20% so the image is never clipped
       gsap.to(bgRef.current, {
         yPercent: -12,
         ease: 'none',
@@ -88,23 +98,75 @@ export function HeroSection() {
     return () => ctx.revert()
   }, [])
 
+  /* ── Video readiness ─────────────────────────────── */
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+
+    const markReady = () => setVideoReady(true)
+
+    if (video.readyState >= 3) {
+      markReady()
+    } else {
+      video.addEventListener('canplaythrough', markReady)
+      video.addEventListener('loadeddata', markReady)
+    }
+
+    return () => {
+      video.removeEventListener('canplaythrough', markReady)
+      video.removeEventListener('loadeddata', markReady)
+    }
+  }, [])
+
+  /* ── Start playback only after delay + readiness ─── */
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video || !videoDelayPassed || !videoReady) return
+
+    const playPromise = video.play()
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        /* autoplay blocked — image remains visible */
+      })
+    }
+  }, [videoDelayPassed, videoReady])
+
+  const showVideo = videoDelayPassed && videoReady
+
   return (
     <section
       ref={heroRef}
       className="relative min-h-[100svh] flex items-center justify-center overflow-hidden"
     >
 
-      {/* ── Layer 0: Background photo (parallax slowest) ── */}
+      {/* ── Layer 0: Background photo + video (parallax slowest) ── */}
       <div
         ref={bgRef}
         className="absolute will-change-transform"
         style={{ top: '-20%', bottom: '-20%', left: 0, right: 0 }}
       >
+        {/* Fallback image — always visible until video loads */}
         <img
           src={HERO_IMG}
           alt="Botanical indoor installation"
-          className="h-full w-full object-cover object-center"
+          crossOrigin="anonymous"
+          fetchPriority="high"
+          className="absolute inset-0 h-full w-full object-cover object-center"
         />
+
+        {/* Background video — fades in over the image when ready */}
+        <video
+          ref={videoRef}
+          className={`absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-[1400ms] ${showVideo ? 'opacity-100' : 'opacity-0'
+            }`}
+          muted
+          loop
+          playsInline
+          preload="auto"
+          poster={HERO_IMG}
+        >
+          <source src={HERO_VIDEO} type="video/mp4" />
+        </video>
       </div>
 
       {/* ── Layer 1: Atmospheric gradient overlay ──────── */}
@@ -200,12 +262,6 @@ export function HeroSection() {
           >
             Our Mission
           </a>
-          {/* <a */}
-          {/*   href="#founder" */}
-          {/*   className="rounded-full border border-white/35 px-6 py-3 text-center text-sm font-medium tracking-[0.06em] text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-white/70 hover:bg-white/8 sm:px-8 sm:py-[14px] sm:tracking-[0.07em]" */}
-          {/* > */}
-          {/*   Meet the Founder */}
-          {/* </a> */}
         </div>
 
         {/* Nature stats strip */}
