@@ -187,23 +187,23 @@ export function HeroSection() {
       />
 
       {/* ── Layer 2: Mid-depth leaf — left ─────────────── */}
-      <div
-        ref={leafMidLeftRef}
-        className="absolute -left-20 bottom-[-5%] z-[2] pointer-events-none will-change-transform"
-        style={{ opacity: 0.18 }}
-      >
-        <MonsteraLeaf className="w-80 h-[440px] text-sage" />
-      </div>
-
-      {/* ── Layer 2: Mid-depth leaf cluster — right top ── */}
-      <div
-        ref={leafMidRightRef}
-        className="absolute -right-10 top-[-2%] z-[2] pointer-events-none will-change-transform"
-        style={{ opacity: 0.12 }}
-      >
-        <TropicalLeaf className="w-44 h-[420px] text-gold" />
-      </div>
-
+      {/* <div */}
+      {/*   ref={leafMidLeftRef} */}
+      {/*   className="absolute -left-20 bottom-[-5%] z-[2] pointer-events-none will-change-transform" */}
+      {/*   style={{ opacity: 0.18 }} */}
+      {/* > */}
+      {/*   <MonsteraLeaf className="w-80 h-[440px] text-sage" /> */}
+      {/* </div> */}
+      {/**/}
+      {/* {/* ── Layer 2: Mid-depth leaf cluster — right top ── */}
+      {/* <div */}
+      {/*   ref={leafMidRightRef} */}
+      {/*   className="absolute -right-10 top-[-2%] z-[2] pointer-events-none will-change-transform" */}
+      {/*   style={{ opacity: 0.12 }} */}
+      {/* > */}
+      {/*   <TropicalLeaf className="w-44 h-[420px] text-gold" /> */}
+      {/* </div> */}
+      {/**/}
       {/* ── Layer 3: Floating pollen particles ─────────── */}
       <div className="absolute inset-0 z-[3] pointer-events-none overflow-hidden">
         {[...Array(6)].map((_, i) => (
@@ -286,22 +286,22 @@ export function HeroSection() {
 
       {/* ── Layer 6: Foreground leaves (parallax fastest) ─ */}
       {/* Bottom-right — largest, closest to viewer */}
-      <div
-        ref={leafFrontRightRef}
-        className="pointer-events-none absolute -right-20 -bottom-24 z-[15] will-change-transform sm:-right-14 sm:-bottom-16"
-        style={{ opacity: 0.28 }}
-      >
-        <MonsteraLeaf className="h-[300px] w-[220px] text-sage-dark sm:h-[480px] sm:w-[340px]" />
-      </div>
-      {/* Bottom-left — tropical frond */}
-      <div
-        ref={leafFrontLeftRef}
-        className="pointer-events-none absolute -bottom-16 -left-16 z-[15] will-change-transform sm:-bottom-10 sm:-left-10"
-        style={{ opacity: 0.2 }}
-      >
-        <TropicalLeaf className="h-[250px] w-20 text-sage sm:h-[380px] sm:w-28" />
-      </div>
-
+      {/* <div */}
+      {/*   ref={leafFrontRightRef} */}
+      {/*   className="pointer-events-none absolute -right-20 -bottom-24 z-[15] will-change-transform sm:-right-14 sm:-bottom-16" */}
+      {/*   style={{ opacity: 0.28 }} */}
+      {/* > */}
+      {/*   <MonsteraLeaf className="h-[300px] w-[220px] text-sage-dark sm:h-[480px] sm:w-[340px]" /> */}
+      {/* </div> */}
+      {/* {/* Bottom-left — tropical frond */}
+      {/* <div */}
+      {/*   ref={leafFrontLeftRef} */}
+      {/*   className="pointer-events-none absolute -bottom-16 -left-16 z-[15] will-change-transform sm:-bottom-10 sm:-left-10" */}
+      {/*   style={{ opacity: 0.2 }} */}
+      {/* > */}
+      {/*   <TropicalLeaf className="h-[250px] w-20 text-sage sm:h-[380px] sm:w-28" /> */}
+      {/* </div> */}
+      {/**/}
       {/* ── Scroll indicator ────────────────────────────── */}
       <div className="absolute bottom-5 left-1/2 z-20 hidden -translate-x-1/2 flex-col items-center gap-2 animate-scroll-bounce sm:flex">
         <span className="font-sans text-[9px] uppercase tracking-[0.28em] text-white/35">Scroll</span>
