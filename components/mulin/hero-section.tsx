@@ -200,12 +200,12 @@ export function HeroSection() {
           >
             Our Mission
           </a>
-          <a
-            href="#founder"
-            className="rounded-full border border-white/35 px-6 py-3 text-center text-sm font-medium tracking-[0.06em] text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-white/70 hover:bg-white/8 sm:px-8 sm:py-[14px] sm:tracking-[0.07em]"
-          >
-            Meet the Founder
-          </a>
+          {/* <a */}
+          {/*   href="#founder" */}
+          {/*   className="rounded-full border border-white/35 px-6 py-3 text-center text-sm font-medium tracking-[0.06em] text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-white/70 hover:bg-white/8 sm:px-8 sm:py-[14px] sm:tracking-[0.07em]" */}
+          {/* > */}
+          {/*   Meet the Founder */}
+          {/* </a> */}
         </div>
 
         {/* Nature stats strip */}
