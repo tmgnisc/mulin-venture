@@ -37,12 +37,12 @@ export function HeroSection() {
       /* ── Entry animation ─────────────────────────────── */
       const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
       tl
-        .fromTo(labelRef.current,    { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.7, delay: 0.5 })
-        .fromTo(heading1Ref.current, { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 1 },   '-=0.35')
-        .fromTo(heading2Ref.current, { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 1 },   '-=0.65')
+        .fromTo(labelRef.current, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.7, delay: 0.5 })
+        .fromTo(heading1Ref.current, { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 1 }, '-=0.35')
+        .fromTo(heading2Ref.current, { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 1 }, '-=0.65')
         .fromTo(subheadingRef.current, { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.8 }, '-=0.45')
-        .fromTo(buttonsRef.current,  { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.7 }, '-=0.4')
-        .fromTo(statsRef.current,    { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.6 }, '-=0.3')
+        .fromTo(buttonsRef.current, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.7 }, '-=0.4')
+        .fromTo(statsRef.current, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.6 }, '-=0.3')
 
       const st = {
         trigger: heroRef.current,
@@ -162,34 +162,23 @@ export function HeroSection() {
       </div>
 
       {/* ── Layer 5: Center content ─────────────────────── */}
-      <div className="relative z-10 mx-auto max-w-5xl px-[clamp(16px,5vw,80px)] text-center">
-
-        {/* Label pill */}
-        <span
-          ref={labelRef}
-          className="mb-6 inline-flex max-w-full items-center gap-2 rounded-full border border-gold/45 px-3 py-2 text-center font-sans text-[9px] uppercase tracking-[0.14em] text-gold opacity-0 sm:mb-8 sm:gap-2.5 sm:px-5 sm:text-[10px] sm:tracking-[0.26em]"
-        >
-          <span className="w-1 h-1 rounded-full bg-gold" />
-          <span className="break-words">Entrepreneur · Environment Educator · Climate Change</span>
-          <span className="w-1 h-1 rounded-full bg-gold" />
-        </span>
+      <div className="relative z-10 mx-auto max-w-5xl px-[clamp(16px,5vw,80px)] pt-24 sm:pt-28 lg:pt-32 text-center">
 
         {/* Heading */}
-        <h1 className="mb-6 font-serif font-light leading-[1.08] text-white sm:mb-8 sm:leading-[1.04]">
+        <h1 className="mb-6 flex flex-col items-center font-serif font-light leading-[1.08] text-white sm:mb-8 sm:leading-[1.04]">
           <span
             ref={heading1Ref}
             className="block opacity-0"
             style={{ fontSize: 'clamp(1.9rem, 9.2vw, 7rem)' }}
           >
-            Climate Anxiety &amp;
+            Sustainable Engineering.
           </span>
           <span
             ref={heading2Ref}
             className="block italic text-gold opacity-0"
             style={{ fontSize: 'clamp(1.9rem, 9.2vw, 7rem)' }}
           >
-            Environmental Education
-          </span>
+            Biophilic Design.          </span>
         </h1>
 
         {/* Subheading */}
@@ -198,8 +187,7 @@ export function HeroSection() {
           className="mx-auto mb-8 max-w-[92%] font-sans font-light leading-relaxed text-white/70 opacity-0 sm:mb-10 sm:max-w-xl"
           style={{ fontSize: 'clamp(0.92rem, 3.4vw, 1.05rem)' }}
         >
-          Empowering Action, Not Paralysis — equipping individuals, particularly youth, with the knowledge, skills, and emotional resilience to transform climate anxiety into constructive climate action.
-        </p>
+          We are a consulting non-profit. We optimize spaces using LEED & WELL principles, and channel our profits into environmental education for schools.</p>
 
         {/* CTAs */}
         <div
