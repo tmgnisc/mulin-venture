@@ -137,6 +137,7 @@ export default function CommunityPage() {
               alt="Lush green leaves"
               fill
               priority
+              sizes="100vw"
               className="object-cover object-center"
             />
           </div>
@@ -151,7 +152,7 @@ export default function CommunityPage() {
             </motion.h1>
 
             <motion.p variants={rise} className="mt-6 max-w-2xl text-base leading-relaxed text-[#ddebe0] md:text-lg">
-              We don't just optimize offices; we transform schools. Every service you book funds environmental education and healthier classrooms for the next generation
+              We don&apos;t just optimize offices; we transform schools. Every service you book funds environmental education and healthier classrooms for the next generation
             </motion.p>
 
             <motion.div variants={rise} className="mt-10 flex flex-wrap gap-4">
@@ -279,7 +280,13 @@ export default function CommunityPage() {
                 className="overflow-hidden rounded-xl border border-[#264433]/10 bg-[#f1f5f0]"
               >
                 <div className="relative h-48">
-                  <Image src={project.image} alt={project.title} fill className="object-cover" />
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 33vw"
+                    className="object-cover"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0f1f19]/60 via-[#0f1f19]/20 to-transparent" />
                   <div className="absolute left-3 top-3 rounded-full bg-[#1b5a42] px-3 py-1 text-xs text-white">{project.category}</div>
                   <p className="absolute bottom-3 left-3 flex items-center gap-1.5 text-sm text-white/95">

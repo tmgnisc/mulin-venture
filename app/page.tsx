@@ -15,8 +15,6 @@ import { SectionDivider } from '@/components/mulin/section-divider'
 import { CustomCursor } from '@/components/mulin/custom-cursor'
 import { AOSInit } from '@/components/mulin/aos-init'
 
-export const dynamic = 'force-dynamic'
-
 export default function MulinVenturePage() {
   return (
     <>
