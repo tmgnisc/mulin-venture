@@ -90,7 +90,7 @@ export default function AboutPage() {
                 Who We Are
               </motion.h1>
               <motion.p variants={rise} className="mt-6 max-w-3xl text-base leading-relaxed text-[#d8e8dd] md:text-lg">
-                Rivers &amp; Roots is a non-profit organization dedicated to fostering environmental sustainability through innovative solutions and community engagement.
+                Mulin Venture is a non-profit organization dedicated to fostering environmental sustainability through innovative solutions and community engagement.
               </motion.p>
               <motion.p variants={rise} className="mt-4 max-w-3xl text-base leading-relaxed text-[#d8e8dd] md:text-lg">
                 Founded in Nepal with a mission to protect and restore the natural environment, the organization centers waste reduction, river restoration, and environmental education.
@@ -333,11 +333,11 @@ export default function AboutPage() {
             <div className="mt-8 grid gap-4 md:grid-cols-3">
               <div className="rounded-2xl border border-[#d7e0d5] bg-white p-6">
                 <p className="text-xs uppercase tracking-[0.16em] text-[#5f7568]">Phone</p>
-                <p className="mt-3 text-sm text-[#31443a]">+977 9851024400</p>
+                <p className="mt-3 text-sm text-[#31443a]">+977 980000000</p>
               </div>
               <div className="rounded-2xl border border-[#d7e0d5] bg-white p-6">
                 <p className="text-xs uppercase tracking-[0.16em] text-[#5f7568]">Email</p>
-                <p className="mt-3 text-sm text-[#31443a]">info@riversroots.org</p>
+                <p className="mt-3 text-sm text-[#31443a]">info@mulinventure.org</p>
               </div>
               <div className="rounded-2xl border border-[#d7e0d5] bg-white p-6">
                 <p className="text-xs uppercase tracking-[0.16em] text-[#5f7568]">Location</p>
