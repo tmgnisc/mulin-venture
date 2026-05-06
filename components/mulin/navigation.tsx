@@ -30,7 +30,7 @@ const navLinks = [
     ],
   },
   { label: 'Community', href: '/community' },
-  { label: 'About', href: '#about' },
+  { label: 'About', href: '/about' },
 ]
 
 export function Navigation() {
