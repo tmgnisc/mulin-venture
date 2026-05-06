@@ -29,7 +29,7 @@ const navLinks = [
       { label: 'Roof Gardens', href: '#roof-gardens', comingSoon: true },
     ],
   },
-  { label: 'Community', href: '#community' },
+  { label: 'Community', href: '/community' },
   { label: 'About', href: '#about' },
 ]
 
