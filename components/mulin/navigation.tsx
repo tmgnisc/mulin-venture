@@ -9,24 +9,24 @@ const navLinks = [
   { label: 'Research', href: '/research' },
   {
     label: 'Services',
-    href: '#services',
+    href: '/services',
     dropdownItems: [
-      { label: 'LEED Certification', href: '#leed-certification' },
-      { label: 'WELL Certification', href: '#well-certification' },
-      { label: 'Sustainable Building Design', href: '#sustainable-building-design' },
-      { label: 'Air Quality', href: '#air-quality', comingSoon: true },
-      { label: 'Water Safety', href: '#water-safety', comingSoon: true },
-      { label: 'Light Optimization', href: '#light-optimization', comingSoon: true },
-      { label: 'Soil Health', href: '#soil-health', comingSoon: true },
-      { label: 'Noise Mapping', href: '#noise-mapping', comingSoon: true },
+      { label: 'LEED Certification', href: '/services/leed-certification' },
+      { label: 'WELL Certification', href: '/services/well-certification' },
+      { label: 'Sustainable Building Design', href: '/services/sustainable-building-design' },
+      { label: 'Air Quality', href: '/services/air-quality' },
+      { label: 'Water Safety', href: '/services/water-safety' },
+      { label: 'Light Optimization', href: '/services/light-optimization' },
+      { label: 'Soil Health', href: '/services/soil-health' },
+      { label: 'Noise Mapping', href: '/services/noise-mapping' },
     ],
   },
   {
     label: 'Products',
-    href: '#products',
+    href: '/products',
     dropdownItems: [
-      { label: 'Green Wall Systems', href: '#green-wall-systems' },
-      { label: 'Roof Gardens', href: '#roof-gardens', comingSoon: true },
+      { label: 'Green Wall Systems', href: '/products/green-wall-systems' },
+      { label: 'Roof Gardens', href: '/products/roof-gardens' },
     ],
   },
   { label: 'Community', href: '/community' },
@@ -143,13 +143,13 @@ export function Navigation() {
                     <div className="pointer-events-none absolute left-1/2 top-full z-50 w-56 -translate-x-1/2 pt-3 opacity-0 transition-opacity duration-200 group-hover:pointer-events-auto group-hover:opacity-100">
                       <div className="rounded-2xl border border-ink/10 bg-cream/95 p-2 shadow-xl backdrop-blur-md">
                         {link.dropdownItems.map((item) => (
-                          <a
+                          <Link
                             key={item.label}
                             href={item.href}
                             className="flex items-center justify-between gap-3 rounded-xl px-3 py-2 text-[13px] tracking-[0.03em] text-ink transition-colors duration-200 hover:bg-sage/10 hover:text-sage-dark"
                           >
                             <span>{item.label}</span>
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     </div>
