@@ -9,6 +9,15 @@ export type ConsultationMailPayload = {
   message: string
 }
 
+function escapeHtml(value: string) {
+  return value
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#39;')
+}
+
 export async function sendConsultationMail(payload: ConsultationMailPayload) {
   const smtpHost = process.env.SMTP_HOST || 'smtp.ethereal.email'
   const smtpPortRaw = process.env.SMTP_PORT || '587'
@@ -43,6 +52,13 @@ export async function sendConsultationMail(payload: ConsultationMailPayload) {
     payload.message,
   ].join('\n')
 
+  const safeFullName = escapeHtml(payload.fullName)
+  const safeOrganizationName = escapeHtml(payload.organizationName || 'N/A')
+  const safeEmail = escapeHtml(payload.email)
+  const safePhone = escapeHtml(payload.phone || 'N/A')
+  const safeSelectedService = escapeHtml(payload.selectedService)
+  const safeMessage = escapeHtml(payload.message).replace(/\n/g, '<br/>')
+
   try {
     const info = await transporter.sendMail({
       from: `"${fromName}" <${smtpUser}>`,
@@ -52,13 +68,13 @@ export async function sendConsultationMail(payload: ConsultationMailPayload) {
       text: submissionSummary,
       html: `
         <h2>New Consultation Request</h2>
-        <p><strong>Full Name:</strong> ${payload.fullName}</p>
-        <p><strong>Organization Name:</strong> ${payload.organizationName || 'N/A'}</p>
-        <p><strong>Email:</strong> ${payload.email}</p>
-        <p><strong>Phone:</strong> ${payload.phone || 'N/A'}</p>
-        <p><strong>Service:</strong> ${payload.selectedService}</p>
+        <p><strong>Full Name:</strong> ${safeFullName}</p>
+        <p><strong>Organization Name:</strong> ${safeOrganizationName}</p>
+        <p><strong>Email:</strong> ${safeEmail}</p>
+        <p><strong>Phone:</strong> ${safePhone}</p>
+        <p><strong>Service:</strong> ${safeSelectedService}</p>
         <p><strong>Project Details:</strong></p>
-        <p>${payload.message.replace(/\n/g, '<br/>')}</p>
+        <p>${safeMessage}</p>
       `,
     })
 
