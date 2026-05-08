@@ -8,7 +8,6 @@ import { toast } from 'sonner'
 // import ReCAPTCHA from 'react-google-recaptcha'
 import { Navigation } from '@/components/mulin/navigation'
 import { Footer } from '@/components/mulin/footer'
-import { ConsultationServicesSection } from '@/components/mulin/consultation-services'
 import { consultationSchema, consultationServiceTypes, type ConsultationFormValues } from '@/lib/schema'
 
 export default function ConsultationPage() {
@@ -119,7 +118,6 @@ export default function ConsultationPage() {
           <div className="absolute top-0 left-[-8%] h-64 w-64 rounded-full bg-[#bfd3c5]/20 blur-3xl" />
         </div>
 
-        <ConsultationServicesSection />
         <section className="relative pt-[clamp(36px,6vw,72px)] pb-[clamp(72px,9vw,120px)]">
           <div className="mx-auto max-w-[1320px] px-[clamp(20px,5vw,80px)]">
             <motion.div
