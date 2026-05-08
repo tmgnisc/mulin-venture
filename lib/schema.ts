@@ -19,9 +19,7 @@ export const consultationSchema = z.object({
     .string()
     .trim()
     .max(120, 'Business name is too long.')
-    .regex(/^[A-Za-z0-9&.,' -]*$/, 'Use a valid business name (letters, numbers, spaces, and &.,\'- only).')
-    .optional()
-    .or(z.literal('')),
+    .regex(/^[A-Za-z0-9&.,' -]*$/, 'Use a valid business name (letters, numbers, spaces, and &.,\'- only).'),
   email: z
     .string()
     .trim()
@@ -37,8 +35,7 @@ export const consultationSchema = z.object({
       if (!value) return true
       const digits = value.replace(/\D/g, '')
       return digits.length >= 7 && digits.length <= 15
-    }, 'Phone number must contain 7 to 15 digits.')
-    .optional(),
+    }, 'Phone number must contain 7 to 15 digits.'),
   serviceType: z.enum(consultationServiceTypes, {
     errorMap: () => ({ message: 'Please select a service.' }),
   }),
