@@ -36,6 +36,7 @@ const navLinks = [
 export function Navigation() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [openMobileSubmenu, setOpenMobileSubmenu] = useState<string | null>(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -113,7 +114,7 @@ export function Navigation() {
                       <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-sage transition-all duration-300 group-hover:w-full" />
                     </Link>
                   ) : (
-                    <a
+                    <Link
                       href={link.href}
                       className={`relative inline-flex items-center gap-1 text-[13px] tracking-[0.08em] font-normal transition-colors duration-300 group-hover:text-sage ${scrolled ? 'text-ink' : 'text-white'
                         }`}
@@ -136,7 +137,7 @@ export function Navigation() {
                         </svg>
                       )}
                       <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-sage transition-all duration-300 group-hover:w-full" />
-                    </a>
+                    </Link>
                   )}
 
                   {link.dropdownItems && (
@@ -171,7 +172,10 @@ export function Navigation() {
 
             {/* Mobile Menu Button */}
             <button
-              onClick={() => setMobileMenuOpen(true)}
+              onClick={() => {
+                setOpenMobileSubmenu(null)
+                setMobileMenuOpen(true)
+              }}
               className={`lg:hidden p-2 transition-colors ${scrolled ? 'text-ink' : 'text-white'
                 }`}
               aria-label="Open menu"
@@ -191,7 +195,10 @@ export function Navigation() {
           {/* Close Button */}
           <div className="flex justify-end p-6">
             <button
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={() => {
+                setOpenMobileSubmenu(null)
+                setMobileMenuOpen(false)
+              }}
               className="text-white p-2"
               aria-label="Close menu"
             >
@@ -202,49 +209,90 @@ export function Navigation() {
           {/* Nav Links */}
           <div className="flex-1 flex flex-col items-center justify-center gap-8">
             {navLinks.map((link, index) => (
-              link.href.startsWith('/') ? (
-                <Link
-                  key={link.label}
-                  href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="font-serif text-4xl text-white hover:text-gold transition-colors duration-300"
-                  style={{
-                    transitionDelay: mobileMenuOpen ? `${index * 80}ms` : '0ms',
-                    transform: mobileMenuOpen ? 'translateY(0)' : 'translateY(20px)',
-                    opacity: mobileMenuOpen ? 1 : 0,
-                    transition: 'transform 0.4s ease, opacity 0.4s ease, color 0.3s ease',
-                  }}
-                >
-                  {link.label}
-                </Link>
-              ) : (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="font-serif text-4xl text-white hover:text-gold transition-colors duration-300"
-                  style={{
-                    transitionDelay: mobileMenuOpen ? `${index * 80}ms` : '0ms',
-                    transform: mobileMenuOpen ? 'translateY(0)' : 'translateY(20px)',
-                    opacity: mobileMenuOpen ? 1 : 0,
-                    transition: 'transform 0.4s ease, opacity 0.4s ease, color 0.3s ease',
-                  }}
-                >
-                  {link.label}
-                </a>
-              )
+              <div
+                key={link.label}
+                className="flex flex-col items-center"
+                style={{
+                  transitionDelay: mobileMenuOpen ? `${index * 80}ms` : '0ms',
+                  transform: mobileMenuOpen ? 'translateY(0)' : 'translateY(20px)',
+                  opacity: mobileMenuOpen ? 1 : 0,
+                  transition: 'transform 0.4s ease, opacity 0.4s ease, color 0.3s ease',
+                }}
+              >
+                <div className="flex items-center gap-3">
+                  <Link
+                    href={link.href}
+                    onClick={() => {
+                      setOpenMobileSubmenu(null)
+                      setMobileMenuOpen(false)
+                    }}
+                    className="font-serif text-4xl text-white hover:text-gold transition-colors duration-300"
+                  >
+                    {link.label}
+                  </Link>
+
+                  {link.dropdownItems && (
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setOpenMobileSubmenu((current) => (current === link.label ? null : link.label))
+                      }
+                      className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white transition-colors duration-300 hover:border-gold hover:text-gold"
+                      aria-label={`Toggle ${link.label} submenu`}
+                      aria-expanded={openMobileSubmenu === link.label}
+                    >
+                      <svg
+                        viewBox="0 0 20 20"
+                        aria-hidden="true"
+                        className={`h-4 w-4 transition-transform duration-200 ${openMobileSubmenu === link.label ? 'rotate-0' : 'rotate-180'
+                          }`}
+                        fill="none"
+                      >
+                        <path
+                          d="M5 12L10 7L15 12"
+                          stroke="currentColor"
+                          strokeWidth="1.8"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </button>
+                  )}
+                </div>
+
+                {link.dropdownItems && openMobileSubmenu === link.label && (
+                  <div className="mt-4 flex flex-col items-center gap-3">
+                    {link.dropdownItems.map((item) => (
+                      <Link
+                        key={item.label}
+                        href={item.href}
+                        onClick={() => {
+                          setOpenMobileSubmenu(null)
+                          setMobileMenuOpen(false)
+                        }}
+                        className="text-lg text-white/80 transition-colors duration-300 hover:text-gold"
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
           </div>
 
           {/* Mobile CTA */}
           <div className="p-8 text-center">
-            <a
-              href="#customize"
-              onClick={() => setMobileMenuOpen(false)}
+            <Link
+              href="/consultation"
+              onClick={() => {
+                setOpenMobileSubmenu(null)
+                setMobileMenuOpen(false)
+              }}
               className="inline-block px-8 py-4 bg-sage text-white rounded-full text-lg"
             >
-              Start Customizing
-            </a>
+              Request Consultation
+            </Link>
           </div>
         </div>
       </div>

@@ -6,7 +6,7 @@ import { SproutIcon, InstagramIcon, PinterestIcon, TikTokIcon, ArrowRight } from
 
 const shopLinks = [
   { label: 'Our Plants', href: '#' },
-  { label: 'Custom Orders', href: '#customize' },
+  { label: 'Custom Orders', href: '/consultation' },
   { label: 'Gift Sets', href: '#' },
   { label: 'Corporate & Office', href: '#' },
   { label: 'Event Rentals', href: '#' },
