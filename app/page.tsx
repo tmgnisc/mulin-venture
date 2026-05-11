@@ -1,8 +1,3 @@
-'use client'
-
-import { useEffect } from 'react'
-import AOS from 'aos'
-
 import { Navigation } from '@/components/mulin/navigation'
 import { HeroSection } from '@/components/mulin/hero-section'
 import { PhilosophySection } from '@/components/mulin/philosophy-section'
@@ -18,64 +13,31 @@ import { TestimonialsSection } from '@/components/mulin/testimonials-section'
 import { Footer } from '@/components/mulin/footer'
 import { SectionDivider } from '@/components/mulin/section-divider'
 import { CustomCursor } from '@/components/mulin/custom-cursor'
+import { AOSInit } from '@/components/mulin/aos-init'
 
 export default function MulinVenturePage() {
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      easing: 'ease-out-cubic',
-      once: true,
-      offset: 50,
-    })
-  }, [])
-
   return (
     <>
+      <AOSInit />
       <CustomCursor />
       <Navigation />
 
       <main>
-        {/* Section 1: Hero */}
         <HeroSection />
-
-        {/* Section 2: Brand Philosophy */}
         <PhilosophySection />
-
-        {/* Section 3: Editorial Banner */}
         <EditorialBanner />
-
-        {/* Section Divider */}
         <SectionDivider />
-
-        {/* Section 4: Bento Grid Services */}
         <BentoServices />
-
-        {/* Section 5: Customization Showcase */}
         {/* <CustomizationSection />*/}
-
-        {/* Section 6: Biophilic Design */}
         <BiophilicSection />
-
-        {/* Section Divider */}
         <SectionDivider />
-
-        {/* Section 7: Botanical Journal */}
         <JournalSection />
-
-        {/* Section 8: Founder */}
         <FounderSection />
-
-        {/* Section 9: CTA Banner */}
         <CTABanner />
-
-        {/* Section 10: Instagram Gallery */}
         <InstagramGallery />
-
-        {/* Section 11: Testimonials */}
         <TestimonialsSection />
       </main>
 
-      {/* Footer */}
       <Footer />
     </>
   )

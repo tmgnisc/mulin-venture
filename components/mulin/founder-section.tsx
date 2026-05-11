@@ -43,13 +43,14 @@ export function FounderSection() {
                 &ldquo;Educate, connect, and empower — that is the heart of everything we do.&rdquo;
               </p>
             </blockquote>
+            <p className="font-sans font-light text-ink-soft leading-relaxed mb-8">
+              Monica is also the Founder of <strong className="text-ink font-medium">Mulin Venture</strong>, an initiative that pioneers Green Urbanisation and sustainable, inclusive design — bridging environmental action with the built environment.
+            </p>
+
+
 
             <p className="font-sans font-light text-ink-soft leading-relaxed mb-5">
               Monica is the Executive Director of <strong className="text-ink font-medium">Nepal Climate Hub</strong> — a centralised platform for youth in Nepal. The Hub educates, connects, and empowers them. It links youth with climate champions, organisations, and resources, and provides practical guidance for climate action.
-            </p>
-
-            <p className="font-sans font-light text-ink-soft leading-relaxed mb-8">
-              Monica is also the Founder of <strong className="text-ink font-medium">Mulin Venture</strong>, an initiative that pioneers Green Urbanisation and sustainable, inclusive design — bridging environmental action with the built environment.
             </p>
 
             <div className="flex flex-col gap-1">
