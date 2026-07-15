@@ -13,8 +13,8 @@ const serviceLabelMap: Record<string, string> = {
   'leed-certification': 'LEED Certification',
   'well-certification': 'WELL Certification',
   'sustainable-building-design': 'Sustainable Building Design',
-  'green-wall-systems': 'Green Wall Systems',
-  'roof-gardens': 'Roof Gardens',
+  kokedama: 'Kokedama',
+  tippy: 'Tippy',
 }
 
 export async function handleConsultationPost(request: Request) {

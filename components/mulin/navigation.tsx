@@ -25,8 +25,8 @@ const navLinks = [
     label: 'Products',
     href: '/products',
     dropdownItems: [
-      { label: 'Green Wall Systems', href: '/products/green-wall-systems' },
-      { label: 'Roof Gardens', href: '/products/roof-gardens' },
+      { label: 'Kokedama', href: '/products/kokedama' },
+      { label: 'Tippy', href: '/products/tippy' },
     ],
   },
   { label: 'Community', href: '/community' },
