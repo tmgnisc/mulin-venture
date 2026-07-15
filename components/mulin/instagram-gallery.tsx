@@ -57,6 +57,7 @@ export function InstagramGallery() {
                 className="absolute inset-x-0 w-full border-0"
                 style={{ top: '-54px', height: 'calc(100% + 454px)' }}
                 loading="lazy"
+                referrerPolicy="origin"
                 allowFullScreen
                 scrolling="no"
               />
