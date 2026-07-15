@@ -4,8 +4,8 @@ export const consultationServiceTypes = [
   'leed-certification',
   'well-certification',
   'sustainable-building-design',
-  'green-wall-systems',
-  'roof-gardens',
+  'kokedama',
+  'tippy',
 ] as const
 
 export const consultationSchema = z.object({

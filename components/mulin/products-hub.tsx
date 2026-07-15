@@ -71,9 +71,9 @@ export function ProductsHub() {
               </div>
 
               <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 font-sans text-sm text-white/70">
-                <span>living systems</span>
-                <span>roof gardens</span>
-                <span>installation-ready</span>
+                <span>kokedama</span>
+                <span>tippy</span>
+                <span>ready to grow</span>
               </div>
             </motion.div>
 

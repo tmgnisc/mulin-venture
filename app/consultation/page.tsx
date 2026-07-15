@@ -215,8 +215,8 @@ export default function ConsultationPage() {
                   <option value="leed-certification">LEED Certification</option>
                   <option value="well-certification">WELL Certification</option>
                   <option value="sustainable-building-design">Sustainable Building Design</option>
-                  <option value="green-wall-systems">Green Wall Systems</option>
-                  <option value="roof-gardens">Roof Gardens</option>
+                  <option value="kokedama">Kokedama</option>
+                  <option value="tippy">Tippy</option>
                 </select>
                 {errors.serviceType ? <p className="mt-1 text-xs text-red-700">{errors.serviceType.message}</p> : null}
               </motion.label>
