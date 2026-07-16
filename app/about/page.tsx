@@ -333,11 +333,11 @@ export default function AboutPage() {
             <div className="mt-8 grid gap-4 md:grid-cols-3">
               <div className="rounded-2xl border border-[#d7e0d5] bg-white p-6">
                 <p className="text-xs uppercase tracking-[0.16em] text-[#5f7568]">Phone</p>
-                <p className="mt-3 text-sm text-[#31443a]">+977 980000000</p>
+                <a href="tel:+9779847519689" className="mt-3 block text-sm text-[#31443a] hover:underline">+977 984-7519689</a>
               </div>
               <div className="rounded-2xl border border-[#d7e0d5] bg-white p-6">
                 <p className="text-xs uppercase tracking-[0.16em] text-[#5f7568]">Email</p>
-                <p className="mt-3 text-sm text-[#31443a]">info@mulinventure.org</p>
+                <a href="mailto:info@mulinventure.com" className="mt-3 block text-sm text-[#31443a] hover:underline">info@mulinventure.com</a>
               </div>
               <div className="rounded-2xl border border-[#d7e0d5] bg-white p-6">
                 <p className="text-xs uppercase tracking-[0.16em] text-[#5f7568]">Location</p>

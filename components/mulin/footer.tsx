@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import { useState } from 'react'
-import { SproutIcon, InstagramIcon, PinterestIcon, TikTokIcon, ArrowRight } from './svg-assets'
+import { SproutIcon, InstagramIcon, FacebookIcon, TikTokIcon, ArrowRight } from './svg-assets'
 
 const shopLinks = [
   { label: 'Our Plants', href: '#' },
@@ -64,7 +64,7 @@ export function Footer() {
             </p>
             <div className="flex gap-4">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/mulinventure/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white/50 hover:text-gold transition-colors"
@@ -73,16 +73,16 @@ export function Footer() {
                 <InstagramIcon className="w-5 h-5" />
               </a>
               <a
-                href="https://pinterest.com"
+                href="https://www.facebook.com/profile.php?id=61591035293534"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white/50 hover:text-gold transition-colors"
-                aria-label="Pinterest"
+                aria-label="Facebook"
               >
-                <PinterestIcon className="w-5 h-5" />
+                <FacebookIcon className="w-5 h-5" />
               </a>
               <a
-                href="https://tiktok.com"
+                href="https://www.tiktok.com/@muliin_06"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white/50 hover:text-gold transition-colors"
@@ -161,10 +161,16 @@ export function Footer() {
             <div className="space-y-2">
               <p className="font-sans text-sm">Kathmandu, Nepal</p>
               <a
-                href="mailto:hello@mulinventure.com"
-                className="font-sans text-sm hover:text-gold transition-colors"
+                href="tel:+9779847519689"
+                className="block font-sans text-sm hover:text-gold transition-colors"
               >
-                hello@mulinventure.com
+                +977 984-7519689
+              </a>
+              <a
+                href="mailto:info@mulinventure.com"
+                className="block font-sans text-sm hover:text-gold transition-colors"
+              >
+                info@mulinventure.com
               </a>
             </div>
           </div>

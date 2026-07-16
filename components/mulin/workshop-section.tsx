@@ -75,10 +75,12 @@ export function WorkshopSection() {
             {/* CTA */}
             <div className="flex flex-wrap items-center gap-5">
               <a
-                href="mailto:hello@mulinventure.com?subject=Kokedama%20Workshop"
+                href="https://docs.google.com/forms/d/e/1FAIpQLScm-Yxm_SAbAaLwAcw_qrb2XZHwlxdkGdFF_jJlu_AXdD4HJA/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-moss text-cream rounded-full px-7 py-3.5 text-sm font-medium hover:bg-ink transition-colors duration-300 group/btn"
               >
-                Contact Us to Know More
+                Register for the Workshop
                 <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
               </a>
               <span className="font-sans text-xs text-ink-soft">

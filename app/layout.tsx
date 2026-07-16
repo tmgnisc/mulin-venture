@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Cormorant_Garamond, DM_Sans } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { Toaster } from '@/components/ui/sonner'
+import { JsonLd, organizationSchema } from '@/components/seo/structured-data'
 import './globals.css'
 
 const cormorantGaramond = Cormorant_Garamond({
@@ -19,14 +20,21 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'Mulin Venture | Indoor Plant Atelier',
-  description: 'Bespoke indoor plants paired with hand-crafted vessels — designed for the spaces you live in. Custom vessels, rare species, and artisan planters.',
-  keywords: ['indoor plants', 'custom planters', 'biophilic design', 'luxury plants', 'botanical atelier'],
+  metadataBase: new URL('https://www.mulinventure.com'),
+  title: {
+    default: 'Mulin Venture | Indoor Plant Atelier in Nepal',
+    template: '%s | Mulin Venture Nepal',
+  },
+  description:
+    'Bespoke indoor plants, kokedama & biophilic design in Nepal. Handcrafted greenery for homes & offices. Contact us today for a free consultation!',
+  keywords: ['indoor plants Nepal', 'kokedama Nepal', 'biophilic design Nepal', 'green walls Kathmandu', 'plant atelier Nepal', 'custom planters'],
   authors: [{ name: 'Mulin Venture' }],
   openGraph: {
-    title: 'Mulin Venture | Indoor Plant Atelier',
-    description: 'Bespoke indoor plants paired with hand-crafted vessels — designed for the spaces you live in.',
+    title: 'Mulin Venture | Indoor Plant Atelier in Nepal',
+    description: 'Bespoke indoor plants paired with hand-crafted vessels — designed in Kathmandu for the spaces you live in.',
     type: 'website',
+    locale: 'en_US',
+    siteName: 'Mulin Venture',
   },
 }
 
@@ -44,6 +52,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${cormorantGaramond.variable} ${dmSans.variable} bg-cream`}>
       <body className="font-sans antialiased">
+        <JsonLd data={organizationSchema} />
         {children}
         <Toaster richColors closeButton />
         {process.env.NODE_ENV === 'production' && <Analytics />}
