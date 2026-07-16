@@ -37,12 +37,12 @@ export function InstagramGallery() {
           </a>
         </div>
 
-        {/* Masonry Grid of Instagram Embeds */}
-        <div className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4">
+        {/* Mobile: horizontal snap carousel · md+: masonry grid */}
+        <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 -mx-[clamp(20px,5vw,80px)] px-[clamp(20px,5vw,80px)] md:mx-0 md:px-0 md:pb-0 md:block md:columns-2 lg:columns-3 md:space-y-4 md:overflow-visible">
           {instagramPosts.map((post, index) => (
             <div
               key={post.permalink}
-              className={`relative break-inside-avoid overflow-hidden rounded-xl bg-white shadow-[0_1px_10px_rgba(0,0,0,0.08)] ${
+              className={`relative shrink-0 w-[72vw] max-w-70 snap-center md:w-auto md:max-w-none md:shrink md:break-inside-avoid overflow-hidden rounded-xl bg-white shadow-[0_1px_10px_rgba(0,0,0,0.08)] ${
                 post.type === 'reel' ? 'aspect-[9/16]' : 'aspect-square'
               }`}
               data-aos="fade-up"
@@ -66,7 +66,7 @@ export function InstagramGallery() {
 
           {/* Follow Tile */}
           <div
-            className="break-inside-avoid overflow-hidden rounded-xl aspect-square bg-gold flex flex-col items-center justify-center p-8 text-center"
+            className="shrink-0 w-[72vw] max-w-70 snap-center md:w-auto md:max-w-none md:shrink md:break-inside-avoid overflow-hidden rounded-xl aspect-square bg-gold flex flex-col items-center justify-center p-8 text-center"
             data-aos="fade-up"
           >
             <p className="font-sans text-sm text-moss/70 mb-2">
