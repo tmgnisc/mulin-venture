@@ -15,7 +15,7 @@ const shopLinks = [
 const companyLinks = [
   { label: 'About Mulin', href: '#about' },
   { label: 'Our Process', href: '#' },
-  { label: 'Botanical Journal', href: '#journal' },
+  { label: 'FAQ', href: '#faq' },
   { label: 'Press & Media', href: '#' },
   { label: 'Careers', href: '#' },
 ]

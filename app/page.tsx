@@ -4,8 +4,8 @@ import { PhilosophySection } from '@/components/mulin/philosophy-section'
 import { EditorialBanner } from '@/components/mulin/editorial-banner'
 import { BentoServices } from '@/components/mulin/bento-services'
 //import { CustomizationSection } from '@/components/mulin/customization-section'
-import { BiophilicSection } from '@/components/mulin/biophilic-section'
-import { JournalSection } from '@/components/mulin/journal-section'
+import { HomeProductsSection } from '@/components/mulin/home-products-section'
+import { FAQSection } from '@/components/mulin/faq-section'
 import { CTABanner } from '@/components/mulin/cta-banner'
 import { FounderSection } from '@/components/mulin/founder-section'
 import { InstagramGallery } from '@/components/mulin/instagram-gallery'
@@ -29,13 +29,13 @@ export default function MulinVenturePage() {
         <SectionDivider />
         <BentoServices />
         {/* <CustomizationSection />*/}
-        <BiophilicSection />
         <SectionDivider />
-        <JournalSection />
+        <HomeProductsSection />
         <FounderSection />
         <CTABanner />
         <InstagramGallery />
         <TestimonialsSection />
+        <FAQSection />
       </main>
 
       <Footer />
