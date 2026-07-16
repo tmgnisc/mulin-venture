@@ -24,6 +24,11 @@ const faqs = [
       'Absolutely. We offer short-term plant rentals for weddings, product launches, and special occasions — delivered, styled, and collected by our team so your event leaves a lasting impression.',
   },
   {
+    question: 'When is the Kokedama Workshop held?',
+    answer:
+      'Our Kokedama Workshop runs every Saturday. You’ll craft your own moss-ball planting with guidance from our team, enjoy snacks, and join in games and fun activities. Seats are limited — contact us to reserve your spot.',
+  },
+  {
     question: 'How do I get started on a project?',
     answer:
       'Simply request a consultation. We’ll discuss your space, your vision, and your budget, then craft a botanical design proposal tailored to you — from a single arrangement to a large-scale installation.',

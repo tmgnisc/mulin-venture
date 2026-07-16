@@ -5,6 +5,7 @@ import { EditorialBanner } from '@/components/mulin/editorial-banner'
 import { BentoServices } from '@/components/mulin/bento-services'
 //import { CustomizationSection } from '@/components/mulin/customization-section'
 import { HomeProductsSection } from '@/components/mulin/home-products-section'
+import { WorkshopSection } from '@/components/mulin/workshop-section'
 import { FAQSection } from '@/components/mulin/faq-section'
 import { CTABanner } from '@/components/mulin/cta-banner'
 import { FounderSection } from '@/components/mulin/founder-section'
@@ -31,6 +32,8 @@ export default function MulinVenturePage() {
         {/* <CustomizationSection />*/}
         <SectionDivider />
         <HomeProductsSection />
+        <SectionDivider />
+        <WorkshopSection />
         <FounderSection />
         <CTABanner />
         <InstagramGallery />
