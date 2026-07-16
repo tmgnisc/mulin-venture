@@ -80,7 +80,7 @@ export function ProductsHub() {
             <motion.div variants={rise} className="relative">
               <div className="overflow-hidden rounded-[44px] border border-white/10 bg-white/5 shadow-[0_30px_70px_rgba(0,0,0,0.18)] backdrop-blur-sm">
                 <div className="relative min-h-[420px]">
-                  <Image src="/leaf.jpg" alt="Layered plant texture" fill className="object-cover" priority />
+                  <Image src="https://images.unsplash.com/photo-1459156212016-c812468e2115?auto=format&fit=crop&w=1400&q=80" alt="Overhead view of layered green tropical leaves" fill className="object-cover" priority />
                   <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(6,15,10,0.08),rgba(6,15,10,0.42))]" />
                   <div className="absolute inset-x-0 bottom-0 p-6 text-white">
                     <p className="text-[11px] uppercase tracking-[0.2em] text-white/60">Product preview</p>

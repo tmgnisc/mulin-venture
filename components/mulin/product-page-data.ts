@@ -66,7 +66,7 @@ const productPages: Record<string, ProductPageContent> = {
   kokedama: {
     slug: 'kokedama',
     eyebrow: 'Living Craft / Japanese Botanics',
-    title: 'Kokedama',
+    title: 'Kokedama by Mulin',
     summary:
       'A hand-bound moss ball that carries a living plant without a pot, letting greenery sit, hang, or gather in ways ordinary planters never allow.',
     heroImage: '/kokedama-hero.png',

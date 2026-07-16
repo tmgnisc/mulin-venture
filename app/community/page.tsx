@@ -49,7 +49,7 @@ const communityProjects = [
     title: 'Leading the Way in Waste Management',
     body: 'Another successful recycling effort where 78 kg of waste was responsibly managed through school-community collaboration and practical sorting education.',
     tags: ['Recycling', 'Waste Management', 'Doko Recyclers'],
-    image: '/leaf.jpeg',
+    image: 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=900&q=80',
   },
   {
     category: 'School',
@@ -57,7 +57,7 @@ const communityProjects = [
     title: 'Collaboration with Fairyland International School',
     body: 'Supporting a cleaner future through on-campus orientation, waste bins, and student-led sustainability participation.',
     tags: ['Orientation', 'Environmental Science', 'Student Engagement'],
-    image: '/placeholder.jpg',
+    image: 'https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=format&fit=crop&w=900&q=80',
   },
   {
     category: 'School',
@@ -65,7 +65,7 @@ const communityProjects = [
     title: 'Waste to Art - Creative Upcycling',
     body: 'Students transformed waste materials into creative artwork, linking environmental responsibility with imagination.',
     tags: ['Upcycling', 'Art', 'Waste Management', 'Creativity'],
-    image: '/placeholder-user.jpg',
+    image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=80',
   },
 ]
 
@@ -133,8 +133,8 @@ export default function CommunityPage() {
             style={{ top: '-20%', bottom: '-20%', left: 0, right: 0 }}
           >
             <Image
-              src="/plant.jpg"
-              alt="Lush green leaves"
+              src="https://images.unsplash.com/photo-1618477388954-7852f32655ec?auto=format&fit=crop&w=1920&q=80"
+              alt="Students and volunteers gathered outdoors for a community environment program"
               fill
               priority
               sizes="100vw"

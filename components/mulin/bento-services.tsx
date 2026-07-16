@@ -36,8 +36,8 @@ export function BentoServices() {
             data-aos-delay="0"
           >
             <img
-              src="https://images.squarespace-cdn.com/content/v1/5e6713bbf2132f62e71a5389/1588878556739-1VFN907TT7784A0YKJ26/DSC_0369.jpg?format=2500w"
-              alt="Landscape Architecture"
+              src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1600&q=80"
+              alt="Lush indoor garden with layered tropical foliage designed for a residential space"
               className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
             />
             <div className="absolute inset-0 bg-linear-to-t from-moss via-moss/35 to-transparent" />
@@ -72,8 +72,8 @@ export function BentoServices() {
             data-aos-delay="80"
           >
             <img
-              src="https://images.squarespace-cdn.com/content/v1/5e6713bbf2132f62e71a5389/1588878556739-1VFN907TT7784A0YKJ26/DSC_0369.jpg?format=2500w"
-              alt="Installation"
+              src="https://images.unsplash.com/photo-1463320726281-696a485928c7?auto=format&fit=crop&w=1600&q=80"
+              alt="Potted plants arranged on a wooden table during a professional installation"
               className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
             />
             <div className="absolute inset-0 bg-linear-to-t from-ink/85 via-ink/15 to-transparent" />
@@ -143,8 +143,8 @@ export function BentoServices() {
             data-aos-delay="0"
           >
             <img
-              src="https://images.squarespace-cdn.com/content/v1/5e6713bbf2132f62e71a5389/1588878556739-1VFN907TT7784A0YKJ26/DSC_0369.jpg?format=2500w"
-              alt="Green Walls"
+              src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=1600&q=80"
+              alt="Dense green leaves covering a vertical surface like a living wall"
               className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
             />
             <div className="absolute inset-0 bg-linear-to-t from-moss/92 via-moss/18 to-transparent" />
