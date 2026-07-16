@@ -8,7 +8,7 @@ const articles = [
     date: 'March 15, 2026',
     readTime: '8 min read',
     excerpt: 'Discover how preserved moss walls can transform your space with minimal maintenance and maximum impact.',
-    image: 'https://images.squarespace-cdn.com/content/v1/5e6713bbf2132f62e71a5389/1588878556739-1VFN907TT7784A0YKJ26/DSC_0369.jpg?format=2500w',
+    image: 'https://images.unsplash.com/photo-1545241047-6083a3684587?auto=format&fit=crop&w=900&q=80',
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const articles = [
     date: 'March 8, 2026',
     readTime: '6 min read',
     excerpt: 'From ceramic to concrete, learn how to match your plant with the perfect vessel for both style and health.',
-    image: 'https://images.squarespace-cdn.com/content/v1/5e6713bbf2132f62e71a5389/1588878556739-1VFN907TT7784A0YKJ26/DSC_0369.jpg?format=2500w',
+    image: 'https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=900&q=80',
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const articles = [
     date: 'February 28, 2026',
     readTime: '5 min read',
     excerpt: 'The science behind how certain plant species can purify your indoor air and boost your well-being.',
-    image: 'https://images.squarespace-cdn.com/content/v1/5e6713bbf2132f62e71a5389/1588878556739-1VFN907TT7784A0YKJ26/DSC_0369.jpg?format=2500w',
+    image: 'https://images.unsplash.com/photo-1470137237906-d8a4f71e1966?auto=format&fit=crop&w=900&q=80',
   },
 ]
 

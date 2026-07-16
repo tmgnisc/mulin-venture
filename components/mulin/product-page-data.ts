@@ -38,7 +38,7 @@ export const productHubItems: ProductHubItem[] = [
     slug: 'kokedama',
     href: '/products/kokedama',
     eyebrow: 'Living Craft',
-    title: 'Kokedama',
+    title: 'Kokedama by Mulin',
     summary:
       'Handcrafted Japanese moss-ball plantings that free greenery from the pot, bringing a soft, sculptural touch of nature to desks, shelves, and hanging displays.',
     image: '/kokedama-2.png',
@@ -66,7 +66,7 @@ const productPages: Record<string, ProductPageContent> = {
   kokedama: {
     slug: 'kokedama',
     eyebrow: 'Living Craft / Japanese Botanics',
-    title: 'Kokedama',
+    title: 'Kokedama by Mulin',
     summary:
       'A hand-bound moss ball that carries a living plant without a pot, letting greenery sit, hang, or gather in ways ordinary planters never allow.',
     heroImage: '/kokedama-hero.png',

@@ -96,7 +96,7 @@ export default function ResearchPage() {
           <div className="absolute inset-0">
             <Image
               src="https://images.unsplash.com/photo-1470058869958-2a77ade41c02?auto=format&fit=crop&w=1920&q=80"
-              alt="Research hero"
+              alt="Green plant leaves in soft light, backdrop for Mulin research publications"
               fill
               className="object-cover object-top"
             />

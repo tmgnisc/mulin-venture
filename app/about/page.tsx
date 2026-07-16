@@ -99,8 +99,8 @@ export default function AboutPage() {
 
             <motion.div variants={rise} className="relative h-[360px] overflow-hidden rounded-3xl border border-white/10 bg-white/5 md:h-[460px]">
               <Image
-                src="/plant.jpg"
-                alt="Environmental restoration in Nepal"
+                src="https://images.unsplash.com/photo-1552084117-56a987666449?auto=format&fit=crop&w=1200&q=80"
+                alt="Volunteers planting a young tree during a community restoration program"
                 fill
                 className="object-cover"
               />
@@ -150,8 +150,8 @@ export default function AboutPage() {
             <motion.div variants={rise} className="grid gap-4 sm:grid-cols-[1.08fr_0.72fr]">
               <div className="relative min-h-[420px] overflow-hidden rounded-[28px]">
                 <Image
-                  src="/plant.jpg"
-                  alt="Environmental restoration work"
+                  src="https://images.unsplash.com/photo-1444492417251-9c84a5fa18e0?auto=format&fit=crop&w=1200&q=80"
+                  alt="A clear river flowing through green hills, the focus of restoration work"
                   fill
                   className="object-cover"
                 />
@@ -167,8 +167,8 @@ export default function AboutPage() {
               <div className="flex flex-col gap-4">
                 <div className="relative min-h-[200px] overflow-hidden rounded-[24px]">
                   <Image
-                    src="/leaf.jpg"
-                    alt="Environmental education"
+                    src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=900&q=80"
+                    alt="Hands holding a seedling in soil during an environmental education session"
                     fill
                     className="object-cover"
                   />

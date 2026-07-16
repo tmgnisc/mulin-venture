@@ -25,7 +25,7 @@ const navLinks = [
     label: 'Products',
     href: '/products',
     dropdownItems: [
-      { label: 'Kokedama', href: '/products/kokedama' },
+      { label: 'Kokedama by Mulin', href: '/products/kokedama' },
       { label: 'Tippy', href: '/products/tippy' },
     ],
   },
