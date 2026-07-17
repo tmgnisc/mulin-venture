@@ -1,5 +1,7 @@
 import type { MetadataRoute } from 'next'
 
+export const dynamic = 'force-static'
+
 const BASE_URL = 'https://www.mulinventure.com'
 
 // Update a page's date only when its content actually changes.
