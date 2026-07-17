@@ -35,6 +35,20 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'Mulin Venture',
+    images: [
+      {
+        url: '/rlogo.png',
+        width: 500,
+        height: 500,
+        alt: 'Mulin Venture logo',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Mulin Venture | Indoor Plant Atelier in Nepal',
+    description: 'Bespoke indoor plants paired with hand-crafted vessels — designed in Kathmandu for the spaces you live in.',
+    images: ['/rlogo.png'],
   },
 }
 
