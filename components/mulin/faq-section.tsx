@@ -82,11 +82,12 @@ export function FAQSection() {
                   </span>
                   <span
                     className={`relative shrink-0 w-9 h-9 rounded-full border flex items-center justify-center transition-all duration-300 ${
-                      isOpen ? 'border-sage bg-sage text-cream rotate-45' : 'border-sage/25 text-sage'
+                      isOpen ? 'border-sage bg-sage text-cream' : 'border-sage/25 text-sage'
                     }`}
                   >
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-4 h-4">
-                      <path d="M12 5v14M5 12h14" strokeLinecap="round" />
+                      {!isOpen && <path d="M12 5v14" strokeLinecap="round" />}
+                      <path d="M5 12h14" strokeLinecap="round" />
                     </svg>
                   </span>
                 </button>
