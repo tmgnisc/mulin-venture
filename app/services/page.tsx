@@ -4,11 +4,10 @@ import { ServicesHub } from '@/components/mulin/services-hub'
 export const metadata: Metadata = {
   title: { absolute: 'Botanical Design Services in Nepal | Mulin Venture' },
   description:
-    'Green walls, biophilic design, landscape architecture & plant care in Nepal. Explore 8 services. Contact us today for a free consultation!',
+    'Biophilic design, rooftop greening, green building rating, plant art workshops, and garden maintenance in Nepal.',
   alternates: { canonical: '/services' },
 }
 
 export default function ServicesLandingPage() {
   return <ServicesHub />
 }
-

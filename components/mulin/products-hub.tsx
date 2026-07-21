@@ -49,10 +49,11 @@ export function ProductsHub() {
                 Product Section
               </p>
               <h1 className="mt-5 font-serif font-light leading-[1.02] text-white" style={{ fontSize: 'clamp(3rem, 7vw, 6.6rem)' }}>
-                Products that grow into the space.
+                Three core products for nature-positive spaces.
               </h1>
               <p className="mt-6 max-w-xl font-sans font-light text-[clamp(1rem,1.12vw,1.15rem)] leading-relaxed text-white/78">
-                A product-first presentation with a strong hero, clear product routes, and enough breathing room to read as a real product section.
+                Plant Art Products, Moss Walls & Living Walls, and Biodiversity Toolkit form the
+                core of our product ecosystem.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link
@@ -71,9 +72,9 @@ export function ProductsHub() {
               </div>
 
               <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 font-sans text-sm text-white/70">
-                <span>kokedama</span>
-                <span>tippy</span>
-                <span>ready to grow</span>
+                <span>plant art products</span>
+                <span>moss & living walls</span>
+                <span>biodiversity toolkit</span>
               </div>
             </motion.div>
 
@@ -85,7 +86,7 @@ export function ProductsHub() {
                   <div className="absolute inset-x-0 bottom-0 p-6 text-white">
                     <p className="text-[11px] uppercase tracking-[0.2em] text-white/60">Product preview</p>
                     <p className="mt-3 max-w-md font-sans font-light text-sm leading-relaxed text-white/84">
-                      Two product routes presented with a stronger commercial frame and cleaner product emphasis.
+                      Kokedama sits under Plant Art Products, and Tippy sits under Biodiversity Toolkit.
                     </p>
                   </div>
                 </div>
@@ -98,8 +99,8 @@ export function ProductsHub() {
           <div className="mx-auto max-w-[1320px] px-[clamp(20px,5vw,80px)] py-6">
             <div className="flex flex-col gap-3 font-sans text-[11px] uppercase tracking-[0.2em] text-white/72 md:flex-row md:items-center md:justify-between">
               <p>featured products</p>
-              <p>installation paths</p>
-              <p>living systems</p>
+              <p>category structure</p>
+              <p>community impact</p>
             </div>
           </div>
         </section>
@@ -172,7 +173,7 @@ export function ProductsHub() {
               <div>
                 <p className="text-[11px] uppercase tracking-[0.2em] text-[#72806d]">Need help choosing?</p>
                 <h3 className="mt-3 font-serif font-light text-[clamp(2rem,4vw,3.5rem)] leading-[1.02] text-[#454C23]">
-                  The products now feel like they’re growing out of the same garden.
+                  Need help choosing the right product category?
                 </h3>
               </div>
               <Link

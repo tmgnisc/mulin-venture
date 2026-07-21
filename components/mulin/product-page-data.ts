@@ -35,170 +35,192 @@ export type ProductHubItem = {
 
 export const productHubItems: ProductHubItem[] = [
   {
-    slug: 'kokedama',
-    href: '/products/kokedama',
+    slug: 'plant-art-products',
+    href: '/products/plant-art-products',
     eyebrow: 'Living Craft',
-    title: 'Kokedama',
+    title: 'Plant Art Products',
     summary:
-      'Handcrafted Japanese moss-ball plantings that free greenery from the pot, bringing a soft, sculptural touch of nature to desks, shelves, and hanging displays.',
+      'Handcrafted decorative pieces that integrate living plants into wall art, sculptures, and installations for sensory wellbeing.',
     image: '/kokedama-2.png',
-    alt: 'Handcrafted kokedama moss ball plantings',
+    alt: 'Handcrafted plant art featuring living plants',
     accent: '#737F3C',
-    detail: 'Best for desks, shelves, and hanging arrangements that need a living focal point without the weight of planters.',
-    metric: '02 layers of care logic',
+    detail: 'Includes Kokedama creations under the Plant Art category.',
+    metric: 'kokedama included',
   },
   {
-    slug: 'tippy',
-    href: '/products/tippy',
-    eyebrow: 'Growing Together',
-    title: 'Tippy',
+    slug: 'moss-walls-living-walls',
+    href: '/products/moss-walls-living-walls',
+    eyebrow: 'Biophilic Installations',
+    title: 'Moss Walls & Living Walls',
     summary:
-      'An eco-friendly watering can designed for children, with a gentle pour and easy grip that turns everyday plant care into a habit kids actually look forward to.',
+      'Moss panels and fully living plant walls for indoor and outdoor spaces that are visually striking, acoustically beneficial, and deeply calming.',
+    image:
+      'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1600&q=80',
+    alt: 'Living wall installation with dense layered greenery',
+    accent: '#5F8F74',
+    detail: 'Centerpiece installations designed to anchor biophilic spaces.',
+    metric: 'indoor + outdoor',
+  },
+  {
+    slug: 'biodiversity-toolkit',
+    href: '/products/biodiversity-toolkit',
+    eyebrow: 'Education & Action',
+    title: 'Biodiversity Toolkit',
+    summary:
+      'A practical educational resource for individuals, schools, and organisations to support biodiversity through native planting and community learning.',
     image: '/tippy.jpeg',
-    alt: 'Tippy children’s watering cans in green and turquoise',
+    alt: 'Biodiversity toolkit resources with child-friendly gardening tools',
     accent: '#8C9A4B',
-    detail: 'Best for homes, schools, and gardens where children are learning to care for plants with their own hands.',
-    metric: '03 checks before pour',
+    detail: 'Includes Tippy as a child-friendly tool within biodiversity learning kits.',
+    metric: 'tippy included',
   },
 ]
 
 const productPages: Record<string, ProductPageContent> = {
-  kokedama: {
-    slug: 'kokedama',
-    eyebrow: 'Living Craft / Japanese Botanics',
-    title: 'Kokedama by Mulin',
+  'plant-art-products': {
+    slug: 'plant-art-products',
+    eyebrow: 'Living Craft / Decorative Botanics',
+    title: 'Plant Art Products',
     summary:
-      'A hand-bound moss ball that carries a living plant without a pot, letting greenery sit, hang, or gather in ways ordinary planters never allow.',
+      'Handcrafted decorative pieces that integrate living plants into wall art, sculptures, and installations.',
     heroImage: '/kokedama-hero.png',
-    heroAlt: 'Handcrafted kokedama moss balls with living plants',
-    heroNote: 'Made from plants of your choice, potting soil, sphagnum moss, and biodegradable jute rope — with a manual book and reusable holder included.',
+    heroAlt: 'Plant art installations featuring living greenery',
+    heroNote:
+      'Each piece is built to deliver a unique natural aesthetic while contributing to sensory wellbeing in homes and workspaces.',
     bodyImage: '/kokedamas.png',
-    bodyAlt: 'A collection of kokedama moss ball plantings',
+    bodyAlt: 'Collection of handcrafted living plant art pieces',
     accent: '#737F3C',
     stats: [
-      { value: '01', label: 'weekly soak' },
-      { value: '02', label: 'indirect light' },
-      { value: '03', label: 'monthly feed' },
+      { value: '01', label: 'living material' },
+      { value: '02', label: 'crafted by hand' },
+      { value: '03', label: 'sensory wellbeing' },
     ],
-    overviewTitle: 'What the craft solves',
+    overviewTitle: 'What this product line offers',
     overviewBody:
-      'Kokedama works best when plant, moss, and placement are treated as one living object. Each ball starts from a plant of your choice, a soil core shaped by hand, a sphagnum moss wrap, and biodegradable jute rope — and comes with a manual book and reusable holder so caring for it stays simple.',
-    featuresTitle: 'Care tips for kokedama',
+      'Plant Art Products bring together craftsmanship and living systems so decorative pieces remain beautiful and biologically alive. This category includes Kokedama and related handcrafted formats.',
+    featuresTitle: 'Core highlights',
     features: [
       {
-        title: 'Watering by soak',
-        body: 'Soak the moss ball in water for 10–15 minutes when it feels dry and light — usually once a week. Let it drain fully before displaying again, and avoid watering from the top.',
+        title: 'Handcrafted expression',
+        body: 'Every piece is made by hand and composed to suit the personality of the space.',
       },
       {
-        title: 'Light and humidity',
-        body: 'Place in bright, indirect light — direct sun can dry the moss and harm the plant. Mist the plant and moss ball once or twice a week, especially for tropical species.',
+        title: 'Living installation value',
+        body: 'Designs do more than decorate, they create a calm, nature-connected atmosphere.',
       },
       {
-        title: 'Feeding and temperature',
-        body: 'Add a diluted liquid fertilizer to the soak once a month — flowering plants benefit from potassium-rich feeds. Keep the ball at a stable room temperature, away from cold drafts.',
+        title: 'Category includes Kokedama',
+        body: 'Kokedama sits within this line as one of the signature plant art formats.',
       },
     ],
-    processTitle: 'Step by step: how a kokedama is made',
+    processTitle: 'How we deliver',
     process: [
-      {
-        step: '01',
-        title: 'Prepare the plant and soil ball',
-        body: 'Gently remove the plant from its pot and shake off excess soil from the roots. Mix potting soil with wet hands until it holds together as a ball, sized for your plant and stand.',
-      },
-      {
-        step: '02',
-        title: 'Moss time',
-        body: 'Form the sphagnum moss into a wrap sheet matched to the size of your soil ball — in a tray or held in your hand, whichever feels natural.',
-      },
-      {
-        step: '03',
-        title: 'Bind and water',
-        body: 'Wrap the ball firmly with jute rope several times to secure everything, leaving extra string if you want to hang it. Then submerge the finished ball in water for 10–15 minutes and drain the excess.',
-      },
-    ],
-    outcomesTitle: 'Troubleshooting',
-    outcomes: [
-      {
-        title: 'Reading the leaves',
-        body: 'Yellowing leaves point to overwatering or a lack of nutrients — adjust the watering rhythm and consider feeding. Dry moss means under-watering or low humidity; soak more often and mist regularly.',
-      },
-      {
-        title: 'A plant that outgrows',
-        body: 'When the plant outgrows its ball, unwrap the string, add more soil, and reshape to accommodate the growth.',
-      },
-      {
-        title: 'Roots and moss',
-        body: 'Root rot comes from too much water retention — let the ball dry out between waterings. If moss falls off, wrap the string tighter or add more moss to keep it intact.',
-      },
-    ],
-  },
-  tippy: {
-    slug: 'tippy',
-    eyebrow: 'Growing Together / Kids & Garden',
-    title: 'Tippy',
-    summary:
-      'An eco-friendly watering can shaped for small hands, with a gentle pour and playful form that makes daily plant care a habit children want to keep.',
-    heroImage: '/tippy-2.jpg',
-    heroAlt: 'Tippy watering can closeup with embossed Tippy logo',
-    heroNote: 'Sized for small hands, balanced for a gentle pour, and made from eco-friendly materials that are safe to grow up with.',
-    bodyImage: '/tippy-inline.jpg',
-    bodyAlt: 'A lineup of Tippy watering cans in green, orange, turquoise, and beige',
-    accent: '#8C9A4B',
-    stats: [
-      { value: '01', label: 'easy grip' },
-      { value: '02', label: 'gentle pour' },
-      { value: '03', label: 'eco material' },
-    ],
-    overviewTitle: 'What the product solves',
-    overviewBody:
-      'Children love watering plants — adult watering cans just aren’t made for them. Tippy is sized, weighted, and balanced for small hands, so kids can pour gently without spills, while the eco-friendly build keeps the whole habit kind to the planet they’re learning to care for.',
-    featuresTitle: 'Scope of support',
-    features: [
-      {
-        title: 'Child-first ergonomics',
-        body: 'A light body, easy grip, and balanced spout let small hands lift, carry, and pour without help.',
-      },
-      {
-        title: 'Gentle, controlled pour',
-        body: 'The long curved spout slows the flow so young gardeners water seedlings without flooding them.',
-      },
-      {
-        title: 'Eco-friendly build',
-        body: 'Made from environmentally responsible materials, so the tool teaching care for nature reflects it too.',
-      },
-    ],
-    processTitle: 'How it comes together',
-    process: [
-      {
-        step: '01',
-        title: 'Fill together',
-        body: 'The wide opening makes filling easy at any tap or bucket, a small ritual kids can own from day one.',
-      },
-      {
-        step: '02',
-        title: 'Carry with confidence',
-        body: 'The balanced shape keeps water steady on the walk to the plant, even in the smallest hands.',
-      },
-      {
-        step: '03',
-        title: 'Pour and watch it grow',
-        body: 'The gentle spout rewards patience — a slow, even stream that plants and children both thrive on.',
-      },
+      { step: '01', title: 'Context review', body: 'We understand where the piece will live and what mood it should create.' },
+      { step: '02', title: 'Material crafting', body: 'We build each piece with living components and handcrafted detailing.' },
+      { step: '03', title: 'Placement guidance', body: 'We provide setup and care guidance so the piece thrives long-term.' },
     ],
     outcomesTitle: 'Expected outcomes',
     outcomes: [
+      { title: 'Unique aesthetic identity', body: 'Spaces gain a natural signature that feels intentional and alive.' },
+      { title: 'Improved sensory comfort', body: 'Living plant presence supports calm and emotional wellbeing.' },
+      { title: 'Long-term connection', body: 'People engage more actively with nature through ongoing care.' },
+    ],
+  },
+  'moss-walls-living-walls': {
+    slug: 'moss-walls-living-walls',
+    eyebrow: 'Biophilic Systems / Vertical Greenery',
+    title: 'Moss Walls & Living Walls',
+    summary:
+      'Moss panels and fully living plant walls designed for indoor and outdoor environments.',
+    heroImage:
+      'https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=1600&q=80',
+    heroAlt: 'Green wall with dense foliage in an interior environment',
+    heroNote:
+      'These installations are visually striking, acoustically beneficial, and deeply calming.',
+    accent: '#5F8F74',
+    stats: [
+      { value: '01', label: 'visual impact' },
+      { value: '02', label: 'acoustic value' },
+      { value: '03', label: 'calming effect' },
+    ],
+    overviewTitle: 'What this product line offers',
+    overviewBody:
+      'Moss walls and living walls function as centerpiece biophilic installations that transform plain surfaces into active ecological systems.',
+    featuresTitle: 'Core highlights',
+    features: [
       {
-        title: 'A daily green habit',
-        body: 'Watering becomes something children ask to do, building a lasting connection with living things.',
+        title: 'Indoor and outdoor suitability',
+        body: 'Solutions are designed for controlled interiors as well as exterior conditions.',
       },
       {
-        title: 'Independence in the garden',
-        body: 'Kids handle real plant care on their own, with a tool that works with them instead of against them.',
+        title: 'Centerpiece biophilic role',
+        body: 'Walls become spatial anchors that define the character of the environment.',
       },
       {
-        title: 'Care that reflects its values',
-        body: 'An eco-friendly product teaching an eco-friendly habit — the lesson and the object agree.',
+        title: 'Acoustic and emotional comfort',
+        body: 'Layered plant surfaces help soften sound and create a calm atmospheric quality.',
       },
+    ],
+    processTitle: 'How we deliver',
+    process: [
+      { step: '01', title: 'Site suitability', body: 'We evaluate wall conditions, light, and environmental performance needs.' },
+      { step: '02', title: 'System design', body: 'Planting, structural support, and aesthetic direction are integrated as one plan.' },
+      { step: '03', title: 'Installation and care setup', body: 'We install the wall and establish practical maintenance routines.' },
+    ],
+    outcomesTitle: 'Expected outcomes',
+    outcomes: [
+      { title: 'Stronger biophilic identity', body: 'Spaces instantly read as nature-connected and restorative.' },
+      { title: 'Better sensory atmosphere', body: 'Users experience more visual richness and calmer soundscapes.' },
+      { title: 'Living performance', body: 'The installation continues delivering ecological and emotional value over time.' },
+    ],
+  },
+  'biodiversity-toolkit': {
+    slug: 'biodiversity-toolkit',
+    eyebrow: 'Education / Community Ecology',
+    title: 'Biodiversity Toolkit',
+    summary:
+      'A practical, educational resource for individuals, schools, and organisations to actively support biodiversity.',
+    heroImage: '/tippy-2.jpg',
+    heroAlt: 'Biodiversity toolkit materials and kid-friendly plant care resources',
+    heroNote:
+      'Includes native plant guides, planting materials, and community resources rooted in indigenous ecological knowledge.',
+    bodyImage: '/tippy-inline.jpg',
+    bodyAlt: 'Community-focused biodiversity toolkit components',
+    accent: '#8C9A4B',
+    stats: [
+      { value: '01', label: 'native guides' },
+      { value: '02', label: 'planting materials' },
+      { value: '03', label: 'community learning' },
+    ],
+    overviewTitle: 'What this product line offers',
+    overviewBody:
+      'The Biodiversity Toolkit helps people move from awareness to action with practical materials and clear local guidance. Tippy is included within this category as a learning-friendly tool.',
+    featuresTitle: 'Core highlights',
+    features: [
+      {
+        title: 'Action-ready resources',
+        body: 'Tools and guides are designed for immediate application in homes, schools, and organizations.',
+      },
+      {
+        title: 'Indigenous ecological grounding',
+        body: 'Learning resources respect local ecological knowledge and cultural context.',
+      },
+      {
+        title: 'Category includes Tippy',
+        body: 'Tippy supports child engagement and habit-building within biodiversity learning activities.',
+      },
+    ],
+    processTitle: 'How we deliver',
+    process: [
+      { step: '01', title: 'Context mapping', body: 'We align toolkit components to user type, site conditions, and learning goals.' },
+      { step: '02', title: 'Toolkit assembly', body: 'We combine native guidance, materials, and practical learning supports.' },
+      { step: '03', title: 'Community activation', body: 'We guide rollout through simple actions and workshop-style engagement.' },
+    ],
+    outcomesTitle: 'Expected outcomes',
+    outcomes: [
+      { title: 'Higher biodiversity awareness', body: 'People understand local species needs and ecosystem relationships.' },
+      { title: 'Practical habitat support', body: 'Communities create and maintain biodiversity-supportive micro-environments.' },
+      { title: 'Sustained participation', body: 'Accessible tools help users keep nature-positive habits over time.' },
     ],
   },
 }

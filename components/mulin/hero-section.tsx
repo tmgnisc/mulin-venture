@@ -24,9 +24,7 @@ export function HeroSection() {
   const leafMidRightRef = useRef<HTMLDivElement>(null)
   const leafFrontRightRef = useRef<HTMLDivElement>(null)
   const leafFrontLeftRef = useRef<HTMLDivElement>(null)
-  const labelRef = useRef<HTMLSpanElement>(null)
   const heading1Ref = useRef<HTMLSpanElement>(null)
-  const heading2Ref = useRef<HTMLSpanElement>(null)
   const subheadingRef = useRef<HTMLParagraphElement>(null)
   const buttonsRef = useRef<HTMLDivElement>(null)
   const statsRef = useRef<HTMLDivElement>(null)
@@ -48,9 +46,7 @@ export function HeroSection() {
       /* ── Entry animation ─────────────────────────────── */
       const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
       tl
-        .fromTo(labelRef.current, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.7, delay: 0.5 })
-        .fromTo(heading1Ref.current, { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 1 }, '-=0.35')
-        .fromTo(heading2Ref.current, { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 1 }, '-=0.65')
+        .fromTo(heading1Ref.current, { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 1, delay: 0.5 })
         .fromTo(subheadingRef.current, { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.8 }, '-=0.45')
         .fromTo(buttonsRef.current, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.7 }, '-=0.4')
         .fromTo(statsRef.current, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.6 }, '-=0.3')
@@ -225,15 +221,6 @@ export function HeroSection() {
 
       {/* ── Layer 5: Center content ─────────────────────── */}
       <div className="relative z-10 mx-auto max-w-5xl px-[clamp(16px,5vw,80px)] pt-24 sm:pt-28 lg:pt-32 text-center">
-
-        {/* Tagline label */}
-        <span
-          ref={labelRef}
-          className="mb-4 inline-block font-sans text-[11px] uppercase tracking-[0.32em] text-gold opacity-0 sm:mb-6"
-        >
-          Nurture through Nature
-        </span>
-
         {/* Heading */}
         <h1 className="mb-6 flex flex-col items-center font-serif font-light leading-[1.08] text-white sm:mb-8 sm:leading-[1.04]">
           <span
@@ -241,14 +228,7 @@ export function HeroSection() {
             className="block opacity-0"
             style={{ fontSize: 'clamp(1.9rem, 9.2vw, 7rem)' }}
           >
-            Sustainable Cities.
-          </span>
-          <span
-            ref={heading2Ref}
-            className="block italic text-gold opacity-0"
-            style={{ fontSize: 'clamp(1.9rem, 9.2vw, 7rem)' }}
-          >
-            Nature in Every Space.
+            Nurture through Nature
           </span>
         </h1>
 

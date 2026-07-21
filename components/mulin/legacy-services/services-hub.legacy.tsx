@@ -55,14 +55,13 @@ export function ServicesHub() {
                 className="mt-5 font-serif leading-[0.96] text-white"
                 style={{ fontSize: 'clamp(2.8rem, 6vw, 5.4rem)' }}
               >
-                Five focused services, one clear starting point.
+                Eight focused pathways, one clear starting point.
               </motion.h1>
               <motion.p
                 variants={item}
                 className="mt-6 max-w-2xl text-[clamp(1rem,1.2vw,1.2rem)] leading-relaxed text-white/80"
               >
-                Explore our core services for biophilic design, rooftop greening, environmental
-                assessment, workshops, and long-term maintenance.
+                Explore the service families below to move from the overview into a dedicated detail page, each with its own context, process, and next-step guidance.
               </motion.p>
               <motion.div variants={item} className="mt-8 flex flex-wrap gap-3">
                 <Link
@@ -84,7 +83,7 @@ export function ServicesHub() {
             <motion.div variants={item} className="grid grid-cols-3 gap-3 rounded-[30px] border border-white/10 bg-white/5 p-4 backdrop-blur-md">
               <div className="rounded-2xl border border-white/10 bg-white/10 p-4">
                 <p className="text-[10px] uppercase tracking-[0.22em] text-white/55">Detailed pages</p>
-                <p className="mt-2 font-serif text-3xl leading-none text-white">05</p>
+                <p className="mt-2 font-serif text-3xl leading-none text-white">08</p>
               </div>
               <div className="rounded-2xl border border-white/10 bg-white/10 p-4">
                 <p className="text-[10px] uppercase tracking-[0.22em] text-white/55">Card system</p>
@@ -100,7 +99,7 @@ export function ServicesHub() {
                   <MonsteraLeaf className="h-7 w-7 text-white/70" />
                 </div>
                 <p className="mt-3 text-sm leading-relaxed text-white/80">
-                  Each service opens into a dedicated page with context, process, and clear outcomes.
+                  Each service opens into a matching detail page with a consistent skeleton and a contextual layout.
                 </p>
               </div>
             </motion.div>
