@@ -92,7 +92,7 @@ export default function Loading() {
               <Skeleton className="min-h-85 rounded-[28px] bg-[#d7e0d4] md:col-span-4" />
               <Skeleton className="min-h-85 rounded-[28px] bg-[#e3eade] md:col-span-4" />
               <Skeleton className="min-h-85 rounded-[28px] bg-[#44624e]/30 md:col-span-4" />
-              <Skeleton className="min-h-40 rounded-[28px] bg-[#e8d5b0]/55 md:col-span-12" />
+              <Skeleton className="min-h-40 rounded-[28px] bg-[#FFE871]/55 md:col-span-12" />
             </div>
           </div>
         </section>
@@ -182,7 +182,7 @@ export default function Loading() {
         </section>
       </main>
 
-      <footer className="bg-[#122018] px-[clamp(20px,5vw,80px)] py-14">
+      <footer className="bg-[#2B2F16] px-[clamp(20px,5vw,80px)] py-14">
         <div className="mx-auto max-w-[1320px]">
           <Skeleton className="h-8 w-48 rounded bg-white/20" />
           <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-4">

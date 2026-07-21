@@ -3,7 +3,7 @@ import { Skeleton } from '@/components/ui/skeleton'
 export default function Loading() {
   return (
     <main className="min-h-[100svh] bg-[#edf2ed]">
-      <section className="border-b border-[#cfd9d2] bg-[#123327] px-6 pt-28 pb-20 md:px-10">
+      <section className="border-b border-[#cfd9d2] bg-[#454C23] px-6 pt-28 pb-20 md:px-10">
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div>
             <Skeleton className="h-4 w-24 rounded-full bg-white/20" />
@@ -51,7 +51,7 @@ export default function Loading() {
       </section>
 
       <section className="mx-auto max-w-6xl px-6 pb-20 md:px-10">
-        <Skeleton className="h-44 rounded-[22px] bg-[#17392d]/30" />
+        <Skeleton className="h-44 rounded-[22px] bg-[#454C23]/30" />
       </section>
 
       <section className="mx-auto max-w-6xl px-6 pb-24 md:px-10">

@@ -74,13 +74,13 @@ export function Navigation() {
                 }`}
             >
               <Image
-                src="/logo.jpeg"
+                src="/favicon-mulin.png"
                 alt="Mulin Venture logo"
                 width={44}
                 height={44}
                 className="rounded-full object-cover"
               />
-              <span className="font-serif font-semibold text-xl tracking-[0.15em]">MULIN</span>
+              <span className="font-serif font-bold text-xl tracking-[0.15em]">Mulin Venture</span>
               <SproutIcon className="w-5 h-5" />
             </Link>
 

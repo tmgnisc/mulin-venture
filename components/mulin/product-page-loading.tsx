@@ -2,8 +2,8 @@ import { Skeleton } from '@/components/ui/skeleton'
 
 export function ProductPageLoading() {
   return (
-    <main className="bg-[#f3efe6] text-[#1e241f]">
-      <section className="relative overflow-hidden bg-[#17342c]">
+    <main className="bg-[#FFFFFF] text-[#454C23]">
+      <section className="relative overflow-hidden bg-[#454C23]">
         <div className="mx-auto grid max-w-[1320px] gap-10 px-[clamp(20px,5vw,80px)] pt-28 pb-18 lg:grid-cols-[0.96fr_1.04fr] lg:items-center">
           <div className="max-w-2xl">
             <Skeleton className="h-7 w-44 rounded-full bg-white/10" />
@@ -27,7 +27,7 @@ export function ProductPageLoading() {
         </div>
       </section>
 
-      <section className="bg-[#214136]">
+      <section className="bg-[#454C23]">
         <div className="mx-auto max-w-[1320px] px-[clamp(20px,5vw,80px)] py-6">
           <Skeleton className="h-5 w-full rounded-full bg-white/12" />
         </div>

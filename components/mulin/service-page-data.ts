@@ -29,7 +29,7 @@ const servicePages: Record<string, ServicePageContent> = {
       'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80',
     heroAlt: 'Modern sustainable building exterior',
     heroNote: 'Credit strategy, submittal prep, and review-ready coordination for project teams.',
-    accent: '#c6a96a',
+    accent: '#FFBE71',
     stats: [
       { value: '01', label: 'scorecard review' },
       { value: '02', label: 'credit alignment' },
@@ -97,7 +97,7 @@ const servicePages: Record<string, ServicePageContent> = {
       'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=80',
     heroAlt: 'Calm interior with natural light and planting',
     heroNote: 'Indoor comfort, wellness features, and evidence-led design decisions.',
-    accent: '#86a89a',
+    accent: '#8C9A4B',
     stats: [
       { value: '01', label: 'wellness map' },
       { value: '02', label: 'comfort review' },
@@ -165,7 +165,7 @@ const servicePages: Record<string, ServicePageContent> = {
       'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1600&q=80',
     heroAlt: 'Architectural model and design materials on a table',
     heroNote: 'Early-stage planning, envelope thinking, and material strategy in one workflow.',
-    accent: '#6f8b66',
+    accent: '#737F3C',
     stats: [
       { value: '01', label: 'concept framing' },
       { value: '02', label: 'material logic' },
@@ -369,7 +369,7 @@ const servicePages: Record<string, ServicePageContent> = {
       'https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1600&q=80',
     heroAlt: 'Interior filled with strong natural daylight',
     heroNote: 'Daylight control, glare strategy, and layered lighting recommendations.',
-    accent: '#d3b56d',
+    accent: '#FFBE71',
     stats: [
       { value: '01', label: 'daylight study' },
       { value: '02', label: 'glare control' },
@@ -437,7 +437,7 @@ const servicePages: Record<string, ServicePageContent> = {
       'https://images.unsplash.com/photo-1625066708174-d9f7e3a94d1c?auto=format&fit=crop&w=1600&q=80',
     heroAlt: 'Healthy soil and plant roots in a cultivation bed',
     heroNote: 'Substrate balance, drainage review, and plant performance planning.',
-    accent: '#8a6f4f',
+    accent: '#9A5B3F',
     stats: [
       { value: '01', label: 'substrate check' },
       { value: '02', label: 'root health' },

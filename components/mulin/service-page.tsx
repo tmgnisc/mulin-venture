@@ -36,8 +36,8 @@ export function ServicePage({ content }: ServicePageProps) {
   return (
     <>
       <Navigation />
-      <main className="bg-[#f4f1e8] text-[#1d2d25]">
-        <section className="relative overflow-hidden border-b border-[#d8ddd7] bg-[#17342c]">
+      <main className="bg-[#FFFFFF] text-[#454C23]">
+        <section className="relative overflow-hidden border-b border-[#d8ddd7] bg-[#454C23]">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(255,255,255,0.1),transparent_34%),radial-gradient(circle_at_82%_82%,rgba(198,169,106,0.16),transparent_30%),linear-gradient(180deg,rgba(9,20,17,0.16),rgba(9,20,17,0.56))]" />
           <div className="absolute -left-24 top-24 h-64 w-64 rounded-full blur-3xl" style={{ backgroundColor: `${content.accent}1a` }} />
           <div className="absolute inset-x-0 bottom-0 h-px bg-white/10" />
@@ -62,7 +62,7 @@ export function ServicePage({ content }: ServicePageProps) {
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link
                   href="/consultation"
-                  className="inline-flex items-center gap-2 rounded-full bg-[#c6a96a] px-6 py-3 text-sm font-medium text-[#10211b] transition-transform duration-200 hover:-translate-y-0.5"
+                  className="inline-flex items-center gap-2 rounded-full bg-[#FFBE71] px-6 py-3 text-sm font-medium text-[#2B2F16] transition-transform duration-200 hover:-translate-y-0.5"
                 >
                   Request Consultation
                   <ArrowRight className="h-4 w-4" />
@@ -123,7 +123,7 @@ export function ServicePage({ content }: ServicePageProps) {
           >
             <motion.div variants={rise} className="lg:sticky lg:top-28 self-start">
               <p className="text-[11px] uppercase tracking-[0.22em] text-[#6f7f77]">{content.overviewTitle}</p>
-              <h2 className="mt-3 max-w-xl font-serif text-[clamp(2rem,3.4vw,3.2rem)] leading-[1.02] text-[#1d2d25]">
+              <h2 className="mt-3 max-w-xl font-serif text-[clamp(2rem,3.4vw,3.2rem)] leading-[1.02] text-[#454C23]">
                 {content.title} with context, not decoration.
               </h2>
               <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-[#496055]">
@@ -138,12 +138,12 @@ export function ServicePage({ content }: ServicePageProps) {
                     transition={{ type: 'spring', stiffness: 260, damping: 20 }}
                     className="flex items-start gap-4 rounded-[18px] border border-[#d7dfda] bg-white/75 p-4 shadow-[0_12px_28px_rgba(18,31,25,0.04)]"
                   >
-                    <div className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#17342c] text-[11px] text-white">
+                    <div className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#454C23] text-[11px] text-white">
                       0{index + 1}
                     </div>
                     <div>
-                      <h3 className="font-serif text-xl leading-tight text-[#203329]">{feature.title}</h3>
-                      <p className="mt-2 text-sm leading-relaxed text-[#51665c]">{feature.body}</p>
+                      <h3 className="font-serif text-xl leading-tight text-[#454C23]">{feature.title}</h3>
+                      <p className="mt-2 text-sm leading-relaxed text-[#737F3C]">{feature.body}</p>
                     </div>
                   </motion.div>
                 ))}
@@ -160,14 +160,14 @@ export function ServicePage({ content }: ServicePageProps) {
                 <div className="grid gap-0 md:grid-cols-[1.1fr_0.9fr]">
                   <div className="p-7 md:p-8">
                     <span className="text-[10px] uppercase tracking-[0.24em] text-[#7a8c83]">01</span>
-                    <h3 className="mt-4 font-serif text-[clamp(1.75rem,2.4vw,2.6rem)] leading-[1.02] text-[#203329]">
+                    <h3 className="mt-4 font-serif text-[clamp(1.75rem,2.4vw,2.6rem)] leading-[1.02] text-[#454C23]">
                       {content.features[0].title}
                     </h3>
-                    <p className="mt-4 max-w-lg text-sm leading-relaxed text-[#51665c]">
+                    <p className="mt-4 max-w-lg text-sm leading-relaxed text-[#737F3C]">
                       {content.features[0].body}
                     </p>
                   </div>
-                  <div className="relative min-h-52 overflow-hidden bg-[#17342c]">
+                  <div className="relative min-h-52 overflow-hidden bg-[#454C23]">
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_25%,rgba(198,169,106,0.25),transparent_28%),radial-gradient(circle_at_70%_70%,rgba(255,255,255,0.08),transparent_34%)]" />
                     <div className="absolute inset-0 p-6 text-white">
                       <p className="text-[10px] uppercase tracking-[0.24em] text-white/50">Foundation</p>
@@ -186,19 +186,19 @@ export function ServicePage({ content }: ServicePageProps) {
                   whileHover={{ y: -5 }}
                   transition={{ type: 'spring', stiffness: 250, damping: 20 }}
                   className={`overflow-hidden rounded-[26px] border p-6 shadow-[0_16px_35px_rgba(18,31,25,0.05)] ${
-                    index === 0 ? 'border-[#dfe5df] bg-[#f7f9f5]' : 'border-[#d7dfda] bg-[#fcfbf7]'
+                    index === 0 ? 'border-[#dfe5df] bg-[#f7f9f5]' : 'border-[#d7dfda] bg-[#FFFFFF]'
                   }`}
                 >
                   <div className="mb-6 flex items-center justify-between">
                     <span className="text-[10px] uppercase tracking-[0.24em] text-[#7a8c83]">0{index + 2}</span>
-                    <span className="rounded-full border border-[#17342c]/10 bg-white/70 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-[#55665d]">
+                    <span className="rounded-full border border-[#454C23]/10 bg-white/70 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-[#55665d]">
                       Detail
                     </span>
                   </div>
-                  <h3 className="font-serif text-[clamp(1.45rem,1.9vw,2rem)] leading-[1.02] text-[#203329]">
+                  <h3 className="font-serif text-[clamp(1.45rem,1.9vw,2rem)] leading-[1.02] text-[#454C23]">
                     {feature.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-[#51665c]">{feature.body}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-[#737F3C]">{feature.body}</p>
                 </motion.article>
               ))}
             </motion.div>
@@ -216,7 +216,7 @@ export function ServicePage({ content }: ServicePageProps) {
             >
               <motion.div variants={rise}>
                 <p className="text-[11px] uppercase tracking-[0.22em] text-[#6f7f77]">{content.featuresTitle}</p>
-                <h2 className="mt-3 font-serif text-[clamp(2rem,3.4vw,3rem)] leading-[1.02] text-[#1d2d25]">
+                <h2 className="mt-3 font-serif text-[clamp(2rem,3.4vw,3rem)] leading-[1.02] text-[#454C23]">
                   {content.processTitle}
                 </h2>
               </motion.div>
@@ -235,17 +235,17 @@ export function ServicePage({ content }: ServicePageProps) {
                   whileHover={{ y: -7 }}
                   transition={{ type: 'spring', stiffness: 240, damping: 20 }}
                   className={`relative overflow-hidden rounded-[28px] border p-6 shadow-[0_16px_35px_rgba(18,31,25,0.05)] ${
-                    index === 1 ? 'border-[#17342c] bg-[#17342c] text-white' : index === 2 ? 'border-[#e0d2bb] bg-[#f7f1e6]' : 'border-[#d4ddd8] bg-white'
+                    index === 1 ? 'border-[#454C23] bg-[#454C23] text-white' : index === 2 ? 'border-[#E5ECFF] bg-[#FFFFFF]' : 'border-[#d4ddd8] bg-white'
                   }`}
                 >
-                  <div className={`absolute inset-x-0 top-0 h-1 ${index === 1 ? 'bg-[#c6a96a]' : 'bg-[#17342c]/10'}`} />
+                  <div className={`absolute inset-x-0 top-0 h-1 ${index === 1 ? 'bg-[#FFBE71]' : 'bg-[#454C23]/10'}`} />
                   <div className="mb-8 flex items-center justify-between">
                     <span className={`text-[11px] uppercase tracking-[0.22em] ${index === 1 ? 'text-white/55' : 'text-[#7a8c83]'}`}>{item.step}</span>
-                    <span className={`rounded-full border px-3 py-1 text-[10px] uppercase tracking-[0.2em] ${index === 1 ? 'border-white/15 bg-white/10 text-white/80' : 'border-[#17342c]/10 bg-[#f3f6f1] text-[#55665d]'}`}>
+                    <span className={`rounded-full border px-3 py-1 text-[10px] uppercase tracking-[0.2em] ${index === 1 ? 'border-white/15 bg-white/10 text-white/80' : 'border-[#454C23]/10 bg-[#f3f6f1] text-[#55665d]'}`}>
                       Stage {index + 1}
                     </span>
                   </div>
-                  <h3 className={`font-serif text-2xl ${index === 1 ? 'text-white' : 'text-[#203329]'}`}>{item.title}</h3>
+                  <h3 className={`font-serif text-2xl ${index === 1 ? 'text-white' : 'text-[#454C23]'}`}>{item.title}</h3>
                   <p className={`mt-3 text-sm leading-relaxed ${index === 1 ? 'text-white/76' : 'text-[#52665c]'}`}>{item.body}</p>
                 </motion.article>
               ))}
@@ -263,7 +263,7 @@ export function ServicePage({ content }: ServicePageProps) {
           >
             <motion.div
               variants={rise}
-              className="relative overflow-hidden rounded-[28px] bg-[#17342c] p-8 text-white shadow-[0_22px_50px_rgba(18,31,25,0.18)]"
+              className="relative overflow-hidden rounded-[28px] bg-[#454C23] p-8 text-white shadow-[0_22px_50px_rgba(18,31,25,0.18)]"
             >
               <div className="absolute -right-10 -top-12 text-white/10">
                 <MonsteraLeaf className="h-44 w-44" />
@@ -277,7 +277,7 @@ export function ServicePage({ content }: ServicePageProps) {
               </p>
               <Link
                 href="/consultation"
-                className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-medium text-[#17342c] transition-transform hover:-translate-y-0.5"
+                className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-medium text-[#454C23] transition-transform hover:-translate-y-0.5"
               >
                 Start the conversation
                 <ArrowRight className="h-4 w-4" />
@@ -292,24 +292,24 @@ export function ServicePage({ content }: ServicePageProps) {
                   whileHover={{ y: -6, scale: 1.01 }}
                   transition={{ type: 'spring', stiffness: 250, damping: 22 }}
                   className={`relative overflow-hidden rounded-[24px] border p-6 ${
-                    index === 0 ? 'sm:col-span-2 border-[#17342c] bg-[#17342c] text-white' : index === 1 ? 'border-[#d7dfda] bg-[#fbfaf5]' : 'border-[#e0d2bb] bg-[#f7f1e6]'
+                    index === 0 ? 'sm:col-span-2 border-[#454C23] bg-[#454C23] text-white' : index === 1 ? 'border-[#d7dfda] bg-[#FFFFFF]' : 'border-[#E5ECFF] bg-[#FFFFFF]'
                   }`}
                   style={{
                     background:
                       index === 0
-                        ? 'linear-gradient(180deg, #17342c 0%, #1d3d34 100%)'
+                        ? 'linear-gradient(180deg, #454C23 0%, #1d3d34 100%)'
                         : index === 1
                           ? `linear-gradient(180deg, ${content.accent}18 0%, rgba(251,250,245,0.98) 58%, rgba(251,250,245,1) 100%)`
                           : `linear-gradient(180deg, ${content.accent}16 0%, rgba(247,241,230,0.98) 58%, rgba(247,241,230,1) 100%)`,
                   }}
                 >
-                  <div className={`flex h-10 w-10 items-center justify-center rounded-full ${index === 0 ? 'bg-white/12 text-white' : 'bg-[#e6efe8] text-[#17342c]'}`}>
+                  <div className={`flex h-10 w-10 items-center justify-center rounded-full ${index === 0 ? 'bg-white/12 text-white' : 'bg-[#e6efe8] text-[#454C23]'}`}>
                     <CheckIcon className="h-5 w-5" />
                   </div>
-                  <h3 className={`mt-5 font-serif text-[clamp(1.45rem,1.8vw,2rem)] leading-tight ${index === 0 ? 'text-white' : 'text-[#203329]'}`}>
+                  <h3 className={`mt-5 font-serif text-[clamp(1.45rem,1.8vw,2rem)] leading-tight ${index === 0 ? 'text-white' : 'text-[#454C23]'}`}>
                     {outcome.title}
                   </h3>
-                  <p className={`mt-3 text-sm leading-relaxed ${index === 0 ? 'text-white/76' : 'text-[#51665c]'}`}>{outcome.body}</p>
+                  <p className={`mt-3 text-sm leading-relaxed ${index === 0 ? 'text-white/76' : 'text-[#737F3C]'}`}>{outcome.body}</p>
                 </motion.article>
               ))}
             </motion.div>

@@ -13,7 +13,7 @@ const shopLinks = [
 ]
 
 const companyLinks = [
-  { label: 'About Mulin', href: '#about' },
+  { label: 'About Mulin Venture', href: '#about' },
   { label: 'Our Process', href: '#' },
   { label: 'FAQ', href: '#faq' },
   { label: 'Press & Media', href: '#' },
@@ -37,17 +37,17 @@ export function Footer() {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-12">
           <div className="flex items-center gap-3">
             <Image
-              src="/rlogo.png"
+              src="/favicon-mulin.png"
               alt="Mulin Venture logo"
               width={50}
               height={50}
               className="rounded-full object-contain"
             />
-            <span className="font-serif font-semibold text-2xl tracking-[0.15em] text-white">MULIN</span>
+            <span className="font-serif font-bold text-2xl tracking-[0.15em] text-white">Mulin Venture</span>
             <SproutIcon className="w-6 h-6 text-sage" />
           </div>
-          <p className="font-serif italic text-lg text-white/60">
-            Indoor Plant Atelier
+          <p className="font-serif text-lg tracking-[0.12em] uppercase text-white/60">
+            Nurture through Nature
           </p>
         </div>
 

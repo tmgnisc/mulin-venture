@@ -226,6 +226,14 @@ export function HeroSection() {
       {/* ── Layer 5: Center content ─────────────────────── */}
       <div className="relative z-10 mx-auto max-w-5xl px-[clamp(16px,5vw,80px)] pt-24 sm:pt-28 lg:pt-32 text-center">
 
+        {/* Tagline label */}
+        <span
+          ref={labelRef}
+          className="mb-4 inline-block font-sans text-[11px] uppercase tracking-[0.32em] text-gold opacity-0 sm:mb-6"
+        >
+          Nurture through Nature
+        </span>
+
         {/* Heading */}
         <h1 className="mb-6 flex flex-col items-center font-serif font-light leading-[1.08] text-white sm:mb-8 sm:leading-[1.04]">
           <span

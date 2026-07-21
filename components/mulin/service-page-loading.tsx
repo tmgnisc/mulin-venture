@@ -2,8 +2,8 @@ import { Skeleton } from '@/components/ui/skeleton'
 
 export function ServicePageLoading() {
   return (
-    <main className="bg-[#f4f1e8] text-[#1d2d25]">
-      <section className="relative overflow-hidden border-b border-[#d8ddd7] bg-[#17342c]">
+    <main className="bg-[#FFFFFF] text-[#454C23]">
+      <section className="relative overflow-hidden border-b border-[#d8ddd7] bg-[#454C23]">
         <div className="mx-auto grid max-w-[1320px] gap-10 px-[clamp(20px,5vw,80px)] pt-28 pb-16 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:pb-20">
           <div className="max-w-2xl">
             <Skeleton className="h-7 w-48 rounded-full bg-white/10" />
@@ -37,9 +37,9 @@ export function ServicePageLoading() {
           </div>
 
           <div className="grid gap-4 sm:grid-cols-3">
-            <Skeleton className="h-52 rounded-[24px] bg-[#f8f7f1]" />
-            <Skeleton className="h-52 rounded-[24px] bg-[#f8f7f1]" />
-            <Skeleton className="h-52 rounded-[24px] bg-[#f8f7f1]" />
+            <Skeleton className="h-52 rounded-[24px] bg-[#FFFFFF]" />
+            <Skeleton className="h-52 rounded-[24px] bg-[#FFFFFF]" />
+            <Skeleton className="h-52 rounded-[24px] bg-[#FFFFFF]" />
           </div>
         </div>
       </section>
@@ -63,7 +63,7 @@ export function ServicePageLoading() {
 
       <section className="mx-auto max-w-[1320px] px-[clamp(20px,5vw,80px)] py-[clamp(56px,7vw,96px)]">
         <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-          <div className="rounded-[28px] bg-[#17342c] p-8">
+          <div className="rounded-[28px] bg-[#454C23] p-8">
             <Skeleton className="h-4 w-32 rounded bg-white/10" />
             <Skeleton className="mt-3 h-12 w-full max-w-lg rounded-xl bg-white/15" />
             <Skeleton className="mt-4 h-5 w-full max-w-xl rounded bg-white/10" />
@@ -71,9 +71,9 @@ export function ServicePageLoading() {
             <Skeleton className="mt-8 h-11 w-52 rounded-full bg-white/15" />
           </div>
           <div className="grid gap-4 sm:grid-cols-3">
-            <Skeleton className="h-52 rounded-[24px] bg-[#f8f7f1]" />
-            <Skeleton className="h-52 rounded-[24px] bg-[#f8f7f1]" />
-            <Skeleton className="h-52 rounded-[24px] bg-[#f8f7f1]" />
+            <Skeleton className="h-52 rounded-[24px] bg-[#FFFFFF]" />
+            <Skeleton className="h-52 rounded-[24px] bg-[#FFFFFF]" />
+            <Skeleton className="h-52 rounded-[24px] bg-[#FFFFFF]" />
           </div>
         </div>
       </section>

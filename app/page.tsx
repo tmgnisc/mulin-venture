@@ -19,9 +19,9 @@ import { AOSInit } from '@/components/mulin/aos-init'
 import { JsonLd, faqSchema, testimonialsSchema } from '@/components/seo/structured-data'
 
 export const metadata: Metadata = {
-  title: { absolute: 'Mulin Venture | Indoor Plant Atelier in Nepal' },
+  title: { absolute: 'Mulin Venture | Nurture through Nature' },
   description:
-    'Bespoke indoor plants, kokedama & green walls in Nepal — crafted for homes & offices. Contact us today for a free consultation!',
+    'Mulin Venture — biophilic design and sustainable built environments in Nepal, rooted in science, biodiversity, and community. Contact us today for a free consultation!',
   alternates: { canonical: '/' },
 }
 

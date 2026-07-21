@@ -31,11 +31,11 @@ export function ServicesHub() {
   return (
     <>
       <Navigation />
-      <main className="bg-[#f4f1e8] text-[#1d2d25]">
-        <section className="relative overflow-hidden border-b border-[#d8ddd7] bg-[#17342c]">
+      <main className="bg-[#FFFFFF] text-[#454C23]">
+        <section className="relative overflow-hidden border-b border-[#d8ddd7] bg-[#454C23]">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.11),transparent_34%),radial-gradient(circle_at_80%_78%,rgba(198,169,106,0.16),transparent_30%),linear-gradient(180deg,rgba(8,18,15,0.12),rgba(8,18,15,0.62))]" />
-          <div className="absolute -left-24 top-24 h-64 w-64 rounded-full bg-[#c6a96a]/10 blur-3xl" />
-          <div className="absolute right-[-6rem] bottom-[-4rem] h-72 w-72 rounded-full bg-[#86a89a]/10 blur-3xl" />
+          <div className="absolute -left-24 top-24 h-64 w-64 rounded-full bg-[#FFBE71]/10 blur-3xl" />
+          <div className="absolute right-[-6rem] bottom-[-4rem] h-72 w-72 rounded-full bg-[#8C9A4B]/10 blur-3xl" />
 
           <motion.div
             className="relative mx-auto grid max-w-[1320px] gap-10 px-[clamp(20px,5vw,80px)] pt-28 pb-16 lg:grid-cols-[1.02fr_0.98fr] lg:items-end lg:pb-20"
@@ -66,7 +66,7 @@ export function ServicesHub() {
               <motion.div variants={item} className="mt-8 flex flex-wrap gap-3">
                 <Link
                   href="/consultation"
-                  className="inline-flex items-center gap-2 rounded-full bg-[#c6a96a] px-6 py-3 text-sm font-medium text-[#10211b] transition-transform duration-200 hover:-translate-y-0.5"
+                  className="inline-flex items-center gap-2 rounded-full bg-[#FFBE71] px-6 py-3 text-sm font-medium text-[#2B2F16] transition-transform duration-200 hover:-translate-y-0.5"
                 >
                   Request Consultation
                   <ArrowRight className="h-4 w-4" />
@@ -120,24 +120,24 @@ export function ServicesHub() {
                 variants={item}
                 whileHover={{ y: -8, scale: 1.01 }}
                 transition={{ type: 'spring', stiffness: 260, damping: 22 }}
-                className="group relative overflow-hidden rounded-[28px] border border-[#d6ded9] bg-[#fbfaf5] p-6 shadow-[0_20px_45px_rgba(17,31,24,0.06)]"
+                className="group relative overflow-hidden rounded-[28px] border border-[#d6ded9] bg-[#FFFFFF] p-6 shadow-[0_20px_45px_rgba(17,31,24,0.06)]"
                 style={{
                   background: `linear-gradient(180deg, ${service.accent}18 0%, rgba(251,250,245,0.95) 54%, rgba(251,250,245,1) 100%)`,
                 }}
               >
-                <div className="absolute -right-10 -top-12 text-[#17342c] opacity-[0.05] pointer-events-none">
+                <div className="absolute -right-10 -top-12 text-[#454C23] opacity-[0.05] pointer-events-none">
                   <MonsteraLeaf className="h-44 w-44" />
                 </div>
                 <div className="relative flex h-full min-h-64 flex-col justify-between">
                   <div className="flex items-start justify-between gap-4">
                     <div>
                       <p className="text-[10px] uppercase tracking-[0.22em] text-[#73837b]">{service.eyebrow}</p>
-                      <p className="mt-3 inline-flex rounded-full border border-[#17342c]/10 bg-white/70 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-[#55665d]">
+                      <p className="mt-3 inline-flex rounded-full border border-[#454C23]/10 bg-white/70 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-[#55665d]">
                         {service.order}
                       </p>
                     </div>
                     <span
-                      className="grid h-10 w-10 place-items-center rounded-full border border-[#17342c]/10 bg-white/75 text-[#17342c] transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                      className="grid h-10 w-10 place-items-center rounded-full border border-[#454C23]/10 bg-white/75 text-[#454C23] transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
                     >
                       <ArrowRight className="h-4 w-4" />
                     </span>
@@ -147,14 +147,14 @@ export function ServicesHub() {
                     <h2 className="font-serif text-[clamp(1.55rem,2vw,2.2rem)] leading-[1.02] text-[#1f2d27]">
                       {service.title}
                     </h2>
-                    <p className="mt-4 text-sm leading-relaxed text-[#51665c]">
+                    <p className="mt-4 text-sm leading-relaxed text-[#737F3C]">
                       {service.summary}
                     </p>
                   </div>
 
                   <Link
                     href={service.href}
-                    className="mt-6 inline-flex items-center gap-2 self-start rounded-full bg-[#17342c] px-4 py-2.5 text-xs font-medium tracking-[0.06em] text-white transition-transform duration-200 hover:-translate-y-0.5"
+                    className="mt-6 inline-flex items-center gap-2 self-start rounded-full bg-[#454C23] px-4 py-2.5 text-xs font-medium tracking-[0.06em] text-white transition-transform duration-200 hover:-translate-y-0.5"
                   >
                     Explore page
                     <ArrowRight className="h-3.5 w-3.5" />

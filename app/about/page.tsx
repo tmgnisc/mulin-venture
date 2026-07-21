@@ -73,8 +73,8 @@ export default function AboutPage() {
   return (
     <>
       <Navigation />
-      <main className="bg-[#edf2ed] text-[#1d2d25]">
-        <section className="relative overflow-hidden border-b border-[#cfd9d2] bg-[#123327]">
+      <main className="bg-[#edf2ed] text-[#454C23]">
+        <section className="relative overflow-hidden border-b border-[#cfd9d2] bg-[#454C23]">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_15%,rgba(255,255,255,0.09),transparent_40%),radial-gradient(circle_at_78%_80%,rgba(255,255,255,0.08),transparent_36%)]" />
           <motion.div
             className="relative mx-auto grid max-w-6xl gap-12 px-6 pt-28 pb-20 md:px-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center"
@@ -124,8 +124,8 @@ export default function AboutPage() {
         >
           <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
             <motion.div variants={rise}>
-              <p className="text-xs tracking-[0.16em] text-[#5f7568]">OUR MISSION / VISION</p>
-              <h2 className="mt-3 max-w-xl font-serif text-4xl leading-tight text-[#203328] md:text-5xl">
+              <p className="text-xs tracking-[0.16em] text-[#737F3C]">OUR MISSION / VISION</p>
+              <h2 className="mt-3 max-w-xl font-serif text-4xl leading-tight text-[#454C23] md:text-5xl">
                 Restore rivers, reduce waste, and empower communities through practical action.
               </h2>
               <p className="mt-5 max-w-xl leading-relaxed text-[#3d5145]">
@@ -133,15 +133,15 @@ export default function AboutPage() {
               </p>
 
               <div className="mt-8 border-l border-[#d1ddd3] pl-5">
-                <p className="text-xs uppercase tracking-[0.16em] text-[#5f7568]">Our Mission</p>
-                <p className="mt-2 text-base leading-relaxed text-[#2f4137]">
+                <p className="text-xs uppercase tracking-[0.16em] text-[#737F3C]">Our Mission</p>
+                <p className="mt-2 text-base leading-relaxed text-[#454C23]">
                   To restore Nepal&apos;s rivers, reduce waste going into landfills, and empower students and local communities to become stewards of change.
                 </p>
               </div>
 
               <div className="mt-6 border-l border-[#d1ddd3] pl-5">
-                <p className="text-xs uppercase tracking-[0.16em] text-[#5f7568]">Our Vision</p>
-                <p className="mt-2 text-base leading-relaxed text-[#2f4137]">
+                <p className="text-xs uppercase tracking-[0.16em] text-[#737F3C]">Our Vision</p>
+                <p className="mt-2 text-base leading-relaxed text-[#454C23]">
                   A future where rivers flow clean and clear, students lead environmental innovation, and communities embrace sustainable waste systems.
                 </p>
               </div>
@@ -175,7 +175,7 @@ export default function AboutPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/5 to-transparent" />
                 </div>
                 <div className="rounded-[24px] border border-[#d8e2d7] bg-[#f7faf6] p-6">
-                  <p className="text-xs uppercase tracking-[0.16em] text-[#5f7568]">What we believe</p>
+                  <p className="text-xs uppercase tracking-[0.16em] text-[#737F3C]">What we believe</p>
                   <p className="mt-3 text-sm leading-relaxed text-[#355043]">
                     Change happens when education, systems, and community ownership move together.
                   </p>
@@ -195,7 +195,7 @@ export default function AboutPage() {
           <motion.p variants={rise} className="inline-flex rounded-full bg-[#d7e4da] px-4 py-1 text-xs tracking-[0.16em] text-[#4f6a5b]">
             ONE PLANET, ONE MISSION
           </motion.p>
-          <motion.h2 variants={rise} className="mt-4 max-w-3xl font-serif text-4xl leading-tight text-[#203328] md:text-5xl">
+          <motion.h2 variants={rise} className="mt-4 max-w-3xl font-serif text-4xl leading-tight text-[#454C23] md:text-5xl">
             We confront pollution and environmental degradation with practical, community-led action.
           </motion.h2>
 
@@ -207,7 +207,7 @@ export default function AboutPage() {
                 whileHover={{ y: -4 }}
                 className="rounded-xl border border-[#c7d5cb] bg-[#f7faf6] p-6"
               >
-                <h3 className="font-sans text-xl font-semibold text-[#1f3128]">{item.title}</h3>
+                <h3 className="font-sans text-xl font-semibold text-[#454C23]">{item.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-[#435a4d]">{item.text}</p>
               </motion.article>
             ))}
@@ -222,15 +222,15 @@ export default function AboutPage() {
           variants={container}
         >
           <motion.div variants={rise} className="rounded-[22px] border border-[#cfd9d2] bg-[#f8fbf7] px-7 py-8 md:px-8 md:py-10">
-            <p className="text-xs tracking-[0.16em] text-[#5f7568]">OUR TEAM</p>
-            <h2 className="mt-3 font-serif text-4xl text-[#203328] md:text-5xl">Meet Our Team</h2>
+            <p className="text-xs tracking-[0.16em] text-[#737F3C]">OUR TEAM</p>
+            <h2 className="mt-3 font-serif text-4xl text-[#454C23] md:text-5xl">Meet Our Team</h2>
             <p className="mt-4 max-w-3xl leading-relaxed text-[#3d5145]">
               A small but committed network of environmental advocates, educators, and community partners working toward cleaner rivers, better systems, and stronger public awareness.
             </p>
             <div className="mt-8 grid gap-4 md:grid-cols-3">
               {team.map((item) => (
                 <div key={item.title} className="rounded-2xl border border-[#d7e0d5] bg-white p-6">
-                  <h3 className="font-sans text-lg font-semibold text-[#1f3128]">{item.title}</h3>
+                  <h3 className="font-sans text-lg font-semibold text-[#454C23]">{item.title}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-[#435a4d]">{item.text}</p>
                 </div>
               ))}
@@ -245,10 +245,10 @@ export default function AboutPage() {
           viewport={{ once: true, amount: 0.3 }}
           variants={container}
         >
-          <motion.div variants={rise} className="rounded-3xl bg-[#8a6a47] px-7 py-10 text-white md:px-10">
-            <p className="text-xs tracking-[0.16em] text-[#f4e8d9]">OUR STORY</p>
+          <motion.div variants={rise} className="rounded-3xl bg-[#9A5B3F] px-7 py-10 text-white md:px-10">
+            <p className="text-xs tracking-[0.16em] text-[#FFFFFF]">OUR STORY</p>
             <h2 className="mt-3 font-serif text-4xl md:text-5xl">The Heart of Our Mission</h2>
-            <p className="mt-4 max-w-3xl leading-relaxed text-[#f9f1e8]">
+            <p className="mt-4 max-w-3xl leading-relaxed text-[#FFFFFF]">
               Our journey began with school-based recycling efforts and grew into a broader mission to rehabilitate rivers, reduce waste, and expand environmental education.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
@@ -270,8 +270,8 @@ export default function AboutPage() {
           variants={container}
         >
           <motion.div variants={rise}>
-            <p className="text-xs tracking-[0.16em] text-[#5f7568]">BLOGS</p>
-            <h2 className="mt-3 font-serif text-4xl text-[#203328] md:text-5xl">Our Latest Writing</h2>
+            <p className="text-xs tracking-[0.16em] text-[#737F3C]">BLOGS</p>
+            <h2 className="mt-3 font-serif text-4xl text-[#454C23] md:text-5xl">Our Latest Writing</h2>
             <p className="mt-4 max-w-3xl leading-relaxed text-[#3d5145]">
               Looking for more insight? Explore our recent articles to learn more about the projects, environmental tips, and research shaping our work.
             </p>
@@ -284,13 +284,13 @@ export default function AboutPage() {
                 whileHover={{ y: -4 }}
                 className="rounded-2xl border border-[#c7d5cb] bg-[#f8fbf7] p-6"
               >
-                <h3 className="font-sans text-lg font-semibold text-[#1f3128]">{item.title}</h3>
+                <h3 className="font-sans text-lg font-semibold text-[#454C23]">{item.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-[#435a4d]">{item.text}</p>
               </motion.article>
             ))}
           </div>
           <div className="mt-6">
-            <Button asChild className="rounded-full bg-[#1a5845] px-6 text-white hover:bg-[#144535]">
+            <Button asChild className="rounded-full bg-[#454C23] px-6 text-white hover:bg-[#454C23]">
               <Link href="/research">See Research</Link>
             </Button>
           </div>
@@ -303,14 +303,14 @@ export default function AboutPage() {
           viewport={{ once: true, amount: 0.2 }}
           variants={container}
         >
-          <motion.div variants={rise} className="rounded-[22px] bg-[#17392d] px-7 py-9 text-white md:px-10">
+          <motion.div variants={rise} className="rounded-[22px] bg-[#454C23] px-7 py-9 text-white md:px-10">
             <p className="text-xs tracking-[0.16em] text-[#c7ddd0]">OUR SCIENCE & RESEARCH</p>
             <h2 className="mt-3 font-serif text-4xl md:text-5xl">Evidence guides every project we build.</h2>
             <p className="mt-4 max-w-3xl leading-relaxed text-white/80">
               We translate field observations, environmental research, and community feedback into practical action plans for river restoration, waste diversion, and education.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
-              <Button asChild className="rounded-full bg-white px-6 text-[#1f3128] hover:bg-[#eef5ef]">
+              <Button asChild className="rounded-full bg-white px-6 text-[#454C23] hover:bg-[#eef5ef]">
                 <Link href="/research">Open Research</Link>
               </Button>
               <Button asChild variant="outline" className="rounded-full border-white/65 bg-transparent text-white hover:bg-white/10">
@@ -328,20 +328,20 @@ export default function AboutPage() {
           variants={container}
         >
           <motion.div variants={rise} className="rounded-[22px] border border-[#cfd9d2] bg-[#f8fbf7] px-7 py-9 md:px-10">
-            <p className="text-xs tracking-[0.16em] text-[#5f7568]">CONTACT INFORMATION</p>
-            <h2 className="mt-3 font-serif text-4xl text-[#203328] md:text-5xl">Feel free to contact and reach us.</h2>
+            <p className="text-xs tracking-[0.16em] text-[#737F3C]">CONTACT INFORMATION</p>
+            <h2 className="mt-3 font-serif text-4xl text-[#454C23] md:text-5xl">Feel free to contact and reach us.</h2>
             <div className="mt-8 grid gap-4 md:grid-cols-3">
               <div className="rounded-2xl border border-[#d7e0d5] bg-white p-6">
-                <p className="text-xs uppercase tracking-[0.16em] text-[#5f7568]">Phone</p>
-                <a href="tel:+9779847519689" className="mt-3 block text-sm text-[#31443a] hover:underline">+977 984-7519689</a>
+                <p className="text-xs uppercase tracking-[0.16em] text-[#737F3C]">Phone</p>
+                <a href="tel:+9779847519689" className="mt-3 block text-sm text-[#454C23] hover:underline">+977 984-7519689</a>
               </div>
               <div className="rounded-2xl border border-[#d7e0d5] bg-white p-6">
-                <p className="text-xs uppercase tracking-[0.16em] text-[#5f7568]">Email</p>
-                <a href="mailto:info@mulinventure.com" className="mt-3 block text-sm text-[#31443a] hover:underline">info@mulinventure.com</a>
+                <p className="text-xs uppercase tracking-[0.16em] text-[#737F3C]">Email</p>
+                <a href="mailto:info@mulinventure.com" className="mt-3 block text-sm text-[#454C23] hover:underline">info@mulinventure.com</a>
               </div>
               <div className="rounded-2xl border border-[#d7e0d5] bg-white p-6">
-                <p className="text-xs uppercase tracking-[0.16em] text-[#5f7568]">Location</p>
-                <p className="mt-3 text-sm text-[#31443a]">Kathmandu, Nepal</p>
+                <p className="text-xs uppercase tracking-[0.16em] text-[#737F3C]">Location</p>
+                <p className="mt-3 text-sm text-[#454C23]">Kathmandu, Nepal</p>
               </div>
             </div>
           </motion.div>

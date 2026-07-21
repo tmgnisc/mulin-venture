@@ -28,7 +28,7 @@ export function EditorialBanner() {
         ref={bgRef}
         className="absolute inset-0 -top-[100px] -bottom-[100px]"
         style={{
-          background: 'linear-gradient(135deg, #2C3B28 0%, #1A2416 50%, #0D160B 100%)',
+          background: 'linear-gradient(135deg, #454C23 0%, #1A2416 50%, #0D160B 100%)',
         }}
       />
 

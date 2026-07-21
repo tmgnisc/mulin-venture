@@ -193,7 +193,7 @@ export function BentoServices() {
           {/* 07 — Biophilic Art */}
           <div
             className="md:col-span-4 group relative overflow-hidden rounded-[28px] min-h-85"
-            style={{ backgroundColor: '#4A6741' }}
+            style={{ backgroundColor: '#454C23' }}
             data-aos="fade-up"
             data-aos-delay="160"
           >
@@ -222,7 +222,7 @@ export function BentoServices() {
           {/* 08 — Event Rentals (Full Width Banner) */}
           <div
             className="md:col-span-12 group relative overflow-hidden rounded-[28px] min-h-40"
-            style={{ backgroundColor: '#E8D5B0' }}
+            style={{ backgroundColor: '#FFE871' }}
             data-aos="fade-up"
             data-aos-delay="0"
           >

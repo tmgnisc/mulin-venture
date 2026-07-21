@@ -6,9 +6,10 @@ export const organizationSchema = {
   '@id': `${SITE_URL}/#organization`,
   name: 'Mulin Venture',
   url: SITE_URL,
-  logo: `${SITE_URL}/rlogo.png`,
+  logo: `${SITE_URL}/logo-mulin.png`,
+  slogan: 'Nurture through Nature',
   description:
-    'Botanical atelier in Kathmandu, Nepal — bespoke indoor plants, kokedama, biophilic design, green walls, and plant care services for homes and businesses.',
+    'Mulin Venture — Nurture through Nature. Biophilic design, sustainable built environments, and biodiversity-first consulting in Kathmandu, Nepal — indoor plants, kokedama, green walls, and plant care for homes and businesses.',
   email: 'info@mulinventure.com',
   telephone: '+977-9847519689',
   address: {
@@ -98,7 +99,7 @@ export const testimonialsSchema = {
     {
       '@type': 'Review',
       reviewBody:
-        "Mulin's team helped me design a green wall for my entire office. The transformation was incredible.",
+        "Mulin Venture's team helped me design a green wall for my entire office. The transformation was incredible.",
       author: { '@type': 'Person', name: 'James T.' },
       reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
     },
