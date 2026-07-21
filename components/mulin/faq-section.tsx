@@ -6,32 +6,32 @@ const faqs = [
   {
     question: 'What services does Mulin Venture offer?',
     answer:
-      'We offer full-scale botanical design services including landscape architecture, installation, biophilic design, green walls, botanical branding, maintenance programs, biophilic art, and event rentals — botanical beauty for every space.',
+      'We provide biophilic design, landscape and rooftop greening, green building rating support, plant art workshops, and ongoing garden maintenance.',
   },
   {
-    question: 'Do you provide ongoing plant maintenance?',
+    question: 'Do you provide ongoing maintenance after installation?',
     answer:
-      'Yes. Our maintenance programs are ongoing care subscriptions designed to keep your plants thriving year-round, backed by over 12 years of expertise.',
+      'Yes. We provide ongoing maintenance for living walls, rooftop gardens, and planted interiors to keep systems healthy over time.',
   },
   {
-    question: 'What is a kokedama and how do I care for it?',
+    question: 'What products do you offer?',
     answer:
-      'Kokedama is a handcrafted Japanese moss-ball planting that frees greenery from the pot. Care is simple — a weekly soak and indirect light. Each kokedama comes with a manual book and a reusable holder.',
+      'Our product range includes plant art products, moss and living walls, and a biodiversity toolkit for homes, schools, and organizations.',
   },
   {
-    question: 'Can I rent plants for a wedding or event?',
+    question: 'Do you run workshops for schools and organizations?',
     answer:
-      'Absolutely. We offer short-term plant rentals for weddings, product launches, and special occasions — delivered, styled, and collected by our team so your event leaves a lasting impression.',
+      'Yes. Our plant art workshops are available for schools, organizations, and public events, with biophilic design and biodiversity learning built in.',
   },
   {
-    question: 'When is the Kokedama Workshop held?',
+    question: 'How do you measure environmental impact?',
     answer:
-      'Our Kokedama Workshop runs every Saturday. You’ll craft your own moss-ball planting with guidance from our team, enjoy snacks, and join in games and fun activities. Seats are limited — contact us to reserve your spot.',
+      'We use our Green Building Rating System to assess carbon footprint, biodiversity impact, and nature-based solution potential, then provide practical improvement guidance.',
   },
   {
     question: 'How do I get started on a project?',
     answer:
-      'Simply request a consultation. We’ll discuss your space, your vision, and your budget, then craft a botanical design proposal tailored to you — from a single arrangement to a large-scale installation.',
+      'Book a biophilic consultation and we will map your goals, site context, and budget into a phased plan for products, services, and long-term care.',
   },
 ]
 

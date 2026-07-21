@@ -22,14 +22,14 @@ export function BentoServices() {
             </h2>
           </div>
           <p className="font-sans font-light text-ink-soft max-w-xs leading-relaxed text-sm md:text-right">
-            From custom plant arrangements to large-scale installations — botanical beauty for every space.
+            End-to-end biophilic services for healthier interiors, stronger biodiversity, and measurable climate impact.
           </p>
         </div>
 
         {/* Bento Grid */}
         <div className="grid grid-cols-1 gap-3 md:grid-cols-12 md:gap-3">
 
-          {/* 01 — Landscape Architecture (Hero, 2 rows) */}
+          {/* 01 — Biophilic Design (Hero, 2 rows) */}
           <div
             className="md:col-span-7 md:row-span-2 group relative overflow-hidden rounded-[28px] min-h-115 md:min-h-0"
             data-aos="fade-up"
@@ -50,10 +50,10 @@ export function BentoServices() {
                 className="font-serif text-white leading-[1.08] mb-3"
                 style={{ fontSize: 'clamp(1.9rem, 3vw, 2.9rem)' }}
               >
-                Landscape<br />Architecture
+                Biophilic<br />Design
               </h3>
               <p className="font-sans text-white/60 text-sm leading-relaxed max-w-75 mb-7">
-                Full-scale botanical design for residential and commercial spaces. We bring nature indoors with intentional, lasting design.
+                End-to-end design that places nature at the center of material, planting, light, texture, and airflow decisions.
               </p>
               <a
                 href="#"
@@ -65,7 +65,7 @@ export function BentoServices() {
             </div>
           </div>
 
-          {/* 02 — Installation */}
+          {/* 02 — Landscape and Rooftop Greening */}
           <div
             className="md:col-span-5 group relative overflow-hidden rounded-[28px] min-h-65"
             data-aos="fade-up"
@@ -80,15 +80,15 @@ export function BentoServices() {
             <div className="absolute inset-0 flex flex-col justify-between p-7">
               <span className="text-[10px] uppercase tracking-[0.32em] text-white/35 font-sans self-end">02</span>
               <div>
-                <h3 className="font-serif text-white text-2xl leading-tight mb-2">Installation</h3>
+                <h3 className="font-serif text-white text-2xl leading-tight mb-2">Landscape &amp; Rooftop Greening</h3>
                 <p className="font-sans text-white/60 text-xs leading-relaxed max-w-65">
-                  White-glove delivery and professional installation of all plant arrangements.
+                  Transform rooftops and exterior spaces into productive green environments that support local ecology.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* 03 — Biophilic Design */}
+          {/* 03 — Green Building Rating System */}
           <div
             className="md:col-span-3 group relative overflow-hidden rounded-[28px] min-h-65 border border-sage/20"
             style={{ background: 'linear-gradient(135deg, #f0f4f0 0%, #e8f0e8 100%)' }}
@@ -107,15 +107,15 @@ export function BentoServices() {
               </div>
               <div>
                 <div className="h-px w-8 bg-sage/35 mb-4" />
-                <h3 className="font-serif text-ink text-2xl leading-tight mb-2">Biophilic<br />Design</h3>
+                <h3 className="font-serif text-ink text-2xl leading-tight mb-2">Green Building<br />Rating System</h3>
                 <p className="font-sans text-ink-soft text-[11px] leading-relaxed">
-                  Science-backed spatial design that integrates nature into your built environment for wellness.
+                  Assess carbon footprint, biodiversity impact, and nature-based solution potential with structured guidance.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* 04 — Botanical Branding */}
+          {/* 04 — Plant Art Workshops */}
           <div
             className="md:col-span-2 group relative overflow-hidden rounded-[28px] bg-moss min-h-65"
             data-aos="fade-up"
@@ -128,15 +128,15 @@ export function BentoServices() {
               <span className="text-[10px] uppercase tracking-[0.32em] text-white/25 font-sans">04</span>
               <div>
                 <div className="h-px w-6 bg-gold/45 mb-4" />
-                <h3 className="font-serif text-gold text-xl leading-tight mb-2">Botanical<br />Branding</h3>
+                <h3 className="font-serif text-gold text-xl leading-tight mb-2">Plant Art<br />Workshops</h3>
                 <p className="font-sans text-white/45 text-[11px] leading-relaxed">
-                  Custom installations that reflect your brand identity.
+                  Hands-on learning experiences for schools, organizations, and communities.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* 05 — Green Walls */}
+          {/* 05 — Garden Maintenance */}
           <div
             className="md:col-span-4 group relative overflow-hidden rounded-[28px] min-h-85"
             data-aos="fade-up"
@@ -151,15 +151,15 @@ export function BentoServices() {
             <div className="absolute inset-0 flex flex-col justify-between p-7">
               <span className="text-[10px] uppercase tracking-[0.32em] text-white/35 font-sans">05</span>
               <div>
-                <h3 className="font-serif text-white text-2xl leading-tight mb-2">Green Walls</h3>
+                <h3 className="font-serif text-white text-2xl leading-tight mb-2">Garden Maintenance</h3>
                 <p className="font-sans text-white/60 text-xs leading-relaxed">
-                  Vertical gardens and living walls that transform any surface into a thriving ecosystem.
+                  Ongoing care for living walls, rooftop gardens, and planted interiors so every system stays healthy.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* 06 — Maintenance Programs */}
+          {/* 06 — Living Walls and Plant Systems */}
           <div
             className="md:col-span-4 group relative overflow-hidden rounded-[28px] bg-cream-dark border border-sage/15 min-h-85"
             data-aos="fade-up"
@@ -178,19 +178,19 @@ export function BentoServices() {
               </div>
               <div>
                 <div className="flex items-baseline gap-2 mb-4">
-                  <span className="font-serif text-ink leading-none" style={{ fontSize: '3.2rem' }}>12+</span>
-                  <span className="font-sans text-[11px] text-ink-soft">years of<br />expertise</span>
+                  <span className="font-serif text-ink leading-none" style={{ fontSize: '3.2rem' }}>24/7</span>
+                  <span className="font-sans text-[11px] text-ink-soft">care and<br />monitoring</span>
                 </div>
                 <div className="h-px w-full bg-sage/15 mb-5" />
-                <h3 className="font-serif text-ink text-xl leading-tight mb-2">Maintenance<br />Programs</h3>
+                <h3 className="font-serif text-ink text-xl leading-tight mb-2">Living Walls &amp;<br />Plant Systems</h3>
                 <p className="font-sans text-ink-soft text-[11px] leading-relaxed">
-                  Ongoing care subscriptions to keep your plants thriving year-round.
+                  Moss walls and fully living walls that improve ambience, acoustics, and indoor air quality.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* 07 — Biophilic Art */}
+          {/* 07 — Biodiversity Toolkit */}
           <div
             className="md:col-span-4 group relative overflow-hidden rounded-[28px] min-h-85"
             style={{ backgroundColor: '#454C23' }}
@@ -204,9 +204,9 @@ export function BentoServices() {
               <span className="text-[10px] uppercase tracking-[0.32em] text-white/25 font-sans">07</span>
               <div>
                 <div className="h-px w-8 bg-gold/45 mb-4" />
-                <h3 className="font-serif text-white text-2xl leading-tight mb-2">Biophilic Art</h3>
+                <h3 className="font-serif text-white text-2xl leading-tight mb-2">Biodiversity Toolkit</h3>
                 <p className="font-sans text-white/60 text-xs leading-relaxed max-w-55">
-                  Preserved moss art, terrariums, and sculptural botanical installations.
+                  Practical resources to help people support native species in schools, homes, and organizations.
                 </p>
                 <a
                   href="#"
@@ -219,7 +219,7 @@ export function BentoServices() {
             </div>
           </div>
 
-          {/* 08 — Event Rentals (Full Width Banner) */}
+          {/* 08 — Community Collaboration (Full Width Banner) */}
           <div
             className="md:col-span-12 group relative overflow-hidden rounded-[28px] min-h-40"
             style={{ backgroundColor: '#FFE871' }}
@@ -241,10 +241,10 @@ export function BentoServices() {
                     className="font-serif text-ink leading-tight mb-1"
                     style={{ fontSize: 'clamp(1.6rem, 3vw, 2.4rem)' }}
                   >
-                    Event Rentals
+                    Community Collaboration
                   </h3>
                   <p className="font-sans text-ink-soft text-sm leading-relaxed max-w-md">
-                    Short-term plant rentals for weddings, launches, and special occasions that leave a lasting impression.
+                    Co-create projects rooted in local and indigenous ecological knowledge to restore connection with nature.
                   </p>
                 </div>
               </div>
@@ -252,7 +252,7 @@ export function BentoServices() {
                 href="#"
                 className="shrink-0 inline-flex items-center gap-2 border border-ink/20 rounded-full px-7 py-3 text-sm font-medium text-ink hover:bg-ink hover:text-cream transition-all duration-300 group/btn self-start md:self-auto"
               >
-                Book Now
+                Start a Project
                 <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
               </a>
             </div>

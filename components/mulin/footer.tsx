@@ -59,8 +59,8 @@ export function Footer() {
           {/* Brand Column */}
           <div>
             <p className="font-sans font-light text-sm leading-relaxed mb-6">
-              Crafting bespoke indoor plant arrangements with hand-made vessels.
-              Every piece is designed with intention and delivered with care.
+              Environmentally responsible design, living plant systems, and community-centered
+              learning that help cities reconnect with nature.
             </p>
             <div className="flex gap-4">
               <a
@@ -73,7 +73,7 @@ export function Footer() {
                 <InstagramIcon className="w-5 h-5" />
               </a>
               <a
-                href="https://www.facebook.com/profile.php?id=61591035293534"
+                href="https://www.facebook.com/share/1aHW7G3oTv/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white/50 hover:text-gold transition-colors"

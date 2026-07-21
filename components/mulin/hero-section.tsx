@@ -11,10 +11,10 @@ const HERO_IMG = '/leaf.jpg'
 const HERO_VIDEO = '/videos/video.mp4'
 
 const stats = [
-  { value: 'Youth', label: 'Empowerment' },
-  { value: 'Climate', label: 'Education' },
-  { value: 'Action', label: 'Not Paralysis' },
-  { value: 'Global', label: 'Mission' },
+  { value: 'Biophilic', label: 'Design' },
+  { value: 'Urban', label: 'Biodiversity' },
+  { value: 'Carbon', label: 'Capture' },
+  { value: 'Community', label: 'Learning' },
 ]
 
 export function HeroSection() {
@@ -241,14 +241,15 @@ export function HeroSection() {
             className="block opacity-0"
             style={{ fontSize: 'clamp(1.9rem, 9.2vw, 7rem)' }}
           >
-            Sustainable Engineering.
+            Sustainable Cities.
           </span>
           <span
             ref={heading2Ref}
             className="block italic text-gold opacity-0"
             style={{ fontSize: 'clamp(1.9rem, 9.2vw, 7rem)' }}
           >
-            Biophilic Design.          </span>
+            Nature in Every Space.
+          </span>
         </h1>
 
         {/* Subheading */}
@@ -257,7 +258,9 @@ export function HeroSection() {
           className="mx-auto mb-8 max-w-[92%] font-sans font-light leading-relaxed text-white/70 opacity-0 sm:mb-10 sm:max-w-xl"
           style={{ fontSize: 'clamp(0.92rem, 3.4vw, 1.05rem)' }}
         >
-          We are a consulting non-profit. We optimize spaces using LEED & WELL principles, and channel our profits into environmental education for schools.</p>
+          We create environmentally responsible and socially conscious green spaces that
+          weave nature into urban life, improve wellbeing, and build carbon-absorbing havens.
+        </p>
 
         {/* CTAs */}
         <div

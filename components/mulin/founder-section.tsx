@@ -40,23 +40,27 @@ export function FounderSection() {
           <div>
             <blockquote className="border-l-4 border-sage pl-6 mb-8">
               <p className="font-serif italic text-sage text-xl md:text-2xl leading-relaxed">
-                &ldquo;Educate, connect, and empower — that is the heart of everything we do.&rdquo;
+                &ldquo;Sustainable cities begin when we design every space as part of nature, not apart from it.&rdquo;
               </p>
             </blockquote>
             <p className="font-sans font-light text-ink-soft leading-relaxed mb-8">
-              Monica is also the Founder of <strong className="text-ink font-medium">Mulin Venture</strong>, an initiative that pioneers Green Urbanisation and sustainable, inclusive design — bridging environmental action with the built environment.
+              <strong className="text-ink font-medium">Monica Neupane</strong> founded Mulin Venture
+              to build environmentally responsible and socially conscious green spaces that nurture
+              wellbeing and biodiversity in urban life.
             </p>
 
 
 
             <p className="font-sans font-light text-ink-soft leading-relaxed mb-5">
-              Monica is the Executive Director of <strong className="text-ink font-medium">Nepal Climate Hub</strong> — a centralised platform for youth in Nepal. The Hub educates, connects, and empowers them. It links youth with climate champions, organisations, and resources, and provides practical guidance for climate action.
+              Her work bridges biophilic design, community learning, and indigenous ecological
+              knowledge, helping clients and communities create spaces that actively support
+              climate-positive outcomes.
             </p>
 
             <div className="flex flex-col gap-1">
               <span className="font-serif text-ink text-lg">Monica</span>
               <span className="font-sans text-[11px] uppercase tracking-[0.2em] text-sage">
-                Executive Director, Nepal Climate Hub · Founder, Mulin Venture
+                Founder, Mulin Venture
               </span>
             </div>
           </div>
