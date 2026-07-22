@@ -114,7 +114,7 @@ export default function ConsultationPage() {
 
       <main className="relative overflow-hidden bg-[linear-gradient(180deg,#1f3a34_0%,#2d4e45_16%,#d5e4d2_36%,#f7f3e8_100%)] pt-20">
         <div className="pointer-events-none absolute inset-0">
-          <div className="absolute -top-20 right-[10%] h-72 w-72 rounded-full bg-[#89b29f]/25 blur-3xl" />
+          <div className="absolute -top-20 right-[10%] h-72 w-72 rounded-full bg-[#8C9A4B]/25 blur-3xl" />
           <div className="absolute top-0 left-[-8%] h-64 w-64 rounded-full bg-[#bfd3c5]/20 blur-3xl" />
         </div>
 
@@ -144,7 +144,7 @@ export default function ConsultationPage() {
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, amount: 0.2 }}
-              className="mx-auto grid w-full max-w-4xl grid-cols-1 gap-5 rounded-3xl border border-[#dfd3bd] bg-[#f7f1e6]/90 p-6 shadow-[0_24px_60px_rgba(17,31,24,0.12)] backdrop-blur-md md:grid-cols-2 md:p-8"
+              className="mx-auto grid w-full max-w-4xl grid-cols-1 gap-5 rounded-3xl border border-[#E5ECFF] bg-[#FFFFFF]/90 p-6 shadow-[0_24px_60px_rgba(17,31,24,0.12)] backdrop-blur-md md:grid-cols-2 md:p-8"
             >
               <motion.label variants={item} className="text-sm text-ink/80">
                 Full Name <span className="text-red-700">*</span>
@@ -155,7 +155,7 @@ export default function ConsultationPage() {
                       event.target.value = filterFullName(event.target.value)
                     },
                   })}
-                  className="mt-2 w-full rounded-xl border border-ink/15 bg-[#fcf8f0] px-4 py-3 text-sm text-ink outline-none transition focus:border-sage focus:ring-2 focus:ring-sage/15"
+                  className="mt-2 w-full rounded-xl border border-ink/15 bg-[#FFFFFF] px-4 py-3 text-sm text-ink outline-none transition focus:border-sage focus:ring-2 focus:ring-sage/15"
                   placeholder="Your name"
                 />
                 {errors.fullName ? <p className="mt-1 text-xs text-red-700">{errors.fullName.message}</p> : null}
@@ -170,7 +170,7 @@ export default function ConsultationPage() {
                       event.target.value = filterBusinessName(event.target.value)
                     },
                   })}
-                  className="mt-2 w-full rounded-xl border border-ink/15 bg-[#fcf8f0] px-4 py-3 text-sm text-ink outline-none transition focus:border-sage focus:ring-2 focus:ring-sage/15"
+                  className="mt-2 w-full rounded-xl border border-ink/15 bg-[#FFFFFF] px-4 py-3 text-sm text-ink outline-none transition focus:border-sage focus:ring-2 focus:ring-sage/15"
                   placeholder="Your organization"
                 />
                 {errors.organizationName ? <p className="mt-1 text-xs text-red-700">{errors.organizationName.message}</p> : null}
@@ -185,7 +185,7 @@ export default function ConsultationPage() {
                       event.target.value = filterEmail(event.target.value)
                     },
                   })}
-                  className="mt-2 w-full rounded-xl border border-ink/15 bg-[#fcf8f0] px-4 py-3 text-sm text-ink outline-none transition focus:border-sage focus:ring-2 focus:ring-sage/15"
+                  className="mt-2 w-full rounded-xl border border-ink/15 bg-[#FFFFFF] px-4 py-3 text-sm text-ink outline-none transition focus:border-sage focus:ring-2 focus:ring-sage/15"
                   placeholder="you@example.com"
                 />
                 {errors.email ? <p className="mt-1 text-xs text-red-700">{errors.email.message}</p> : null}
@@ -200,7 +200,7 @@ export default function ConsultationPage() {
                       event.target.value = filterPhone(event.target.value)
                     },
                   })}
-                  className="mt-2 w-full rounded-xl border border-ink/15 bg-[#fcf8f0] px-4 py-3 text-sm text-ink outline-none transition focus:border-sage focus:ring-2 focus:ring-sage/15"
+                  className="mt-2 w-full rounded-xl border border-ink/15 bg-[#FFFFFF] px-4 py-3 text-sm text-ink outline-none transition focus:border-sage focus:ring-2 focus:ring-sage/15"
                   placeholder="+977..."
                 />
                 {errors.phone ? <p className="mt-1 text-xs text-red-700">{errors.phone.message}</p> : null}
@@ -210,7 +210,7 @@ export default function ConsultationPage() {
                 Service <span className="text-red-700">*</span>
                 <select
                   {...register('serviceType')}
-                  className="mt-2 w-full rounded-xl border border-ink/15 bg-[#fcf8f0] px-4 py-3 text-sm text-ink outline-none transition focus:border-sage focus:ring-2 focus:ring-sage/15"
+                  className="mt-2 w-full rounded-xl border border-ink/15 bg-[#FFFFFF] px-4 py-3 text-sm text-ink outline-none transition focus:border-sage focus:ring-2 focus:ring-sage/15"
                 >
                   <option value="leed-certification">LEED Certification</option>
                   <option value="well-certification">WELL Certification</option>
@@ -226,7 +226,7 @@ export default function ConsultationPage() {
                 <textarea
                   {...register('message')}
                   rows={5}
-                  className="mt-2 w-full rounded-xl border border-ink/15 bg-[#fcf8f0] px-4 py-3 text-sm text-ink outline-none transition focus:border-sage focus:ring-2 focus:ring-sage/15"
+                  className="mt-2 w-full rounded-xl border border-ink/15 bg-[#FFFFFF] px-4 py-3 text-sm text-ink outline-none transition focus:border-sage focus:ring-2 focus:ring-sage/15"
                   placeholder="Tell us about your space, timeline, and goals..."
                 />
                 {errors.message ? <p className="mt-1 text-xs text-red-700">{errors.message.message}</p> : null}

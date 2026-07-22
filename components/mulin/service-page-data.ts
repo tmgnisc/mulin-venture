@@ -1,3 +1,11 @@
+export type ApproachItem = {
+  title: string
+  body: string
+  image: string
+  alt: string
+  caption: string
+}
+
 export type ServicePageContent = {
   slug: string
   eyebrow: string
@@ -12,6 +20,11 @@ export type ServicePageContent = {
   overviewBody: string
   featuresTitle: string
   features: { title: string; body: string }[]
+  approach?: {
+    title: string
+    subtitle: string
+    items: ApproachItem[]
+  }
   processTitle: string
   process: { step: string; title: string; body: string }[]
   outcomesTitle: string
@@ -19,548 +32,253 @@ export type ServicePageContent = {
 }
 
 const servicePages: Record<string, ServicePageContent> = {
-  'leed-certification': {
-    slug: 'leed-certification',
-    eyebrow: 'Building Performance / LEED',
-    title: 'LEED Certification',
+  'biophilic-design': {
+    slug: 'biophilic-design',
+    eyebrow: 'Core Service / Nature-Led Spaces',
+    title: 'Biophilic Design',
     summary:
-      'A structured path for projects that need a clear certification roadmap, documentation discipline, and measurable environmental performance.',
+      'End-to-end design that places nature at the heart of every decision from material selection and plant placement to lighting, texture, and air flow.',
+    heroImage:
+      'https://images.unsplash.com/photo-1523419409543-5d3f8f9f5a4f?auto=format&fit=crop&w=1600&q=80',
+    heroAlt: 'Nature-integrated interior space with layered planting and natural materials',
+    heroNote:
+      'We design spaces that are measurably better for the people who use them.',
+    accent: '#737F3C',
+    stats: [
+      { value: '01', label: 'materials' },
+      { value: '02', label: 'planting' },
+      { value: '03', label: 'air + light' },
+    ],
+    overviewTitle: 'What we focus on',
+    overviewBody:
+      'Biophilic Design aligns spatial planning, materiality, planting, and sensory quality so built environments feel alive and support daily wellbeing.',
+    featuresTitle: 'Scope of support',
+    features: [
+      { title: 'Material and texture strategy', body: 'We select finishes and tactile layers that support a nature-connected atmosphere.' },
+      { title: 'Plant placement logic', body: 'Plant systems are positioned for both ecological value and spatial experience.' },
+      { title: 'Airflow and light integration', body: 'We tune air and lighting relationships to support comfort and performance.' },
+    ],
+    processTitle: 'How the work unfolds',
+    process: [
+      { step: '01', title: 'Discovery', body: 'We map goals, users, and environmental conditions.' },
+      { step: '02', title: 'Design development', body: 'Nature-led concepts are translated into actionable layouts and specifications.' },
+      { step: '03', title: 'Implementation support', body: 'We guide delivery and refinements to protect design intent.' },
+    ],
+    outcomesTitle: 'Expected outcomes',
+    outcomes: [
+      { title: 'Healthier daily experience', body: 'Users feel better supported by the physical environment.' },
+      { title: 'Stronger spatial identity', body: 'Spaces communicate a clear, nature-positive brand and atmosphere.' },
+      { title: 'Measurable quality gains', body: 'Environmental and experiential performance improves with intent.' },
+    ],
+  },
+  'landscape-rooftop-greening-design': {
+    slug: 'landscape-rooftop-greening-design',
+    eyebrow: 'Exterior Systems / Urban Ecology',
+    title: 'Landscape & Rooftop Greening Design',
+    summary:
+      'Transforming underused rooftops and exterior spaces into productive green environments.',
+    heroImage:
+      'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1600&q=80',
+    heroAlt: 'Rooftop and landscape greenery in an urban setting',
+    heroNote:
+      'Our landscape designs combine aesthetic vision with ecological function, supporting native species while creating spaces people love.',
+    accent: '#5F8F74',
+    stats: [
+      { value: '01', label: 'rooftop use' },
+      { value: '02', label: 'native species' },
+      { value: '03', label: 'ecological function' },
+    ],
+    overviewTitle: 'What we focus on',
+    overviewBody:
+      'We turn roofs and exterior zones into high-value green systems that support biodiversity, climate resilience, and better place quality.',
+    featuresTitle: 'Scope of support',
+    features: [
+      { title: 'Rooftop transformation planning', body: 'We convert underused roof areas into productive living environments.' },
+      { title: 'Ecological planting strategy', body: 'Plant palettes are selected for native support and long-term performance.' },
+      { title: 'Experience-driven landscape design', body: 'Spaces are built to be both ecologically useful and socially welcoming.' },
+    ],
+    approach: {
+      title: 'Our methodology',
+      subtitle: 'Every landscape begins with understanding the living systems of the site.',
+      items: [
+        {
+          title: 'We are rooted in science',
+          body: 'At Mulin, every project begins with a deep listening to the land. Before we design, we observe, analyze, and understand the living system of a site — its sun path, prevailing winds, microclimates, water flow, soil, and biodiversity. This diagram represents just one layer of that process — mapping the sun\'s journey and wind patterns — helping us to create spaces that are resilient, regenerative, and comfortable for both people and ecosystems.',
+          image: '/brand/sun-wind-diagram.png',
+          alt: 'Sun and wind-path diagram reading of a site',
+          caption: 'Sun and Wind-path diagram reading of a site',
+        },
+        {
+          title: 'We prioritise sustainability',
+          body: 'At Mulin, our landscapes are built to last — without compromising nature. We prioritize sustainable materials and systems that work with the environment to create beautiful, functional, and regenerative spaces. These heavy-duty turf pavers represent our commitment to permeable solutions that allow rainwater to return to the earth, reducing runoff and supporting healthy soils, durability and low maintenance, and green integration, blending hardscapes with living systems.',
+          image: '/brand/water-efficient-pavers.jpg',
+          alt: 'Layers of water efficient pavers',
+          caption: 'Layers of water efficient pavers',
+        },
+        {
+          title: 'Biodiversity oriented design',
+          body: 'At Mulin, we believe that every landscape should support life — for people, plants, animals, and the invisible networks that sustain them. Our biodiversity-oriented design approach weaves native plants, layered habitats, and ecological processes into every project, creating spaces that are alive, resilient, and ever-changing. Through thoughtful planting and design, we restore native ecosystems and attract pollinators, birds, and beneficial insects.',
+          image: '/brand/sparrow-birdbath.jpg',
+          alt: 'Sparrow on a bird bath',
+          caption: 'Sparrow on a bird bath',
+        },
+      ],
+    },
+    processTitle: 'How the work unfolds',
+    process: [
+      { step: '01', title: 'Site assessment', body: 'We review structural, climatic, and ecological opportunities.' },
+      { step: '02', title: 'Design integration', body: 'Landscape vision and ecological requirements are combined into one scheme.' },
+      { step: '03', title: 'Installation roadmap', body: 'Phased implementation is defined for practical delivery and care.' },
+    ],
+    outcomesTitle: 'Expected outcomes',
+    outcomes: [
+      { title: 'Higher biodiversity value', body: 'Urban spaces begin supporting species that were previously displaced.' },
+      { title: 'Better social use', body: 'People gain usable, restorative green areas in dense environments.' },
+      { title: 'Long-term ecological performance', body: 'Design decisions support sustained growth and resilience.' },
+    ],
+  },
+  'green-building-rating-system': {
+    slug: 'green-building-rating-system',
+    eyebrow: 'Assessment / Advisory',
+    title: 'Green Building Rating System',
+    summary:
+      'A structured assessment and advisory service that measures the environmental performance of interior and exterior spaces.',
     heroImage:
       'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80',
-    heroAlt: 'Modern sustainable building exterior',
-    heroNote: 'Credit strategy, submittal prep, and review-ready coordination for project teams.',
-    accent: '#c6a96a',
+    heroAlt: 'Modern sustainable building facade',
+    heroNote:
+      'We help clients understand their carbon footprint, biodiversity impact, and nature-based solution potential and how to improve each one.',
+    accent: '#FFBE71',
     stats: [
-      { value: '01', label: 'scorecard review' },
-      { value: '02', label: 'credit alignment' },
-      { value: '03', label: 'submission support' },
+      { value: '01', label: 'carbon footprint' },
+      { value: '02', label: 'biodiversity impact' },
+      { value: '03', label: 'improvement roadmap' },
     ],
     overviewTitle: 'What we focus on',
     overviewBody:
-      'We translate design intent into a certification plan that is practical for architects, consultants, and owners. The goal is a cleaner path from concept to closeout, with fewer surprises when documentation starts to move.',
+      'Our rating system makes environmental performance visible, comparable, and actionable so clients can make informed design and operations decisions.',
     featuresTitle: 'Scope of support',
     features: [
-      {
-        title: 'Credit Strategy',
-        body: 'Map prerequisites, optional credits, and documentation responsibilities early so the team can plan with confidence.',
-      },
-      {
-        title: 'Documentation Review',
-        body: 'Track narratives, product data, and compliance evidence so every package is ready for the next reviewer step.',
-      },
-      {
-        title: 'Project Coordination',
-        body: 'Align design, procurement, and execution teams around the same performance targets instead of isolated checklists.',
-      },
+      { title: 'Performance diagnostics', body: 'We assess existing conditions across carbon, biodiversity, and nature-based indicators.' },
+      { title: 'Scored evaluation framework', body: 'A consistent structure helps teams benchmark and track progress over time.' },
+      { title: 'Action-oriented recommendations', body: 'Clients receive clear steps to improve outcomes in each impact area.' },
     ],
+    approach: {
+      title: 'Our methodology',
+      subtitle: 'Sustainable building starts with understanding the full impact of every material and system.',
+      items: [
+        {
+          title: 'Lifecycle Assessment',
+          body: 'At Mulin, we believe that what we build today should not become tomorrow\'s burden. That\'s why we consider the entire lifecycle of materials and systems we introduce into a site — from extraction and manufacturing to use, maintenance, and eventual return to the earth. Our Lifecycle Assessment (LCA) approach helps us choose low-impact, durable materials that minimize carbon footprint and resource use.',
+          image: '/brand/lifecycle-assessment.jpg',
+          alt: 'Stages of sustainable lifecycle of materials',
+          caption: 'Stages of sustainable lifecycle of materials',
+        },
+        {
+          title: 'Use of local crafts',
+          body: 'At Mulin, we believe that the materials we choose are not just functional — they tell stories of place, people, and tradition. By working with locally crafted materials like hollow clay blocks, we support regional artisanship, reduce environmental impact, and create buildings that breathe with the climate. Our approach to local crafts allows us to use natural, breathable materials that regulate heat and moisture, reducing the need for artificial systems.',
+          image: '/brand/hollow-clay-block.png',
+          alt: 'Hollow clay block',
+          caption: 'Hollow clay block',
+        },
+        {
+          title: 'Reduce energy consumption',
+          body: 'At Mulin, we believe that energy efficiency starts with design, not just technology. By choosing materials that work with the climate — like Low-E (low-emissivity) coated windows — we reduce the need for artificial heating and cooling, creating spaces that are naturally comfortable and sustainable. Our approach focuses on passive design solutions that optimize light, air, and heat — reducing dependency on mechanical systems.',
+          image: '/brand/low-e-coating.png',
+          alt: 'Low E Coating and Photochromic Coating on Double Glazed Window',
+          caption: 'Low E Coating and Photochromic Coating on Double Glazed Window',
+        },
+      ],
+    },
     processTitle: 'How the work unfolds',
     process: [
-      {
-        step: '01',
-        title: 'Assessment',
-        body: 'We review the project brief, program goals, and current design documents to identify the certification path.',
-      },
-      {
-        step: '02',
-        title: 'Roadmap',
-        body: 'A practical action plan defines milestones, materials, and responsibilities for each credit category.',
-      },
-      {
-        step: '03',
-        title: 'Submission',
-        body: 'We coordinate review-ready packages and help the team resolve questions before they become delays.',
-      },
+      { step: '01', title: 'Data collection', body: 'We gather key environmental and spatial inputs from the project.' },
+      { step: '02', title: 'Assessment and scoring', body: 'Performance is evaluated against the rating framework.' },
+      { step: '03', title: 'Advisory handoff', body: 'We deliver a practical pathway for targeted improvements.' },
     ],
     outcomesTitle: 'Expected outcomes',
     outcomes: [
-      {
-        title: 'Clearer scope',
-        body: 'The team understands what is needed, when it is needed, and who owns each deliverable.',
-      },
-      {
-        title: 'Fewer revisions',
-        body: 'Documentation is prepared with review expectations in mind, which reduces late-stage cleanup.',
-      },
-      {
-        title: 'Stronger performance',
-        body: 'The certification process becomes a tool for design quality rather than a burden on the schedule.',
-      },
+      { title: 'Clear environmental visibility', body: 'Clients understand where performance is strong and where it must improve.' },
+      { title: 'Better decision quality', body: 'Investment and design choices are guided by measurable evidence.' },
+      { title: 'Accountable progress', body: 'Impact improvements can be tracked and communicated confidently.' },
     ],
   },
-  'well-certification': {
-    slug: 'well-certification',
-    eyebrow: 'Occupant Health / WELL',
-    title: 'WELL Certification',
+  'plant-art-workshops': {
+    slug: 'plant-art-workshops',
+    eyebrow: 'Community Learning / Hands-On',
+    title: 'Plant Art Workshops',
     summary:
-      'Design support for healthier interiors, occupant comfort, and performance criteria that put people at the center of the space.',
+      'Hands-on community workshops where participants create their own plant art pieces while learning about biophilic design, indigenous plant knowledge, and the benefits of living with nature.',
     heroImage:
-      'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=80',
-    heroAlt: 'Calm interior with natural light and planting',
-    heroNote: 'Indoor comfort, wellness features, and evidence-led design decisions.',
-    accent: '#86a89a',
+      'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1600&q=80',
+    heroAlt: 'Participants creating plant art in a workshop setting',
+    heroNote:
+      'Available for schools, organisations, and public events.',
+    accent: '#8C9A4B',
     stats: [
-      { value: '01', label: 'wellness map' },
-      { value: '02', label: 'comfort review' },
-      { value: '03', label: 'occupant focus' },
+      { value: '01', label: 'hands-on craft' },
+      { value: '02', label: 'biophilic learning' },
+      { value: '03', label: 'community format' },
     ],
     overviewTitle: 'What we focus on',
     overviewBody:
-      'This service centers indoor air, light, acoustics, thermal comfort, and the daily experience of occupants. We help teams create calm, healthy interiors that feel intentional rather than overdesigned.',
+      'These workshops build practical confidence through making, learning, and shared community participation around nature-connected living.',
     featuresTitle: 'Scope of support',
     features: [
-      {
-        title: 'Air and ventilation',
-        body: 'Review fresh-air strategy, filtration, and low-emission material decisions that support healthier interiors.',
-      },
-      {
-        title: 'Light and comfort',
-        body: 'Balance daylight, glare control, and layered artificial lighting to support the way people actually use a space.',
-      },
-      {
-        title: 'Acoustic quality',
-        body: 'Identify the sound-sensitive zones that need more control, privacy, or material treatment.',
-      },
+      { title: 'Guided plant art creation', body: 'Participants produce their own living plant art with step-by-step support.' },
+      { title: 'Biophilic education', body: 'Sessions explain why nature-integrated spaces support human wellbeing.' },
+      { title: 'Indigenous knowledge connection', body: 'Learning includes local ecological wisdom and culturally grounded practice.' },
     ],
     processTitle: 'How the work unfolds',
     process: [
-      {
-        step: '01',
-        title: 'Occupant profile',
-        body: 'We define who uses the building, how long they stay, and which comfort factors matter most.',
-      },
-      {
-        step: '02',
-        title: 'Design tuning',
-        body: 'Targets for air, light, and acoustic performance are translated into practical interventions.',
-      },
-      {
-        step: '03',
-        title: 'Verification',
-        body: 'We help the team document what was implemented and where further tuning may be needed.',
-      },
+      { step: '01', title: 'Program planning', body: 'We align workshop format to audience type and learning outcomes.' },
+      { step: '02', title: 'Facilitated session', body: 'Participants create, discuss, and practice nature-connected techniques.' },
+      { step: '03', title: 'Take-home continuity', body: 'Care guidance and resources support continued practice after the event.' },
     ],
     outcomesTitle: 'Expected outcomes',
     outcomes: [
-      {
-        title: 'Better daily comfort',
-        body: 'Spaces feel easier to occupy because wellness concerns are addressed early.',
-      },
-      {
-        title: 'Stronger user trust',
-        body: 'People notice when a space supports focus, rest, and movement without distraction.',
-      },
-      {
-        title: 'Measured improvements',
-        body: 'Health-related decisions are documented with enough clarity to support certification goals.',
-      },
+      { title: 'Practical skill growth', body: 'Participants leave with real making and care confidence.' },
+      { title: 'Stronger nature connection', body: 'People build personal relationships with living systems.' },
+      { title: 'Community-level engagement', body: 'Groups sustain shared action beyond one-time activities.' },
     ],
   },
-  'sustainable-building-design': {
-    slug: 'sustainable-building-design',
-    eyebrow: 'Concept / Sustainable Design',
-    title: 'Sustainable Building Design',
+  'garden-maintenance': {
+    slug: 'garden-maintenance',
+    eyebrow: 'Stewardship / Ongoing Care',
+    title: 'Garden Maintenance',
     summary:
-      'Integrated design guidance for projects that want energy, material, and spatial decisions to work together from the start.',
+      'Ongoing care and maintenance for living walls, rooftop gardens, and planted interiors.',
     heroImage:
-      'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1600&q=80',
-    heroAlt: 'Architectural model and design materials on a table',
-    heroNote: 'Early-stage planning, envelope thinking, and material strategy in one workflow.',
-    accent: '#6f8b66',
+      'https://images.unsplash.com/photo-1592150621744-aca64f48394a?auto=format&fit=crop&w=1600&q=80',
+    heroAlt: 'Gardener maintaining healthy planted systems',
+    heroNote:
+      'We ensure every green space we create continues to thrive, keeping ecosystems healthy and clients confident.',
+    accent: '#5F6F68',
     stats: [
-      { value: '01', label: 'concept framing' },
-      { value: '02', label: 'material logic' },
-      { value: '03', label: 'energy intent' },
+      { value: '01', label: 'health monitoring' },
+      { value: '02', label: 'preventive care' },
+      { value: '03', label: 'system longevity' },
     ],
     overviewTitle: 'What we focus on',
     overviewBody:
-      'We look at the building as a connected system. The result is a cleaner design narrative where envelope, daylight, ventilation, structure, and material selection support the same sustainability goals.',
+      'Maintenance is treated as ecological stewardship, protecting plant health, visual quality, and long-term performance across all installed systems.',
     featuresTitle: 'Scope of support',
     features: [
-      {
-        title: 'Integrated planning',
-        body: 'Bring sustainability into the first design conversations instead of treating it like a final checklist.',
-      },
-      {
-        title: 'Material direction',
-        body: 'Evaluate low-impact materials, sourcing, durability, and maintenance implications together.',
-      },
-      {
-        title: 'System alignment',
-        body: 'Coordinate massing, shading, and ventilation decisions with the project’s long-term performance goals.',
-      },
+      { title: 'Routine ecosystem care', body: 'Scheduled care protects plant vitality and system stability.' },
+      { title: 'Issue prevention and correction', body: 'Early diagnosis and targeted interventions reduce long-term risk.' },
+      { title: 'Client confidence support', body: 'Clear communication and reporting keep care outcomes transparent.' },
     ],
     processTitle: 'How the work unfolds',
     process: [
-      {
-        step: '01',
-        title: 'Brief review',
-        body: 'We map the project’s aspirations, constraints, and sustainability targets before design decisions harden.',
-      },
-      {
-        step: '02',
-        title: 'Concept options',
-        body: 'We compare strategies that shape energy use, comfort, and construction impact in parallel.',
-      },
-      {
-        step: '03',
-        title: 'Refinement',
-        body: 'The preferred direction is tuned so it stays practical for consultants and contractors.',
-      },
+      { step: '01', title: 'Baseline check', body: 'We assess current health status and care needs across the site.' },
+      { step: '02', title: 'Care execution', body: 'Maintenance tasks are delivered on a structured rhythm.' },
+      { step: '03', title: 'Performance follow-up', body: 'We track outcomes and adjust plans as conditions change.' },
     ],
     outcomesTitle: 'Expected outcomes',
     outcomes: [
-      {
-        title: 'Better coordination',
-        body: 'Teams make fewer disconnected decisions because the sustainability logic is visible early.',
-      },
-      {
-        title: 'Lower friction',
-        body: 'Concepts are easier to defend because they come with an implementation path.',
-      },
-      {
-        title: 'Stronger identity',
-        body: 'The building’s story becomes coherent, not just efficient.',
-      },
-    ],
-  },
-  'air-quality': {
-    slug: 'air-quality',
-    eyebrow: 'Indoor Environment / Air',
-    title: 'Air Quality',
-    summary:
-      'Monitoring and mitigation planning for spaces where ventilation, filtration, and occupant well-being need more attention.',
-    heroImage:
-      'https://images.unsplash.com/photo-1509388260858-7a5ae74f3c3d?auto=format&fit=crop&w=1600&q=80',
-    heroAlt: 'Sunlit interior with greenery and clean finishes',
-    heroNote: 'Ventilation review, filtration logic, and low-emission material strategy.',
-    accent: '#6aa8a0',
-    stats: [
-      { value: '01', label: 'iaq review' },
-      { value: '02', label: 'source mapping' },
-      { value: '03', label: 'mitigation plan' },
-    ],
-    overviewTitle: 'What we focus on',
-    overviewBody:
-      'We identify the likely sources of poor indoor air quality and prioritize the fixes that matter most. That includes ventilation, emissions, filtration, and the way a space is operated after handover.',
-    featuresTitle: 'Scope of support',
-    features: [
-      {
-        title: 'Source review',
-        body: 'Identify odor, VOC, and pollutant sources coming from materials, equipment, or maintenance habits.',
-      },
-      {
-        title: 'Ventilation strategy',
-        body: 'Check air delivery, exhaust, and filtration assumptions against how the building is actually used.',
-      },
-      {
-        title: 'Operational guidance',
-        body: 'Offer simple monitoring and maintenance actions so performance stays stable over time.',
-      },
-    ],
-    processTitle: 'How the work unfolds',
-    process: [
-      {
-        step: '01',
-        title: 'Survey',
-        body: 'We review the space, building systems, and known occupant concerns.',
-      },
-      {
-        step: '02',
-        title: 'Diagnosis',
-        body: 'Potential indoor air issues are ranked by urgency and fixability.',
-      },
-      {
-        step: '03',
-        title: 'Response',
-        body: 'Mitigation measures are laid out in a sequence that teams can actually execute.',
-      },
-    ],
-    outcomesTitle: 'Expected outcomes',
-    outcomes: [
-      {
-        title: 'Cleaner indoor experience',
-        body: 'Spaces become easier to occupy because irritation and uncertainty go down.',
-      },
-      {
-        title: 'Targeted fixes',
-        body: 'Instead of generic advice, teams get focused actions tied to the building’s conditions.',
-      },
-      {
-        title: 'Ongoing confidence',
-        body: 'Monitoring becomes part of routine operations, not a one-time event.',
-      },
-    ],
-  },
-  'water-safety': {
-    slug: 'water-safety',
-    eyebrow: 'Building Health / Water',
-    title: 'Water Safety',
-    summary:
-      'Planning and review support for water systems that need cleaner operation, better control, and more confidence from end users.',
-    heroImage:
-      'https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa?auto=format&fit=crop&w=1600&q=80',
-    heroAlt: 'Water droplets on a clean blue surface',
-    heroNote: 'Filtration, plumbing hygiene, and monitoring strategy for building systems.',
-    accent: '#5f8fb0',
-    stats: [
-      { value: '01', label: 'system review' },
-      { value: '02', label: 'risk mapping' },
-      { value: '03', label: 'monitoring plan' },
-    ],
-    overviewTitle: 'What we focus on',
-    overviewBody:
-      'Water safety is about more than treatment equipment. We look at plumbing hygiene, stagnation risk, fixture use, maintenance rhythm, and the operational habits that keep a system stable.',
-    featuresTitle: 'Scope of support',
-    features: [
-      {
-        title: 'System hygiene',
-        body: 'Review design and maintenance decisions that influence cleanliness, stagnation, and user confidence.',
-      },
-      {
-        title: 'Filter logic',
-        body: 'Assess whether filtration and treatment strategies align with the building’s use and water source.',
-      },
-      {
-        title: 'Operational checks',
-        body: 'Document the tasks that should happen regularly so the system remains predictable after handover.',
-      },
-    ],
-    processTitle: 'How the work unfolds',
-    process: [
-      {
-        step: '01',
-        title: 'Review',
-        body: 'We map the water system, users, and known operational pain points.',
-      },
-      {
-        step: '02',
-        title: 'Safeguards',
-        body: 'Risk-reduction measures are organized from highest impact to easiest implementation.',
-      },
-      {
-        step: '03',
-        title: 'Follow-through',
-        body: 'The team receives a monitoring rhythm they can sustain without extra overhead.',
-      },
-    ],
-    outcomesTitle: 'Expected outcomes',
-    outcomes: [
-      {
-        title: 'More reliable systems',
-        body: 'The building has a clearer path to stable water performance.',
-      },
-      {
-        title: 'Lower uncertainty',
-        body: 'Owners and operators know what to check and when to check it.',
-      },
-      {
-        title: 'Better trust',
-        body: 'Water-related concerns are handled with a documented process rather than guesswork.',
-      },
-    ],
-  },
-  'light-optimization': {
-    slug: 'light-optimization',
-    eyebrow: 'Daylight / Lighting',
-    title: 'Light Optimization',
-    summary:
-      'A daylight-and-lighting approach that supports visual comfort, circadian rhythm, and better use of natural light.',
-    heroImage:
-      'https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1600&q=80',
-    heroAlt: 'Interior filled with strong natural daylight',
-    heroNote: 'Daylight control, glare strategy, and layered lighting recommendations.',
-    accent: '#d3b56d',
-    stats: [
-      { value: '01', label: 'daylight study' },
-      { value: '02', label: 'glare control' },
-      { value: '03', label: 'layered output' },
-    ],
-    overviewTitle: 'What we focus on',
-    overviewBody:
-      'Good lighting is not only about brightness. We shape a layered experience where daylight is welcomed, glare is managed, and artificial lighting supports how the space is actually used.',
-    featuresTitle: 'Scope of support',
-    features: [
-      {
-        title: 'Daylight use',
-        body: 'Identify where natural light is an asset and where it needs shaping or moderation.',
-      },
-      {
-        title: 'Glare reduction',
-        body: 'Recommend shading, finish, and layout changes that keep visual comfort intact.',
-      },
-      {
-        title: 'Lighting layers',
-        body: 'Combine ambient, task, and accent lighting so the interior feels intentional through the day.',
-      },
-    ],
-    processTitle: 'How the work unfolds',
-    process: [
-      {
-        step: '01',
-        title: 'Analysis',
-        body: 'We look at orientation, openings, occupancy patterns, and the current lighting strategy.',
-      },
-      {
-        step: '02',
-        title: 'Scenarios',
-        body: 'Several options are compared to find a practical balance between comfort and performance.',
-      },
-      {
-        step: '03',
-        title: 'Calibration',
-        body: 'The selected direction is tuned so the final result stays usable, not overlit.',
-      },
-    ],
-    outcomesTitle: 'Expected outcomes',
-    outcomes: [
-      {
-        title: 'Better visual comfort',
-        body: 'Users can work or rest without fighting glare or uneven brightness.',
-      },
-      {
-        title: 'More efficient lighting',
-        body: 'Light is placed where it helps most instead of being spread indiscriminately.',
-      },
-      {
-        title: 'A calmer atmosphere',
-        body: 'The interior feels composed, warm, and legible throughout the day.',
-      },
-    ],
-  },
-  'soil-health': {
-    slug: 'soil-health',
-    eyebrow: 'Living Systems / Soil',
-    title: 'Soil Health',
-    summary:
-      'Support for planting systems where substrate quality, nutrition, drainage, and root conditions need to work together.',
-    heroImage:
-      'https://images.unsplash.com/photo-1625066708174-d9f7e3a94d1c?auto=format&fit=crop&w=1600&q=80',
-    heroAlt: 'Healthy soil and plant roots in a cultivation bed',
-    heroNote: 'Substrate balance, drainage review, and plant performance planning.',
-    accent: '#8a6f4f',
-    stats: [
-      { value: '01', label: 'substrate check' },
-      { value: '02', label: 'root health' },
-      { value: '03', label: 'care routine' },
-    ],
-    overviewTitle: 'What we focus on',
-    overviewBody:
-      'Healthy planting starts below the surface. We review soil composition, moisture behavior, drainage, and nutrient support so plants can thrive rather than merely survive.',
-    featuresTitle: 'Scope of support',
-    features: [
-      {
-        title: 'Soil balance',
-        body: 'Check texture, structure, and nutrient conditions against the plant palette and maintenance plan.',
-      },
-      {
-        title: 'Drainage logic',
-        body: 'Reduce water stress by making sure the substrate and container system move moisture correctly.',
-      },
-      {
-        title: 'Care rhythm',
-        body: 'Build a maintenance cadence that is realistic for the site and the people looking after it.',
-      },
-    ],
-    processTitle: 'How the work unfolds',
-    process: [
-      {
-        step: '01',
-        title: 'Sampling',
-        body: 'We inspect soil and planting conditions to identify the current limits of the system.',
-      },
-      {
-        step: '02',
-        title: 'Adjustment',
-        body: 'Substrate, irrigation, and nutrient decisions are aligned with the intended planting outcome.',
-      },
-      {
-        step: '03',
-        title: 'Stewardship',
-        body: 'A care plan is left behind so the planting system stays healthy after installation.',
-      },
-    ],
-    outcomesTitle: 'Expected outcomes',
-    outcomes: [
-      {
-        title: 'Stronger growth',
-        body: 'Plants establish more reliably when the soil system is tuned properly.',
-      },
-      {
-        title: 'Less waste',
-        body: 'Healthier substrates and better watering habits reduce replacement cycles.',
-      },
-      {
-        title: 'Better resilience',
-        body: 'The planting system is more adaptable to changing conditions and care schedules.',
-      },
-    ],
-  },
-  'noise-mapping': {
-    slug: 'noise-mapping',
-    eyebrow: 'Acoustics / Noise',
-    title: 'Noise Mapping',
-    summary:
-      'A practical acoustic review for spaces where sound privacy, comfort, and circulation noise affect the experience of the building.',
-    heroImage:
-      'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80',
-    heroAlt: 'Modern workspace with layered interior surfaces',
-    heroNote: 'Sound-sensitive zoning, material tuning, and mitigation recommendations.',
-    accent: '#5f6f68',
-    stats: [
-      { value: '01', label: 'sound scan' },
-      { value: '02', label: 'hotspot map' },
-      { value: '03', label: 'mitigation list' },
-    ],
-    overviewTitle: 'What we focus on',
-    overviewBody:
-      'Noise issues often come from circulation paths, hard finishes, or shared systems that were not treated early enough. We identify those pressure points and turn them into a clear action map.',
-    featuresTitle: 'Scope of support',
-    features: [
-      {
-        title: 'Hotspot mapping',
-        body: 'Identify where sound leakage, reflection, or crowding is most likely to occur.',
-      },
-      {
-        title: 'Material response',
-        body: 'Recommend finishes and partitions that improve privacy without overcomplicating the design.',
-      },
-      {
-        title: 'Use-case planning',
-        body: 'Separate quiet, collaborative, and service zones so the building works with its own rhythm.',
-      },
-    ],
-    processTitle: 'How the work unfolds',
-    process: [
-      {
-        step: '01',
-        title: 'Listening',
-        body: 'We understand where users feel distracted, exposed, or overloaded by sound.',
-      },
-      {
-        step: '02',
-        title: 'Mapping',
-        body: 'The building is traced into zones where noise moves, accumulates, or escapes.',
-      },
-      {
-        step: '03',
-        title: 'Control plan',
-        body: 'A practical sequence of interventions is created for design, construction, or operations.',
-      },
-    ],
-    outcomesTitle: 'Expected outcomes',
-    outcomes: [
-      {
-        title: 'More usable space',
-        body: 'Rooms feel calmer and more functional because sound is managed intentionally.',
-      },
-      {
-        title: 'Better privacy',
-        body: 'Sensitive conversations and focused work get the acoustic support they need.',
-      },
-      {
-        title: 'Easier decisions',
-        body: 'The team can choose materials and layouts with a clearer understanding of their impact.',
-      },
+      { title: 'Thriving green systems', body: 'Installed spaces remain healthy, attractive, and resilient.' },
+      { title: 'Reduced replacement waste', body: 'Preventive care lowers avoidable loss and rework.' },
+      { title: 'Reliable long-term value', body: 'Clients retain confidence that investments continue to perform.' },
     ],
   },
 }

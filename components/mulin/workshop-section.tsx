@@ -4,9 +4,9 @@ import Link from 'next/link'
 import { ArrowRight, MonsteraLeaf } from './svg-assets'
 
 const highlights = [
-  { title: 'Hands-On Craft', body: 'Bind your own kokedama from moss, soil, and jute — and take it home with you.' },
-  { title: 'Snacks & Refreshments', body: 'Light snacks and drinks served throughout the session.' },
-  { title: 'Games & Fun Activities', body: 'Plant-themed games and group activities to keep the afternoon playful.' },
+  { title: 'Hands-On Plant Art', body: 'Create your own living plant art guided by our team and take it home.' },
+  { title: 'Biophilic Learning', body: 'Learn how biophilic spaces support wellbeing, focus, and emotional calm.' },
+  { title: 'Indigenous Knowledge', body: 'Discover local ecological wisdom and practical biodiversity actions for daily life.' },
 ]
 
 export function WorkshopSection() {
@@ -27,7 +27,7 @@ export function WorkshopSection() {
               {/* Saturday badge */}
               <div className="absolute top-6 left-6 bg-gold rounded-full px-5 py-2.5">
                 <span className="text-[11px] uppercase tracking-[0.2em] text-moss font-sans font-medium">
-                  Every Saturday
+                  Community Sessions
                 </span>
               </div>
             </div>
@@ -47,12 +47,12 @@ export function WorkshopSection() {
               className="font-serif text-ink leading-[1.05] mb-5"
               style={{ fontSize: 'clamp(2.2rem, 4vw, 3.5rem)' }}
             >
-              Kokedama Workshop
+              Plant Art Workshops
             </h2>
             <p className="font-sans font-light text-ink-soft leading-relaxed mb-9 max-w-lg">
-              Spend a Saturday with us learning the Japanese art of kokedama. Guided by our team,
-              you&apos;ll craft your own moss-ball planting from scratch — with good company,
-              snacks, and games along the way.
+              Hands-on workshops where participants build plant art while learning about biophilic
+              design, biodiversity, and nature-connected living. Available for schools, organizations,
+              and public events.
             </p>
 
             {/* Highlights */}
@@ -80,7 +80,7 @@ export function WorkshopSection() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-moss text-cream rounded-full px-7 py-3.5 text-sm font-medium hover:bg-ink transition-colors duration-300 group/btn"
               >
-                Register for the Workshop
+                Join a Workshop
                 <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
               </a>
               <span className="font-sans text-xs text-ink-soft">

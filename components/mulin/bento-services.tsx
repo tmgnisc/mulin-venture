@@ -1,13 +1,62 @@
 'use client'
 
-import { ArrowRight, MonsteraLeaf, SproutIcon } from './svg-assets'
+import Link from 'next/link'
+import { ArrowRight, MonsteraLeaf } from './svg-assets'
+
+const services = [
+  {
+    slug: 'biophilic-design',
+    title: 'Biophilic Design',
+    eyebrow: 'Core Service',
+    tone: 'dark',
+    layout: 'md:col-span-7 md:row-span-2 min-h-[460px]',
+    image:
+      'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80',
+    summary:
+      'End-to-end design that places nature at the heart of every decision from material selection and plant placement to lighting, texture, and air flow. We design spaces that are measurably better for the people who use them.',
+  },
+  {
+    slug: 'landscape-rooftop-greening-design',
+    title: 'Landscape & Rooftop Greening Design',
+    eyebrow: 'Urban Ecology',
+    tone: 'image',
+    layout: 'md:col-span-5 min-h-[220px]',
+    summary:
+      'Transforming underused rooftops and exterior spaces into productive green environments. Our landscape designs combine aesthetic vision with ecological function, supporting native species while creating spaces people love.',
+  },
+  {
+    slug: 'green-building-rating-system',
+    title: 'Green Building Rating System',
+    eyebrow: 'Assessment',
+    tone: 'light',
+    layout: 'md:col-span-4 min-h-[280px]',
+    summary:
+      'A structured assessment and advisory service that measures the environmental performance of interior and exterior spaces. We help clients understand their carbon footprint, biodiversity impact, and nature-based solution potential and how to improve each one.',
+  },
+  {
+    slug: 'plant-art-workshops',
+    title: 'Plant Art Workshops',
+    eyebrow: 'Community Learning',
+    tone: 'accent',
+    layout: 'md:col-span-4 min-h-[280px]',
+    summary:
+      'Hands-on community workshops where participants create their own plant art pieces while learning about biophilic design, indigenous plant knowledge, and the benefits of living with nature. Available for schools, organisations, and public events.',
+  },
+  {
+    slug: 'garden-maintenance',
+    title: 'Garden Maintenance',
+    eyebrow: 'Long-Term Care',
+    tone: 'banner',
+    layout: 'md:col-span-4 min-h-[280px]',
+    summary:
+      'Ongoing care and maintenance for living walls, rooftop gardens, and planted interiors. We ensure every green space we create continues to thrive, keeping ecosystems healthy and clients confident.',
+  },
+]
 
 export function BentoServices() {
   return (
     <section id="services" className="py-[clamp(80px,10vw,140px)] bg-cream">
       <div className="max-w-330 mx-auto px-[clamp(20px,5vw,80px)]">
-
-        {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-5 mb-14" data-aos="fade-up">
           <div>
             <div className="flex items-center gap-3 mb-4">
@@ -21,243 +70,98 @@ export function BentoServices() {
               Our Services
             </h2>
           </div>
-          <p className="font-sans font-light text-ink-soft max-w-xs leading-relaxed text-sm md:text-right">
-            From custom plant arrangements to large-scale installations — botanical beauty for every space.
+          <p className="font-sans font-light text-ink-soft max-w-md leading-relaxed text-sm md:text-right">
+            Five core services built to integrate nature into cities, improve wellbeing, and deliver measurable environmental outcomes.
           </p>
         </div>
 
-        {/* Bento Grid */}
-        <div className="grid grid-cols-1 gap-3 md:grid-cols-12 md:gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-3">
+          {services.map((service, index) => (
+            <article
+              key={service.slug}
+              className={`group relative overflow-hidden rounded-[28px] border border-sage/15 p-7 shadow-[0_14px_32px_rgba(18,31,25,0.05)] ${service.layout} ${
+                service.tone === 'dark'
+                  ? 'bg-[#454C23] text-white border-[#454C23]'
+                  : service.tone === 'image'
+                  ? 'text-white border-transparent'
+                  : service.tone === 'accent'
+                  ? 'bg-[#eaf1e3]'
+                  : service.tone === 'banner'
+                  ? 'bg-[#fff5d9]'
+                  : 'bg-white'
+              }`}
+              data-aos="fade-up"
+              data-aos-delay={index * 80}
+            >
+              {(service.tone === 'image' || service.image) && (
+                <>
+                  <img
+                    src={service.image ?? 'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1600&q=80'}
+                    alt={service.slug === 'biophilic-design' ? 'Biophilic interior with integrated greenery' : 'Rooftop greenery and urban planting'}
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
+                  />
+                  <div className={`absolute inset-0 ${
+                    service.slug === 'biophilic-design'
+                      ? 'bg-linear-to-t from-[#0f170d]/90 via-[#1c2a17]/62 to-[#1c2a17]/45'
+                      : 'bg-linear-to-t from-[#1d2818]/92 via-[#1d2818]/45 to-transparent'
+                  }`} />
+                </>
+              )}
 
-          {/* 01 — Landscape Architecture (Hero, 2 rows) */}
-          <div
-            className="md:col-span-7 md:row-span-2 group relative overflow-hidden rounded-[28px] min-h-115 md:min-h-0"
-            data-aos="fade-up"
-            data-aos-delay="0"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1600&q=80"
-              alt="Lush indoor garden with layered tropical foliage designed for a residential space"
-              className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
-            />
-            <div className="absolute inset-0 bg-linear-to-t from-moss via-moss/35 to-transparent" />
-            <div className="absolute top-7 left-7">
-              <span className="text-[10px] uppercase tracking-[0.32em] text-white/40 font-sans">01</span>
-            </div>
-            <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-10">
-              <div className="h-px w-10 bg-gold/50 mb-6" />
-              <h3
-                className="font-serif text-white leading-[1.08] mb-3"
-                style={{ fontSize: 'clamp(1.9rem, 3vw, 2.9rem)' }}
-              >
-                Landscape<br />Architecture
-              </h3>
-              <p className="font-sans text-white/60 text-sm leading-relaxed max-w-75 mb-7">
-                Full-scale botanical design for residential and commercial spaces. We bring nature indoors with intentional, lasting design.
-              </p>
-              <a
-                href="#"
-                className="inline-flex items-center gap-2 text-sm text-gold hover:text-white transition-colors group/link"
-              >
-                <span className="font-medium tracking-wide">Explore Service</span>
-                <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
-              </a>
-            </div>
-          </div>
-
-          {/* 02 — Installation */}
-          <div
-            className="md:col-span-5 group relative overflow-hidden rounded-[28px] min-h-65"
-            data-aos="fade-up"
-            data-aos-delay="80"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1463320726281-696a485928c7?auto=format&fit=crop&w=1600&q=80"
-              alt="Potted plants arranged on a wooden table during a professional installation"
-              className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
-            />
-            <div className="absolute inset-0 bg-linear-to-t from-ink/85 via-ink/15 to-transparent" />
-            <div className="absolute inset-0 flex flex-col justify-between p-7">
-              <span className="text-[10px] uppercase tracking-[0.32em] text-white/35 font-sans self-end">02</span>
-              <div>
-                <h3 className="font-serif text-white text-2xl leading-tight mb-2">Installation</h3>
-                <p className="font-sans text-white/60 text-xs leading-relaxed max-w-65">
-                  White-glove delivery and professional installation of all plant arrangements.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* 03 — Biophilic Design */}
-          <div
-            className="md:col-span-3 group relative overflow-hidden rounded-[28px] min-h-65 border border-sage/20"
-            style={{ background: 'linear-gradient(135deg, #f0f4f0 0%, #e8f0e8 100%)' }}
-            data-aos="fade-up"
-            data-aos-delay="160"
-          >
-            <div className="absolute -right-10 -top-10 text-sage opacity-[0.08] pointer-events-none">
-              <MonsteraLeaf className="w-48 h-48" />
-            </div>
-            <div className="relative h-full flex flex-col justify-between p-7">
-              <div className="flex items-start justify-between">
-                <span className="text-[10px] uppercase tracking-[0.32em] text-sage/50 font-sans">03</span>
-                <div className="w-8 h-8 rounded-full border border-sage/25 flex items-center justify-center">
-                  <SproutIcon className="w-4 h-4 text-sage" />
+              {service.tone !== 'image' && (
+                <div className="pointer-events-none absolute -right-8 -bottom-8 text-sage/10">
+                  <MonsteraLeaf className="w-32 h-32" />
                 </div>
-              </div>
-              <div>
-                <div className="h-px w-8 bg-sage/35 mb-4" />
-                <h3 className="font-serif text-ink text-2xl leading-tight mb-2">Biophilic<br />Design</h3>
-                <p className="font-sans text-ink-soft text-[11px] leading-relaxed">
-                  Science-backed spatial design that integrates nature into your built environment for wellness.
-                </p>
-              </div>
-            </div>
-          </div>
+              )}
 
-          {/* 04 — Botanical Branding */}
-          <div
-            className="md:col-span-2 group relative overflow-hidden rounded-[28px] bg-moss min-h-65"
-            data-aos="fade-up"
-            data-aos-delay="240"
-          >
-            <div className="absolute -bottom-8 -left-4 text-sage-dark opacity-[0.12] pointer-events-none">
-              <MonsteraLeaf className="w-36 h-36" />
-            </div>
-            <div className="relative h-full flex flex-col justify-between p-6">
-              <span className="text-[10px] uppercase tracking-[0.32em] text-white/25 font-sans">04</span>
-              <div>
-                <div className="h-px w-6 bg-gold/45 mb-4" />
-                <h3 className="font-serif text-gold text-xl leading-tight mb-2">Botanical<br />Branding</h3>
-                <p className="font-sans text-white/45 text-[11px] leading-relaxed">
-                  Custom installations that reflect your brand identity.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* 05 — Green Walls */}
-          <div
-            className="md:col-span-4 group relative overflow-hidden rounded-[28px] min-h-85"
-            data-aos="fade-up"
-            data-aos-delay="0"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=1600&q=80"
-              alt="Dense green leaves covering a vertical surface like a living wall"
-              className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
-            />
-            <div className="absolute inset-0 bg-linear-to-t from-moss/92 via-moss/18 to-transparent" />
-            <div className="absolute inset-0 flex flex-col justify-between p-7">
-              <span className="text-[10px] uppercase tracking-[0.32em] text-white/35 font-sans">05</span>
-              <div>
-                <h3 className="font-serif text-white text-2xl leading-tight mb-2">Green Walls</h3>
-                <p className="font-sans text-white/60 text-xs leading-relaxed">
-                  Vertical gardens and living walls that transform any surface into a thriving ecosystem.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* 06 — Maintenance Programs */}
-          <div
-            className="md:col-span-4 group relative overflow-hidden rounded-[28px] bg-cream-dark border border-sage/15 min-h-85"
-            data-aos="fade-up"
-            data-aos-delay="80"
-          >
-            <div className="absolute -right-3 top-2 font-serif leading-none text-sage/6 pointer-events-none select-none"
-              style={{ fontSize: '140px' }}>
-              12
-            </div>
-            <div className="relative h-full flex flex-col justify-between p-7">
-              <div className="flex items-start justify-between">
-                <span className="text-[10px] uppercase tracking-[0.32em] text-sage/50 font-sans">06</span>
-                <span className="text-[9px] uppercase tracking-[0.18em] text-gold font-sans border border-gold/25 rounded-full px-3 py-1">
-                  Ongoing
-                </span>
-              </div>
-              <div>
-                <div className="flex items-baseline gap-2 mb-4">
-                  <span className="font-serif text-ink leading-none" style={{ fontSize: '3.2rem' }}>12+</span>
-                  <span className="font-sans text-[11px] text-ink-soft">years of<br />expertise</span>
+              <div className="relative z-10 flex h-full flex-col">
+                <div className="flex items-center justify-between">
+                  <span className={`text-[10px] uppercase tracking-[0.3em] font-sans ${
+                    service.tone === 'dark' || service.tone === 'image' ? 'text-white/55' : 'text-sage/55'
+                  }`}>
+                    {service.eyebrow}
+                  </span>
+                  <span className={`rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.2em] ${
+                    service.tone === 'dark' || service.tone === 'image'
+                      ? 'border border-white/20 text-white/75'
+                      : 'border border-sage/20 text-sage-dark'
+                  }`}>
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
                 </div>
-                <div className="h-px w-full bg-sage/15 mb-5" />
-                <h3 className="font-serif text-ink text-xl leading-tight mb-2">Maintenance<br />Programs</h3>
-                <p className="font-sans text-ink-soft text-[11px] leading-relaxed">
-                  Ongoing care subscriptions to keep your plants thriving year-round.
-                </p>
-              </div>
-            </div>
-          </div>
 
-          {/* 07 — Biophilic Art */}
-          <div
-            className="md:col-span-4 group relative overflow-hidden rounded-[28px] min-h-85"
-            style={{ backgroundColor: '#4A6741' }}
-            data-aos="fade-up"
-            data-aos-delay="160"
-          >
-            <div className="absolute top-7 right-7 w-28 h-28 rounded-full border border-white/8 pointer-events-none" />
-            <div className="absolute top-11 right-11 w-20 h-20 rounded-full border border-white/8 pointer-events-none" />
-            <div className="absolute top-16 right-16 w-8 h-8 rounded-full pointer-events-none" style={{ background: 'rgba(201,169,110,0.22)' }} />
-            <div className="relative h-full flex flex-col justify-between p-7">
-              <span className="text-[10px] uppercase tracking-[0.32em] text-white/25 font-sans">07</span>
-              <div>
-                <div className="h-px w-8 bg-gold/45 mb-4" />
-                <h3 className="font-serif text-white text-2xl leading-tight mb-2">Biophilic Art</h3>
-                <p className="font-sans text-white/60 text-xs leading-relaxed max-w-55">
-                  Preserved moss art, terrariums, and sculptural botanical installations.
+                <h3 className={`mt-5 font-serif leading-[1.05] ${
+                  index === 0 ? 'text-[clamp(2rem,3vw,2.9rem)]' : 'text-[clamp(1.45rem,2vw,2rem)]'
+                } ${
+                  service.tone === 'dark' || service.tone === 'image' ? 'text-white' : 'text-ink'
+                }`}>
+                  {service.title}
+                </h3>
+
+                <p className={`mt-4 font-sans text-sm leading-relaxed ${index === 0 ? 'max-w-xl' : ''} ${
+                  service.tone === 'dark'
+                    ? 'text-white/72'
+                    : service.tone === 'image'
+                    ? 'text-white/80'
+                    : 'text-ink-soft'
+                }`}>
+                  {service.summary}
                 </p>
-                <a
-                  href="#"
-                  className="inline-flex items-center gap-1.5 mt-5 text-[11px] text-gold/75 hover:text-gold transition-colors group/link"
+
+                <Link
+                  href={`/services/${service.slug}`}
+                  className={`mt-6 inline-flex items-center gap-2 text-sm transition-colors ${
+                    service.tone === 'dark' || service.tone === 'image'
+                      ? 'text-gold hover:text-white'
+                      : 'text-sage-dark hover:text-ink'
+                  }`}
                 >
-                  Learn more
-                  <ArrowRight className="w-3 h-3 transition-transform group-hover/link:translate-x-0.5" />
-                </a>
+                  Explore Service
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
               </div>
-            </div>
-          </div>
-
-          {/* 08 — Event Rentals (Full Width Banner) */}
-          <div
-            className="md:col-span-12 group relative overflow-hidden rounded-[28px] min-h-40"
-            style={{ backgroundColor: '#E8D5B0' }}
-            data-aos="fade-up"
-            data-aos-delay="0"
-          >
-            {/* Subtle texture: repeating leaf watermarks */}
-            <div className="absolute right-0 top-0 h-full w-64 opacity-[0.08] pointer-events-none flex items-center justify-end pr-6">
-              <MonsteraLeaf className="h-full w-auto text-moss" />
-            </div>
-            {/* Gold accent line */}
-            <div className="absolute left-0 top-0 bottom-0 w-px bg-gold/25" />
-
-            <div className="relative flex flex-col md:flex-row md:items-center md:justify-between gap-6 px-10 py-9">
-              <div className="flex items-center gap-8">
-                <span className="text-[10px] uppercase tracking-[0.32em] text-ink/30 font-sans">08</span>
-                <div>
-                  <h3
-                    className="font-serif text-ink leading-tight mb-1"
-                    style={{ fontSize: 'clamp(1.6rem, 3vw, 2.4rem)' }}
-                  >
-                    Event Rentals
-                  </h3>
-                  <p className="font-sans text-ink-soft text-sm leading-relaxed max-w-md">
-                    Short-term plant rentals for weddings, launches, and special occasions that leave a lasting impression.
-                  </p>
-                </div>
-              </div>
-              <a
-                href="#"
-                className="shrink-0 inline-flex items-center gap-2 border border-ink/20 rounded-full px-7 py-3 text-sm font-medium text-ink hover:bg-ink hover:text-cream transition-all duration-300 group/btn self-start md:self-auto"
-              >
-                Book Now
-                <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
-              </a>
-            </div>
-          </div>
-
+            </article>
+          ))}
         </div>
       </div>
     </section>

@@ -11,12 +11,12 @@ export function CTABanner() {
       <div className="mx-auto w-full max-w-[1280px]" data-aos="fade-up">
         <div className="mx-auto max-w-[860px] text-center">
           <h2 className="font-serif text-moss mb-6" style={{ fontSize: 'clamp(2.5rem, 5vw, 5rem)' }}>
-            Bring Nature Into Your Habitat
+            Build Your Nature-Positive Space
           </h2>
 
           <p className="font-sans font-light text-moss/60 max-w-[620px] mx-auto mb-12 leading-relaxed text-[clamp(1rem,1.35vw,1.25rem)]">
-            Start your botanical journey today. Every plant we create is a unique expression
-            of your space and style.
+            Whether you are redesigning a room or reimagining an entire rooftop, Mulin Venture
+            helps you create spaces that truly nurture through nature.
           </p>
         </div>
 
@@ -30,11 +30,10 @@ export function CTABanner() {
               <TropicalLeaf className="h-4 w-4 text-sage/75 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105 group-hover:text-sage/90" />
             </span>
             <h3 className="mb-3 font-serif text-[clamp(1.15rem,1.5vw,1.4rem)] text-moss">
-              Climate Change Education
+              Book a Consultation
             </h3>
             <p className="font-sans font-light leading-relaxed text-moss/65">
-              Interactive sessions help students understand climate science, impacts, and
-              real-world solutions.
+              Start with a biophilic design conversation tailored to your goals and your space.
             </p>
           </article>
 
@@ -46,10 +45,9 @@ export function CTABanner() {
             <span className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-full border border-moss/12 bg-[#f3f5f1] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:border-gold/30 group-hover:bg-gold/10">
               <MonsteraLeaf className="h-4 w-4 text-[#8E8A74] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105 group-hover:text-[#7A755F]" />
             </span>
-            <h3 className="mb-3 font-serif text-[clamp(1.15rem,1.5vw,1.4rem)] text-moss">Waste Auditing</h3>
+            <h3 className="mb-3 font-serif text-[clamp(1.15rem,1.5vw,1.4rem)] text-moss">Join a Workshop</h3>
             <p className="font-sans font-light leading-relaxed text-moss/65">
-              Hands-on training in waste auditing techniques helps teams measure and reduce
-              school waste.
+              Attend plant art workshops and learn practical biophilic and biodiversity skills.
             </p>
           </article>
 
@@ -62,11 +60,10 @@ export function CTABanner() {
               <TropicalLeaf className="h-4 w-4 text-moss/60 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105 group-hover:text-moss/75" />
             </span>
             <h3 className="mb-3 font-serif text-[clamp(1.15rem,1.5vw,1.4rem)] text-moss">
-              School Green Programs
+              Measure Green Impact
             </h3>
             <p className="font-sans font-light leading-relaxed text-moss/65">
-              We co-design simple school initiatives that support segregation, recycling, and
-              long-term eco habits.
+              Request a Green Building Rating assessment to track carbon and biodiversity outcomes.
             </p>
           </article>
         </div>

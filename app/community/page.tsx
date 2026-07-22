@@ -145,9 +145,9 @@ export default function CommunityPage() {
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,transparent_55%,rgba(5,10,4,0.55)_100%)]" />
           <motion.div variants={container} initial="hidden" animate="show" className="relative mx-auto flex max-w-6xl flex-col items-center px-6 pt-28 pb-10 text-center md:px-10">
             <motion.p variants={rise} className="text-xs tracking-[0.24em] text-[#cbdccc] md:text-sm">
-              MULIN COMMUNITY IMPACT
+              MULIN VENTURE COMMUNITY IMPACT
             </motion.p>
-            <motion.h1 variants={rise} className="mt-5 max-w-4xl font-serif text-4xl leading-tight text-[#f3ead7] md:text-7xl">
+            <motion.h1 variants={rise} className="mt-5 max-w-4xl font-serif text-4xl leading-tight text-[#FFE871] md:text-7xl">
               Deep Roots, Future Leaders.
             </motion.h1>
 
@@ -156,10 +156,10 @@ export default function CommunityPage() {
             </motion.p>
 
             <motion.div variants={rise} className="mt-10 flex flex-wrap gap-4">
-              <Link href="/consultation" className="rounded-full bg-[#c3a36e] px-7 py-3 text-sm tracking-[0.06em] text-[#1f3028] transition-transform duration-300 hover:scale-[1.04]">
+              <Link href="/consultation" className="rounded-full bg-[#FFBE71] px-7 py-3 text-sm tracking-[0.06em] text-[#454C23] transition-transform duration-300 hover:scale-[1.04]">
                 Partner With The Program
               </Link>
-              <Link href="/research" className="rounded-full border border-white/60 px-7 py-3 text-sm tracking-[0.06em] text-white transition-colors duration-300 hover:bg-white hover:text-[#1f3028]">
+              <Link href="/research" className="rounded-full border border-white/60 px-7 py-3 text-sm tracking-[0.06em] text-white transition-colors duration-300 hover:bg-white hover:text-[#454C23]">
                 Learn More
               </Link>
             </motion.div>
@@ -178,7 +178,7 @@ export default function CommunityPage() {
           }}
           className="mt-6 px-6 text-white md:mt-8 md:px-10"
         >
-          <div className="mx-auto grid max-w-6xl gap-8 rounded-2xl border border-[#8a6a47]/20 bg-[#8a6a47] px-6 py-7 shadow-[0_10px_30px_rgba(62,38,18,0.18)] md:grid-cols-3">
+          <div className="mx-auto grid max-w-6xl gap-8 rounded-2xl border border-[#9A5B3F]/20 bg-[#9A5B3F] px-6 py-7 shadow-[0_10px_30px_rgba(62,38,18,0.18)] md:grid-cols-3">
             <div className="flex items-center gap-4">
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/14">
                 <School className="h-5 w-5" />
@@ -227,9 +227,9 @@ export default function CommunityPage() {
               key={item.label}
               variants={rise}
               whileHover={{ y: -5 }}
-              className="rounded-3xl border border-[#28553f]/20 bg-[#f3f7f1] p-6"
+              className="rounded-3xl border border-[#454C23]/20 bg-[#f3f7f1] p-6"
             >
-              <p className="text-xs tracking-[0.16em] text-[#6a816f]">FOCUS AREA {item.value}</p>
+              <p className="text-xs tracking-[0.16em] text-[#737F3C]">FOCUS AREA {item.value}</p>
               <p className="mt-3 font-serif text-3xl text-[#224131] md:text-4xl">{item.label}</p>
             </motion.div>
           ))}
@@ -241,7 +241,7 @@ export default function CommunityPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.7 }}
             transition={{ duration: 0.5 }}
-            className="mx-auto flex w-fit rounded-full border border-[#6a816f]/45 bg-[#f3ead7] px-4 py-1 text-center text-sm tracking-[0.18em] text-[#6a816f]"
+            className="mx-auto flex w-fit rounded-full border border-[#737F3C]/45 bg-[#FFE871] px-4 py-1 text-center text-sm tracking-[0.18em] text-[#737F3C]"
           >
             OUR WORK
           </motion.p>
@@ -250,7 +250,7 @@ export default function CommunityPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.7 }}
             transition={{ duration: 0.6, delay: 0.05 }}
-            className="mt-2 text-center font-serif text-3xl text-[#1f3028] md:text-4xl"
+            className="mt-2 text-center font-serif text-3xl text-[#454C23] md:text-4xl"
           >
             Community Projects
           </motion.h2>
@@ -277,7 +277,7 @@ export default function CommunityPage() {
                 variants={rise}
                 whileHover={{ y: -6 }}
                 transition={{ duration: 0.3 }}
-                className="overflow-hidden rounded-xl border border-[#264433]/10 bg-[#f1f5f0]"
+                className="overflow-hidden rounded-xl border border-[#454C23]/10 bg-[#f1f5f0]"
               >
                 <div className="relative h-48">
                   <Image
@@ -287,8 +287,8 @@ export default function CommunityPage() {
                     sizes="(max-width: 1024px) 100vw, 33vw"
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0f1f19]/60 via-[#0f1f19]/20 to-transparent" />
-                  <div className="absolute left-3 top-3 rounded-full bg-[#1b5a42] px-3 py-1 text-xs text-white">{project.category}</div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#2B2F16]/60 via-[#2B2F16]/20 to-transparent" />
+                  <div className="absolute left-3 top-3 rounded-full bg-[#454C23] px-3 py-1 text-xs text-white">{project.category}</div>
                   <p className="absolute bottom-3 left-3 flex items-center gap-1.5 text-sm text-white/95">
                     <MapPin className="h-3.5 w-3.5" />
                     {project.place}
@@ -298,7 +298,7 @@ export default function CommunityPage() {
                 <div className="p-4">
                   <h3 className="font-sans text-[1.45rem] font-semibold leading-tight text-[#21362d] md:text-[1.6rem]">{project.title}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-[#4a6254] md:text-base">{project.body}</p>
-                  <div className="mt-4 border-t border-[#264433]/10 pt-3" />
+                  <div className="mt-4 border-t border-[#454C23]/10 pt-3" />
                   <div className="flex flex-wrap gap-1.5">
                     {project.tags.map((tag) => (
                       <span key={tag} className="rounded-full bg-[#dde6de] px-2.5 py-0.5 text-[11px] text-[#355243]">
@@ -321,7 +321,7 @@ export default function CommunityPage() {
             <Button
               asChild
               variant="outline"
-              className="rounded-full border-[#264433]/30 bg-[#f6faf5] px-6 text-sm tracking-[0.04em] text-[#264433] hover:border-[#264433] hover:bg-[#264433] hover:text-white"
+              className="rounded-full border-[#454C23]/30 bg-[#f6faf5] px-6 text-sm tracking-[0.04em] text-[#454C23] hover:border-[#454C23] hover:bg-[#454C23] hover:text-white"
             >
               <Link href="/community" className="inline-flex items-center gap-2">
                 See All Our Community Projects
@@ -351,11 +351,11 @@ export default function CommunityPage() {
                 variants={rise}
                 whileHover={{ scale: 1.015 }}
                 transition={{ duration: 0.2 }}
-                className="group rounded-2xl border border-[#28553f]/15 bg-[#f3f7f1] p-5 transition-colors duration-300 hover:border-[#28553f]/35 hover:bg-[#eef4ec] hover:shadow-[0_10px_30px_rgba(32,61,47,0.08)]"
+                className="group rounded-2xl border border-[#454C23]/15 bg-[#f3f7f1] p-5 transition-colors duration-300 hover:border-[#454C23]/35 hover:bg-[#eef4ec] hover:shadow-[0_10px_30px_rgba(32,61,47,0.08)]"
               >
                 <div className="mb-4 flex items-center justify-between">
-                  <span className="text-xs tracking-[0.14em] text-[#5f7768]">PROGRAM 0{index + 1}</span>
-                  <Leaf className="h-4 w-4 fill-transparent text-[#5f7768] transition-colors duration-300 group-hover:fill-[#5f7768]" />
+                  <span className="text-xs tracking-[0.14em] text-[#737F3C]">PROGRAM 0{index + 1}</span>
+                  <Leaf className="h-4 w-4 fill-transparent text-[#737F3C] transition-colors duration-300 group-hover:fill-[#737F3C]" />
                 </div>
                 <h3 className="font-serif text-[1.55rem] leading-tight text-[#223c30]">{program.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-[#3f5648] md:text-base">{program.text}</p>
@@ -400,7 +400,7 @@ export default function CommunityPage() {
             >
               <Link
                 href="/consultation"
-                className="rounded-full bg-[#d6b57b] px-7 py-3 text-sm tracking-[0.06em] text-[#1f3028] transition-transform duration-300 hover:scale-[1.04]"
+                className="rounded-full bg-[#FFBE71] px-7 py-3 text-sm tracking-[0.06em] text-[#454C23] transition-transform duration-300 hover:scale-[1.04]"
               >
                 Get Involved
               </Link>

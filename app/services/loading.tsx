@@ -2,8 +2,8 @@ import { Skeleton } from '@/components/ui/skeleton'
 
 export default function Loading() {
   return (
-    <main className="bg-[#f4f1e8] text-[#1d2d25]">
-      <section className="overflow-hidden border-b border-[#d8ddd7] bg-[#17342c]">
+    <main className="bg-[#FFFFFF] text-[#454C23]">
+      <section className="overflow-hidden border-b border-[#d8ddd7] bg-[#454C23]">
         <div className="mx-auto grid max-w-[1320px] gap-10 px-[clamp(20px,5vw,80px)] pt-28 pb-16 lg:grid-cols-[1.02fr_0.98fr] lg:items-end lg:pb-20">
           <div className="max-w-3xl">
             <Skeleton className="h-7 w-40 rounded-full bg-white/10" />

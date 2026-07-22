@@ -11,22 +11,20 @@ const navLinks = [
     label: 'Services',
     href: '/services',
     dropdownItems: [
-      { label: 'LEED Certification', href: '/services/leed-certification' },
-      { label: 'WELL Certification', href: '/services/well-certification' },
-      { label: 'Sustainable Building Design', href: '/services/sustainable-building-design' },
-      { label: 'Air Quality', href: '/services/air-quality' },
-      { label: 'Water Safety', href: '/services/water-safety' },
-      { label: 'Light Optimization', href: '/services/light-optimization' },
-      { label: 'Soil Health', href: '/services/soil-health' },
-      { label: 'Noise Mapping', href: '/services/noise-mapping' },
+      { label: 'Biophilic Design', href: '/services/biophilic-design' },
+      { label: 'Landscape & Rooftop Greening Design', href: '/services/landscape-rooftop-greening-design' },
+      { label: 'Green Building Rating System', href: '/services/green-building-rating-system' },
+      { label: 'Plant Art Workshops', href: '/services/plant-art-workshops' },
+      { label: 'Garden Maintenance', href: '/services/garden-maintenance' },
     ],
   },
   {
     label: 'Products',
     href: '/products',
     dropdownItems: [
-      { label: 'Kokedama', href: '/products/kokedama' },
-      { label: 'Tippy', href: '/products/tippy' },
+      { label: 'Plant Art Products', href: '/products/plant-art-products' },
+      { label: 'Moss Walls & Living Walls', href: '/products/moss-walls-living-walls' },
+      { label: 'Biodiversity Toolkit', href: '/products/biodiversity-toolkit' },
     ],
   },
   { label: 'Community', href: '/community' },
@@ -74,13 +72,13 @@ export function Navigation() {
                 }`}
             >
               <Image
-                src="/logo.jpeg"
+                src="/favicon-mulin.png"
                 alt="Mulin Venture logo"
                 width={44}
                 height={44}
                 className="rounded-full object-cover"
               />
-              <span className="font-serif font-semibold text-xl tracking-[0.15em]">MULIN</span>
+              <span className="font-serif font-bold text-xl tracking-[0.15em]">Mulin Venture</span>
               <SproutIcon className="w-5 h-5" />
             </Link>
 

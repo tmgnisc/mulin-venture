@@ -2,7 +2,7 @@ import { Skeleton } from '@/components/ui/skeleton'
 
 export function ProductsHubLoading() {
   return (
-    <main className="bg-[#f3efe6] text-[#1e241f]">
+    <main className="bg-[#FFFFFF] text-[#454C23]">
       <section className="relative overflow-hidden bg-[#dfe8d9]">
         <div className="mx-auto grid max-w-[1320px] gap-10 px-[clamp(20px,5vw,80px)] pt-28 pb-18 lg:grid-cols-[0.96fr_1.04fr] lg:items-center">
           <div className="max-w-2xl">

@@ -18,7 +18,7 @@
 //
 // const vesselColors = {
 //   'Ceramic White': '#FAFAFA',
-//   'Terracotta': '#C4714B',
+//   'Terracotta': '#9A5B3F',
 //   'Concrete': '#8B8B8B',
 //   'Glass': '#D4E6E7',
 // }
@@ -102,12 +102,12 @@
 //                   className="transition-colors duration-500"
 //                 />
 //                 {/* Plant leaves */}
-//                 <ellipse cx="60" cy="50" rx="35" ry="40" fill="#7A9E7E" opacity="0.9" />
-//                 <ellipse cx="45" cy="45" rx="20" ry="30" fill="#4A6741" opacity="0.8" />
-//                 <ellipse cx="75" cy="40" rx="18" ry="28" fill="#2C3B28" opacity="0.7" />
-//                 <ellipse cx="60" cy="35" rx="15" ry="25" fill="#7A9E7E" opacity="0.9" />
+//                 <ellipse cx="60" cy="50" rx="35" ry="40" fill="#737F3C" opacity="0.9" />
+//                 <ellipse cx="45" cy="45" rx="20" ry="30" fill="#454C23" opacity="0.8" />
+//                 <ellipse cx="75" cy="40" rx="18" ry="28" fill="#454C23" opacity="0.7" />
+//                 <ellipse cx="60" cy="35" rx="15" ry="25" fill="#737F3C" opacity="0.9" />
 //                 {/* Stem */}
-//                 <rect x="57" y="70" width="6" height="15" fill="#4A6741" />
+//                 <rect x="57" y="70" width="6" height="15" fill="#454C23" />
 //               </svg>
 //             </div>
 //

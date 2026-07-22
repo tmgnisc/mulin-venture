@@ -172,8 +172,8 @@ export default function ResearchPage() {
               >
                 <Badge
                   onClick={() => setActiveTag('All')}
-                  className="cursor-pointer rounded-full px-5 py-2 text-sm text-white transition-colors hover:bg-[#185542]"
-                  style={{ backgroundColor: activeTag === 'All' ? '#185542' : '#6f8279' }}
+                  className="cursor-pointer rounded-full px-5 py-2 text-sm text-white transition-colors hover:bg-[#454C23]"
+                  style={{ backgroundColor: activeTag === 'All' ? '#454C23' : '#6f8279' }}
                 >
                   All
                 </Badge>
@@ -241,7 +241,7 @@ export default function ResearchPage() {
                       </motion.div>
                     </div>
                     <div>
-                      <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.08em] text-[#1b5d49]">Research Article <span className="ml-2 font-normal text-[#74847d]">April 2026</span></p>
+                      <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.08em] text-[#454C23]">Research Article <span className="ml-2 font-normal text-[#74847d]">April 2026</span></p>
                       <h3 className="font-sans text-[clamp(1.25rem,2.2vw,2.1rem)] font-semibold leading-[1.2] text-[#1f2724]">
                         {article.title}
                       </h3>
@@ -251,7 +251,7 @@ export default function ResearchPage() {
                       <p className="mt-2 text-[11px] uppercase tracking-[0.08em] text-[#5b6f67]">{article.tag}</p>
                       <Button
                         asChild
-                        className="mt-5 h-auto rounded-lg bg-[#1a5845] px-5 py-2.5 text-[11px] font-semibold tracking-[0.02em] text-white hover:bg-[#144535]"
+                        className="mt-5 h-auto rounded-lg bg-[#454C23] px-5 py-2.5 text-[11px] font-semibold tracking-[0.02em] text-white hover:bg-[#454C23]"
                       >
                         <a href={`/research/${article.slug}`}>
                         ↓ Download Report
@@ -275,7 +275,7 @@ export default function ResearchPage() {
 
           <div className="mt-8 flex justify-center">
             <motion.div whileHover={{ y: -2 }} transition={{ duration: 0.2 }}>
-              <Button asChild className="h-auto rounded-lg bg-[#1a5845] px-6 py-3 text-xs font-semibold tracking-[0.02em] text-white hover:bg-[#144535]">
+              <Button asChild className="h-auto rounded-lg bg-[#454C23] px-6 py-3 text-xs font-semibold tracking-[0.02em] text-white hover:bg-[#454C23]">
                 <a href="#">Read More →</a>
               </Button>
             </motion.div>

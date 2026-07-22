@@ -28,7 +28,7 @@ export function EditorialBanner() {
         ref={bgRef}
         className="absolute inset-0 -top-[100px] -bottom-[100px]"
         style={{
-          background: 'linear-gradient(135deg, #2C3B28 0%, #1A2416 50%, #0D160B 100%)',
+          background: 'linear-gradient(135deg, #454C23 0%, #1A2416 50%, #0D160B 100%)',
         }}
       />
 
@@ -46,16 +46,16 @@ export function EditorialBanner() {
           className="font-serif font-light italic text-white leading-tight"
           style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)' }}
         >
-          From Anxiety to Action.
+          Cities Need Nature.
         </p>
         <p
           className="font-serif font-light italic text-gold leading-tight"
           style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)' }}
         >
-          Resilience Through Education.
+          Nature Restores Cities.
         </p>
         <p className="font-sans text-sm text-white/60 mt-8 tracking-wide">
-          — Climate Anxiety &amp; Environmental Education Mission
+          — Addressing air quality, biodiversity loss, and climate impact through biophilic design
         </p>
         <a
           href="#mission"

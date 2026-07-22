@@ -2,9 +2,9 @@ import { Skeleton } from '@/components/ui/skeleton'
 
 export default function Loading() {
   return (
-    <main className="relative overflow-hidden bg-[linear-gradient(180deg,#1f3a34_0%,#2d4e45_16%,#d5e4d2_36%,#f7f3e8_100%)] pt-20 text-[#1d2d25]">
+    <main className="relative overflow-hidden bg-[linear-gradient(180deg,#1f3a34_0%,#2d4e45_16%,#d5e4d2_36%,#f7f3e8_100%)] pt-20 text-[#454C23]">
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-20 right-[10%] h-72 w-72 rounded-full bg-[#89b29f]/20 blur-3xl" />
+        <div className="absolute -top-20 right-[10%] h-72 w-72 rounded-full bg-[#8C9A4B]/20 blur-3xl" />
         <div className="absolute top-0 left-[-8%] h-64 w-64 rounded-full bg-[#bfd3c5]/18 blur-3xl" />
       </div>
 
@@ -41,36 +41,36 @@ export default function Loading() {
 
       <section className="relative pb-[clamp(72px,9vw,120px)]">
         <div className="mx-auto max-w-[1320px] px-[clamp(20px,5vw,80px)]">
-          <div className="mx-auto max-w-4xl rounded-3xl border border-[#dfd3bd] bg-[#f7f1e6]/90 p-6 shadow-[0_24px_60px_rgba(17,31,24,0.12)] backdrop-blur-md md:p-8">
+          <div className="mx-auto max-w-4xl rounded-3xl border border-[#E5ECFF] bg-[#FFFFFF]/90 p-6 shadow-[0_24px_60px_rgba(17,31,24,0.12)] backdrop-blur-md md:p-8">
             <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
               <div className="space-y-2">
-                <Skeleton className="h-4 w-24 rounded bg-[#ede7dc]" />
-                <Skeleton className="h-12 w-full rounded-xl bg-[#fcf8f0]" />
+                <Skeleton className="h-4 w-24 rounded bg-[#E5ECFF]" />
+                <Skeleton className="h-12 w-full rounded-xl bg-[#FFFFFF]" />
               </div>
 
               <div className="space-y-2">
-                <Skeleton className="h-4 w-36 rounded bg-[#ede7dc]" />
-                <Skeleton className="h-12 w-full rounded-xl bg-[#fcf8f0]" />
+                <Skeleton className="h-4 w-36 rounded bg-[#E5ECFF]" />
+                <Skeleton className="h-12 w-full rounded-xl bg-[#FFFFFF]" />
               </div>
 
               <div className="space-y-2">
-                <Skeleton className="h-4 w-16 rounded bg-[#ede7dc]" />
-                <Skeleton className="h-12 w-full rounded-xl bg-[#fcf8f0]" />
+                <Skeleton className="h-4 w-16 rounded bg-[#E5ECFF]" />
+                <Skeleton className="h-12 w-full rounded-xl bg-[#FFFFFF]" />
               </div>
 
               <div className="space-y-2">
-                <Skeleton className="h-4 w-16 rounded bg-[#ede7dc]" />
-                <Skeleton className="h-12 w-full rounded-xl bg-[#fcf8f0]" />
+                <Skeleton className="h-4 w-16 rounded bg-[#E5ECFF]" />
+                <Skeleton className="h-12 w-full rounded-xl bg-[#FFFFFF]" />
               </div>
 
               <div className="space-y-2">
-                <Skeleton className="h-4 w-20 rounded bg-[#ede7dc]" />
-                <Skeleton className="h-12 w-full rounded-xl bg-[#fcf8f0]" />
+                <Skeleton className="h-4 w-20 rounded bg-[#E5ECFF]" />
+                <Skeleton className="h-12 w-full rounded-xl bg-[#FFFFFF]" />
               </div>
 
               <div className="space-y-2 md:col-span-2">
-                <Skeleton className="h-4 w-36 rounded bg-[#ede7dc]" />
-                <Skeleton className="h-28 w-full rounded-xl bg-[#fcf8f0]" />
+                <Skeleton className="h-4 w-36 rounded bg-[#E5ECFF]" />
+                <Skeleton className="h-28 w-full rounded-xl bg-[#FFFFFF]" />
               </div>
 
               <div className="md:col-span-2">
@@ -81,7 +81,7 @@ export default function Loading() {
         </div>
       </section>
 
-      <footer className="bg-[#17342c]">
+      <footer className="bg-[#454C23]">
         <div className="mx-auto max-w-[1320px] px-[clamp(20px,5vw,80px)] py-16 md:py-20">
           <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
             <div className="flex items-center gap-3">

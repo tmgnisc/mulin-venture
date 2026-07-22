@@ -25,12 +25,12 @@ export function HomeProductsSection() {
             </h2>
           </div>
           <p className="font-sans font-light text-ink-soft max-w-xs leading-relaxed text-sm md:text-right">
-            Handcrafted botanical products designed to bring living greenery into everyday life.
+            Three core product lines built for living aesthetics, biodiversity action, and community learning.
           </p>
         </div>
 
         {/* Products Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {productHubItems.map((product, index) => (
             <Link
               key={product.slug}

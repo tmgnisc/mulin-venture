@@ -11,10 +11,10 @@ const HERO_IMG = '/leaf.jpg'
 const HERO_VIDEO = '/videos/video.mp4'
 
 const stats = [
-  { value: 'Youth', label: 'Empowerment' },
-  { value: 'Climate', label: 'Education' },
-  { value: 'Action', label: 'Not Paralysis' },
-  { value: 'Global', label: 'Mission' },
+  { value: 'Biophilic', label: 'Design' },
+  { value: 'Urban', label: 'Biodiversity' },
+  { value: 'Carbon', label: 'Capture' },
+  { value: 'Community', label: 'Learning' },
 ]
 
 export function HeroSection() {
@@ -24,9 +24,7 @@ export function HeroSection() {
   const leafMidRightRef = useRef<HTMLDivElement>(null)
   const leafFrontRightRef = useRef<HTMLDivElement>(null)
   const leafFrontLeftRef = useRef<HTMLDivElement>(null)
-  const labelRef = useRef<HTMLSpanElement>(null)
   const heading1Ref = useRef<HTMLSpanElement>(null)
-  const heading2Ref = useRef<HTMLSpanElement>(null)
   const subheadingRef = useRef<HTMLParagraphElement>(null)
   const buttonsRef = useRef<HTMLDivElement>(null)
   const statsRef = useRef<HTMLDivElement>(null)
@@ -48,9 +46,7 @@ export function HeroSection() {
       /* ── Entry animation ─────────────────────────────── */
       const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
       tl
-        .fromTo(labelRef.current, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.7, delay: 0.5 })
-        .fromTo(heading1Ref.current, { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 1 }, '-=0.35')
-        .fromTo(heading2Ref.current, { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 1 }, '-=0.65')
+        .fromTo(heading1Ref.current, { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 1, delay: 0.5 })
         .fromTo(subheadingRef.current, { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.8 }, '-=0.45')
         .fromTo(buttonsRef.current, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.7 }, '-=0.4')
         .fromTo(statsRef.current, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.6 }, '-=0.3')
@@ -204,28 +200,10 @@ export function HeroSection() {
       {/*   <TropicalLeaf className="w-44 h-[420px] text-gold" /> */}
       {/* </div> */}
       {/**/}
-      {/* ── Layer 3: Floating pollen particles ─────────── */}
-      <div className="absolute inset-0 z-[3] pointer-events-none overflow-hidden">
-        {[...Array(6)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute animate-float-up"
-            style={{
-              left: `${8 + i * 16}%`,
-              animationDelay: `${i * 2.2}s`,
-              animationDuration: `${13 + i * 2}s`,
-            }}
-          >
-            {i % 2 === 0
-              ? <MonsteraLeaf className="w-7 h-10 text-sage/20" />
-              : <TropicalLeaf className="w-4 h-9 text-gold/15" />}
-          </div>
-        ))}
-      </div>
+
 
       {/* ── Layer 5: Center content ─────────────────────── */}
       <div className="relative z-10 mx-auto max-w-5xl px-[clamp(16px,5vw,80px)] pt-24 sm:pt-28 lg:pt-32 text-center">
-
         {/* Heading */}
         <h1 className="mb-6 flex flex-col items-center font-serif font-light leading-[1.08] text-white sm:mb-8 sm:leading-[1.04]">
           <span
@@ -233,14 +211,8 @@ export function HeroSection() {
             className="block opacity-0"
             style={{ fontSize: 'clamp(1.9rem, 9.2vw, 7rem)' }}
           >
-            Sustainable Engineering.
+            Nurture through Nature
           </span>
-          <span
-            ref={heading2Ref}
-            className="block italic text-gold opacity-0"
-            style={{ fontSize: 'clamp(1.9rem, 9.2vw, 7rem)' }}
-          >
-            Biophilic Design.          </span>
         </h1>
 
         {/* Subheading */}
@@ -249,7 +221,9 @@ export function HeroSection() {
           className="mx-auto mb-8 max-w-[92%] font-sans font-light leading-relaxed text-white/70 opacity-0 sm:mb-10 sm:max-w-xl"
           style={{ fontSize: 'clamp(0.92rem, 3.4vw, 1.05rem)' }}
         >
-          We are a consulting non-profit. We optimize spaces using LEED & WELL principles, and channel our profits into environmental education for schools.</p>
+          We create environmentally responsible and socially conscious green spaces that
+          weave nature into urban life, improve wellbeing, and build carbon-absorbing havens.
+        </p>
 
         {/* CTAs */}
         <div
