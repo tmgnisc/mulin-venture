@@ -200,24 +200,7 @@ export function HeroSection() {
       {/*   <TropicalLeaf className="w-44 h-[420px] text-gold" /> */}
       {/* </div> */}
       {/**/}
-      {/* ── Layer 3: Floating pollen particles ─────────── */}
-      <div className="absolute inset-0 z-[3] pointer-events-none overflow-hidden">
-        {[...Array(6)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute animate-float-up"
-            style={{
-              left: `${8 + i * 16}%`,
-              animationDelay: `${i * 2.2}s`,
-              animationDuration: `${13 + i * 2}s`,
-            }}
-          >
-            {i % 2 === 0
-              ? <MonsteraLeaf className="w-7 h-10 text-sage/20" />
-              : <TropicalLeaf className="w-4 h-9 text-gold/15" />}
-          </div>
-        ))}
-      </div>
+
 
       {/* ── Layer 5: Center content ─────────────────────── */}
       <div className="relative z-10 mx-auto max-w-5xl px-[clamp(16px,5vw,80px)] pt-24 sm:pt-28 lg:pt-32 text-center">
