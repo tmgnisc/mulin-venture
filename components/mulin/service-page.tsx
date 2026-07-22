@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { motion, type Variants } from 'framer-motion'
 import { ArrowRight, CheckIcon, MonsteraLeaf } from './svg-assets'
 import type { ServicePageContent } from './service-page-data'
+import { ApproachSection } from './approach-section'
 import { Footer } from './footer'
 import { Navigation } from './navigation'
 
@@ -204,6 +205,15 @@ export function ServicePage({ content }: ServicePageProps) {
             </motion.div>
           </motion.div>
         </section>
+
+        {content.approach && (
+          <ApproachSection
+            title={content.approach.title}
+            subtitle={content.approach.subtitle}
+            items={content.approach.items}
+            accent={content.accent}
+          />
+        )}
 
         <section className="border-y border-[#d8ddd7] bg-[#eef2ed]">
           <div className="mx-auto max-w-[1320px] px-[clamp(20px,5vw,80px)] py-[clamp(56px,7vw,96px)]">

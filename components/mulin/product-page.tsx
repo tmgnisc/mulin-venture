@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { motion, type Variants } from 'framer-motion'
 import { ArrowRight, CheckIcon, MonsteraLeaf } from './svg-assets'
 import type { ProductPageContent } from './product-page-data'
+import { ApproachSection } from './approach-section'
 import { Footer } from './footer'
 import { Navigation } from './navigation'
 
@@ -151,6 +152,15 @@ export function ProductPage({ content }: ProductPageProps) {
             </motion.div>
           </motion.div>
         </section>
+
+        {content.approach && (
+          <ApproachSection
+            title={content.approach.title}
+            subtitle={content.approach.subtitle}
+            items={content.approach.items}
+            accent={content.accent}
+          />
+        )}
 
         <section className="bg-[#e9eedf]">
           <div className="mx-auto max-w-[1320px] px-[clamp(20px,5vw,80px)] py-[clamp(48px,7vw,84px)]">

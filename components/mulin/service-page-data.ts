@@ -1,3 +1,11 @@
+export type ApproachItem = {
+  title: string
+  body: string
+  image: string
+  alt: string
+  caption: string
+}
+
 export type ServicePageContent = {
   slug: string
   eyebrow: string
@@ -12,6 +20,11 @@ export type ServicePageContent = {
   overviewBody: string
   featuresTitle: string
   features: { title: string; body: string }[]
+  approach?: {
+    title: string
+    subtitle: string
+    items: ApproachItem[]
+  }
   processTitle: string
   process: { step: string; title: string; body: string }[]
   outcomesTitle: string
@@ -84,6 +97,33 @@ const servicePages: Record<string, ServicePageContent> = {
       { title: 'Ecological planting strategy', body: 'Plant palettes are selected for native support and long-term performance.' },
       { title: 'Experience-driven landscape design', body: 'Spaces are built to be both ecologically useful and socially welcoming.' },
     ],
+    approach: {
+      title: 'Our methodology',
+      subtitle: 'Every landscape begins with understanding the living systems of the site.',
+      items: [
+        {
+          title: 'We are rooted in science',
+          body: 'At Mulin, every project begins with a deep listening to the land. Before we design, we observe, analyze, and understand the living system of a site — its sun path, prevailing winds, microclimates, water flow, soil, and biodiversity. This diagram represents just one layer of that process — mapping the sun\'s journey and wind patterns — helping us to create spaces that are resilient, regenerative, and comfortable for both people and ecosystems.',
+          image: '/brand/sun-wind-diagram.png',
+          alt: 'Sun and wind-path diagram reading of a site',
+          caption: 'Sun and Wind-path diagram reading of a site',
+        },
+        {
+          title: 'We prioritise sustainability',
+          body: 'At Mulin, our landscapes are built to last — without compromising nature. We prioritize sustainable materials and systems that work with the environment to create beautiful, functional, and regenerative spaces. These heavy-duty turf pavers represent our commitment to permeable solutions that allow rainwater to return to the earth, reducing runoff and supporting healthy soils, durability and low maintenance, and green integration, blending hardscapes with living systems.',
+          image: '/brand/water-efficient-pavers.jpg',
+          alt: 'Layers of water efficient pavers',
+          caption: 'Layers of water efficient pavers',
+        },
+        {
+          title: 'Biodiversity oriented design',
+          body: 'At Mulin, we believe that every landscape should support life — for people, plants, animals, and the invisible networks that sustain them. Our biodiversity-oriented design approach weaves native plants, layered habitats, and ecological processes into every project, creating spaces that are alive, resilient, and ever-changing. Through thoughtful planting and design, we restore native ecosystems and attract pollinators, birds, and beneficial insects.',
+          image: '/brand/sparrow-birdbath.jpg',
+          alt: 'Sparrow on a bird bath',
+          caption: 'Sparrow on a bird bath',
+        },
+      ],
+    },
     processTitle: 'How the work unfolds',
     process: [
       { step: '01', title: 'Site assessment', body: 'We review structural, climatic, and ecological opportunities.' },
@@ -123,6 +163,33 @@ const servicePages: Record<string, ServicePageContent> = {
       { title: 'Scored evaluation framework', body: 'A consistent structure helps teams benchmark and track progress over time.' },
       { title: 'Action-oriented recommendations', body: 'Clients receive clear steps to improve outcomes in each impact area.' },
     ],
+    approach: {
+      title: 'Our methodology',
+      subtitle: 'Sustainable building starts with understanding the full impact of every material and system.',
+      items: [
+        {
+          title: 'Lifecycle Assessment',
+          body: 'At Mulin, we believe that what we build today should not become tomorrow\'s burden. That\'s why we consider the entire lifecycle of materials and systems we introduce into a site — from extraction and manufacturing to use, maintenance, and eventual return to the earth. Our Lifecycle Assessment (LCA) approach helps us choose low-impact, durable materials that minimize carbon footprint and resource use.',
+          image: '/brand/lifecycle-assessment.jpg',
+          alt: 'Stages of sustainable lifecycle of materials',
+          caption: 'Stages of sustainable lifecycle of materials',
+        },
+        {
+          title: 'Use of local crafts',
+          body: 'At Mulin, we believe that the materials we choose are not just functional — they tell stories of place, people, and tradition. By working with locally crafted materials like hollow clay blocks, we support regional artisanship, reduce environmental impact, and create buildings that breathe with the climate. Our approach to local crafts allows us to use natural, breathable materials that regulate heat and moisture, reducing the need for artificial systems.',
+          image: '/brand/hollow-clay-block.png',
+          alt: 'Hollow clay block',
+          caption: 'Hollow clay block',
+        },
+        {
+          title: 'Reduce energy consumption',
+          body: 'At Mulin, we believe that energy efficiency starts with design, not just technology. By choosing materials that work with the climate — like Low-E (low-emissivity) coated windows — we reduce the need for artificial heating and cooling, creating spaces that are naturally comfortable and sustainable. Our approach focuses on passive design solutions that optimize light, air, and heat — reducing dependency on mechanical systems.',
+          image: '/brand/low-e-coating.png',
+          alt: 'Low E Coating and Photochromic Coating on Double Glazed Window',
+          caption: 'Low E Coating and Photochromic Coating on Double Glazed Window',
+        },
+      ],
+    },
     processTitle: 'How the work unfolds',
     process: [
       { step: '01', title: 'Data collection', body: 'We gather key environmental and spatial inputs from the project.' },

@@ -1,3 +1,5 @@
+import type { ApproachItem } from './service-page-data'
+
 export type ProductPageContent = {
   slug: string
   eyebrow: string
@@ -14,6 +16,11 @@ export type ProductPageContent = {
   overviewBody: string
   featuresTitle: string
   features: { title: string; body: string }[]
+  approach?: {
+    title: string
+    subtitle: string
+    items: ApproachItem[]
+  }
   processTitle: string
   process: { step: string; title: string; body: string }[]
   outcomesTitle: string
@@ -210,6 +217,33 @@ const productPages: Record<string, ProductPageContent> = {
         body: 'Tippy supports child engagement and habit-building within biodiversity learning activities.',
       },
     ],
+    approach: {
+      title: 'Our philosophy',
+      subtitle: 'The Biodiversity Toolkit is built on three core beliefs that guide everything we create.',
+      items: [
+        {
+          title: 'Ignite passion and mindfulness',
+          body: 'At Mulin, we believe that nurturing biodiversity starts with seeing, noticing, and caring. Our Biodiversity Toolkit invites people to observe, document, and connect with the life around them — because when we pay attention, we begin to protect. Whether it\'s watching birds, tracking insects, or sketching plants, we encourage everyone to become a part of the landscape\'s story.',
+          image: '/brand/toolkit-passion.jpg',
+          alt: 'Excerpt from an initial design for Biodiversity Toolkit',
+          caption: 'Excerpt from an initial design for Biodiversity Toolkit',
+        },
+        {
+          title: 'We are rooted in science',
+          body: 'At Mulin, we believe that caring for nature begins with deep understanding. Our approach to biodiversity is rooted in science, guiding us to see plants not just as decorations, but as living systems that shape and sustain ecosystems. By studying how plants grow, adapt, and interact, we design landscapes that are resilient, regenerative, and rich in life.',
+          image: '/brand/toolkit-science.jpg',
+          alt: 'Excerpt from an initial design for Biodiversity Toolkit',
+          caption: 'Excerpt from an initial design for Biodiversity Toolkit',
+        },
+        {
+          title: 'We Are Current and Activistic',
+          body: 'At Mulin, we don\'t see biodiversity as a passive idea — it\'s a living, urgent call to action. Our work is grounded in current environmental realities, and we design with a deep understanding of the crises and opportunities of our time — from habitat loss to climate change. We believe design is a tool for activism. Every plant we choose, every system we restore, is a step toward healing ecosystems.',
+          image: '/brand/toolkit-activism.jpg',
+          alt: 'Excerpt from an initial design for Biodiversity Toolkit',
+          caption: 'Excerpt from an initial design for Biodiversity Toolkit',
+        },
+      ],
+    },
     processTitle: 'How we deliver',
     process: [
       { step: '01', title: 'Context mapping', body: 'We align toolkit components to user type, site conditions, and learning goals.' },
