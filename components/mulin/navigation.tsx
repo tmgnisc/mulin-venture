@@ -27,6 +27,7 @@ const navLinks = [
       { label: 'Biodiversity Toolkit', href: '/products/biodiversity-toolkit' },
     ],
   },
+  { label: 'Blog', href: '/blog' },
   { label: 'Community', href: '/community' },
   { label: 'About', href: '/about' },
 ]

@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next'
+import { blogPosts } from '@/lib/blog-data'
 
 export const dynamic = 'force-static'
 
@@ -13,6 +14,13 @@ const pages: {
 }[] = [
   { path: '', lastModified: '2026-07-17', changeFrequency: 'weekly', priority: 1.0 },
   { path: '/about', lastModified: '2026-07-17', changeFrequency: 'monthly', priority: 0.8 },
+  { path: '/blog', lastModified: '2026-07-17', changeFrequency: 'weekly', priority: 0.8 },
+  ...blogPosts.map((post) => ({
+    path: `/blog/${post.slug}`,
+    lastModified: new Date(post.date).toISOString().split('T')[0],
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  })),
   { path: '/services', lastModified: '2026-07-17', changeFrequency: 'monthly', priority: 0.9 },
   { path: '/services/leed-certification', lastModified: '2026-07-17', changeFrequency: 'monthly', priority: 0.7 },
   { path: '/services/well-certification', lastModified: '2026-07-17', changeFrequency: 'monthly', priority: 0.7 },
