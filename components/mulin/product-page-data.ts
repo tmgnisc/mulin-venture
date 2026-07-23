@@ -61,8 +61,7 @@ export const productHubItems: ProductHubItem[] = [
     title: 'Moss Walls & Living Walls',
     summary:
       'Moss panels and fully living plant walls for indoor and outdoor spaces that are visually striking, acoustically beneficial, and deeply calming.',
-    image:
-      'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1600&q=80',
+    image: '/livingmosswall.jpg',
     alt: 'Living wall installation with dense layered greenery',
     accent: '#5F8F74',
     detail: 'Centerpiece installations designed to anchor biophilic spaces.',
