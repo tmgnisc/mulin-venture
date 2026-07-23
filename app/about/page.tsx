@@ -9,50 +9,50 @@ import Image from 'next/image'
 
 const priorities = [
   {
-    title: 'Our Priorities',
-    text: 'Restore rivers, reduce waste, and empower communities with practical systems that can be sustained locally.',
+    title: 'Biophilic Design',
+    text: 'We create spaces that reconnect people with nature — improving wellbeing, air quality, and biodiversity in every project.',
   },
   {
-    title: 'Blogs',
-    text: 'Read our latest writing on environmental challenges, project updates, and ideas for a more sustainable Nepal.',
+    title: 'Urban Greening',
+    text: 'From rooftop gardens to living walls, we transform underused urban surfaces into thriving green ecosystems.',
   },
   {
-    title: 'How You Can Help',
-    text: 'Volunteer, attend workshops, support student-led efforts, and bring everyday sustainable practices into your routine.',
+    title: 'Workshops & Education',
+    text: 'Our plant art workshops and community sessions teach hands-on skills for integrating nature into everyday life.',
   },
   {
-    title: 'Donate to Our Mission',
-    text: 'Your support helps fund restoration work, waste diversion, and environmental education where it is needed most.',
+    title: 'Sustainable Products',
+    text: 'We curate and craft biodiversity-friendly products — moss walls, plant art, and tools for greener living.',
   },
 ]
 
 const team = [
   {
-    title: 'Environmental Strategy',
-    text: 'Guiding projects that connect conservation goals with practical implementation in schools and neighborhoods.',
+    title: 'Design & Planning',
+    text: 'Translating biophilic principles into site-specific designs that harmonize architecture with native ecology.',
   },
   {
-    title: 'Community Outreach',
-    text: 'Working closely with students, families, and local groups to build participation and long-term stewardship.',
+    title: 'Installation & Horticulture',
+    text: 'Expert execution of green roofs, living walls, and landscape projects with a focus on long-term plant health.',
   },
   {
-    title: 'Research & Advocacy',
-    text: 'Turning field observations into research-backed programs and public-facing environmental awareness.',
+    title: 'Research & Innovation',
+    text: 'Exploring native species, carbon-capture materials, and regenerative systems to push sustainable design forward.',
   },
 ]
 
 const blogHighlights = [
   {
-    title: 'The Flow of a Crisis',
-    text: 'An assessment of water and sanitation in Kathmandu Valley and the public health consequences of system failure.',
+    title: 'Biophilic Design in Nepal',
+    text: 'How nature-integrated architecture is reshaping urban spaces in Kathmandu and beyond.',
   },
   {
-    title: 'Nepal’s Environmental Crossroads',
-    text: 'A broader look at the country’s air, water, waste, and climate pressures and where action matters most.',
+    title: 'The Rise of Living Walls',
+    text: 'A deep dive into vertical gardens — their ecological benefits, installation process, and maintenance.',
   },
   {
-    title: 'Why River Pollution Matters',
-    text: 'A practical summary of the causes behind river pollution and the actions needed to reverse the trend.',
+    title: 'Designing for Biodiversity',
+    text: 'Practical strategies for incorporating native plants and wildlife habitats into urban landscapes.',
   },
 ]
 
@@ -90,25 +90,25 @@ export default function AboutPage() {
                 Who We Are
               </motion.h1>
               <motion.p variants={rise} className="mt-6 max-w-3xl text-base leading-relaxed text-[#d8e8dd] md:text-lg">
-                Mulin Venture is a non-profit organization dedicated to fostering environmental sustainability through innovative solutions and community engagement.
+                Mulin Venture is a biophilic design studio dedicated to creating green spaces that nurture wellbeing, restore urban biodiversity, and bring nature back into everyday life.
               </motion.p>
               <motion.p variants={rise} className="mt-4 max-w-3xl text-base leading-relaxed text-[#d8e8dd] md:text-lg">
-                Founded in Nepal with a mission to protect and restore the natural environment, the organization centers waste reduction, river restoration, and environmental education.
+                Founded in Nepal, we specialize in biophilic design, landscape and rooftop greening, plant art, and sustainable products — helping clients transform spaces into carbon-absorbing havens.
               </motion.p>
             </div>
 
             <motion.div variants={rise} className="relative h-[360px] overflow-hidden rounded-3xl border border-white/10 bg-white/5 md:h-[460px]">
               <Image
                 src="https://images.unsplash.com/photo-1552084117-56a987666449?auto=format&fit=crop&w=1200&q=80"
-                alt="Volunteers planting a young tree during a community restoration program"
+                alt="A biophilic interior space blending lush greenery with modern architecture"
                 fill
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <p className="text-xs tracking-[0.2em] text-[#dbe8de]">RESTORATION IN ACTION</p>
+                <p className="text-xs tracking-[0.2em] text-[#dbe8de]">BIOPHILIC DESIGN IN PRACTICE</p>
                 <p className="mt-2 max-w-md text-sm leading-relaxed text-white/85">
-                  Community-led programs that connect education, stewardship, and practical change.
+                  Every project we build weaves nature into architecture — improving air, mood, and biodiversity.
                 </p>
               </div>
             </motion.div>
@@ -126,23 +126,23 @@ export default function AboutPage() {
             <motion.div variants={rise}>
               <p className="text-xs tracking-[0.16em] text-[#737F3C]">OUR MISSION / VISION</p>
               <h2 className="mt-3 max-w-xl font-serif text-4xl leading-tight text-[#454C23] md:text-5xl">
-                Restore rivers, reduce waste, and empower communities through practical action.
+                Design green spaces that nurture life, restore biodiversity, and inspire connection with nature.
               </h2>
               <p className="mt-5 max-w-xl leading-relaxed text-[#3d5145]">
-                We are focused on environmental sustainability, community participation, and education that creates measurable change on the ground.
+                We combine biophilic design, native ecology, and sustainable craftsmanship to create spaces that benefit people and the planet.
               </p>
 
               <div className="mt-8 border-l border-[#d1ddd3] pl-5">
                 <p className="text-xs uppercase tracking-[0.16em] text-[#737F3C]">Our Mission</p>
                 <p className="mt-2 text-base leading-relaxed text-[#454C23]">
-                  To restore Nepal&apos;s rivers, reduce waste going into landfills, and empower students and local communities to become stewards of change.
+                  To integrate nature into every built space — through biophilic design, green infrastructure, and education that empowers lasting change.
                 </p>
               </div>
 
               <div className="mt-6 border-l border-[#d1ddd3] pl-5">
                 <p className="text-xs uppercase tracking-[0.16em] text-[#737F3C]">Our Vision</p>
                 <p className="mt-2 text-base leading-relaxed text-[#454C23]">
-                  A future where rivers flow clean and clear, students lead environmental innovation, and communities embrace sustainable waste systems.
+                  A future where every building breathes with greenery, cities support thriving ecosystems, and people live in harmony with the natural world.
                 </p>
               </div>
             </motion.div>
@@ -151,15 +151,15 @@ export default function AboutPage() {
               <div className="relative min-h-[420px] overflow-hidden rounded-[28px]">
                 <Image
                   src="https://images.unsplash.com/photo-1444492417251-9c84a5fa18e0?auto=format&fit=crop&w=1200&q=80"
-                  alt="A clear river flowing through green hills, the focus of restoration work"
+                  alt="Lush green rooftop garden overlooking the Kathmandu skyline"
                   fill
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/10 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <p className="text-[11px] uppercase tracking-[0.18em] text-white/75">River restoration</p>
+                  <p className="text-[11px] uppercase tracking-[0.18em] text-white/75">Urban greening</p>
                   <p className="mt-2 max-w-sm text-sm leading-relaxed text-white/85">
-                    Working with communities to protect waterways and strengthen public stewardship.
+                    Transforming rooftops, facades, and underused spaces into thriving green ecosystems.
                   </p>
                 </div>
               </div>
@@ -168,7 +168,7 @@ export default function AboutPage() {
                 <div className="relative min-h-[200px] overflow-hidden rounded-[24px]">
                   <Image
                     src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=900&q=80"
-                    alt="Hands holding a seedling in soil during an environmental education session"
+                    alt="Close-up of a moss wall installation with varied textures and shades of green"
                     fill
                     className="object-cover"
                   />
@@ -177,7 +177,7 @@ export default function AboutPage() {
                 <div className="rounded-[24px] border border-[#d8e2d7] bg-[#f7faf6] p-6">
                   <p className="text-xs uppercase tracking-[0.16em] text-[#737F3C]">What we believe</p>
                   <p className="mt-3 text-sm leading-relaxed text-[#355043]">
-                    Change happens when education, systems, and community ownership move together.
+                    Great design restores — it brings life, colour, and ecology back into the places we inhabit.
                   </p>
                 </div>
               </div>
@@ -193,10 +193,10 @@ export default function AboutPage() {
           variants={container}
         >
           <motion.p variants={rise} className="inline-flex rounded-full bg-[#d7e4da] px-4 py-1 text-xs tracking-[0.16em] text-[#4f6a5b]">
-            ONE PLANET, ONE MISSION
+            NATURE FIRST, ALWAYS
           </motion.p>
           <motion.h2 variants={rise} className="mt-4 max-w-3xl font-serif text-4xl leading-tight text-[#454C23] md:text-5xl">
-            We confront pollution and environmental degradation with practical, community-led action.
+            We bring biophilic thinking to every project — from concept to completion.
           </motion.h2>
 
           <motion.div variants={container} className="mt-8 grid gap-4 md:grid-cols-2">
@@ -225,7 +225,7 @@ export default function AboutPage() {
             <p className="text-xs tracking-[0.16em] text-[#737F3C]">OUR TEAM</p>
             <h2 className="mt-3 font-serif text-4xl text-[#454C23] md:text-5xl">Meet Our Team</h2>
             <p className="mt-4 max-w-3xl leading-relaxed text-[#3d5145]">
-              A small but committed network of environmental advocates, educators, and community partners working toward cleaner rivers, better systems, and stronger public awareness.
+              A passionate team of designers, horticulturists, and sustainability advocates working together to make every space greener and more liveable.
             </p>
             <div className="mt-8 grid gap-4 md:grid-cols-3">
               {team.map((item) => (
@@ -249,14 +249,14 @@ export default function AboutPage() {
             <p className="text-xs tracking-[0.16em] text-[#FFFFFF]">OUR STORY</p>
             <h2 className="mt-3 font-serif text-4xl md:text-5xl">The Heart of Our Mission</h2>
             <p className="mt-4 max-w-3xl leading-relaxed text-[#FFFFFF]">
-              Our journey began with school-based recycling efforts and grew into a broader mission to rehabilitate rivers, reduce waste, and expand environmental education.
+              Our journey began with a simple belief — that nature belongs in every space we inhabit. From small residential projects to large-scale green installations, we have grown into a trusted studio for biophilic design in Nepal.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Button asChild className="rounded-full bg-white px-6 text-[#2f4a3a] hover:bg-[#eef5ef]">
-                <Link href="/community">See Community Impact</Link>
+                <Link href="/services">Explore Our Services</Link>
               </Button>
               <Button asChild variant="outline" className="rounded-full border-white/65 bg-transparent text-white hover:bg-white/10">
-                <Link href="/research">Our Science &amp; Research</Link>
+                <Link href="/products">Our Products</Link>
               </Button>
             </div>
           </motion.div>
@@ -273,7 +273,7 @@ export default function AboutPage() {
             <p className="text-xs tracking-[0.16em] text-[#737F3C]">BLOGS</p>
             <h2 className="mt-3 font-serif text-4xl text-[#454C23] md:text-5xl">Our Latest Writing</h2>
             <p className="mt-4 max-w-3xl leading-relaxed text-[#3d5145]">
-              Looking for more insight? Explore our recent articles to learn more about the projects, environmental tips, and research shaping our work.
+              Explore our latest articles on biophilic design, urban greening, plant care, and the ideas shaping our approach to sustainable spaces.
             </p>
           </motion.div>
           <div className="mt-8 grid gap-4 md:grid-cols-3">
@@ -291,7 +291,7 @@ export default function AboutPage() {
           </div>
           <div className="mt-6">
             <Button asChild className="rounded-full bg-[#454C23] px-6 text-white hover:bg-[#454C23]">
-              <Link href="/research">See Research</Link>
+              <Link href="/blog">Read the Blog</Link>
             </Button>
           </div>
         </motion.section>
@@ -304,17 +304,17 @@ export default function AboutPage() {
           variants={container}
         >
           <motion.div variants={rise} className="rounded-[22px] bg-[#454C23] px-7 py-9 text-white md:px-10">
-            <p className="text-xs tracking-[0.16em] text-[#c7ddd0]">OUR SCIENCE & RESEARCH</p>
-            <h2 className="mt-3 font-serif text-4xl md:text-5xl">Evidence guides every project we build.</h2>
+            <p className="text-xs tracking-[0.16em] text-[#c7ddd0]">OUR APPROACH</p>
+            <h2 className="mt-3 font-serif text-4xl md:text-5xl">Every project is rooted in ecological thinking.</h2>
             <p className="mt-4 max-w-3xl leading-relaxed text-white/80">
-              We translate field observations, environmental research, and community feedback into practical action plans for river restoration, waste diversion, and education.
+              We draw on native plant science, climate-responsive design, and years of hands-on experience to create green spaces that thrive in Nepal&apos;s unique environment.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Button asChild className="rounded-full bg-white px-6 text-[#454C23] hover:bg-[#eef5ef]">
-                <Link href="/research">Open Research</Link>
+                <Link href="/research">Our Research</Link>
               </Button>
               <Button asChild variant="outline" className="rounded-full border-white/65 bg-transparent text-white hover:bg-white/10">
-                <Link href="/community">Community Impact</Link>
+                <Link href="/services">Our Services</Link>
               </Button>
             </div>
           </motion.div>
