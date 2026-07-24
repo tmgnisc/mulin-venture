@@ -139,8 +139,8 @@ const productPages: Record<string, ProductPageContent> = {
     summary:
       'Moss panels and fully living plant walls designed for indoor and outdoor environments.',
     heroImage:
-      'https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=1600&q=80',
-    heroAlt: 'Green wall with dense foliage in an interior environment',
+      'https://images.unsplash.com/photo-1761971976133-5b0cbaee8c89?auto=format&fit=crop&w=1600&q=80',
+    heroAlt: 'Lush green living wall installation in a modern interior space',
     heroNote:
       'These installations are visually striking, acoustically beneficial, and deeply calming.',
     accent: '#5F8F74',

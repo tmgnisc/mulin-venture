@@ -49,7 +49,7 @@ const communityProjects = [
     title: 'Green Roof & Native Garden Installation',
     body: 'Designed and installed a rooftop green space with native plants, creating an outdoor classroom and cooling the building.',
     tags: ['Green Roof', 'Native Plants', 'Outdoor Classroom'],
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?auto=format&fit=crop&w=900&q=80',
+    image: 'https://images.unsplash.com/photo-1463936575829-25148e1db1b8?auto=format&fit=crop&w=900&q=80',
   },
   {
     category: 'Workshop',
