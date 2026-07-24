@@ -18,10 +18,28 @@ export async function generateMetadata({
   const content = getServicePageContent(slug)
   if (!content) return {}
 
+  const cta = ' — Book a free consultation in Nepal today!'
+  const desc = content.summary.length + cta.length > 155
+    ? content.summary.slice(0, 140 - cta.length).replace(/\s+\S*$/, '') + cta
+    : content.summary + cta
+
   return {
     title: { absolute: `${content.title} in Nepal | Mulin Venture` },
-    description: content.summary,
+    description: desc,
     alternates: { canonical: `/services/${slug}` },
+    openGraph: {
+      title: `${content.title} in Nepal | Mulin Venture`,
+      description: desc,
+      url: `https://www.mulinventure.com/services/${slug}`,
+      siteName: 'Mulin Venture',
+      type: 'website',
+      locale: 'en_US',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${content.title} in Nepal | Mulin Venture`,
+      description: desc,
+    },
   }
 }
 

@@ -97,7 +97,17 @@ export function BentoServices() {
                 <>
                   <img
                     src={service.image ?? 'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1600&q=80'}
-                    alt={service.slug === 'biophilic-design' ? 'Biophilic interior with integrated greenery' : 'Rooftop greenery and urban planting'}
+                    alt={
+  service.slug === 'biophilic-design'
+    ? 'Biophilic interior with layered greenery, natural light, and sustainable materials'
+    : service.slug === 'landscape-rooftop-greening-design'
+    ? 'Rooftop garden with native plants in an urban Nepali setting'
+    : service.slug === 'green-building-rating-system'
+    ? 'Modern sustainable building facade with green certification features'
+    : service.slug === 'plant-art-workshops'
+    ? 'Participants creating living plant art during a hands-on workshop'
+    : 'Gardener pruning and maintaining a lush planted garden'
+}
                     className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
                   />
                   <div className={`absolute inset-0 ${

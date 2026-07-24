@@ -15,12 +15,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const post = getBlogPost(slug)
   if (!post) return {}
   return {
-    title: { absolute: `${post.title} | Mulin Venture` },
-    description: post.excerpt,
+    title: { absolute: `${post.title} | Mulin Venture Nepal` },
+    description: `${post.excerpt} — Mulin Venture Nepal`,
     alternates: { canonical: `/blog/${slug}` },
     openGraph: {
       title: post.title,
-      description: post.excerpt,
+      description: `${post.excerpt} — Mulin Venture Nepal`,
       url: `https://www.mulinventure.com/blog/${slug}`,
       siteName: 'Mulin Venture',
       type: 'article',
@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     twitter: {
       card: 'summary_large_image',
       title: post.title,
-      description: post.excerpt,
+      description: `${post.excerpt} — Mulin Venture Nepal`,
       images: [post.image],
     },
   }

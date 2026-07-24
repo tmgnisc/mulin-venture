@@ -74,7 +74,7 @@ export function Navigation() {
             >
               <Image
                 src="/favicon-mulin.png"
-                alt="Mulin Venture logo"
+                alt="Mulin Venture logo — biophilic design studio in Kathmandu, Nepal"
                 width={44}
                 height={44}
                 className="rounded-full object-cover"

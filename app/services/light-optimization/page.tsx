@@ -4,9 +4,9 @@ import { ServicePage } from '@/components/mulin/service-page'
 import { getServicePageContent } from '@/components/mulin/service-page-data'
 
 export const metadata: Metadata = {
-  title: { absolute: 'Light Optimization Services in Nepal | Mulin Venture' },
+  title: { absolute: 'Light Optimization & Biophilic Design in Nepal | Mulin Venture' },
   description:
-    'Daylight & lighting design in Nepal — glare control, visual comfort & layered light strategy for healthier spaces. Get in touch today!',
+    'Daylight, glare control, and layered lighting design as part of biophilic spaces in Nepal. Get in touch with Mulin Venture today!',
   alternates: { canonical: '/services/light-optimization' },
 }
 

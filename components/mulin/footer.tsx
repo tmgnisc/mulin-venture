@@ -38,7 +38,7 @@ export function Footer() {
           <div className="flex items-center gap-3">
             <Image
               src="/favicon-mulin.png"
-              alt="Mulin Venture logo"
+              alt="Mulin Venture logo — biophilic design studio in Nepal"
               width={50}
               height={50}
               className="rounded-full object-contain"

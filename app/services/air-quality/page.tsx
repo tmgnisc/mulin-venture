@@ -4,9 +4,9 @@ import { ServicePage } from '@/components/mulin/service-page'
 import { getServicePageContent } from '@/components/mulin/service-page-data'
 
 export const metadata: Metadata = {
-  title: { absolute: 'Indoor Air Quality Services in Nepal | Mulin Venture' },
+  title: { absolute: 'Indoor Air Quality & Biophilic Design in Nepal | Mulin Venture' },
   description:
-    'Indoor air quality review, ventilation strategy & low-emission material planning in Nepal. Breathe easier — contact Mulin Venture today!',
+    'Indoor air quality review, ventilation strategy, and biophilic planting design in Nepal. Breathe easier — contact Mulin Venture for a free consultation!',
   alternates: { canonical: '/services/air-quality' },
 }
 

@@ -4,9 +4,9 @@ import { ServicePage } from '@/components/mulin/service-page'
 import { getServicePageContent } from '@/components/mulin/service-page-data'
 
 export const metadata: Metadata = {
-  title: { absolute: 'WELL Certification in Nepal | Mulin Venture' },
+  title: { absolute: 'Green Building Rating & WELL Support in Nepal | Mulin Venture' },
   description:
-    'WELL certification support in Nepal — healthier interiors, better air, light & acoustic comfort for your building. Contact us today!',
+    'Green building rating and WELL certification support in Nepal — healthier interiors, better air, light & acoustic comfort. Contact Mulin Venture today!',
   alternates: { canonical: '/services/well-certification' },
 }
 

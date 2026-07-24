@@ -4,9 +4,9 @@ import { ServicePage } from '@/components/mulin/service-page'
 import { getServicePageContent } from '@/components/mulin/service-page-data'
 
 export const metadata: Metadata = {
-  title: { absolute: 'Soil Health & Plant Care in Nepal | Mulin Venture' },
+  title: { absolute: 'Soil Health & Garden Maintenance in Nepal | Mulin Venture' },
   description:
-    'Soil health, substrate balance & drainage planning for indoor & outdoor planting in Nepal. Contact Mulin Venture for a free consultation!',
+    'Soil health, substrate balance, and drainage planning for gardens, living walls, and green roofs in Nepal. Contact Mulin Venture for a free consultation!',
   alternates: { canonical: '/services/soil-health' },
 }
 

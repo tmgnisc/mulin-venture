@@ -4,9 +4,9 @@ import { ServicePage } from '@/components/mulin/service-page'
 import { getServicePageContent } from '@/components/mulin/service-page-data'
 
 export const metadata: Metadata = {
-  title: { absolute: 'Acoustic Noise Mapping in Nepal | Mulin Venture' },
+  title: { absolute: 'Acoustic Design & Green Building Rating in Nepal | Mulin Venture' },
   description:
-    'Acoustic noise mapping & sound privacy solutions for buildings in Nepal — hotspot review, material & zoning recommendations. Contact us today!',
+    'Acoustic comfort, noise mapping, and sound privacy solutions as part of green building design in Nepal. Contact Mulin Venture today!',
   alternates: { canonical: '/services/noise-mapping' },
 }
 

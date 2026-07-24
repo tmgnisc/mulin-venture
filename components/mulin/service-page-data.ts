@@ -283,8 +283,20 @@ const servicePages: Record<string, ServicePageContent> = {
   },
 }
 
+const slugAliases: Record<string, string> = {
+  'leed-certification': 'green-building-rating-system',
+  'well-certification': 'green-building-rating-system',
+  'sustainable-building-design': 'biophilic-design',
+  'air-quality': 'biophilic-design',
+  'water-safety': 'landscape-rooftop-greening-design',
+  'light-optimization': 'biophilic-design',
+  'soil-health': 'garden-maintenance',
+  'noise-mapping': 'green-building-rating-system',
+}
+
 export function getServicePageContent(slug: string) {
-  return servicePages[slug]
+  const resolved = slugAliases[slug] ?? slug
+  return servicePages[resolved]
 }
 
 export const serviceHubItems = Object.values(servicePages).map((page, index) => ({

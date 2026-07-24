@@ -38,7 +38,7 @@ export default function BlogPage() {
           <div className="absolute inset-0 opacity-10">
             <Image
               src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1920&q=80"
-              alt=""
+              alt="Decorative background pattern representing botanical growth and natural forms"
               fill
               className="object-cover"
             />
