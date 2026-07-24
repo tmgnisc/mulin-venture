@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Navigation } from '@/components/mulin/navigation'
 import { Footer } from '@/components/mulin/footer'
+import { PageBreadcrumb } from '@/components/mulin/page-breadcrumb'
 import { Button } from '@/components/ui/button'
 
 const articles = [
@@ -37,7 +38,8 @@ export default function ResearchPage() {
     <>
       <Navigation />
       <main className="bg-[#f3f5f4] pb-20">
-        <section className="relative overflow-hidden border-b border-[#d8dfdc]">
+        <section className="relative overflow-hidden border-b border-[#d8dfdc] pt-20">
+          <PageBreadcrumb segments={['research']} />
           <div className="absolute inset-0">
             <Image
               src="https://images.unsplash.com/photo-1470058869958-2a77ade41c02?auto=format&fit=crop&w=1920&q=80"
@@ -48,7 +50,7 @@ export default function ResearchPage() {
             <div className="absolute inset-0 bg-[#06211a]/75 backdrop-blur-[2px]" />
           </div>
           <motion.div
-            className="relative mx-auto max-w-[1200px] px-[clamp(20px,5.2vw,80px)] pt-28 pb-20 text-center"
+            className="relative mx-auto max-w-[1200px] px-[clamp(20px,5.2vw,80px)] pt-4 pb-20 text-center"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.35 }}

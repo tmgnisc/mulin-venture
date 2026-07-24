@@ -41,14 +41,14 @@ export function ProductPage({ content, slugArr }: ProductPageProps) {
     <>
       <Navigation />
       <main className="bg-[#FFFFFF] text-[#454C23]">
-        <section className="relative overflow-hidden bg-[#454C23]">
+        <section className="relative overflow-hidden bg-[#454C23] pt-20">
           {breadcrumbSegments.length > 0 && <PageBreadcrumb segments={breadcrumbSegments} />}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_14%_18%,rgba(255,255,255,0.08),transparent_28%),radial-gradient(circle_at_86%_14%,rgba(198,169,106,0.18),transparent_22%),linear-gradient(180deg,#454C23_0%,#454C23_100%)]" />
           <div className="absolute -left-24 top-10 h-72 w-72 rounded-full bg-[#737F3C]/12 blur-3xl" />
           <div className="absolute right-[-5rem] top-16 h-80 w-80 rounded-full bg-[#FFBE71]/12 blur-3xl" />
 
           <motion.div
-            className="relative mx-auto grid max-w-[1320px] gap-10 px-[clamp(20px,5vw,80px)] pt-28 pb-18 lg:grid-cols-[0.96fr_1.04fr] lg:items-center"
+            className="relative mx-auto grid max-w-[1320px] gap-10 px-[clamp(20px,5vw,80px)] pt-6 pb-18 lg:grid-cols-[0.96fr_1.04fr] lg:items-center"
             initial="hidden"
             animate="show"
             variants={container}

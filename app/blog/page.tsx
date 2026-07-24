@@ -35,7 +35,7 @@ export default function BlogPage() {
       <Navigation />
       <main>
         {/* Hero */}
-        <section className="relative overflow-hidden bg-moss pb-20 pt-24">
+        <section className="relative overflow-hidden bg-moss pb-20 pt-20">
           <PageBreadcrumb segments={['blog']} />
           <div className="absolute inset-0 opacity-10">
             <Image

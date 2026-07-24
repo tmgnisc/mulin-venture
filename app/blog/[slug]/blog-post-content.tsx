@@ -49,7 +49,7 @@ export function BlogPostContent({ post }: { post: BlogPost }) {
       <main>
         <JsonLd data={articleSchema} />
         {/* Hero */}
-        <section className="relative pt-24 pb-16 md:pb-20 overflow-hidden bg-moss">
+        <section className="relative pt-20 pb-16 md:pb-20 overflow-hidden bg-moss">
           <PageBreadcrumb segments={['blog', post.slug]} />
           <div className="absolute inset-0 opacity-20">
             <Image src={post.image} alt="" fill className="object-cover" />

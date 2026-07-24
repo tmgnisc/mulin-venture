@@ -85,5 +85,5 @@ export default async function Page({
   if (!key) notFound()
   const content = getProductPageContent(key)
   if (!content) notFound()
-  return <ProductPage content={content} slugArr={slugArr} />
+  return <ProductPage content={content} slugArr={['products', ...slugArr]} />
 }

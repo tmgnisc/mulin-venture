@@ -41,14 +41,14 @@ export function ServicePage({ content, slugArr }: ServicePageProps) {
     <>
       <Navigation />
       <main className="bg-[#FFFFFF] text-[#454C23]">
-        <section className="relative overflow-hidden border-b border-[#d8ddd7] bg-[#454C23]">
+        <section className="relative overflow-hidden border-b border-[#d8ddd7] bg-[#454C23] pt-20">
           {breadcrumbSegments.length > 0 && <PageBreadcrumb segments={breadcrumbSegments} />}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(255,255,255,0.1),transparent_34%),radial-gradient(circle_at_82%_82%,rgba(198,169,106,0.16),transparent_30%),linear-gradient(180deg,rgba(9,20,17,0.16),rgba(9,20,17,0.56))]" />
           <div className="absolute -left-24 top-24 h-64 w-64 rounded-full blur-3xl" style={{ backgroundColor: `${content.accent}1a` }} />
           <div className="absolute inset-x-0 bottom-0 h-px bg-white/10" />
 
           <motion.div
-            className="relative mx-auto grid max-w-[1320px] gap-10 px-[clamp(20px,5vw,80px)] pt-28 pb-16 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:pb-20"
+            className="relative mx-auto grid max-w-[1320px] gap-10 px-[clamp(20px,5vw,80px)] pt-6 pb-16 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:pb-20"
             initial="hidden"
             animate="show"
             variants={container}

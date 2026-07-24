@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { Navigation } from '@/components/mulin/navigation'
 import { Footer } from '@/components/mulin/footer'
+import { PageBreadcrumb } from '@/components/mulin/page-breadcrumb'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -74,10 +75,11 @@ export default function AboutPage() {
     <>
       <Navigation />
       <main className="bg-[#edf2ed] text-[#454C23]">
-        <section className="relative overflow-hidden border-b border-[#cfd9d2] bg-[#454C23]">
+        <section className="relative overflow-hidden border-b border-[#cfd9d2] bg-[#454C23] pt-20">
+          <PageBreadcrumb segments={['about']} />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_15%,rgba(255,255,255,0.09),transparent_40%),radial-gradient(circle_at_78%_80%,rgba(255,255,255,0.08),transparent_36%)]" />
           <motion.div
-            className="relative mx-auto grid max-w-6xl gap-12 px-6 pt-28 pb-20 md:px-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center"
+            className="relative mx-auto grid max-w-6xl gap-12 px-6 pt-4 pb-20 md:px-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center"
             initial="hidden"
             animate="show"
             variants={container}

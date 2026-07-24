@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { ArrowRight, Leaf, MapPin, School, Users } from 'lucide-react'
 import { Navigation } from '@/components/mulin/navigation'
 import { Footer } from '@/components/mulin/footer'
+import { PageBreadcrumb } from '@/components/mulin/page-breadcrumb'
 import { useEffect, useRef, useState } from 'react'
 import { Button } from '@/components/ui/button'
 
@@ -127,7 +128,8 @@ export default function CommunityPage() {
     <>
       <Navigation />
       <main className="bg-[#e9efe8] text-[#1d2c24]">
-        <section className="relative min-h-[46svh] overflow-hidden">
+        <section className="relative min-h-[46svh] overflow-hidden pt-20">
+          <PageBreadcrumb segments={['community']} />
           <div
             className="absolute will-change-transform"
             style={{ top: '-20%', bottom: '-20%', left: 0, right: 0 }}
@@ -143,7 +145,7 @@ export default function CommunityPage() {
           </div>
           <div className="absolute inset-0 bg-[linear-gradient(155deg,rgba(10,18,9,0.88)_0%,rgba(20,32,18,0.62)_50%,rgba(10,18,9,0.92)_100%)]" />
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,transparent_55%,rgba(5,10,4,0.55)_100%)]" />
-          <motion.div variants={container} initial="hidden" animate="show" className="relative mx-auto flex max-w-6xl flex-col items-center px-6 pt-28 pb-10 text-center md:px-10">
+          <motion.div variants={container} initial="hidden" animate="show" className="relative mx-auto flex max-w-6xl flex-col items-center px-6 pt-4 pb-10 text-center md:px-10">
             <motion.p variants={rise} className="text-xs tracking-[0.24em] text-[#cbdccc] md:text-sm">
               MULIN VENTURE COMMUNITY IMPACT
             </motion.p>

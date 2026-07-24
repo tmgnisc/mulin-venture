@@ -20,6 +20,9 @@ const labelMap: Record<string, string> = {
   'green-building-rating-system': 'Green Building Rating',
   'plant-art-workshops': 'Plant Art Workshops',
   'garden-maintenance': 'Garden Maintenance',
+  about: 'About',
+  community: 'Community',
+  research: 'Research',
 }
 
 function resolveLabel(segment: string): string {
@@ -40,21 +43,21 @@ export function PageBreadcrumb({ segments }: { segments: string[] }) {
   }
 
   return (
-    <nav aria-label="Breadcrumb" className="mx-auto max-w-[1320px] px-[clamp(20px,5vw,80px)] pt-6">
-      <ol className="flex flex-wrap items-center gap-1.5 text-xs text-white/55 sm:gap-2.5">
+    <nav aria-label="Breadcrumb" className="relative z-10 mx-auto max-w-[1320px] px-[clamp(20px,5vw,80px)]">
+      <ol className="flex flex-wrap items-center gap-1.5 text-xs text-white/70 sm:gap-2.5">
         {crumbs.map((crumb, index) => (
           <li key={index} className="flex items-center gap-1.5">
-            {index > 0 && <ChevronRight className="h-3 w-3 shrink-0 opacity-40" />}
+            {index > 0 && <ChevronRight className="h-3 w-3 shrink-0 opacity-60" />}
             {crumb.href ? (
               <Link
                 href={crumb.href}
-                className="flex items-center gap-1 transition-colors hover:text-white/80"
+                className="flex items-center gap-1 transition-colors hover:text-white"
               >
-                {index === 0 && <Home className="h-3 w-3" />}
+                {index === 0 && <Home className="h-3.5 w-3.5" />}
                 <span>{crumb.label}</span>
               </Link>
             ) : (
-              <span className="text-white/80 font-medium" aria-current="page">
+              <span className="text-white font-medium" aria-current="page">
                 {crumb.label}
               </span>
             )}

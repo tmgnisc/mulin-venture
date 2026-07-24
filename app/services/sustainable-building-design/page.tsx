@@ -13,5 +13,5 @@ export const metadata: Metadata = {
 export default function Page() {
   const content = getServicePageContent('sustainable-building-design')
   if (!content) notFound()
-  return <ServicePage content={content} slugArr={["sustainable-building-design"]} />
+  return <ServicePage content={content} slugArr={['services', "sustainable-building-design"]} />
 }
