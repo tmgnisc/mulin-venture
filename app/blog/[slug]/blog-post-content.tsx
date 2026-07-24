@@ -7,6 +7,7 @@ import { Navigation } from '@/components/mulin/navigation'
 import { Footer } from '@/components/mulin/footer'
 import { ArrowRight } from '@/components/mulin/svg-assets'
 import { JsonLd } from '@/components/seo/structured-data'
+import { PageBreadcrumb } from '@/components/mulin/page-breadcrumb'
 import { blogPosts } from '@/lib/blog-data'
 import type { BlogPost } from '@/lib/blog-data'
 
@@ -48,7 +49,8 @@ export function BlogPostContent({ post }: { post: BlogPost }) {
       <main>
         <JsonLd data={articleSchema} />
         {/* Hero */}
-        <section className="relative pt-28 pb-16 md:pb-20 overflow-hidden bg-moss">
+        <section className="relative pt-24 pb-16 md:pb-20 overflow-hidden bg-moss">
+          <PageBreadcrumb segments={['blog', post.slug]} />
           <div className="absolute inset-0 opacity-20">
             <Image src={post.image} alt="" fill className="object-cover" />
           </div>

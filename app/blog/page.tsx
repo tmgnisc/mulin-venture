@@ -6,6 +6,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Navigation } from '@/components/mulin/navigation'
 import { Footer } from '@/components/mulin/footer'
+import { PageBreadcrumb } from '@/components/mulin/page-breadcrumb'
 import { blogPosts, blogCategories } from '@/lib/blog-data'
 
 const sectionContainer = {
@@ -34,7 +35,8 @@ export default function BlogPage() {
       <Navigation />
       <main>
         {/* Hero */}
-        <section className="relative overflow-hidden bg-moss pb-20 pt-28">
+        <section className="relative overflow-hidden bg-moss pb-20 pt-24">
+          <PageBreadcrumb segments={['blog']} />
           <div className="absolute inset-0 opacity-10">
             <Image
               src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1920&q=80"

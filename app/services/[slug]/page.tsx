@@ -51,5 +51,5 @@ export default async function Page({
   const { slug } = await params
   const content = getServicePageContent(slug)
   if (!content) notFound()
-  return <ServicePage content={content} />
+  return <ServicePage content={content} slugArr={[slug]} />
 }

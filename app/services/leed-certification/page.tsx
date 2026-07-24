@@ -13,6 +13,6 @@ export const metadata: Metadata = {
 export default function Page() {
   const content = getServicePageContent('leed-certification')
   if (!content) notFound()
-  return <ServicePage content={content} />
+  return <ServicePage content={content} slugArr={["leed-certification"]} />
 }
 

@@ -8,9 +8,11 @@ import type { ServicePageContent } from './service-page-data'
 import { ApproachSection } from './approach-section'
 import { Footer } from './footer'
 import { Navigation } from './navigation'
+import { PageBreadcrumb } from './page-breadcrumb'
 
 type ServicePageProps = {
   content: ServicePageContent
+  slugArr?: string[]
 }
 
 const container: Variants = {
@@ -33,12 +35,14 @@ const rise: Variants = {
   },
 }
 
-export function ServicePage({ content }: ServicePageProps) {
+export function ServicePage({ content, slugArr }: ServicePageProps) {
+  const breadcrumbSegments = slugArr ?? [content.slug]
   return (
     <>
       <Navigation />
       <main className="bg-[#FFFFFF] text-[#454C23]">
         <section className="relative overflow-hidden border-b border-[#d8ddd7] bg-[#454C23]">
+          {breadcrumbSegments.length > 0 && <PageBreadcrumb segments={breadcrumbSegments} />}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(255,255,255,0.1),transparent_34%),radial-gradient(circle_at_82%_82%,rgba(198,169,106,0.16),transparent_30%),linear-gradient(180deg,rgba(9,20,17,0.16),rgba(9,20,17,0.56))]" />
           <div className="absolute -left-24 top-24 h-64 w-64 rounded-full blur-3xl" style={{ backgroundColor: `${content.accent}1a` }} />
           <div className="absolute inset-x-0 bottom-0 h-px bg-white/10" />

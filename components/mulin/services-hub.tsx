@@ -6,6 +6,7 @@ import { ArrowRight, MonsteraLeaf } from './svg-assets'
 import { serviceHubItems } from './service-page-data'
 import { Footer } from './footer'
 import { Navigation } from './navigation'
+import { PageBreadcrumb } from './page-breadcrumb'
 
 const container: Variants = {
   hidden: { opacity: 0 },
@@ -33,6 +34,7 @@ export function ServicesHub() {
       <Navigation />
       <main className="bg-[#FFFFFF] text-[#454C23]">
         <section className="relative overflow-hidden border-b border-[#d8ddd7] bg-[#454C23]">
+          <PageBreadcrumb segments={['services']} />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.11),transparent_34%),radial-gradient(circle_at_80%_78%,rgba(198,169,106,0.16),transparent_30%),linear-gradient(180deg,rgba(8,18,15,0.12),rgba(8,18,15,0.62))]" />
           <div className="absolute -left-24 top-24 h-64 w-64 rounded-full bg-[#FFBE71]/10 blur-3xl" />
           <div className="absolute right-[-6rem] bottom-[-4rem] h-72 w-72 rounded-full bg-[#8C9A4B]/10 blur-3xl" />

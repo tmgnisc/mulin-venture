@@ -8,9 +8,11 @@ import type { ProductPageContent } from './product-page-data'
 import { ApproachSection } from './approach-section'
 import { Footer } from './footer'
 import { Navigation } from './navigation'
+import { PageBreadcrumb } from './page-breadcrumb'
 
 type ProductPageProps = {
   content: ProductPageContent
+  slugArr?: string[]
 }
 
 const container: Variants = {
@@ -33,12 +35,14 @@ const rise: Variants = {
   },
 }
 
-export function ProductPage({ content }: ProductPageProps) {
+export function ProductPage({ content, slugArr }: ProductPageProps) {
+  const breadcrumbSegments = slugArr ?? [content.slug]
   return (
     <>
       <Navigation />
       <main className="bg-[#FFFFFF] text-[#454C23]">
         <section className="relative overflow-hidden bg-[#454C23]">
+          {breadcrumbSegments.length > 0 && <PageBreadcrumb segments={breadcrumbSegments} />}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_14%_18%,rgba(255,255,255,0.08),transparent_28%),radial-gradient(circle_at_86%_14%,rgba(198,169,106,0.18),transparent_22%),linear-gradient(180deg,#454C23_0%,#454C23_100%)]" />
           <div className="absolute -left-24 top-10 h-72 w-72 rounded-full bg-[#737F3C]/12 blur-3xl" />
           <div className="absolute right-[-5rem] top-16 h-80 w-80 rounded-full bg-[#FFBE71]/12 blur-3xl" />
@@ -67,12 +71,30 @@ export function ProductPage({ content }: ProductPageProps) {
                   Request Consultation
                   <ArrowRight className="h-4 w-4" />
                 </Link>
-                <Link
-                  href="/products"
-                  className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/8 px-6 py-3 text-sm text-white/90 transition-colors hover:bg-white/12"
-                >
-                  Back to Products
-                </Link>
+                {content.parent ? (
+                  <Link
+                    href={content.parent.href}
+                    className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/8 px-6 py-3 text-sm text-white/90 transition-colors hover:bg-white/12"
+                  >
+                    ← Back to {content.parent.title}
+                  </Link>
+                ) : (
+                  <Link
+                    href="/products"
+                    className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/8 px-6 py-3 text-sm text-white/90 transition-colors hover:bg-white/12"
+                  >
+                    All Products
+                  </Link>
+                )}
+                {content.subcategories?.map((sub) => (
+                  <Link
+                    key={sub.slug}
+                    href={sub.href}
+                    className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/8 px-6 py-3 text-sm text-white/90 transition-colors hover:bg-white/12"
+                  >
+                    Explore {sub.title} →
+                  </Link>
+                ))}
               </div>
 
               <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 font-sans text-sm text-white/72">
@@ -258,6 +280,47 @@ export function ProductPage({ content }: ProductPageProps) {
             </motion.div>
           </motion.div>
         </section>
+
+        {content.subcategories && content.subcategories.length > 0 && (
+          <section className="bg-[#e9eedf]">
+            <div className="mx-auto max-w-[1320px] px-[clamp(20px,5vw,80px)] py-[clamp(48px,7vw,84px)]">
+              <motion.div
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.16 }}
+                variants={container}
+              >
+                <motion.div variants={rise}>
+                  <p className="text-[11px] uppercase tracking-[0.2em] text-[#748072]">Subcategories</p>
+                  <h2 className="mt-3 font-serif font-light text-[clamp(2rem,4vw,3.5rem)] leading-[1.02] text-[#454C23]">
+                    Explore products in this category.
+                  </h2>
+                </motion.div>
+                <motion.div className="mt-10 grid gap-6 md:grid-cols-2" variants={container}>
+                  {content.subcategories.map((sub) => (
+                    <motion.div key={sub.slug} variants={rise}>
+                      <Link
+                        href={sub.href}
+                        className="group block rounded-[36px] bg-white p-6 shadow-[0_16px_36px_rgba(18,26,20,0.05)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_44px_rgba(18,26,20,0.1)]"
+                      >
+                        <p className="text-[11px] uppercase tracking-[0.2em] text-[#7f8a79]">Subcategory</p>
+                        <h3 className="mt-4 font-serif font-light text-[clamp(1.55rem,2vw,2.2rem)] leading-[1.02] text-[#454C23] group-hover:text-[#737F3C] transition-colors">
+                          {sub.title}
+                        </h3>
+                        <p className="mt-3 font-sans font-light text-sm leading-relaxed text-[#4a564d]">
+                          {sub.summary}
+                        </p>
+                        <div className="mt-6 inline-flex items-center gap-2 font-sans text-[10px] uppercase tracking-[0.2em] text-[#6f7d6d] group-hover:text-[#737F3C] transition-colors">
+                          View {sub.title} →
+                        </div>
+                      </Link>
+                    </motion.div>
+                  ))}
+                </motion.div>
+              </motion.div>
+            </div>
+          </section>
+        )}
       </main>
       <Footer />
     </>
