@@ -27,6 +27,10 @@ export const organizationSchema = {
     'https://www.tiktok.com/@muliin_06',
     'https://www.facebook.com/profile.php?id=61591035293534',
   ],
+  publisher: {
+    '@type': 'Organization',
+    name: 'Nirvix Technology',
+  },
   knowsAbout: [
     'Biophilic Design',
     'Green Roofs',

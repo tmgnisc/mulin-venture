@@ -27,7 +27,7 @@ export function BlogPostContent({ post }: { post: BlogPost }) {
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Mulin Venture',
+      name: 'Nirvix Technology',
       logo: {
         '@type': 'ImageObject',
         url: `${SITE_URL}/logo-mulin.png`,

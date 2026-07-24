@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     'Biophilic design studio in Kathmandu — green roofs, living walls, plant art, and sustainable landscapes. Book a free consultation!',
   keywords: ['biophilic design Nepal', 'green roof Kathmandu', 'living walls Nepal', 'landscape design Nepal', 'plant art workshop Kathmandu', 'sustainable building design Nepal', 'moss walls Nepal', 'biodiversity toolkit', 'Mulin Venture'],
   authors: [{ name: 'Mulin Venture', url: 'https://www.mulinventure.com' }],
+  other: { publisher: 'Nirvix Technology' },
   robots: {
     index: true,
     follow: true,

@@ -35,6 +35,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description: `${post.excerpt} — Mulin Venture Nepal`,
       images: [post.image],
     },
+    other: {
+      'publisher': 'Nirvix Technology',
+      'article:publisher': 'Nirvix Technology',
+    },
   }
 }
 
