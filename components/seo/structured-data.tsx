@@ -9,7 +9,7 @@ export const organizationSchema = {
   logo: `${SITE_URL}/logo-mulin.png`,
   slogan: 'Nurture through Nature',
   description:
-    'Mulin Venture — Nurture through Nature. Biophilic design, sustainable built environments, and biodiversity-first consulting in Kathmandu, Nepal — indoor plants, kokedama, green walls, and plant care for homes and businesses.',
+    'Mulin Venture is a biophilic design studio in Kathmandu, Nepal. We specialize in green roofs, living walls, landscape and rooftop greening, plant art workshops, garden maintenance, and sustainable building design.',
   email: 'info@mulinventure.com',
   telephone: '+977-9847519689',
   address: {
@@ -21,10 +21,25 @@ export const organizationSchema = {
     '@type': 'Country',
     name: 'Nepal',
   },
+  foundingDate: '2023',
   sameAs: [
     'https://www.instagram.com/mulinventure/',
     'https://www.tiktok.com/@muliin_06',
     'https://www.facebook.com/profile.php?id=61591035293534',
+  ],
+  publisher: {
+    '@type': 'Organization',
+    name: 'Nirvix Technology',
+  },
+  knowsAbout: [
+    'Biophilic Design',
+    'Green Roofs',
+    'Living Walls',
+    'Landscape Design',
+    'Plant Art Workshops',
+    'Garden Maintenance',
+    'Sustainable Building Design',
+    'Biodiversity Conservation',
   ],
 }
 
@@ -37,39 +52,39 @@ export const faqSchema = {
       name: 'What services does Mulin Venture offer?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'We offer full-scale botanical design services in Nepal including landscape architecture, installation, biophilic design, green walls, botanical branding, maintenance programs, biophilic art, and event rentals.',
+        text: 'We provide biophilic design, landscape and rooftop greening, green building rating assessment, plant art workshops, and ongoing garden maintenance in Nepal.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Do you provide ongoing plant maintenance?',
+      name: 'Do you provide ongoing maintenance after installation?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Our maintenance programs are ongoing care subscriptions designed to keep your plants thriving year-round, backed by over 12 years of expertise.',
+        text: 'Yes. We provide ongoing maintenance for living walls, rooftop gardens, and planted interiors to keep systems healthy over time.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What is a kokedama and how do I care for it?',
+      name: 'What products do you offer?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Kokedama is a handcrafted Japanese moss-ball planting that frees greenery from the pot. Care is simple — a weekly soak and indirect light. Each kokedama comes with a manual book and a reusable holder.',
+        text: 'Our product range includes plant art products (including Kokedama), moss and living walls, and a biodiversity toolkit for homes, schools, and organizations across Nepal.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can I rent plants for a wedding or event?',
+      name: 'Do you run workshops for schools and organizations?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Absolutely. We offer short-term plant rentals across Nepal for weddings, product launches, and special occasions — delivered, styled, and collected by our team.',
+        text: 'Yes. Our plant art workshops are available for schools, organizations, and public events, with biophilic design and biodiversity learning built in.',
       },
     },
     {
       '@type': 'Question',
-      name: 'When is the Kokedama Workshop held?',
+      name: 'How do you measure environmental impact?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Our Kokedama Workshop runs every Saturday in Kathmandu. You will craft your own moss-ball planting with guidance from our team, enjoy snacks, and join in games and fun activities. Seats are limited — contact us to reserve your spot.',
+        text: 'We use our Green Building Rating System to assess carbon footprint, biodiversity impact, and nature-based solution potential, then provide practical improvement guidance.',
       },
     },
     {
@@ -77,7 +92,7 @@ export const faqSchema = {
       name: 'How do I get started on a project?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Simply request a consultation. We will discuss your space, your vision, and your budget, then craft a botanical design proposal tailored to you — from a single arrangement to a large-scale installation.',
+        text: 'Book a biophilic consultation and we will map your goals, site context, and budget into a phased plan for products, services, and long-term care.',
       },
     },
   ],
@@ -93,42 +108,42 @@ export const testimonialsSchema = {
       '@type': 'Review',
       reviewBody:
         "The Monstera arrived in the most stunning matte white ceramic vessel — it's the statement piece our living room needed.",
-      author: { '@type': 'Person', name: 'Priya S.' },
+      author: { '@type': 'Person', name: 'Nischal Tamang' },
       reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
     },
     {
       '@type': 'Review',
       reviewBody:
-        "Mulin Venture's team helped me design a green wall for my entire office. The transformation was incredible.",
-      author: { '@type': 'Person', name: 'James T.' },
+        "Mulin's team helped me design a green wall for my entire office. The transformation was incredible.",
+      author: { '@type': 'Person', name: 'Roshan KC' },
       reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
     },
     {
       '@type': 'Review',
       reviewBody:
         "The custom terrarium they created for my partner was the most thoughtful gift I've ever given.",
-      author: { '@type': 'Person', name: 'Ananya R.' },
+      author: { '@type': 'Person', name: 'Sujan Pun' },
       reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
     },
     {
       '@type': 'Review',
       reviewBody:
         'Exceptional quality and service. Every detail was considered, from the soil blend to the handwritten care card.',
-      author: { '@type': 'Person', name: 'Michael C.' },
+      author: { '@type': 'Person', name: 'Sonu Thapa Magar' },
       reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
     },
     {
       '@type': 'Review',
       reviewBody:
         "We ordered 30 custom plants for our hotel lobby. Six months later, they're all thriving beautifully.",
-      author: { '@type': 'Person', name: 'Elena K.' },
+      author: { '@type': 'Person', name: 'Sanjeev Magar' },
       reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
     },
   ],
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: 5,
-    reviewCount: 5,
+    reviewCount: 6,
     bestRating: 5,
   },
 }

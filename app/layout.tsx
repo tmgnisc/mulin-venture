@@ -15,16 +15,28 @@ const leagueSpartan = League_Spartan({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.mulinventure.com'),
   title: {
-    default: 'Mulin Venture | Nurture through Nature',
+    default: 'Mulin Venture | Biophilic Design & Green Spaces in Nepal',
     template: '%s | Mulin Venture',
   },
   description:
-    'Mulin Venture — Nurture through Nature. Biophilic design, sustainable built environments, and biodiversity-first consulting in Nepal. LEED & WELL optimization with profits channeled into environmental education.',
-  keywords: ['biophilic design Nepal', 'sustainable building design', 'LEED certification Nepal', 'WELL certification', 'biodiversity design', 'green building Kathmandu', 'indoor plants Nepal', 'kokedama Nepal'],
-  authors: [{ name: 'Mulin Venture' }],
+    'Biophilic design studio in Kathmandu — green roofs, living walls, plant art, and sustainable landscapes. Book a free consultation!',
+  keywords: ['biophilic design Nepal', 'green roof Kathmandu', 'living walls Nepal', 'landscape design Nepal', 'plant art workshop Kathmandu', 'sustainable building design Nepal', 'moss walls Nepal', 'biodiversity toolkit', 'Mulin Venture'],
+  authors: [{ name: 'Mulin Venture', url: 'https://www.mulinventure.com' }],
+  other: { publisher: 'Nirvix Technology' },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
-    title: 'Mulin Venture | Nurture through Nature',
-    description: 'Biophilic design and sustainable built environments — rooted in science, biodiversity, and community. Designed in Kathmandu.',
+    title: 'Mulin Venture | Biophilic Design Studio in Nepal',
+    description: 'Biophilic design, green roofs, living walls, plant art, and sustainable landscapes in Nepal — rooted in science, biodiversity, and community.',
     type: 'website',
     locale: 'en_US',
     siteName: 'Mulin Venture',
@@ -38,9 +50,9 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    card: 'summary',
-    title: 'Mulin Venture | Nurture through Nature',
-    description: 'Biophilic design and sustainable built environments — rooted in science, biodiversity, and community. Designed in Kathmandu.',
+    card: 'summary_large_image',
+    title: 'Mulin Venture | Biophilic Design Studio in Nepal',
+    description: 'Biophilic design, green roofs, living walls, plant art, and sustainable landscapes in Nepal — rooted in science, biodiversity, and community.',
     images: ['/logo-mulin.png'],
   },
 }

@@ -3,68 +3,69 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, Heart, Leaf, MapPin, School, Users } from 'lucide-react'
+import { ArrowRight, Leaf, MapPin, School, Users } from 'lucide-react'
 import { Navigation } from '@/components/mulin/navigation'
 import { Footer } from '@/components/mulin/footer'
+import { PageBreadcrumb } from '@/components/mulin/page-breadcrumb'
 import { useEffect, useRef, useState } from 'react'
 import { Button } from '@/components/ui/button'
 
 const programs = [
   {
-    title: 'Children for Change',
-    text: 'Young students collect recyclable materials and exchange them for practical educational items, turning sustainability into a daily habit.',
+    title: 'Plant Art Workshops',
+    text: 'Hands-on sessions where participants create living art — moss frames, terrariums, and botanical arrangements for their homes and schools.',
   },
   {
-    title: 'Community Business Network',
-    text: 'Restaurants and local businesses collaborate with the initiative to reduce waste at source and support cleaner public spaces.',
+    title: 'School Greening Program',
+    text: 'We partner with schools to design and install green roofs, native gardens, and outdoor learning spaces that connect students with nature.',
   },
   {
-    title: 'Riverbank Renewal',
-    text: 'Volunteers, residents, and local groups restore riparian zones through cleanup, planting, and long-term care activities.',
+    title: 'Community Green Spaces',
+    text: 'Collaborating with neighbourhoods to transform vacant lots and underused areas into thriving community gardens and pocket parks.',
   },
   {
-    title: 'Climate Learning Sessions',
-    text: 'Interactive awareness sessions introduce climate action, sustainable choices, and environmental responsibility to students and families.',
+    title: 'Biophilic Design Talks',
+    text: 'Interactive presentations on biophilic design principles, native plants, and sustainable urban living for community groups and organizations.',
   },
   {
-    title: 'School Waste Audits',
-    text: 'Partner schools track and categorize daily waste generation to build practical systems for reduction, reuse, and recycling.',
+    title: 'Rooftop Garden Installations',
+    text: 'Working with residential and commercial buildings to convert rooftops into productive green spaces that cool, insulate, and support biodiversity.',
   },
   {
-    title: 'Neighborhood Cleanup Drives',
-    text: 'Periodic local drives mobilize youth and residents to clean public areas and strengthen long-term stewardship behavior.',
+    title: 'Biodiversity Awareness Drives',
+    text: 'Neighborhood initiatives that educate on local flora and fauna, encouraging wildlife-friendly gardening and native plant stewardship.',
   },
 ]
 
 const pillars = [
-  { label: 'Waste Management', value: '01' },
-  { label: 'River Ecosystems', value: '02' },
-  { label: 'Public Awareness', value: '03' },
+  { label: 'Urban Greening', value: '01' },
+  { label: 'Design Education', value: '02' },
+  { label: 'Community Spaces', value: '03' },
 ]
 
 const communityProjects = [
   {
     category: 'School',
     place: 'Vidhya Sagar School',
-    title: 'Leading the Way in Waste Management',
-    body: 'Another successful recycling effort where 78 kg of waste was responsibly managed through school-community collaboration and practical sorting education.',
-    tags: ['Recycling', 'Waste Management', 'Doko Recyclers'],
-    image: 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=900&q=80',
+    title: 'Green Roof & Native Garden Installation',
+    body: 'Designed and installed a rooftop green space with native plants, creating an outdoor classroom and cooling the building.',
+    tags: ['Green Roof', 'Native Plants', 'Outdoor Classroom'],
+    image: 'https://images.unsplash.com/photo-1463936575829-25148e1db1b8?auto=format&fit=crop&w=900&q=80',
   },
   {
-    category: 'School',
+    category: 'Workshop',
     place: 'Fairyland International School, Budhanilkantha',
-    title: 'Collaboration with Fairyland International School',
-    body: 'Supporting a cleaner future through on-campus orientation, waste bins, and student-led sustainability participation.',
-    tags: ['Orientation', 'Environmental Science', 'Student Engagement'],
+    title: 'Moss Art & Terrarium Workshop',
+    body: 'Led an interactive plant art workshop where students built their own moss terrariums and learned about biophilic design.',
+    tags: ['Moss Art', 'Workshop', 'Hands-on Learning'],
     image: 'https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=format&fit=crop&w=900&q=80',
   },
   {
-    category: 'School',
-    place: 'Jagat Sundar School',
-    title: 'Waste to Art - Creative Upcycling',
-    body: 'Students transformed waste materials into creative artwork, linking environmental responsibility with imagination.',
-    tags: ['Upcycling', 'Art', 'Waste Management', 'Creativity'],
+    category: 'Community',
+    place: 'Kathmandu',
+    title: 'Pocket Park Transformation',
+    body: 'Converted an underused urban plot into a vibrant pocket park with native shrubs, seating, and pollinator-friendly plants.',
+    tags: ['Pocket Park', 'Urban Greening', 'Biodiversity'],
     image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=80',
   },
 ]
@@ -127,14 +128,15 @@ export default function CommunityPage() {
     <>
       <Navigation />
       <main className="bg-[#e9efe8] text-[#1d2c24]">
-        <section className="relative min-h-[46svh] overflow-hidden">
+        <section className="relative min-h-[46svh] overflow-hidden pt-20">
+          <PageBreadcrumb segments={['community']} />
           <div
             className="absolute will-change-transform"
             style={{ top: '-20%', bottom: '-20%', left: 0, right: 0 }}
           >
             <Image
               src="https://images.unsplash.com/photo-1618477388954-7852f32655ec?auto=format&fit=crop&w=1920&q=80"
-              alt="Students and volunteers gathered outdoors for a community environment program"
+              alt="Community members planting greenery in an urban neighbourhood space"
               fill
               priority
               sizes="100vw"
@@ -143,7 +145,7 @@ export default function CommunityPage() {
           </div>
           <div className="absolute inset-0 bg-[linear-gradient(155deg,rgba(10,18,9,0.88)_0%,rgba(20,32,18,0.62)_50%,rgba(10,18,9,0.92)_100%)]" />
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,transparent_55%,rgba(5,10,4,0.55)_100%)]" />
-          <motion.div variants={container} initial="hidden" animate="show" className="relative mx-auto flex max-w-6xl flex-col items-center px-6 pt-28 pb-10 text-center md:px-10">
+          <motion.div variants={container} initial="hidden" animate="show" className="relative mx-auto flex max-w-6xl flex-col items-center px-6 pt-4 pb-10 text-center md:px-10">
             <motion.p variants={rise} className="text-xs tracking-[0.24em] text-[#cbdccc] md:text-sm">
               MULIN VENTURE COMMUNITY IMPACT
             </motion.p>
@@ -152,15 +154,15 @@ export default function CommunityPage() {
             </motion.h1>
 
             <motion.p variants={rise} className="mt-6 max-w-2xl text-base leading-relaxed text-[#ddebe0] md:text-lg">
-              We don&apos;t just optimize offices; we transform schools. Every service you book funds environmental education and healthier classrooms for the next generation
+              We don&apos;t just design green spaces — we build greener communities. Every service you book helps fund plant art workshops, school greening projects, and urban biodiversity initiatives.
             </motion.p>
 
             <motion.div variants={rise} className="mt-10 flex flex-wrap gap-4">
               <Link href="/consultation" className="rounded-full bg-[#FFBE71] px-7 py-3 text-sm tracking-[0.06em] text-[#454C23] transition-transform duration-300 hover:scale-[1.04]">
-                Partner With The Program
+                Partner With Us
               </Link>
-              <Link href="/research" className="rounded-full border border-white/60 px-7 py-3 text-sm tracking-[0.06em] text-white transition-colors duration-300 hover:bg-white hover:text-[#454C23]">
-                Learn More
+              <Link href="/services" className="rounded-full border border-white/60 px-7 py-3 text-sm tracking-[0.06em] text-white transition-colors duration-300 hover:bg-white hover:text-[#454C23]">
+                Our Services
               </Link>
             </motion.div>
           </motion.div>
@@ -187,18 +189,18 @@ export default function CommunityPage() {
                 <p className="font-sans text-5xl font-semibold leading-none">
                   <CountUp to={5} suffix="+" start={startCount} />
                 </p>
-                <p className="mt-1 text-sm text-white/85">Schools Partnered</p>
+                <p className="mt-1 text-sm text-white/85">Schools & Partners</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/14">
-                <Heart className="h-5 w-5" />
+                <Leaf className="h-5 w-5" />
               </div>
               <div>
                 <p className="font-sans text-5xl font-semibold leading-none">
-                  <CountUp to={100} suffix="%" start={startCount} />
+                  <CountUp to={100} suffix="+" start={startCount} />
                 </p>
-                <p className="mt-1 text-sm text-white/85">Profits Donated</p>
+                <p className="mt-1 text-sm text-white/85">Green Projects Completed</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
@@ -261,7 +263,7 @@ export default function CommunityPage() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mx-auto mt-4 max-w-3xl text-center text-base leading-relaxed text-[#3f5648] md:text-lg"
           >
-            From climate education sessions to waste management programs, explore the projects we&apos;ve led with schools and communities across Nepal.
+            From school green roofs to community pocket parks and plant art workshops, explore the projects we&apos;ve led with schools and communities across Nepal.
           </motion.p>
 
           <motion.div
@@ -342,7 +344,7 @@ export default function CommunityPage() {
             Core community programs
           </motion.h2>
           <motion.p variants={rise} className="mx-auto max-w-3xl text-center text-sm leading-relaxed text-[#3f5648] md:text-base">
-            Program design focuses on youth participation, institutional collaboration, and measurable environmental practice.
+            Our programs focus on hands-on learning, community-led greening, and making biophilic design accessible to everyone.
           </motion.p>
           <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {programs.map((program, index) => (
@@ -389,7 +391,7 @@ export default function CommunityPage() {
                 transition={{ duration: 0.6, delay: 0.05, ease: [0.16, 1, 0.3, 1] }}
                 className="mt-3 max-w-2xl font-serif text-3xl leading-tight md:text-5xl"
               >
-                Help scale community-driven recycling and river restoration across more neighborhoods.
+                Help us bring more green spaces, plant art workshops, and biophilic design to communities across Nepal.
               </motion.h3>
             </div>
             <motion.div

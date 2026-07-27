@@ -230,6 +230,63 @@ html {
   animation: gentle-float 6s ease-in-out infinite;
 }
 
+/* Seed-to-tree growth with hands */
+@keyframes seed {
+  0%, 8% { opacity: 1; }
+  20%, 100% { opacity: 0; }
+}
+
+@keyframes hand-left {
+  0% { opacity: 0; transform: translateX(-4px); }
+  15%, 100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes hand-right {
+  0% { opacity: 0; transform: translateX(4px); }
+  15%, 100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fingers-left {
+  0%, 10% { opacity: 0; transform: translate(-3px, 2px); }
+  25%, 100% { opacity: 1; transform: translate(0, 0); }
+}
+
+@keyframes fingers-right {
+  0%, 10% { opacity: 0; transform: translate(3px, 2px); }
+  25%, 100% { opacity: 1; transform: translate(0, 0); }
+}
+
+@keyframes trunk {
+  0% { stroke-dasharray: 0 20; stroke-dashoffset: 0; }
+  15% { stroke-dasharray: 3 20; stroke-dashoffset: -3; }
+  40%, 100% { stroke-dasharray: 20 0; stroke-dashoffset: -20; }
+}
+
+@keyframes branch-left {
+  0%, 35% { opacity: 0; }
+  55%, 100% { opacity: 1; }
+}
+
+@keyframes branch-right {
+  0%, 42% { opacity: 0; }
+  62%, 100% { opacity: 1; }
+}
+
+@keyframes canopy {
+  0%, 50% { opacity: 0; transform: scale(0); }
+  75%, 100% { opacity: 1; transform: scale(1); }
+}
+
+.animate-seed { animation: seed 5s ease-in-out infinite; }
+.animate-hand-left { animation: hand-left 5s ease-in-out infinite; }
+.animate-hand-right { animation: hand-right 5s ease-in-out infinite; }
+.animate-fingers-left { animation: fingers-left 5s ease-in-out infinite; }
+.animate-fingers-right { animation: fingers-right 5s ease-in-out infinite; }
+.animate-trunk { animation: trunk 5s ease-in-out infinite; }
+.animate-branch-left { animation: branch-left 5s ease-in-out infinite; }
+.animate-branch-right { animation: branch-right 5s ease-in-out infinite; }
+.animate-canopy { animation: canopy 5s ease-in-out infinite; }
+
 .animate-scroll-bounce {
   animation: scroll-bounce 2s ease-in-out infinite;
 }

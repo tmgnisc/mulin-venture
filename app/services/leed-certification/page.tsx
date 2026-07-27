@@ -4,15 +4,15 @@ import { ServicePage } from '@/components/mulin/service-page'
 import { getServicePageContent } from '@/components/mulin/service-page-data'
 
 export const metadata: Metadata = {
-  title: { absolute: 'LEED Certification in Nepal | Mulin Venture' },
+  title: { absolute: 'Green Building Rating & LEED Support in Nepal | Mulin Venture' },
   description:
-    'Expert LEED certification support in Nepal — credit strategy, documentation & submission for sustainable buildings. Contact us today!',
+    'Green building rating assessment and LEED certification support in Nepal — carbon footprint, biodiversity impact, and improvement roadmap. Contact Mulin Venture today!',
   alternates: { canonical: '/services/leed-certification' },
 }
 
 export default function Page() {
   const content = getServicePageContent('leed-certification')
   if (!content) notFound()
-  return <ServicePage content={content} />
+  return <ServicePage content={content} slugArr={['services', "leed-certification"]} />
 }
 

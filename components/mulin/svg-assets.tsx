@@ -206,3 +206,31 @@ export function CheckIcon({ className = '' }: { className?: string }) {
     </svg>
   )
 }
+
+export function GrowingPlantIcon({ className = '' }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" strokeWidth="1.3" className={className} aria-hidden="true">
+      {/* Left arm/wrist */}
+      <path d="M4 24C4 24 8 22 11 20C13 18.5 14 17 14 17" strokeLinecap="round" className="animate-hand-left" />
+      {/* Right arm/wrist */}
+      <path d="M24 24C24 24 20 22 17 20C15 18.5 14 17 14 17" strokeLinecap="round" className="animate-hand-right" />
+      {/* Left fingers cupping */}
+      <path d="M11 20C10 19.5 8 18.5 7 17C6 15.5 6 14 7 13" strokeLinecap="round" className="animate-fingers-left" />
+      {/* Right fingers cupping */}
+      <path d="M17 20C18 19.5 20 18.5 21 17C22 15.5 22 14 21 13" strokeLinecap="round" className="animate-fingers-right" />
+      {/* Seed */}
+      <circle cx="14" cy="17" r="1.8" fill="currentColor" stroke="none" className="animate-seed" />
+      {/* Trunk growing upward */}
+      <path d="M14 17V7" strokeLinecap="round" className="animate-trunk" />
+      {/* Left branch */}
+      <path d="M14 12L10 9" strokeLinecap="round" className="animate-branch-left" />
+      {/* Right branch */}
+      <path d="M14 10L18 7" strokeLinecap="round" className="animate-branch-right" />
+      {/* Canopy - leafy cloud */}
+      <ellipse cx="14" cy="5" rx="5.5" ry="4.5" className="animate-canopy" />
+      <ellipse cx="10.5" cy="3.5" rx="3" ry="2.5" className="animate-canopy" />
+      <ellipse cx="17.5" cy="3.5" rx="3" ry="2.5" className="animate-canopy" />
+      <ellipse cx="14" cy="2" rx="2.5" ry="2" className="animate-canopy" />
+    </svg>
+  )
+}

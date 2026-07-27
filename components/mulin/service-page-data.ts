@@ -39,7 +39,7 @@ const servicePages: Record<string, ServicePageContent> = {
     summary:
       'End-to-end design that places nature at the heart of every decision from material selection and plant placement to lighting, texture, and air flow.',
     heroImage:
-      'https://images.unsplash.com/photo-1523419409543-5d3f8f9f5a4f?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1761971975065-8e1fcf101303?auto=format&fit=crop&w=1600&q=80',
     heroAlt: 'Nature-integrated interior space with layered planting and natural materials',
     heroNote:
       'We design spaces that are measurably better for the people who use them.',
@@ -209,9 +209,8 @@ const servicePages: Record<string, ServicePageContent> = {
     title: 'Plant Art Workshops',
     summary:
       'Hands-on community workshops where participants create their own plant art pieces while learning about biophilic design, indigenous plant knowledge, and the benefits of living with nature.',
-    heroImage:
-      'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1600&q=80',
-    heroAlt: 'Participants creating plant art in a workshop setting',
+    heroImage: '/plantartworkshop.jpg',
+    heroAlt: 'Hands shaping a moss ball with soil during a kokedama making workshop',
     heroNote:
       'Available for schools, organisations, and public events.',
     accent: '#8C9A4B',
@@ -283,8 +282,20 @@ const servicePages: Record<string, ServicePageContent> = {
   },
 }
 
+const slugAliases: Record<string, string> = {
+  'leed-certification': 'green-building-rating-system',
+  'well-certification': 'green-building-rating-system',
+  'sustainable-building-design': 'biophilic-design',
+  'air-quality': 'biophilic-design',
+  'water-safety': 'landscape-rooftop-greening-design',
+  'light-optimization': 'biophilic-design',
+  'soil-health': 'garden-maintenance',
+  'noise-mapping': 'green-building-rating-system',
+}
+
 export function getServicePageContent(slug: string) {
-  return servicePages[slug]
+  const resolved = slugAliases[slug] ?? slug
+  return servicePages[resolved]
 }
 
 export const serviceHubItems = Object.values(servicePages).map((page, index) => ({

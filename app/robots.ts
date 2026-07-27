@@ -6,10 +6,13 @@ const BASE_URL = 'https://www.mulinventure.com'
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: {
-      userAgent: '*',
-      allow: '/',
-    },
+    rules: [
+      {
+        userAgent: '*',
+        allow: '/',
+        disallow: ['/api/', '/_next/'],
+      },
+    ],
     sitemap: `${BASE_URL}/sitemap.xml`,
   }
 }

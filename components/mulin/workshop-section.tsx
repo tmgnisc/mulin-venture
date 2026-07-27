@@ -19,7 +19,7 @@ export function WorkshopSection() {
           <div className="relative order-2 lg:order-1" data-aos="fade-up">
             <div className="relative overflow-hidden rounded-[28px] aspect-[4/5] max-h-140 w-full group">
               <img
-                src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1200&q=80"
+                src="/plantartworkshop.jpg"
                 alt="Hands shaping a moss ball with soil during a kokedama making workshop"
                 className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
               />

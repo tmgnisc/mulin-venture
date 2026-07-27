@@ -7,36 +7,37 @@ const testimonials = [
   {
     id: 1,
     quote: 'The Monstera arrived in the most stunning matte white ceramic vessel — it\'s the statement piece our living room needed.',
-    author: 'Priya S.',
-    location: 'New Delhi',
+    author: 'Nischal Tamang',
     rating: 5,
   },
   {
     id: 2,
     quote: 'Mulin\'s team helped me design a green wall for my entire office. The transformation was incredible.',
-    author: 'James T.',
-    location: 'London',
+    author: 'Roshan KC',
     rating: 5,
   },
   {
     id: 3,
     quote: 'The custom terrarium they created for my partner was the most thoughtful gift I\'ve ever given.',
-    author: 'Ananya R.',
-    location: 'Mumbai',
+    author: 'Sujan Pun',
     rating: 5,
   },
   {
     id: 4,
     quote: 'Exceptional quality and service. Every detail was considered, from the soil blend to the handwritten care card.',
-    author: 'Michael C.',
-    location: 'Singapore',
+    author: 'Sonu Thapa Magar',
     rating: 5,
   },
   {
     id: 5,
     quote: 'We ordered 30 custom plants for our hotel lobby. Six months later, they\'re all thriving beautifully.',
-    author: 'Elena K.',
-    location: 'Dubai',
+    author: 'Sanjeev Magar',
+    rating: 5,
+  },
+  {
+    id: 6,
+    quote: 'The workshop completely changed how I think about plants and biophilic design.',
+    author: 'Sajesh Bajracharya',
     rating: 5,
   },
 ]
@@ -123,7 +124,7 @@ export function TestimonialsSection() {
                 {/* Attribution */}
                 <div className="relative z-10">
                   <p className="font-sans text-sm text-ink-soft">
-                    — {testimonial.author}, {testimonial.location}
+                    — {testimonial.author}
                   </p>
                 </div>
               </div>

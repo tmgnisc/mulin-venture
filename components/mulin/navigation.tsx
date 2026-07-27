@@ -5,7 +5,13 @@ import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { SproutIcon, MenuIcon, CloseIcon } from './svg-assets'
 
-const navLinks = [
+type DropdownItem = {
+  label: string
+  href: string
+  children?: { label: string; href: string }[]
+}
+
+const navLinks: ({ label: string; href: string; dropdownItems?: DropdownItem[] })[] = [
   { label: 'Research', href: '/research' },
   {
     label: 'Services',
@@ -22,11 +28,18 @@ const navLinks = [
     label: 'Products',
     href: '/products',
     dropdownItems: [
-      { label: 'Plant Art Products', href: '/products/plant-art-products' },
+      {
+        label: 'Plant Art Products', href: '/products/plant-art-products',
+        children: [{ label: 'Kokedama', href: '/products/plant-art-products/kokedama' }],
+      },
       { label: 'Moss Walls & Living Walls', href: '/products/moss-walls-living-walls' },
-      { label: 'Biodiversity Toolkit', href: '/products/biodiversity-toolkit' },
+      {
+        label: 'Biodiversity Toolkit', href: '/products/biodiversity-toolkit',
+        children: [{ label: 'Tippy', href: '/products/biodiversity-toolkit/tippy' }],
+      },
     ],
   },
+  { label: 'Blog', href: '/blog' },
   { label: 'Community', href: '/community' },
   { label: 'About', href: '/about' },
 ]
@@ -73,7 +86,7 @@ export function Navigation() {
             >
               <Image
                 src="/favicon-mulin.png"
-                alt="Mulin Venture logo"
+                alt="Mulin Venture logo — biophilic design studio in Kathmandu, Nepal"
                 width={44}
                 height={44}
                 className="rounded-full object-cover"
@@ -141,15 +154,42 @@ export function Navigation() {
                   {link.dropdownItems && (
                     <div className="pointer-events-none absolute left-1/2 top-full z-50 w-56 -translate-x-1/2 pt-3 opacity-0 transition-opacity duration-200 group-hover:pointer-events-auto group-hover:opacity-100">
                       <div className="rounded-2xl border border-ink/10 bg-cream/95 p-2 shadow-xl backdrop-blur-md">
-                        {link.dropdownItems.map((item) => (
-                          <Link
-                            key={item.label}
-                            href={item.href}
-                            className="flex items-center justify-between gap-3 rounded-xl px-3 py-2 text-[13px] tracking-[0.03em] text-ink transition-colors duration-200 hover:bg-sage/10 hover:text-sage-dark"
-                          >
-                            <span>{item.label}</span>
-                          </Link>
-                        ))}
+                        {link.dropdownItems.map((item) =>
+                          item.children ? (
+                            <div key={item.label} className="group/sub relative">
+                              <Link
+                                href={item.href}
+                                className="flex items-center justify-between gap-3 rounded-xl px-3 py-2 text-[13px] tracking-[0.03em] text-ink transition-colors duration-200 hover:bg-sage/10 hover:text-sage-dark"
+                              >
+                                <span>{item.label}</span>
+                                <svg viewBox="0 0 20 20" aria-hidden="true" className="h-3 w-3 rotate-90 text-ink/30 shrink-0" fill="none">
+                                  <path d="M5 12L10 7L15 12" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                              </Link>
+                              <div className="pointer-events-none absolute left-full top-0 z-50 pl-2 opacity-0 transition-opacity duration-200 group-hover/sub:pointer-events-auto group-hover/sub:opacity-100">
+                                <div className="rounded-2xl border border-ink/10 bg-cream/95 p-2 shadow-xl backdrop-blur-md whitespace-nowrap">
+                                  {item.children.map((child) => (
+                                    <Link
+                                      key={child.label}
+                                      href={child.href}
+                                      className="flex items-center rounded-xl px-3 py-2 text-[13px] tracking-[0.03em] text-ink transition-colors duration-200 hover:bg-sage/10 hover:text-sage-dark"
+                                    >
+                                      {child.label}
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+                            </div>
+                          ) : (
+                            <Link
+                              key={item.label}
+                              href={item.href}
+                              className="flex items-center justify-between gap-3 rounded-xl px-3 py-2 text-[13px] tracking-[0.03em] text-ink transition-colors duration-200 hover:bg-sage/10 hover:text-sage-dark"
+                            >
+                              <span>{item.label}</span>
+                            </Link>
+                          )
+                        )}
                       </div>
                     </div>
                   )}
@@ -261,17 +301,35 @@ export function Navigation() {
                 {link.dropdownItems && openMobileSubmenu === link.label && (
                   <div className="mt-4 flex flex-col items-center gap-3">
                     {link.dropdownItems.map((item) => (
-                      <Link
-                        key={item.label}
-                        href={item.href}
-                        onClick={() => {
-                          setOpenMobileSubmenu(null)
-                          setMobileMenuOpen(false)
-                        }}
-                        className="text-lg text-white/80 transition-colors duration-300 hover:text-gold"
-                      >
-                        {item.label}
-                      </Link>
+                      <div key={item.label} className="flex flex-col items-center gap-1">
+                        <Link
+                          href={item.href}
+                          onClick={() => {
+                            setOpenMobileSubmenu(null)
+                            setMobileMenuOpen(false)
+                          }}
+                          className="text-lg text-white/80 transition-colors duration-300 hover:text-gold"
+                        >
+                          {item.label}
+                        </Link>
+                        {item.children && (
+                          <div className="flex flex-col items-center gap-1">
+                            {item.children.map((child) => (
+                              <Link
+                                key={child.label}
+                                href={child.href}
+                                onClick={() => {
+                                  setOpenMobileSubmenu(null)
+                                  setMobileMenuOpen(false)
+                                }}
+                                className="text-base text-white/50 transition-colors duration-300 hover:text-gold"
+                              >
+                                {child.label}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </div>
                     ))}
                   </div>
                 )}

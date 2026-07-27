@@ -144,7 +144,7 @@ export function HeroSection() {
         {/* Fallback image — always visible until video loads */}
         <img
           src={HERO_IMG}
-          alt="Botanical indoor installation"
+          alt="Lush botanical indoor installation with tropical plants and foliage"
           crossOrigin="anonymous"
           fetchPriority="high"
           className="absolute inset-0 h-full w-full object-cover object-center"

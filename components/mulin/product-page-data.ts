@@ -1,5 +1,12 @@
 import type { ApproachItem } from './service-page-data'
 
+export type SubcategoryLink = {
+  slug: string
+  title: string
+  href: string
+  summary: string
+}
+
 export type ProductPageContent = {
   slug: string
   eyebrow: string
@@ -25,6 +32,8 @@ export type ProductPageContent = {
   process: { step: string; title: string; body: string }[]
   outcomesTitle: string
   outcomes: { title: string; body: string }[]
+  subcategories?: SubcategoryLink[]
+  parent?: { slug: string; title: string; href: string }
 }
 
 export type ProductHubItem = {
@@ -51,8 +60,8 @@ export const productHubItems: ProductHubItem[] = [
     image: '/kokedama-2.png',
     alt: 'Handcrafted plant art featuring living plants',
     accent: '#737F3C',
-    detail: 'Includes Kokedama creations under the Plant Art category.',
-    metric: 'kokedama included',
+    detail: 'Includes Kokedama as a subcategory under Plant Art.',
+    metric: 'includes kokedama →',
   },
   {
     slug: 'moss-walls-living-walls',
@@ -61,8 +70,7 @@ export const productHubItems: ProductHubItem[] = [
     title: 'Moss Walls & Living Walls',
     summary:
       'Moss panels and fully living plant walls for indoor and outdoor spaces that are visually striking, acoustically beneficial, and deeply calming.',
-    image:
-      'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1600&q=80',
+    image: '/livingmosswall.jpg',
     alt: 'Living wall installation with dense layered greenery',
     accent: '#5F8F74',
     detail: 'Centerpiece installations designed to anchor biophilic spaces.',
@@ -78,8 +86,8 @@ export const productHubItems: ProductHubItem[] = [
     image: '/tippy.jpeg',
     alt: 'Biodiversity toolkit resources with child-friendly gardening tools',
     accent: '#8C9A4B',
-    detail: 'Includes Tippy as a child-friendly tool within biodiversity learning kits.',
-    metric: 'tippy included',
+    detail: 'Includes Tippy as a subcategory within the Biodiversity Toolkit.',
+    metric: 'includes tippy →',
   },
 ]
 
@@ -132,6 +140,59 @@ const productPages: Record<string, ProductPageContent> = {
       { title: 'Improved sensory comfort', body: 'Living plant presence supports calm and emotional wellbeing.' },
       { title: 'Long-term connection', body: 'People engage more actively with nature through ongoing care.' },
     ],
+    subcategories: [
+      { slug: 'kokedama', title: 'Kokedama', href: '/products/plant-art-products/kokedama', summary: 'Japanese moss ball art — handcrafted living sculptures wrapped in moss.' },
+    ],
+  },
+  'kokedama': {
+    slug: 'kokedama',
+    eyebrow: 'Plant Art / Moss Ball Craft',
+    title: 'Kokedama',
+    summary:
+      'Japanese moss ball art — living plants wrapped in moss and bound with twine, crafted by hand as sculptural natural pieces for your space.',
+    heroImage: '/kokedama-hero.png',
+    heroAlt: 'Handcrafted kokedama moss ball with lush green foliage',
+    heroNote:
+      'Kokedama is a signature format within our Plant Art category — each piece is handcrafted and ready to display.',
+    bodyImage: '/kokedamas.png',
+    bodyAlt: 'Collection of handcrafted kokedama moss ball arrangements',
+    accent: '#737F3C',
+    stats: [
+      { value: '01', label: 'moss ball craft' },
+      { value: '02', label: 'hand wrapped' },
+      { value: '03', label: 'living sculpture' },
+    ],
+    overviewTitle: 'What Kokedama offers',
+    overviewBody:
+      'Kokedama is the Japanese art of wrapping a plant\'s root ball in moss and binding it with natural twine. It sits within our Plant Art line as one of the most accessible and expressive formats — no pot needed, just living form.',
+    featuresTitle: 'Core highlights',
+    features: [
+      {
+        title: 'Pot-free display',
+        body: 'Kokedama can be placed on a tray, suspended, or mounted — the moss ball is the vessel.',
+      },
+      {
+        title: 'Low-maintenance living art',
+        body: 'Simply soak the ball when dry — no complicated care routines required.',
+      },
+      {
+        title: 'Handcrafted in Nepal',
+        body: 'Each kokedama is shaped, wrapped, and finished by hand using locally sourced moss and materials.',
+      },
+    ],
+    processTitle: 'How we craft',
+    process: [
+      { step: '01', title: 'Plant selection', body: 'We choose plants suited to Nepali indoor and outdoor conditions.' },
+      { step: '02', title: 'Moss wrapping', body: 'The root ball is encased in living moss and bound with natural jute twine.' },
+      { step: '03', title: 'Finishing & care guide', body: 'Each piece is finished with a care card so it thrives in its new home.' },
+    ],
+    outcomesTitle: 'Expected outcomes',
+    outcomes: [
+      { title: 'Living decor', body: 'A kokedama brings natural texture and life to any corner of a room.' },
+      { title: 'Mindful connection', body: 'Caring for a moss ball encourages slower, more attentive engagement with nature.' },
+      { title: 'Conversation piece', body: 'Each kokedama is unique and invites curiosity from everyone who sees it.' },
+    ],
+    parent: { slug: 'plant-art-products', title: 'Plant Art Products', href: '/products/plant-art-products' },
   },
   'moss-walls-living-walls': {
     slug: 'moss-walls-living-walls',
@@ -140,8 +201,8 @@ const productPages: Record<string, ProductPageContent> = {
     summary:
       'Moss panels and fully living plant walls designed for indoor and outdoor environments.',
     heroImage:
-      'https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=1600&q=80',
-    heroAlt: 'Green wall with dense foliage in an interior environment',
+      'https://images.unsplash.com/photo-1761971976133-5b0cbaee8c89?auto=format&fit=crop&w=1600&q=80',
+    heroAlt: 'Lush green living wall installation in a modern interior space',
     heroNote:
       'These installations are visually striking, acoustically beneficial, and deeply calming.',
     accent: '#5F8F74',
@@ -256,6 +317,59 @@ const productPages: Record<string, ProductPageContent> = {
       { title: 'Practical habitat support', body: 'Communities create and maintain biodiversity-supportive micro-environments.' },
       { title: 'Sustained participation', body: 'Accessible tools help users keep nature-positive habits over time.' },
     ],
+    subcategories: [
+      { slug: 'tippy', title: 'Tippy', href: '/products/biodiversity-toolkit/tippy', summary: 'A child-friendly biodiversity tool for planting, observation, and hands-on care.' },
+    ],
+  },
+  'tippy': {
+    slug: 'tippy',
+    eyebrow: 'Biodiversity Toolkit / Child-Friendly Tool',
+    title: 'Tippy',
+    summary:
+      'A child-friendly biodiversity tool designed to help young learners engage with nature through planting, observation, and hands-on care activities.',
+    heroImage: '/tippy-2.jpg',
+    heroAlt: 'Tippy biodiversity learning tool for children',
+    heroNote:
+      'Tippy is included within the Biodiversity Toolkit as a learning-friendly tool that makes nature engagement accessible to children.',
+    bodyImage: '/tippy-inline.jpg',
+    bodyAlt: 'Tippy tool alongside native plant guides and biodiversity resources',
+    accent: '#8C9A4B',
+    stats: [
+      { value: '01', label: 'child friendly' },
+      { value: '02', label: 'hands-on learning' },
+      { value: '03', label: 'nature connection' },
+    ],
+    overviewTitle: 'What Tippy offers',
+    overviewBody:
+      'Tippy is a thoughtfully designed tool that invites children to plant, observe, and care for nature. It sits within our Biodiversity Toolkit category and is ideal for schools, families, and community programmes.',
+    featuresTitle: 'Core highlights',
+    features: [
+      {
+        title: 'Engages young learners',
+        body: 'Tippy makes biodiversity tangible and accessible for children through simple planting and care activities.',
+      },
+      {
+        title: 'Supports classroom learning',
+        body: 'Teachers and facilitators can integrate Tippy into environmental science and outdoor learning sessions.',
+      },
+      {
+        title: 'Part of a bigger toolkit',
+        body: 'Tippy pairs with native plant guides and community resources for a complete biodiversity experience.',
+      },
+    ],
+    processTitle: 'How it works',
+    process: [
+      { step: '01', title: 'Introduce the tool', body: 'Children meet Tippy and learn about its role in helping plants grow.' },
+      { step: '02', title: 'Plant and observe', body: 'Hands-on planting activities guided by simple, illustrated instructions.' },
+      { step: '03', title: 'Care and grow', body: 'Ongoing observation and care build lasting habits of nature stewardship.' },
+    ],
+    outcomesTitle: 'Expected outcomes',
+    outcomes: [
+      { title: 'Early biodiversity awareness', body: 'Children develop an understanding of local plants and ecosystems.' },
+      { title: 'Practical skills', body: 'Kids gain confidence in planting, watering, and caring for living things.' },
+      { title: 'Lifelong habits', body: 'Positive early experiences with nature encourage long-term environmental stewardship.' },
+    ],
+    parent: { slug: 'biodiversity-toolkit', title: 'Biodiversity Toolkit', href: '/products/biodiversity-toolkit' },
   },
 }
 
@@ -263,4 +377,9 @@ export function getProductPageContent(slug: string) {
   return productPages[slug]
 }
 
-export const productSlugs = Object.keys(productPages)
+export const topLevelSlugs = ['plant-art-products', 'moss-walls-living-walls', 'biodiversity-toolkit']
+export const subcategoryPaths = [
+  { parent: 'plant-art-products', child: 'kokedama' },
+  { parent: 'biodiversity-toolkit', child: 'tippy' },
+]
+export const productSlugs = topLevelSlugs

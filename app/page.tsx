@@ -19,10 +19,34 @@ import { AOSInit } from '@/components/mulin/aos-init'
 import { JsonLd, faqSchema, testimonialsSchema } from '@/components/seo/structured-data'
 
 export const metadata: Metadata = {
-  title: { absolute: 'Mulin Venture | Nurture through Nature' },
+  title: { absolute: 'Mulin Venture | Biophilic Design & Green Spaces in Nepal' },
   description:
-    'Mulin Venture — biophilic design and sustainable built environments in Nepal, rooted in science, biodiversity, and community. Contact us today for a free consultation!',
+    'Biophilic design studio in Kathmandu, Nepal — green roofs, living walls, landscape greening and plant art workshops. Book a free consultation!',
   alternates: { canonical: '/' },
+  openGraph: {
+    title: 'Mulin Venture | Biophilic Design & Green Spaces in Nepal',
+    description:
+      'Mulin Venture — biophilic design studio in Kathmandu, Nepal. Green roofs, living walls, landscape greening, plant art workshops, and garden maintenance.',
+    url: 'https://www.mulinventure.com',
+    siteName: 'Mulin Venture',
+    type: 'website',
+    locale: 'en_US',
+    images: [
+      {
+        url: '/logo-mulin.png',
+        width: 1650,
+        height: 1515,
+        alt: 'Mulin Venture logo — Nurture through Nature',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Mulin Venture | Biophilic Design & Green Spaces in Nepal',
+    description:
+      'Mulin Venture — biophilic design studio in Kathmandu, Nepal. Green roofs, living walls, landscape greening, plant art workshops, and garden maintenance.',
+    images: ['/logo-mulin.png'],
+  },
 }
 
 export default function MulinVenturePage() {
