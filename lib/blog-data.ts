@@ -13,225 +13,99 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
-    slug: 'art-of-moss-walls',
-    title: 'The Art of Moss Walls: A Complete Guide',
-    excerpt: 'Discover how preserved moss walls can transform your space with minimal maintenance and maximum impact.',
-    content: `Moss walls have emerged as one of the most compelling biophilic design elements for modern interiors. Unlike living plant walls, preserved moss requires no watering, no sunlight, and minimal upkeep — making it an ideal solution for spaces where natural light is limited or maintenance access is challenging.
+    slug: 'how-plants-in-office-help',
+    title: 'How Plants in the Office Help: A Complete Guide to Workplace Well-Being',
+    excerpt: 'Discover how introducing indoor plants into your office can improve air quality, boost productivity, and create a healthier work environment for your team.',
+    content: `The modern office is often associated with fluorescent lighting, air-conditioned air, and sterile surfaces. While these elements define conventional workspaces, they also contribute to an environment that can feel disconnected from the natural world. Introducing plants into the office is one of the most effective and accessible ways to counter this disconnect, delivering measurable benefits for employee health, productivity, and overall workplace satisfaction.
 
-What makes moss walls particularly special is their ability to bring texture, depth, and a sense of ancient calm to any environment. The velvety surface of preserved moss creates a visual softness that contrasts beautifully with hard architectural surfaces like glass, concrete, and steel.
+This guide explores the science behind why plants matter in professional settings, the specific benefits they offer, and practical strategies for integrating greenery into any office environment.
 
-## Why Choose Preserved Moss?
+## The Science Behind Plants and Workplace Well-Being
 
-Preserved moss is real moss that has been treated with a eco-friendly glycerin solution to maintain its supple texture and vibrant green colour indefinitely. The preservation process stops the natural decay cycle while retaining the moss's cellular structure and visual characteristics.
+The concept of biophilia, popularised by biologist E.O. Wilson, describes the innate human tendency to seek connections with nature. When this connection is absent, as it often is in conventional office environments, people experience measurable declines in cognitive performance and emotional well-being.
 
-The benefits are substantial:
-- Zero maintenance — no watering, pruning, or fertilising
-- No light requirements — install in windowless rooms, corridors, or basements
-- Hypoallergenic — preserved moss doesn't grow mold or release pollen
-- Acoustically beneficial — the dense surface helps absorb sound
-- Fire retardant — treated to meet fire safety standards
+Research published in the Journal of Experimental Psychology found that employees working in offices with plants demonstrated 15% higher levels of productivity compared to those in minimalist environments. Studies using heart rate monitoring and EEG measurements have also shown that exposure to indoor greenery reduces cortisol levels, lowers blood pressure, and increases alpha-wave activity associated with relaxed alertness.
 
-## Design Possibilities
+These are not marginal improvements. They represent a meaningful shift in how people feel and perform throughout the workday.
 
-Moss walls can be customised to suit any aesthetic. From geometric patterns that feel contemporary and crisp to organic, free-flowing shapes that mimic natural landscapes, the design vocabulary is remarkably versatile.
+## Improved Air Quality
 
-Consider incorporating your brand colours by mixing different moss varieties or by framing the moss within painted backboards. Some clients choose to integrate preserved ferns, lichen, or branches to create richer biodiversity in the installation.
+One of the most well-documented benefits of office plants is their ability to improve indoor air quality. Through a process called phytoremediation, plants absorb volatile organic compounds (VOCs) such as formaldehyde, benzene, and trichloroethylene through their leaves and roots. Soil microorganisms in the potting mix also contribute to breaking down these pollutants.
 
-## Installation Considerations
+The NASA Clean Air Study, while conducted in sealed chambers, established that certain plant species are particularly effective at removing common indoor toxins. In real office settings, even a modest number of well-chosen plants can produce measurable improvements in air quality.
 
-A professional moss wall installation typically begins with assessing the wall surface and ensuring proper mounting. The moss is adhered to panels that are securely fastened to the wall. Most installations are completed within a single day, depending on the scale and complexity of the design.
+Species such as Snake Plant (Sansevieria), Spider Plant (Chlorophytum), and Peace Lily (Spathiphyllum) are among the most effective air-purifying plants for offices. They require minimal maintenance and thrive in the low-light conditions typical of many workspaces.
 
-For best results, avoid direct sunlight exposure, which can fade the colour over time, and maintain a stable indoor humidity level. With these simple considerations, your moss wall will remain beautiful for years.`,
-    category: 'Care Guide',
-    date: 'March 15, 2026',
-    readTime: '8 min read',
-    image: 'https://images.unsplash.com/photo-1545241047-6083a3684587?auto=format&fit=crop&w=900&q=80',
-    alt: 'Preserved moss wall installation in a modern interior',
-    author: 'Mulin Editorial',
-  },
-  {
-    slug: 'choosing-right-vessel',
-    title: 'Choosing the Right Vessel for Your Plant',
-    excerpt: 'From ceramic to concrete, learn how to match your plant with the perfect vessel for both style and health.',
-    content: `The vessel you choose for your plant is more than a decorative container — it plays a critical role in your plant's health and growth. Understanding the relationship between plant species, pot material, and drainage can mean the difference between a thriving plant and one that struggles.
+## Reduced Stress and Improved Mental Health
 
-## Material Matters
+Plants have a calming effect that goes beyond aesthetics. A study by the University of Exeter found that enriching a previously sparse office with plants increased workplace satisfaction by 15% and improved concentration levels. Employees reported feeling more focused, more relaxed, and more positive about their work environment.
 
-Each pot material offers distinct advantages:
+The presence of greenery also reduces noise levels in open-plan offices. Plants absorb, diffract, and reflect sound, helping to create a more comfortable acoustic environment. This is particularly valuable in spaces with hard surfaces such as glass, concrete, and steel, where noise can become a significant source of distraction.
 
-**Ceramic and Terracotta:** These porous materials allow air and moisture to pass through the walls, helping prevent root rot. Terracotta is especially suited for plants that prefer drier soil, such as succulents and cacti. Glazed ceramic retains more moisture and works well for tropical plants that like consistent humidity.
+## Increased Productivity and Creativity
 
-**Concrete:** Concrete planters are trendy and provide excellent stability for tall or top-heavy plants. The material is porous but less so than terracotta, so be mindful of watering frequency. Concrete also stays cooler, which benefits root systems in warm climates.
+The relationship between plants and productivity is well established. Research from the Malayasia-greening study found that employees in offices with plants scored 12% higher on productivity tests than those without. The effect was consistent across different types of work, from creative tasks to routine administrative work.
 
-**Fibreglass and Resin:** Lightweight and durable, these modern materials come in endless shapes and finishes. They are non-porous, so proper drainage holes are essential. Great for large floor plants where weight is a concern.
+Plants also support creative thinking. A study published in the Journal of Experimental Psychology found that participants working in rooms with plants generated 15% more creative ideas in brainstorming tasks. The presence of nature appears to activate the brain's default mode network, which is associated with creative insight and imaginative thinking.
 
-## Drainage Is Non-Negotiable
+## Better Employee Retention and Attraction
 
-Regardless of material, drainage holes are essential. Stagnant water leads to root rot, the most common cause of indoor plant death. If you fall in love with a pot without drainage, use it as a cachepot — place your plant in a plain nursery pot inside the decorative vessel.
+In today's competitive job market, workplace environment plays a significant role in employee satisfaction and retention. A survey by the Royal Horticultural Society found that 62% of employees believed that office plants would make them more likely to stay with their employer. Similarly, 68% of employees felt that office plants indicated that their employer cared about their well-being.
 
-## Size and Proportion
+For organisations looking to attract top talent, a green office environment sends a clear message: this is a workplace that values its people.
 
-A good rule of thumb is to choose a pot that is 2-4 inches larger in diameter than your plant's current root ball. Too large a pot can cause the soil to stay wet for too long; too small a pot will restrict root growth and require more frequent watering.
+## Practical Strategies for Introducing Plants to Your Office
 
-## Aesthetic Harmony
+Integrating plants into an office does not require a major renovation. The following strategies can help any organisation create a greener workspace.
 
-Beyond health considerations, your vessel should complement your space. Consider the colour palette, material texture, and overall design language of your room. A well-chosen pot elevates your plant from a simple houseplant to a design statement.`,
-    category: 'Design Tips',
-    date: 'March 8, 2026',
-    readTime: '6 min read',
-    image: 'https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=900&q=80',
-    alt: 'Ceramic plant vessels arranged on a wooden shelf',
-    author: 'Mulin Editorial',
-  },
-  {
-    slug: 'indoor-plants-air-quality',
-    title: 'How Indoor Plants Improve Air Quality',
-    excerpt: 'The science behind how certain plant species can purify your indoor air and boost your well-being.',
-    content: `The idea that indoor plants improve air quality has moved from anecdotal belief to well-documented science. While the famous NASA Clean Air Study from the 1980s is often cited, modern research has refined our understanding of how plants interact with indoor environments.
+**Start Small**: Begin with desktop plants in high-traffic areas such as reception desks, break rooms, and shared workstations. Low-maintenance species like Pothos, ZZ Plant, and Snake Plant are ideal for offices where gardening expertise may be limited.
 
-## How Plants Purify Air
+**Use Vertical Space**: Wall-mounted planters and hanging baskets are excellent solutions for offices with limited floor space. They add visual interest without occupying valuable workspace and can transform blank walls into living features.
 
-Plants absorb carbon dioxide and release oxygen through photosynthesis, but their air-cleaning abilities go further. Through a process called phytoremediation, plants can absorb volatile organic compounds (VOCs) such as formaldehyde, benzene, and trichloroethylene through their leaves and roots. Soil microorganisms in the potting mix also play a significant role in breaking down these pollutants.
+**Create Green Focal Points**: A single large floor plant or a small indoor garden can serve as a focal point in meeting rooms or lobbies. These installations create a sense of arrival and set a positive tone for visitors and employees alike.
 
-## Most Effective Air-Purifying Plants
+**Consider Professional Installation**: For larger offices or more ambitious projects, working with a professional biophilic design firm ensures that plant selections are appropriate for the specific light, temperature, and humidity conditions of your space. Companies like [Mulin Venture](https://www.mulinventure.com) specialise in creating tailored green solutions for commercial environments, from living walls to complete workplace transformations.
 
-Not all plants are equally effective. The following species have demonstrated superior air-purifying capabilities:
+**Establish a Maintenance Routine**: Plants require basic care to thrive. Establishing a simple maintenance schedule, whether handled in-house or by a professional service, ensures that your investment in greenery continues to deliver returns.
 
-**Snake Plant (Sansevieria):** Exceptionally hardy and effective at removing formaldehyde. It continues producing oxygen at night, making it ideal for bedrooms.
+## The Role of Technology in Workplace Greening
 
-**Spider Plant (Chlorophytum):** Excellent at removing carbon monoxide and xylene. Easy to propagate and nearly impossible to kill.
+Modern office greening projects increasingly benefit from technological solutions. Smart irrigation systems, environmental sensors, and automated lighting can help maintain optimal conditions for indoor plants while minimising maintenance effort. Companies that specialise in digital solutions, such as [Nirvix Technology](https://www.nirvixtech.com/), can help organisations develop custom applications and systems to monitor and manage their workplace greenery alongside other building management functions.
 
-**Peace Lily (Spathiphyllum):** Removes ammonia, benzene, and formaldehyde effectively. Its white blooms add visual appeal.
+The integration of technology and nature represents a forward-thinking approach to workplace design, one that recognises that human well-being depends on both.
 
-**Pothos (Epipremnum):** Rapid-growing vine that effectively clears formaldehyde and carbon monoxide. Thrives in low light.
+## Long-Term Benefits for Organisations
 
-## Realistic Expectations
+The benefits of office plants extend beyond immediate improvements in air quality and employee satisfaction. Organisations that invest in green workspaces often report:
 
-While plants do improve air quality, achieving the purification levels seen in laboratory studies would require a large number of plants in a sealed environment. In practical terms, a room with several well-chosen plants will experience measurable but modest improvements in air quality. The greater benefit may be psychological — plants reduce stress, increase productivity, and create a sense of connection to nature.
+- Reduced absenteeism due to improved health and well-being
+- Lower healthcare costs associated with stress-related conditions
+- Enhanced brand image and corporate social responsibility credentials
+- Increased employee engagement and collaborative behaviour
 
-## Best Practices
+These long-term benefits make office plants not merely an aesthetic choice but a strategic investment in organisational performance.
 
-To maximise the air-purifying benefits of indoor plants, dust leaves regularly, ensure proper watering to keep soil microorganisms active, and provide adequate light for photosynthesis. Grouping plants together can create a more significant cumulative effect and also increases local humidity through transpiration.`,
-    category: 'Wellness',
-    date: 'February 28, 2026',
-    readTime: '5 min read',
-    image: 'https://images.unsplash.com/photo-1470137237906-d8a4f71e1966?auto=format&fit=crop&w=900&q=80',
-    alt: 'Indoor plants in a bright living room setting',
-    author: 'Mulin Editorial',
-  },
-  {
-    slug: 'biophilic-design-workplace',
-    title: 'Biophilic Design in the Workplace: Boosting Productivity Through Nature',
-    excerpt: 'Research shows that incorporating natural elements into office design can increase productivity, creativity, and employee well-being.',
-    content: `The modern workplace is undergoing a transformation. As organisations recognise the link between environment and performance, biophilic design has moved from a niche consideration to a strategic priority. The evidence is compelling: workplaces that incorporate natural elements consistently report higher employee satisfaction, reduced absenteeism, and improved cognitive performance.
+## Conclusion
 
-## The Science Behind Biophilia
+Introducing plants into the office is a simple, cost-effective, and evidence-based approach to improving workplace well-being. From enhanced air quality and reduced stress to increased productivity and better employee retention, the benefits are substantial and well-documented.
 
-Biophilia, a term popularised by biologist E.O. Wilson, refers to the innate human tendency to seek connections with nature. When this instinct is unmet — as it often is in conventional office environments — we experience measurable declines in well-being and performance.
+Whether you are a small startup or a large corporation, integrating greenery into your workspace is an investment that pays dividends in employee health, satisfaction, and performance. The evidence is clear: plants in the office are not a luxury but a necessity for any organisation that values its people.
 
-Studies using EEG and heart rate monitoring have shown that exposure to natural elements reduces cortisol levels, lowers blood pressure, and increases alpha-wave activity associated with relaxed alertness. In practical terms, employees in biophilic offices report 15% higher levels of well-being and 6% higher productivity.
+For organisations looking to explore biophilic design solutions, [Mulin Venture](https://www.mulinventure.com) offers comprehensive workplace greening services tailored to the specific needs of each client. From initial consultation to ongoing maintenance, their team of experts can help create an office environment that truly nurtures through nature.
 
-## Key Elements of Biophilic Office Design
-
-**Natural Light:** Access to daylight is the single most important biophilic element. Workstations should be arranged to maximise natural light exposure, and glass partitions can help distribute light deeper into the floor plate.
-
-**Living Plants:** Beyond air purification, plants create visual interest, reduce noise, and provide a sense of vitality. A mix of floor plants, wall-mounted planters, and desktop plants creates layered biophilic experiences.
-
-**Natural Materials:** Wood, stone, bamboo, and wool bring tactile richness and visual warmth. These materials signal comfort and safety on a subconscious level.
-
-**Views of Nature:** Direct sightlines to windows with greenery are ideal. Where this isn't possible, high-quality nature photography or digital nature displays can provide meaningful substitutes.
-
-## Implementation Strategy
-
-Start with a biophilic audit of your current space. Identify areas with the least natural connection — windowless meeting rooms, interior corridors, and cubicle clusters — and prioritise these for intervention. Even modest changes, such as adding a living wall to a reception area or placing plants in shared spaces, can produce meaningful improvements in how people feel and perform.`,
+This article was produced in collaboration with [Nirvix Technology](https://www.nirvixtech.com/), a digital solutions provider specialising in web development, custom applications, and technology strategy for businesses across Nepal.`,
     category: 'Biophilic Design',
-    date: 'February 15, 2026',
-    readTime: '7 min read',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&q=80',
-    alt: 'Modern office with biophilic design elements including plants and natural light',
-    author: 'Mulin Editorial',
-  },
-  {
-    slug: 'kokedama-beginners-guide',
-    title: 'Kokedama: A Beginner\'s Guide to Japanese Moss Ball Gardening',
-    excerpt: 'Learn the art of kokedama — a beautiful Japanese technique of growing plants in moss balls without traditional pots.',
-    content: `Kokedama, which translates literally to "moss ball" in Japanese, is a centuries-old gardening technique that transforms plants into living sculptures. By encasing the root ball in a moss-covered soil sphere, kokedama eliminates the need for a traditional pot and creates a striking display piece that can be hung or placed on a dish.
-
-## The History
-
-Kokedama originated from Japan's bonsai tradition, specifically from a technique called "nearai" that was developed by gardeners who wanted to display plants without heavy ceramic pots. Over time, this practical technique evolved into an art form that embodies the Japanese aesthetic principles of wabi-sabi — finding beauty in imperfection and natural simplicity.
-
-## Creating Your First Kokedama
-
-The process is meditative and rewarding. You will need a small plant, bonsai soil or a mix of akadama and peat moss, sheet moss, and gardening twine.
-
-Start by removing the plant from its nursery pot and gently loosening the root ball. Shape the soil into a compact sphere around the roots, ensuring it holds together firmly. Wrap the sphere in pre-soaked sheet moss, pressing gently to create a smooth, even surface. Secure the moss with twine, wrapping in multiple directions until the moss is firmly bound.
-
-## Choosing the Right Plant
-
-Plants that thrive in kokedama include ferns, pothos, peace lilies, and certain orchids. The key is selecting species that enjoy the moist, well-aerated root environment that the moss ball provides. Succulents and cacti are generally poor candidates as they prefer drier conditions.
-
-## Care and Maintenance
-
-Kokedama care is simple. Water by soaking the moss ball in a bowl of water for 10-15 minutes whenever the moss feels dry to the touch. Mist the moss occasionally to maintain humidity. Provide appropriate light for your chosen plant species, and fertilise monthly during the growing season with a diluted liquid fertiliser.
-
-With proper care, a kokedama can thrive for years, growing and evolving as a living piece of art in your home.`,
-    category: 'Care Guide',
-    date: 'January 30, 2026',
-    readTime: '7 min read',
-    image: 'https://images.unsplash.com/photo-1462989856370-729a9c1e2c91?auto=format&fit=crop&w=900&q=80',
-    alt: 'Handcrafted kokedama moss ball plant hanging on a wall',
-    author: 'Mulin Editorial',
-  },
-  {
-    slug: 'sustainable-landscaping-nepal',
-    title: 'Sustainable Landscaping in Nepal: Native Plants and Water-Wise Design',
-    excerpt: 'How Nepali landscapes can be both beautiful and ecologically responsible through native planting and smart water management.',
-    content: `Nepal's extraordinary biodiversity — spanning tropical Terai to alpine Himalayas — offers an unparalleled palette for sustainable landscaping. Yet many contemporary landscapes in Nepal rely on non-native species and resource-intensive maintenance practices. The shift toward sustainable landscaping is both an ecological necessity and an opportunity to celebrate Nepal's botanical heritage.
-
-## Why Native Plants Matter
-
-Native plants are adapted to local climate conditions, require less water, and support local wildlife — including birds, butterflies, and beneficial insects. They are naturally resistant to local pests and diseases, reducing or eliminating the need for chemical interventions.
-
-In Kathmandu Valley, native species such as Lali Gurans (Rhododendron), Champa (Magnolia), and Salla (Pine) can form the backbone of a landscape that feels distinctly Nepali while requiring substantially less maintenance than exotic alternatives.
-
-## Water-Wise Design Principles
-
-Nepal faces increasing water stress, particularly in urban areas during the dry season. Sustainable landscapes minimise water demand through several strategies:
-
-**Hydrozoning:** Grouping plants with similar water needs together so irrigation can be targeted efficiently.
-
-**Rainwater Harvesting:** Directing roof runoff into garden beds rather than storm drains. Simple swales and rain gardens can capture and filter water naturally.
-
-**Mulching:** A thick layer of organic mulch reduces evaporation, moderates soil temperature, and slowly adds nutrients to the soil as it decomposes.
-
-**Drought-Tolerant Species:** Many beautiful Nepali plants are naturally drought-tolerant once established, including various species of Barberry, Daphne, and native grasses.
-
-## Creating Habitat
-
-A sustainable landscape functions as a mini-ecosystem. Incorporate plants that provide nectar for pollinators, berries for birds, and shelter for small wildlife. A small water feature — even a simple bird bath — dramatically increases the habitat value of any garden.
-
-## The Economic Case
-
-While sustainable landscapes may require higher initial planning investment, they deliver lower ongoing costs through reduced water bills, fewer chemical inputs, and less maintenance labour. For commercial properties, a well-designed sustainable landscape also enhances property value and brand identity.
-
-Nepal's landscaping industry has an opportunity to lead by example, creating outdoor spaces that are not only beautiful but actively contribute to the health of our environment.`,
-    category: 'Sustainability',
-    date: 'January 18, 2026',
-    readTime: '6 min read',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?auto=format&fit=crop&w=900&q=80',
-    alt: 'Sustainable garden with native Nepali plants',
-    author: 'Mulin Editorial',
+    date: 'September 11, 2026',
+    readTime: '10 min read',
+    image: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80',
+    alt: 'Office workspace with green plants on desks and shelves',
+    author: 'Sudip Pradhan',
   },
 ]
 
 export const blogCategories = [
   'All',
-  'Care Guide',
-  'Design Tips',
-  'Wellness',
   'Biophilic Design',
-  'Sustainability',
 ]
 
 export function getBlogPost(slug: string) {

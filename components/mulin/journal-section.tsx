@@ -1,36 +1,10 @@
 'use client'
 
-const articles = [
-  {
-    id: 1,
-    title: 'The Art of Moss Walls: A Complete Guide',
-    category: 'Care Guide',
-    date: 'March 15, 2026',
-    readTime: '8 min read',
-    excerpt: 'Discover how preserved moss walls can transform your space with minimal maintenance and maximum impact.',
-    image: 'https://images.unsplash.com/photo-1545241047-6083a3684587?auto=format&fit=crop&w=900&q=80',
-  },
-  {
-    id: 2,
-    title: 'Choosing the Right Vessel for Your Plant',
-    category: 'Design Tips',
-    date: 'March 8, 2026',
-    readTime: '6 min read',
-    excerpt: 'From ceramic to concrete, learn how to match your plant with the perfect vessel for both style and health.',
-    image: 'https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=900&q=80',
-  },
-  {
-    id: 3,
-    title: 'How Indoor Plants Improve Air Quality',
-    category: 'Wellness',
-    date: 'February 28, 2026',
-    readTime: '5 min read',
-    excerpt: 'The science behind how certain plant species can purify your indoor air and boost your well-being.',
-    image: 'https://images.unsplash.com/photo-1470137237906-d8a4f71e1966?auto=format&fit=crop&w=900&q=80',
-  },
-]
+import { blogPosts } from '@/lib/blog-data'
 
 export function JournalSection() {
+  const articles = blogPosts.slice(0, 3)
+
   return (
     <section id="journal" className="py-[clamp(80px,10vw,140px)] bg-cream">
       <div className="max-w-[1320px] mx-auto px-[clamp(20px,5vw,80px)]">
@@ -48,25 +22,27 @@ export function JournalSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {articles.map((article, index) => (
             <article
-              key={article.id}
+              key={article.slug}
               className="group cursor-pointer"
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
               {/* Image Container */}
-              <div className="relative aspect-[3/4] rounded-xl overflow-hidden mb-6">
-                <img
-                  src={article.image}
-                  alt={article.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.08]"
-                />
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-moss/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <span className="text-gold text-sm tracking-wide border border-gold px-6 py-3 rounded-full">
-                    Read Article
-                  </span>
+              <a href={`/blog/${article.slug}`} className="block">
+                <div className="relative aspect-[3/4] rounded-xl overflow-hidden mb-6">
+                  <img
+                    src={article.image}
+                    alt={article.alt}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.08]"
+                  />
+                  {/* Hover Overlay */}
+                  <div className="absolute inset-0 bg-moss/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span className="text-gold text-sm tracking-wide border border-gold px-6 py-3 rounded-full">
+                      Read Article
+                    </span>
+                  </div>
                 </div>
-              </div>
+              </a>
 
               {/* Content */}
               <div>
@@ -77,7 +53,7 @@ export function JournalSection() {
                   className="font-serif text-ink mb-3 group-hover:text-sage transition-colors"
                   style={{ fontSize: 'clamp(1.25rem, 2vw, 1.5rem)' }}
                 >
-                  {article.title}
+                  <a href={`/blog/${article.slug}`}>{article.title}</a>
                 </h3>
                 <p className="font-sans text-xs text-ink-soft mb-3">
                   {article.date} · {article.readTime}
@@ -86,7 +62,7 @@ export function JournalSection() {
                   {article.excerpt}
                 </p>
                 <a
-                  href="#"
+                  href={`/blog/${article.slug}`}
                   className="inline-block mt-4 text-sage text-sm tracking-wide hover:text-sage-dark transition-colors"
                 >
                   Read More →

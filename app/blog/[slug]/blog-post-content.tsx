@@ -153,9 +153,35 @@ export function BlogPostContent({ post }: { post: BlogPost }) {
                   )
                 }
                 if (line.trim() === '') return <div key={i} className="h-4" />
+                const regex = /\*\*([^*]+)\*\*|\[([^\]]+)\]\(([^)]+)\)/g
+                const parts = []
+                let lastIndex = 0
+                let match
+                while ((match = regex.exec(line)) !== null) {
+                  if (match.index > lastIndex) {
+                    parts.push(line.slice(lastIndex, match.index))
+                  }
+                  if (match[1]) {
+                    parts.push(
+                      <strong key={`bold-${i}-${match.index}`} className="font-semibold text-ink">
+                        {match[1]}
+                      </strong>
+                    )
+                  } else if (match[2]) {
+                    parts.push(
+                      <a key={`link-${i}-${match.index}`} href={match[3]} target="_blank" rel="noopener noreferrer" className="text-sage underline hover:text-sage-dark transition-colors">
+                        {match[2]}
+                      </a>
+                    )
+                  }
+                  lastIndex = match.index + match[0].length
+                }
+                if (lastIndex < line.length) {
+                  parts.push(line.slice(lastIndex))
+                }
                 return (
                   <p key={i} className="font-sans text-sm text-ink-soft leading-relaxed mb-4">
-                    {line}
+                    {parts.length > 0 ? parts : line}
                   </p>
                 )
               })}
