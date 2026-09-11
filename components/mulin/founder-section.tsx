@@ -47,7 +47,7 @@ export function FounderSection() {
               <div className="absolute -inset-4 rounded-3xl bg-sage/10" />
               <div className="relative w-[320px] h-[420px] md:w-[380px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/founder.jpeg"
+                  src="/Profile Founder.jpg"
                   alt="Monica — Founder"
                   fill
                   className="object-cover object-center"

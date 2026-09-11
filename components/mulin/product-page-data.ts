@@ -23,6 +23,7 @@ export type ProductPageContent = {
   overviewBody: string
   featuresTitle: string
   features: { title: string; body: string }[]
+  gallery?: { image: string; alt: string }[]
   approach?: {
     title: string
     subtitle: string
@@ -180,6 +181,18 @@ const productPages: Record<string, ProductPageContent> = {
         body: 'Each kokedama is shaped, wrapped, and finished by hand using locally sourced moss and materials.',
       },
     ],
+    gallery: [
+      { image: '/kokedama1.JPG', alt: 'Handcrafted kokedama moss ball with green foliage' },
+      { image: '/kokedama2JPG.JPG', alt: 'Kokedama moss ball arrangement on display' },
+      { image: '/kokedama3.JPG', alt: 'Detailed view of kokedama moss wrapping' },
+      { image: '/kokedama4.JPG', alt: 'Kokedama hanging display with natural twine' },
+      { image: '/kokedama5.jpg', alt: 'Collection of kokedama moss balls' },
+      { image: '/kokedama6.JPG', alt: 'Kokedama placed on a wooden surface' },
+      { image: '/kokedama7.JPG', alt: 'Close-up of kokedama moss texture' },
+      { image: '/kokedama8.JPG', alt: 'Kokedama arrangement with various plants' },
+      { image: '/kokedama9.JPG', alt: 'Kokedama suspended in a bright space' },
+      { image: '/Kokedama10.JPG', alt: 'Finished kokedama ready for display' },
+    ],
     processTitle: 'How we craft',
     process: [
       { step: '01', title: 'Plant selection', body: 'We choose plants suited to Nepali indoor and outdoor conditions.' },
@@ -205,6 +218,8 @@ const productPages: Record<string, ProductPageContent> = {
     heroAlt: 'Lush green living wall installation in a modern interior space',
     heroNote:
       'These installations are visually striking, acoustically beneficial, and deeply calming.',
+    bodyImage: '/Moss panel prototype.jpg',
+    bodyAlt: 'Moss panel prototype showcasing textured moss wall design',
     accent: '#5F8F74',
     stats: [
       { value: '01', label: 'visual impact' },

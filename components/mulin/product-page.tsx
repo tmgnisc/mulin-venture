@@ -4,9 +4,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { motion, type Variants } from 'framer-motion'
 import { ArrowRight, CheckIcon, MonsteraLeaf } from './svg-assets'
+import { getProductWhatsAppLink } from '@/lib/whatsapp'
 import type { ProductPageContent } from './product-page-data'
 import { ApproachSection } from './approach-section'
 import { Footer } from './footer'
+import { Lightbox, useLightbox } from './lightbox'
 import { Navigation } from './navigation'
 import { PageBreadcrumb } from './page-breadcrumb'
 
@@ -37,6 +39,8 @@ const rise: Variants = {
 
 export function ProductPage({ content, slugArr }: ProductPageProps) {
   const breadcrumbSegments = slugArr ?? [content.slug]
+  const galleryImages = content.gallery?.map((g) => ({ src: g.image, alt: g.alt })) ?? []
+  const lightbox = useLightbox(galleryImages)
   return (
     <>
       <Navigation />
@@ -64,13 +68,15 @@ export function ProductPage({ content, slugArr }: ProductPageProps) {
                 {content.summary}
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Link
-                  href="/consultation"
+                <a
+                  href={getProductWhatsAppLink(content.title)}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full bg-[#FFBE71] px-6 py-3 text-sm font-medium text-[#2B2F16] transition-transform duration-200 hover:-translate-y-0.5"
                 >
                   Request Consultation
                   <ArrowRight className="h-4 w-4" />
-                </Link>
+                </a>
                 {content.parent ? (
                   <Link
                     href={content.parent.href}
@@ -175,6 +181,70 @@ export function ProductPage({ content, slugArr }: ProductPageProps) {
           </motion.div>
         </section>
 
+        {content.gallery && content.gallery.length > 0 && (
+          <section className="border-t border-[#d8ddd7] bg-[#f7f9f5]">
+            <div className="mx-auto max-w-[1320px] px-[clamp(20px,5vw,80px)] py-[clamp(56px,7vw,96px)]">
+              <motion.div
+                className="mx-auto max-w-2xl text-center"
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.2 }}
+                variants={container}
+              >
+                <motion.p
+                  variants={rise}
+                  className="text-[11px] uppercase tracking-[0.22em] text-[#6f7f77]"
+                >
+                  Gallery
+                </motion.p>
+                <motion.h2
+                  variants={rise}
+                  className="mt-4 font-serif leading-[1.04] text-[#454C23]"
+                  style={{ fontSize: 'clamp(2rem, 3.6vw, 3.4rem)' }}
+                >
+                  Every piece, up close
+                </motion.h2>
+              </motion.div>
+
+              <motion.div
+                className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-5 md:gap-4"
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.1 }}
+                variants={container}
+              >
+                {content.gallery.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    variants={rise}
+                    className={`cursor-pointer overflow-hidden rounded-[20px] md:rounded-[24px] transition-transform hover:scale-[1.02] ${
+                      index === 0 ? 'md:col-span-2 md:row-span-2' : ''
+                    }`}
+                    onClick={() => lightbox.open(index)}
+                  >
+                    <img
+                      src={item.image}
+                      alt={item.alt}
+                      className={`w-full object-cover ${
+                        index === 0 ? 'aspect-square md:aspect-auto md:h-full' : 'aspect-square'
+                      }`}
+                    />
+                  </motion.div>
+                ))}
+              </motion.div>
+            </div>
+          </section>
+        )}
+
+        <Lightbox
+          images={galleryImages}
+          index={lightbox.index}
+          isOpen={lightbox.isOpen}
+          onClose={lightbox.close}
+          onPrev={lightbox.prev}
+          onNext={lightbox.next}
+        />
+
         {content.approach && (
           <ApproachSection
             title={content.approach.title}
@@ -249,13 +319,15 @@ export function ProductPage({ content, slugArr }: ProductPageProps) {
               <p className="mt-4 max-w-xl font-sans font-light text-sm leading-relaxed text-white/78">
                 The ending stays product-like and conclusive, with enough visual weight to feel intentional.
               </p>
-              <Link
-                href="/consultation"
+              <a
+                href={getProductWhatsAppLink(content.title)}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#FFFFFF] px-5 py-3 text-sm font-medium text-[#454C23] transition-transform hover:-translate-y-0.5"
               >
                 Start the conversation
                 <ArrowRight className="h-4 w-4" />
-              </Link>
+              </a>
             </motion.div>
 
             <motion.div className="grid gap-4 sm:grid-cols-2" variants={container}>

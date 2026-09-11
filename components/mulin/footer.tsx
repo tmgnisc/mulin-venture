@@ -3,10 +3,11 @@
 import Image from 'next/image'
 import { useState } from 'react'
 import { GrowingPlantIcon, InstagramIcon, FacebookIcon, TikTokIcon, ArrowRight } from './svg-assets'
+import { getWhatsAppLink } from '@/lib/whatsapp'
 
 const shopLinks = [
   { label: 'Our Plants', href: '#' },
-  { label: 'Custom Orders', href: '/consultation' },
+  { label: 'Custom Orders', whatsapp: true },
   { label: 'Gift Sets', href: '#' },
   { label: 'Corporate & Office', href: '#' },
   { label: 'Event Rentals', href: '#' },
@@ -101,12 +102,23 @@ export function Footer() {
             <ul className="space-y-3">
               {shopLinks.map((link) => (
                 <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="font-sans text-sm hover:text-gold transition-colors"
-                  >
-                    {link.label}
-                  </a>
+                  {'whatsapp' in link && link.whatsapp ? (
+                    <a
+                      href={getWhatsAppLink()}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-sans text-sm hover:text-gold transition-colors"
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <a
+                      href={'href' in link ? link.href : '#'}
+                      className="font-sans text-sm hover:text-gold transition-colors"
+                    >
+                      {link.label}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>
@@ -147,6 +159,7 @@ export function Footer() {
                   placeholder="Your email address"
                   className="flex-1 bg-transparent font-sans text-sm text-white placeholder:text-white/40 outline-none"
                   aria-label="Email address"
+                  suppressHydrationWarning
                 />
                 <button
                   type="submit"
@@ -187,6 +200,8 @@ export function Footer() {
               <a href="#" className="hover:text-gold transition-colors">Privacy</a>
               <span className="mx-2">|</span>
               <a href="#" className="hover:text-gold transition-colors">Terms</a>
+              <span className="mx-2">|</span>
+              Developed by <a href="https://nirvixtech.com" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">Nirvix Technology</a>
             </p>
           </div>
         </div>

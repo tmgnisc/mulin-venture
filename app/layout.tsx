@@ -3,6 +3,7 @@ import { League_Spartan } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { Toaster } from '@/components/ui/sonner'
 import { JsonLd, organizationSchema } from '@/components/seo/structured-data'
+import { WhatsAppFloat } from '@/components/mulin/whatsapp-float'
 import './globals.css'
 
 const leagueSpartan = League_Spartan({
@@ -74,6 +75,7 @@ export default function RootLayout({
         <JsonLd data={organizationSchema} />
         {children}
         <Toaster richColors closeButton />
+        <WhatsAppFloat />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

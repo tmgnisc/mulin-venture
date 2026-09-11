@@ -29,6 +29,11 @@ export type ServicePageContent = {
   process: { step: string; title: string; body: string }[]
   outcomesTitle: string
   outcomes: { title: string; body: string }[]
+  showcase?: {
+    title: string
+    subtitle: string
+    items: { title: string; body: string; image: string; alt: string; client?: string }[]
+  }
 }
 
 const servicePages: Record<string, ServicePageContent> = {
@@ -136,6 +141,19 @@ const servicePages: Record<string, ServicePageContent> = {
       { title: 'Better social use', body: 'People gain usable, restorative green areas in dense environments.' },
       { title: 'Long-term ecological performance', body: 'Design decisions support sustained growth and resilience.' },
     ],
+    showcase: {
+      title: 'Our work',
+      subtitle: 'Already delivered projects',
+      items: [
+        {
+          title: 'Leapfrog Institute',
+          body: 'A landscape and rooftop greening design that transformed underused areas into thriving green environments, supporting both people and biodiversity.',
+          image: '/Design work for leapfrog.jpg',
+          alt: 'Landscape design work for Leapfrog Institute by Mulin Venture',
+          client: 'Leapfrog Institute',
+        },
+      ],
+    },
   },
   'green-building-rating-system': {
     slug: 'green-building-rating-system',
@@ -240,6 +258,30 @@ const servicePages: Record<string, ServicePageContent> = {
       { title: 'Stronger nature connection', body: 'People build personal relationships with living systems.' },
       { title: 'Community-level engagement', body: 'Groups sustain shared action beyond one-time activities.' },
     ],
+    showcase: {
+      title: 'Glimpse of the workshop',
+      subtitle: 'Moments from our sessions',
+      items: [
+        {
+          title: 'Participants at work',
+          body: 'Hands-on creation during the workshop, where participants shape their own plant art pieces.',
+          image: '/Participant of our Worshop.jpg',
+          alt: 'Participant shaping plant art during workshop',
+        },
+        {
+          title: 'Group session',
+          body: 'A shared learning experience bringing people together around nature-connected making.',
+          image: '/Group.JPG',
+          alt: 'Group of participants in a plant art workshop session',
+        },
+        {
+          title: 'Nurture through nature',
+          body: 'A deeper connection with living systems, fostering care and awareness through direct engagement.',
+          image: '/Nurture through nature.jpg',
+          alt: 'Nurturing plants and connecting with nature during workshop',
+        },
+      ],
+    },
   },
   'garden-maintenance': {
     slug: 'garden-maintenance',

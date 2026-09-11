@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { motion, type Variants } from 'framer-motion'
 import { ArrowRight, MonsteraLeaf } from './svg-assets'
+import { getWhatsAppLink } from '@/lib/whatsapp'
 import { Footer } from './footer'
 import { Navigation } from './navigation'
 import { PageBreadcrumb } from './page-breadcrumb'
@@ -58,13 +59,15 @@ export function ProductsHub() {
                 core of our product ecosystem.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Link
-                  href="/consultation"
+                <a
+                  href={getWhatsAppLink()}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full bg-[#FFBE71] px-6 py-3 text-sm font-medium text-[#2B2F16] transition-transform duration-200 hover:-translate-y-0.5"
                 >
                   Request Consultation
                   <ArrowRight className="h-4 w-4" />
-                </Link>
+                </a>
                 <Link
                   href="/"
                   className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/8 px-6 py-3 text-sm text-white/90 transition-colors hover:bg-white/12"
@@ -178,13 +181,15 @@ export function ProductsHub() {
                   Need help choosing the right product category?
                 </h3>
               </div>
-              <Link
-                href="/consultation"
+              <a
+                href={getWhatsAppLink()}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-[#737F3C] px-6 py-3 text-sm font-medium text-white transition-transform duration-200 hover:-translate-y-0.5"
               >
                 Plan a project
                 <ArrowRight className="h-4 w-4" />
-              </Link>
+              </a>
             </div>
           </div>
         </section>

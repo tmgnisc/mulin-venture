@@ -7,53 +7,78 @@ import { PageBreadcrumb } from '@/components/mulin/page-breadcrumb'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import Image from 'next/image'
+import { getWhatsAppLink } from '@/lib/whatsapp'
 
-const priorities = [
+const values = [
   {
-    title: 'Biophilic Design',
-    text: 'We create spaces that reconnect people with nature — improving wellbeing, air quality, and biodiversity in every project.',
+    title: 'Ecological Integrity',
+    text: 'Every design decision is grounded in native ecology and biodiversity science, ensuring our work benefits both people and the planet.',
   },
   {
-    title: 'Urban Greening',
-    text: 'From rooftop gardens to living walls, we transform underused urban surfaces into thriving green ecosystems.',
+    title: 'Community Empowerment',
+    text: 'We believe in sharing knowledge and skills through workshops and education, empowering communities to create their own green spaces.',
   },
   {
-    title: 'Workshops & Education',
-    text: 'Our plant art workshops and community sessions teach hands-on skills for integrating nature into everyday life.',
+    title: 'Sustainable Innovation',
+    text: 'We continuously explore new materials, techniques, and systems that reduce environmental impact while enhancing design quality.',
   },
   {
-    title: 'Sustainable Products',
-    text: 'We curate and craft biodiversity-friendly products — moss walls, plant art, and tools for greener living.',
+    title: 'Cultural Sensitivity',
+    text: 'We respect and integrate indigenous ecological knowledge, honoring Nepal\'s rich botanical heritage in every project.',
   },
 ]
 
 const team = [
   {
-    title: 'Design & Planning',
-    text: 'Translating biophilic principles into site-specific designs that harmonize architecture with native ecology.',
+    name: 'Aneel Magar',
+    role: 'Manager',
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80',
+    alt: 'Aneel Magar — Manager',
   },
   {
-    title: 'Installation & Horticulture',
-    text: 'Expert execution of green roofs, living walls, and landscape projects with a focus on long-term plant health.',
+    name: 'Sudip Pradhan',
+    role: 'Developer',
+    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80',
+    alt: 'Sudip Pradhan — Developer',
   },
   {
-    title: 'Research & Innovation',
-    text: 'Exploring native species, carbon-capture materials, and regenerative systems to push sustainable design forward.',
+    name: 'Saurav Shrestha',
+    role: 'Developer',
+    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80',
+    alt: 'Saurav Shrestha — Developer',
+  },
+  {
+    name: 'Aiska Karki',
+    role: 'Social Media Intern',
+    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=400&q=80',
+    alt: 'Aiska Karki — Social Media Intern',
   },
 ]
 
-const blogHighlights = [
+const testimonials = [
   {
-    title: 'Biophilic Design in Nepal',
-    text: 'How nature-integrated architecture is reshaping urban spaces in Kathmandu and beyond.',
+    quote: 'The Monstera arrived in the most stunning matte white ceramic vessel — it\'s the statement piece our living room needed.',
+    author: 'Nischal Tamang',
   },
   {
-    title: 'The Rise of Living Walls',
-    text: 'A deep dive into vertical gardens — their ecological benefits, installation process, and maintenance.',
+    quote: 'Mulin\'s team helped me design a green wall for my entire office. The transformation was incredible.',
+    author: 'Roshan KC',
   },
   {
-    title: 'Designing for Biodiversity',
-    text: 'Practical strategies for incorporating native plants and wildlife habitats into urban landscapes.',
+    quote: 'The custom terrarium they created for my partner was the most thoughtful gift I\'ve ever given.',
+    author: 'Sujan Pun',
+  },
+  {
+    quote: 'Exceptional quality and service. Every detail was considered, from the soil blend to the handwritten care card.',
+    author: 'Sonu Thapa Magar',
+  },
+  {
+    quote: 'We ordered 30 custom plants for our hotel lobby. Six months later, they\'re all thriving beautifully.',
+    author: 'Sanjeev Magar',
+  },
+  {
+    quote: 'The workshop completely changed how I think about plants and biophilic design.',
+    author: 'Sajesh Bajracharya',
   },
 ]
 
@@ -92,27 +117,28 @@ export default function AboutPage() {
                 Who We Are
               </motion.h1>
               <motion.p variants={rise} className="mt-6 max-w-3xl text-base leading-relaxed text-[#d8e8dd] md:text-lg">
-                Mulin Venture is a biophilic design studio dedicated to creating green spaces that nurture wellbeing, restore urban biodiversity, and bring nature back into everyday life.
+                Mulin Venture is a sustainable design and wellbeing company built on the belief that nature is not a luxury but a necessity. Rooted in the philosophy &ldquo;Nurture through Nature,&rdquo; the company helps individuals, homes, institutions, and businesses create healthier, greener, and more conscious spaces.
               </motion.p>
               <motion.p variants={rise} className="mt-4 max-w-3xl text-base leading-relaxed text-[#d8e8dd] md:text-lg">
-                Founded in Nepal, we specialize in biophilic design, landscape and rooftop greening, plant art, and sustainable products — helping clients transform spaces into carbon-absorbing havens.
+                Through biophilic designs, handcrafted kokedama and living plant art, rooftop and landscape greening, sustainable art workshops, and community-based biodiversity education.
               </motion.p>
+              <motion.div variants={rise} className="mt-8 flex flex-wrap gap-3">
+                <Button asChild className="rounded-full bg-white px-6 text-[#454C23] hover:bg-[#eef5ef]">
+                  <Link href="/about/founder">Meet Our Founder</Link>
+                </Button>
+                <Button asChild variant="outline" className="rounded-full border-white/65 bg-transparent text-white hover:bg-white/10">
+                  <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer">Get in Touch</a>
+                </Button>
+              </motion.div>
             </div>
 
             <motion.div variants={rise} className="relative h-[360px] overflow-hidden rounded-3xl border border-white/10 bg-white/5 md:h-[460px]">
               <Image
-                src="https://images.unsplash.com/photo-1552084117-56a987666449?auto=format&fit=crop&w=1200&q=80"
-                alt="A biophilic interior space blending lush greenery with modern architecture"
+                src="/Tippy and kokedama.JPG"
+                alt="Tippy and kokedama — Mulin Venture products"
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <p className="text-xs tracking-[0.2em] text-[#dbe8de]">BIOPHILIC DESIGN IN PRACTICE</p>
-                <p className="mt-2 max-w-md text-sm leading-relaxed text-white/85">
-                  Every project we build weaves nature into architecture — improving air, mood, and biodiversity.
-                </p>
-              </div>
             </motion.div>
           </motion.div>
         </section>
@@ -130,9 +156,6 @@ export default function AboutPage() {
               <h2 className="mt-3 max-w-xl font-serif text-4xl leading-tight text-[#454C23] md:text-5xl">
                 Design green spaces that nurture life, restore biodiversity, and inspire connection with nature.
               </h2>
-              <p className="mt-5 max-w-xl leading-relaxed text-[#3d5145]">
-                We combine biophilic design, native ecology, and sustainable craftsmanship to create spaces that benefit people and the planet.
-              </p>
 
               <div className="mt-8 border-l border-[#d1ddd3] pl-5">
                 <p className="text-xs uppercase tracking-[0.16em] text-[#737F3C]">Our Mission</p>
@@ -195,14 +218,14 @@ export default function AboutPage() {
           variants={container}
         >
           <motion.p variants={rise} className="inline-flex rounded-full bg-[#d7e4da] px-4 py-1 text-xs tracking-[0.16em] text-[#4f6a5b]">
-            NATURE FIRST, ALWAYS
+            CORE VALUES
           </motion.p>
           <motion.h2 variants={rise} className="mt-4 max-w-3xl font-serif text-4xl leading-tight text-[#454C23] md:text-5xl">
-            We bring biophilic thinking to every project — from concept to completion.
+            The principles that guide everything we do.
           </motion.h2>
 
           <motion.div variants={container} className="mt-8 grid gap-4 md:grid-cols-2">
-            {priorities.map((item) => (
+            {values.map((item) => (
               <motion.article
                 key={item.title}
                 variants={rise}
@@ -217,6 +240,77 @@ export default function AboutPage() {
         </motion.section>
 
         <motion.section
+          className="mx-auto max-w-6xl px-6 pb-20 md:px-10"
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={container}
+        >
+          <motion.div variants={rise}>
+            <p className="text-xs tracking-[0.16em] text-[#737F3C]">OUR STORY</p>
+            <h2 className="mt-3 font-serif text-4xl text-[#454C23] md:text-5xl">Why We Started</h2>
+            <p className="mt-4 max-w-3xl leading-relaxed text-[#3d5145]">
+              Mulin Venture is a sustainable design and wellbeing company built on the belief that nature is not a luxury but a necessity. Rooted in the philosophy &ldquo;Nurture through Nature,&rdquo; the company helps individuals, homes, institutions, and businesses create healthier, greener, and more conscious spaces through biophilic designs, handcrafted kokedama and living plant art, rooftop and landscape greening, sustainable art workshops, and community-based biodiversity education.
+            </p>
+            <p className="mt-4 max-w-3xl leading-relaxed text-[#3d5145]">
+              Beyond its products and services, Mulin Venture fosters a deeper connection between people and the natural world, offering spaces and experiences that invite them to slow down, create, and reconnect with themselves amid the pace of urban life.
+            </p>
+            <p className="mt-4 max-w-3xl leading-relaxed text-[#3d5145]">
+              To date, the company has served more than 200+ clients. We have been supported with Phase 1st seed fund by Red Cross IFRC Limitless Academy and it is powered by a growing team of six full-time employees incorporating environment sciences, IT and architectural professionals alongside dedicated interns who contribute to project delivery, research, community engagement, and daily operations.
+            </p>
+          </motion.div>
+
+          <div className="mt-8 grid gap-4 md:grid-cols-3">
+            <motion.div variants={rise} className="rounded-2xl border border-[#c7d5cb] bg-[#f7faf6] p-6">
+              <p className="text-3xl font-serif text-[#737F3C]">200+</p>
+              <p className="mt-2 text-sm text-[#435a4d]">Clients Served</p>
+            </motion.div>
+            <motion.div variants={rise} className="rounded-2xl border border-[#c7d5cb] bg-[#f7faf6] p-6">
+              <p className="text-3xl font-serif text-[#737F3C]">6</p>
+              <p className="mt-2 text-sm text-[#435a4d]">Full-Time Team Members</p>
+            </motion.div>
+            <motion.div variants={rise} className="rounded-2xl border border-[#c7d5cb] bg-[#f7faf6] p-6">
+              <p className="text-3xl font-serif text-[#737F3C]">IFRC</p>
+              <p className="mt-2 text-sm text-[#435a4d]">Seed Fund Recipient</p>
+            </motion.div>
+          </div>
+        </motion.section>
+
+        <motion.section
+          className="mx-auto max-w-6xl px-6 pb-20 md:px-10"
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={container}
+        >
+          <motion.div variants={rise}>
+            <p className="text-xs tracking-[0.16em] text-[#737F3C]">WHO WE SERVE</p>
+            <h2 className="mt-3 font-serif text-4xl text-[#454C23] md:text-5xl">Our Clients</h2>
+            <p className="mt-4 max-w-3xl leading-relaxed text-[#3d5145]">
+              We work with homeowners, businesses, schools, and organizations who share our vision for greener, healthier spaces.
+            </p>
+          </motion.div>
+
+          <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            {[
+              { title: 'Residential', text: 'Homeowners looking to transform their living spaces with biophilic design.' },
+              { title: 'Commercial', text: 'Businesses seeking to create healthier, more productive work environments.' },
+              { title: 'Education', text: 'Schools and universities wanting to integrate nature into learning spaces.' },
+              { title: 'Hospitality', text: 'Hotels and restaurants creating memorable, nature-inspired experiences.' },
+            ].map((item) => (
+              <motion.div
+                key={item.title}
+                variants={rise}
+                className="rounded-2xl border border-[#c7d5cb] bg-[#f7faf6] p-6"
+              >
+                <h3 className="font-sans text-lg font-semibold text-[#454C23]">{item.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-[#435a4d]">{item.text}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
+
+        <motion.section
           className="mx-auto max-w-6xl px-6 pb-16 md:px-10"
           initial="hidden"
           whileInView="show"
@@ -227,39 +321,23 @@ export default function AboutPage() {
             <p className="text-xs tracking-[0.16em] text-[#737F3C]">OUR TEAM</p>
             <h2 className="mt-3 font-serif text-4xl text-[#454C23] md:text-5xl">Meet Our Team</h2>
             <p className="mt-4 max-w-3xl leading-relaxed text-[#3d5145]">
-              A passionate team of designers, horticulturists, and sustainability advocates working together to make every space greener and more liveable.
+              A passionate team of designers, developers, and sustainability advocates working together to make every space greener and more liveable.
             </p>
-            <div className="mt-8 grid gap-4 md:grid-cols-3">
-              {team.map((item) => (
-                <div key={item.title} className="rounded-2xl border border-[#d7e0d5] bg-white p-6">
-                  <h3 className="font-sans text-lg font-semibold text-[#454C23]">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-[#435a4d]">{item.text}</p>
+            <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {team.map((member) => (
+                <div key={member.name} className="group">
+                  <div className="relative aspect-square overflow-hidden rounded-2xl mb-4">
+                    <Image
+                      src={member.image}
+                      alt={member.alt}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <h3 className="font-sans text-lg font-semibold text-[#454C23]">{member.name}</h3>
+                  <p className="text-[11px] uppercase tracking-[0.16em] text-[#737F3C]">{member.role}</p>
                 </div>
               ))}
-            </div>
-          </motion.div>
-        </motion.section>
-
-        <motion.section
-          className="mx-auto max-w-6xl px-6 pb-20 md:px-10"
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={container}
-        >
-          <motion.div variants={rise} className="rounded-3xl bg-[#9A5B3F] px-7 py-10 text-white md:px-10">
-            <p className="text-xs tracking-[0.16em] text-[#FFFFFF]">OUR STORY</p>
-            <h2 className="mt-3 font-serif text-4xl md:text-5xl">The Heart of Our Mission</h2>
-            <p className="mt-4 max-w-3xl leading-relaxed text-[#FFFFFF]">
-              Our journey began with a simple belief — that nature belongs in every space we inhabit. From small residential projects to large-scale green installations, we have grown into a trusted studio for biophilic design in Nepal.
-            </p>
-            <div className="mt-7 flex flex-wrap gap-3">
-              <Button asChild className="rounded-full bg-white px-6 text-[#2f4a3a] hover:bg-[#eef5ef]">
-                <Link href="/services">Explore Our Services</Link>
-              </Button>
-              <Button asChild variant="outline" className="rounded-full border-white/65 bg-transparent text-white hover:bg-white/10">
-                <Link href="/products">Our Products</Link>
-              </Button>
             </div>
           </motion.div>
         </motion.section>
@@ -272,29 +350,25 @@ export default function AboutPage() {
           variants={container}
         >
           <motion.div variants={rise}>
-            <p className="text-xs tracking-[0.16em] text-[#737F3C]">BLOGS</p>
-            <h2 className="mt-3 font-serif text-4xl text-[#454C23] md:text-5xl">Our Latest Writing</h2>
-            <p className="mt-4 max-w-3xl leading-relaxed text-[#3d5145]">
-              Explore our latest articles on biophilic design, urban greening, plant care, and the ideas shaping our approach to sustainable spaces.
-            </p>
+            <p className="text-xs tracking-[0.16em] text-[#737F3C]">TESTIMONIALS</p>
+            <h2 className="mt-3 font-serif text-4xl text-[#454C23] md:text-5xl">What Our Clients Say</h2>
           </motion.div>
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {blogHighlights.map((item) => (
+
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+            {testimonials.map((item, index) => (
               <motion.article
-                key={item.title}
+                key={index}
                 variants={rise}
-                whileHover={{ y: -4 }}
-                className="rounded-2xl border border-[#c7d5cb] bg-[#f8fbf7] p-6"
+                className="rounded-2xl border border-[#c7d5cb] bg-[#f7faf6] p-6"
               >
-                <h3 className="font-sans text-lg font-semibold text-[#454C23]">{item.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-[#435a4d]">{item.text}</p>
+                <div className="mb-4 text-[#737F3C] text-3xl font-serif">&ldquo;</div>
+                <p className="font-sans text-sm leading-relaxed text-[#3d5145] italic">{item.quote}</p>
+                <div className="mt-6 border-t border-[#d1ddd3] pt-4">
+                  <p className="font-sans text-sm font-semibold text-[#454C23]">{item.author}</p>
+                  <p className="text-[11px] uppercase tracking-[0.16em] text-[#737F3C]">{item.role}</p>
+                </div>
               </motion.article>
             ))}
-          </div>
-          <div className="mt-6">
-            <Button asChild className="rounded-full bg-[#454C23] px-6 text-white hover:bg-[#454C23]">
-              <Link href="/blog">Read the Blog</Link>
-            </Button>
           </div>
         </motion.section>
 
@@ -305,33 +379,9 @@ export default function AboutPage() {
           viewport={{ once: true, amount: 0.2 }}
           variants={container}
         >
-          <motion.div variants={rise} className="rounded-[22px] bg-[#454C23] px-7 py-9 text-white md:px-10">
-            <p className="text-xs tracking-[0.16em] text-[#c7ddd0]">OUR APPROACH</p>
-            <h2 className="mt-3 font-serif text-4xl md:text-5xl">Every project is rooted in ecological thinking.</h2>
-            <p className="mt-4 max-w-3xl leading-relaxed text-white/80">
-              We draw on native plant science, climate-responsive design, and years of hands-on experience to create green spaces that thrive in Nepal&apos;s unique environment.
-            </p>
-            <div className="mt-7 flex flex-wrap gap-3">
-              <Button asChild className="rounded-full bg-white px-6 text-[#454C23] hover:bg-[#eef5ef]">
-                <Link href="/research">Our Research</Link>
-              </Button>
-              <Button asChild variant="outline" className="rounded-full border-white/65 bg-transparent text-white hover:bg-white/10">
-                <Link href="/services">Our Services</Link>
-              </Button>
-            </div>
-          </motion.div>
-        </motion.section>
-
-        <motion.section
-          className="mx-auto max-w-6xl px-6 pb-24 md:px-10"
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
-          variants={container}
-        >
           <motion.div variants={rise} className="rounded-[22px] border border-[#cfd9d2] bg-[#f8fbf7] px-7 py-9 md:px-10">
-            <p className="text-xs tracking-[0.16em] text-[#737F3C]">CONTACT INFORMATION</p>
-            <h2 className="mt-3 font-serif text-4xl text-[#454C23] md:text-5xl">Feel free to contact and reach us.</h2>
+            <p className="text-xs tracking-[0.16em] text-[#737F3C]">LOCATION</p>
+            <h2 className="mt-3 font-serif text-4xl text-[#454C23] md:text-5xl">Find Us</h2>
             <div className="mt-8 grid gap-4 md:grid-cols-3">
               <div className="rounded-2xl border border-[#d7e0d5] bg-white p-6">
                 <p className="text-xs uppercase tracking-[0.16em] text-[#737F3C]">Phone</p>
@@ -345,6 +395,30 @@ export default function AboutPage() {
                 <p className="text-xs uppercase tracking-[0.16em] text-[#737F3C]">Location</p>
                 <p className="mt-3 text-sm text-[#454C23]">Kathmandu, Nepal</p>
               </div>
+            </div>
+          </motion.div>
+        </motion.section>
+
+        <motion.section
+          className="mx-auto max-w-6xl px-6 pb-20 md:px-10"
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={container}
+        >
+          <motion.div variants={rise} className="rounded-3xl bg-[#9A5B3F] px-7 py-10 text-white md:px-10">
+            <p className="text-xs tracking-[0.16em] text-[#FFFFFF]">READY TO TRANSFORM YOUR SPACE?</p>
+            <h2 className="mt-3 font-serif text-4xl md:text-5xl">Let&apos;s Create Something Beautiful Together</h2>
+            <p className="mt-4 max-w-3xl leading-relaxed text-[#FFFFFF]">
+              Whether you are looking to transform your home, office, or community space, we would love to hear from you. Book a consultation today and take the first step toward a greener, healthier environment.
+            </p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <Button asChild className="rounded-full bg-white px-6 text-[#2f4a3a] hover:bg-[#eef5ef]">
+                <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer">Book a Consultation</a>
+              </Button>
+              <Button asChild variant="outline" className="rounded-full border-white/65 bg-transparent text-white hover:bg-white/10">
+                <Link href="/services">Explore Our Services</Link>
+              </Button>
             </div>
           </motion.div>
         </motion.section>

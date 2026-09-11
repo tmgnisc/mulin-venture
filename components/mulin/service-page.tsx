@@ -4,9 +4,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { motion, type Variants } from 'framer-motion'
 import { ArrowRight, CheckIcon, MonsteraLeaf } from './svg-assets'
+import { getProductWhatsAppLink } from '@/lib/whatsapp'
 import type { ServicePageContent } from './service-page-data'
 import { ApproachSection } from './approach-section'
 import { Footer } from './footer'
+import { Lightbox, useLightbox } from './lightbox'
 import { Navigation } from './navigation'
 import { PageBreadcrumb } from './page-breadcrumb'
 
@@ -37,6 +39,8 @@ const rise: Variants = {
 
 export function ServicePage({ content, slugArr }: ServicePageProps) {
   const breadcrumbSegments = slugArr ?? [content.slug]
+  const showcaseImages = content.showcase?.items.map((s) => ({ src: s.image, alt: s.alt })) ?? []
+  const showcaseLightbox = useLightbox(showcaseImages)
   return (
     <>
       <Navigation />
@@ -65,13 +69,15 @@ export function ServicePage({ content, slugArr }: ServicePageProps) {
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">
-                <Link
-                  href="/consultation"
+                <a
+                  href={getProductWhatsAppLink(content.title)}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full bg-[#FFBE71] px-6 py-3 text-sm font-medium text-[#2B2F16] transition-transform duration-200 hover:-translate-y-0.5"
                 >
                   Request Consultation
                   <ArrowRight className="h-4 w-4" />
-                </Link>
+                </a>
                 <Link
                   href="/services"
                   className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm text-white/90 backdrop-blur-sm transition-colors hover:bg-white/15"
@@ -236,7 +242,7 @@ export function ServicePage({ content, slugArr }: ServicePageProps) {
               </motion.div>
               <motion.div variants={rise} className="rounded-[24px] border border-[#d6ddd7] bg-white px-5 py-4 shadow-[0_12px_28px_rgba(18,31,25,0.05)]">
                 <p className="text-sm leading-relaxed text-[#52665c]">
-                  Each section is now intentionally different: the feature area reads like an editorial board, and the process section becomes a timeline rather than another card wall.
+                  {content.approach?.subtitle || 'Our approach combines ecological science with thoughtful design to create spaces that thrive.'}
                 </p>
               </motion.div>
             </motion.div>
@@ -289,13 +295,15 @@ export function ServicePage({ content, slugArr }: ServicePageProps) {
               <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/76">
                 The page structure is intentionally calm so the content reads like a real project brief, even while the route is still being built out.
               </p>
-              <Link
-                href="/consultation"
+              <a
+                href={getProductWhatsAppLink(content.title)}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-medium text-[#454C23] transition-transform hover:-translate-y-0.5"
               >
                 Start the conversation
                 <ArrowRight className="h-4 w-4" />
-              </Link>
+              </a>
             </motion.div>
 
             <motion.div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3" variants={container}>
@@ -329,6 +337,75 @@ export function ServicePage({ content, slugArr }: ServicePageProps) {
             </motion.div>
           </motion.div>
         </section>
+
+        {content.showcase && content.showcase.items.length > 0 && (
+          <section className="border-t border-[#d8ddd7] bg-[#f7f9f5]">
+            <div className="mx-auto max-w-[1320px] px-[clamp(20px,5vw,80px)] py-[clamp(56px,7vw,96px)]">
+              <motion.div
+                className="mx-auto max-w-2xl text-center"
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.2 }}
+                variants={container}
+              >
+                <motion.p
+                  variants={rise}
+                  className="text-[11px] uppercase tracking-[0.22em] text-[#6f7f77]"
+                >
+                  {content.showcase.title}
+                </motion.p>
+                <motion.h2
+                  variants={rise}
+                  className="mt-4 font-serif leading-[1.04] text-[#454C23]"
+                  style={{ fontSize: 'clamp(2rem, 3.6vw, 3.4rem)' }}
+                >
+                  {content.showcase.subtitle}
+                </motion.h2>
+              </motion.div>
+
+              <motion.div
+                className="mt-10 grid grid-cols-3 gap-3 md:gap-4"
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.1 }}
+                variants={container}
+              >
+                {content.showcase.items.map((item, index) => (
+                  <motion.div
+                    key={item.title}
+                    variants={rise}
+                    className="group relative cursor-pointer overflow-hidden rounded-[20px] md:rounded-[28px] transition-transform hover:scale-[1.02]"
+                    onClick={() => showcaseLightbox.open(index)}
+                  >
+                    <img
+                      src={item.image}
+                      alt={item.alt}
+                      className="aspect-[3/4] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+                    <div className="absolute bottom-0 left-0 p-4 md:p-6">
+                      <h3 className="font-serif text-sm md:text-lg leading-tight text-white">
+                        {item.title}
+                      </h3>
+                      <p className="mt-1 hidden text-xs leading-relaxed text-white/78 md:block">
+                        {item.body}
+                      </p>
+                    </div>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </div>
+          </section>
+        )}
+
+        <Lightbox
+          images={showcaseImages}
+          index={showcaseLightbox.index}
+          isOpen={showcaseLightbox.isOpen}
+          onClose={showcaseLightbox.close}
+          onPrev={showcaseLightbox.prev}
+          onNext={showcaseLightbox.next}
+        />
       </main>
       <Footer />
     </>
