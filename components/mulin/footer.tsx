@@ -147,6 +147,7 @@ export function Footer() {
                   placeholder="Your email address"
                   className="flex-1 bg-transparent font-sans text-sm text-white placeholder:text-white/40 outline-none"
                   aria-label="Email address"
+                  suppressHydrationWarning
                 />
                 <button
                   type="submit"
