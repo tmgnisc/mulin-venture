@@ -42,7 +42,14 @@ const navLinks: ({ label: string; href: string; dropdownItems?: DropdownItem[] }
   },
   { label: 'Blog', href: '/blog' },
   { label: 'Community', href: '/community' },
-  { label: 'About', href: '/about' },
+  {
+    label: 'About',
+    href: '/about',
+    dropdownItems: [
+      { label: 'About Us', href: '/about' },
+      { label: 'Founder', href: '/about/founder' },
+    ],
+  },
 ]
 
 export function Navigation() {

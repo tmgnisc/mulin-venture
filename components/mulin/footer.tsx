@@ -104,7 +104,7 @@ export function Footer() {
                 <li key={link.label}>
                   {'whatsapp' in link && link.whatsapp ? (
                     <a
-                      href={getWhatsAppLink('Custom Orders')}
+                      href={getWhatsAppLink()}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="font-sans text-sm hover:text-gold transition-colors"

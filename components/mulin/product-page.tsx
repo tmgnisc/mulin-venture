@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { motion, type Variants } from 'framer-motion'
 import { ArrowRight, CheckIcon, MonsteraLeaf } from './svg-assets'
-import { getWhatsAppLink } from '@/lib/whatsapp'
+import { getProductWhatsAppLink } from '@/lib/whatsapp'
 import type { ProductPageContent } from './product-page-data'
 import { ApproachSection } from './approach-section'
 import { Footer } from './footer'
@@ -66,7 +66,7 @@ export function ProductPage({ content, slugArr }: ProductPageProps) {
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
-                  href={getWhatsAppLink(content.title)}
+                  href={getProductWhatsAppLink(content.title)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full bg-[#FFBE71] px-6 py-3 text-sm font-medium text-[#2B2F16] transition-transform duration-200 hover:-translate-y-0.5"
@@ -253,7 +253,7 @@ export function ProductPage({ content, slugArr }: ProductPageProps) {
                 The ending stays product-like and conclusive, with enough visual weight to feel intentional.
               </p>
               <a
-                href={getWhatsAppLink(content.title)}
+                href={getProductWhatsAppLink(content.title)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#FFFFFF] px-5 py-3 text-sm font-medium text-[#454C23] transition-transform hover:-translate-y-0.5"

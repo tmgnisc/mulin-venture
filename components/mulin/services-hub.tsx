@@ -69,7 +69,7 @@ export function ServicesHub() {
               </motion.p>
               <motion.div variants={item} className="mt-8 flex flex-wrap gap-3">
                 <a
-                  href={getWhatsAppLink('Services')}
+                  href={getWhatsAppLink()}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full bg-[#FFBE71] px-6 py-3 text-sm font-medium text-[#2B2F16] transition-transform duration-200 hover:-translate-y-0.5"

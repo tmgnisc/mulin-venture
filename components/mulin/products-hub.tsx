@@ -60,7 +60,7 @@ export function ProductsHub() {
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
-                  href={getWhatsAppLink('Products')}
+                  href={getWhatsAppLink()}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full bg-[#FFBE71] px-6 py-3 text-sm font-medium text-[#2B2F16] transition-transform duration-200 hover:-translate-y-0.5"
@@ -182,7 +182,7 @@ export function ProductsHub() {
                 </h3>
               </div>
               <a
-                href={getWhatsAppLink('Products')}
+                href={getWhatsAppLink()}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-[#737F3C] px-6 py-3 text-sm font-medium text-white transition-transform duration-200 hover:-translate-y-0.5"

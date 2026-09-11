@@ -159,7 +159,7 @@ export default function CommunityPage() {
             </motion.p>
 
             <motion.div variants={rise} className="mt-10 flex flex-wrap gap-4">
-              <a href={getWhatsAppLink('Community Partnership')} target="_blank" rel="noopener noreferrer" className="rounded-full bg-[#FFBE71] px-7 py-3 text-sm tracking-[0.06em] text-[#454C23] transition-transform duration-300 hover:scale-[1.04]">
+              <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer" className="rounded-full bg-[#FFBE71] px-7 py-3 text-sm tracking-[0.06em] text-[#454C23] transition-transform duration-300 hover:scale-[1.04]">
                 Partner With Us
               </a>
               <Link href="/services" className="rounded-full border border-white/60 px-7 py-3 text-sm tracking-[0.06em] text-white transition-colors duration-300 hover:bg-white hover:text-[#454C23]">
@@ -402,7 +402,7 @@ export default function CommunityPage() {
               transition={{ duration: 0.55, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             >
               <a
-                href={getWhatsAppLink('Community Partnership')}
+                href={getWhatsAppLink()}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full bg-[#FFBE71] px-7 py-3 text-sm tracking-[0.06em] text-[#454C23] transition-transform duration-300 hover:scale-[1.04]"

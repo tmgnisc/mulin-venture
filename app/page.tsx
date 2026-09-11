@@ -9,7 +9,6 @@ import { HomeProductsSection } from '@/components/mulin/home-products-section'
 import { WorkshopSection } from '@/components/mulin/workshop-section'
 import { FAQSection } from '@/components/mulin/faq-section'
 import { CTABanner } from '@/components/mulin/cta-banner'
-import { FounderSection } from '@/components/mulin/founder-section'
 import { InstagramGallery } from '@/components/mulin/instagram-gallery'
 import { TestimonialsSection } from '@/components/mulin/testimonials-section'
 import { Footer } from '@/components/mulin/footer'
@@ -69,7 +68,6 @@ export default function MulinVenturePage() {
         <HomeProductsSection />
         <SectionDivider />
         <WorkshopSection />
-        <FounderSection />
         <CTABanner />
         <InstagramGallery />
         <TestimonialsSection />
