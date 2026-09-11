@@ -29,6 +29,11 @@ export type ServicePageContent = {
   process: { step: string; title: string; body: string }[]
   outcomesTitle: string
   outcomes: { title: string; body: string }[]
+  showcase?: {
+    title: string
+    subtitle: string
+    items: { title: string; body: string; image: string; alt: string; client?: string }[]
+  }
 }
 
 const servicePages: Record<string, ServicePageContent> = {
@@ -136,6 +141,19 @@ const servicePages: Record<string, ServicePageContent> = {
       { title: 'Better social use', body: 'People gain usable, restorative green areas in dense environments.' },
       { title: 'Long-term ecological performance', body: 'Design decisions support sustained growth and resilience.' },
     ],
+    showcase: {
+      title: 'Our work',
+      subtitle: 'Already delivered projects',
+      items: [
+        {
+          title: 'Leapfrog Institute',
+          body: 'A landscape and rooftop greening design that transformed underused areas into thriving green environments, supporting both people and biodiversity.',
+          image: '/Design work for leapfrog.jpg',
+          alt: 'Landscape design work for Leapfrog Institute by Mulin Venture',
+          client: 'Leapfrog Institute',
+        },
+      ],
+    },
   },
   'green-building-rating-system': {
     slug: 'green-building-rating-system',

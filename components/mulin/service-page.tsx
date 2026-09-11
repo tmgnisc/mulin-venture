@@ -239,7 +239,7 @@ export function ServicePage({ content, slugArr }: ServicePageProps) {
               </motion.div>
               <motion.div variants={rise} className="rounded-[24px] border border-[#d6ddd7] bg-white px-5 py-4 shadow-[0_12px_28px_rgba(18,31,25,0.05)]">
                 <p className="text-sm leading-relaxed text-[#52665c]">
-                  Each section is now intentionally different: the feature area reads like an editorial board, and the process section becomes a timeline rather than another card wall.
+                  {content.approach?.subtitle || 'Our approach combines ecological science with thoughtful design to create spaces that thrive.'}
                 </p>
               </motion.div>
             </motion.div>
@@ -334,6 +334,69 @@ export function ServicePage({ content, slugArr }: ServicePageProps) {
             </motion.div>
           </motion.div>
         </section>
+
+        {content.showcase && content.showcase.items.length > 0 && (
+          <section className="border-t border-[#d8ddd7] bg-[#f7f9f5]">
+            <div className="mx-auto max-w-[1320px] px-[clamp(20px,5vw,80px)] py-[clamp(56px,7vw,96px)]">
+              <motion.div
+                className="mx-auto max-w-2xl text-center"
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.2 }}
+                variants={container}
+              >
+                <motion.p
+                  variants={rise}
+                  className="text-[11px] uppercase tracking-[0.22em] text-[#6f7f77]"
+                >
+                  {content.showcase.title}
+                </motion.p>
+                <motion.h2
+                  variants={rise}
+                  className="mt-4 font-serif leading-[1.04] text-[#454C23]"
+                  style={{ fontSize: 'clamp(2rem, 3.6vw, 3.4rem)' }}
+                >
+                  {content.showcase.subtitle}
+                </motion.h2>
+              </motion.div>
+
+              <motion.div
+                className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3"
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.1 }}
+                variants={container}
+              >
+                {content.showcase.items.map((item) => (
+                  <motion.div
+                    key={item.title}
+                    variants={rise}
+                    className="overflow-hidden rounded-[28px] border border-[#d8ddd7] bg-white shadow-[0_18px_40px_rgba(18,31,25,0.06)]"
+                  >
+                    <div className="overflow-hidden">
+                      <img
+                        src={item.image}
+                        alt={item.alt}
+                        className="w-full h-auto block"
+                      />
+                    </div>
+                    <div className="p-6">
+                      {item.client && (
+                        <p className="text-[10px] uppercase tracking-[0.2em] text-[#7a8c83]">{item.client}</p>
+                      )}
+                      <h3 className="mt-2 font-serif text-[clamp(1.3rem,1.8vw,1.8rem)] leading-tight text-[#454C23]">
+                        {item.title}
+                      </h3>
+                      <p className="mt-3 text-sm leading-relaxed text-[#496055]">
+                        {item.body}
+                      </p>
+                    </div>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </div>
+          </section>
+        )}
       </main>
       <Footer />
     </>

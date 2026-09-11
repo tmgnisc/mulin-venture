@@ -9,7 +9,6 @@ export function getWhatsAppLink(): string {
 
 export function getProductWhatsAppLink(item: string): string {
   const base = `https://wa.me/${WHATSAPP_NUMBER}`
-  const pageUrl = typeof window !== 'undefined' ? window.location.href.replace(/^http:/, 'https:') : SITE_URL
-  const text = encodeURIComponent(`Hi, I want to inquire about ${item}. ${pageUrl}`)
+  const text = encodeURIComponent(`Hi, I want to inquire about ${item}. ${SITE_URL}`)
   return `${base}?text=${text}`
 }
