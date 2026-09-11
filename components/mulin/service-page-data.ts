@@ -258,6 +258,30 @@ const servicePages: Record<string, ServicePageContent> = {
       { title: 'Stronger nature connection', body: 'People build personal relationships with living systems.' },
       { title: 'Community-level engagement', body: 'Groups sustain shared action beyond one-time activities.' },
     ],
+    showcase: {
+      title: 'Glimpse of the workshop',
+      subtitle: 'Moments from our sessions',
+      items: [
+        {
+          title: 'Participants at work',
+          body: 'Hands-on creation during the workshop, where participants shape their own plant art pieces.',
+          image: '/Participant of our Worshop.jpg',
+          alt: 'Participant shaping plant art during workshop',
+        },
+        {
+          title: 'Group session',
+          body: 'A shared learning experience bringing people together around nature-connected making.',
+          image: '/Group.JPG',
+          alt: 'Group of participants in a plant art workshop session',
+        },
+        {
+          title: 'Nurture through nature',
+          body: 'A deeper connection with living systems, fostering care and awareness through direct engagement.',
+          image: '/Nurture through nature.jpg',
+          alt: 'Nurturing plants and connecting with nature during workshop',
+        },
+      ],
+    },
   },
   'garden-maintenance': {
     slug: 'garden-maintenance',

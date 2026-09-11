@@ -361,7 +361,7 @@ export function ServicePage({ content, slugArr }: ServicePageProps) {
               </motion.div>
 
               <motion.div
-                className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3"
+                className="mt-10 grid grid-cols-3 gap-3 md:gap-4"
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true, amount: 0.1 }}
@@ -371,23 +371,19 @@ export function ServicePage({ content, slugArr }: ServicePageProps) {
                   <motion.div
                     key={item.title}
                     variants={rise}
-                    className="overflow-hidden rounded-[28px] border border-[#d8ddd7] bg-white shadow-[0_18px_40px_rgba(18,31,25,0.06)]"
+                    className="group relative overflow-hidden rounded-[20px] md:rounded-[28px]"
                   >
-                    <div className="overflow-hidden">
-                      <img
-                        src={item.image}
-                        alt={item.alt}
-                        className="w-full h-auto block"
-                      />
-                    </div>
-                    <div className="p-6">
-                      {item.client && (
-                        <p className="text-[10px] uppercase tracking-[0.2em] text-[#7a8c83]">{item.client}</p>
-                      )}
-                      <h3 className="mt-2 font-serif text-[clamp(1.3rem,1.8vw,1.8rem)] leading-tight text-[#454C23]">
+                    <img
+                      src={item.image}
+                      alt={item.alt}
+                      className="aspect-[3/4] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+                    <div className="absolute bottom-0 left-0 p-4 md:p-6">
+                      <h3 className="font-serif text-sm md:text-lg leading-tight text-white">
                         {item.title}
                       </h3>
-                      <p className="mt-3 text-sm leading-relaxed text-[#496055]">
+                      <p className="mt-1 hidden text-xs leading-relaxed text-white/78 md:block">
                         {item.body}
                       </p>
                     </div>
