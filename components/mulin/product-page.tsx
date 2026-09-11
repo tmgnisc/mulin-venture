@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { motion, type Variants } from 'framer-motion'
 import { ArrowRight, CheckIcon, MonsteraLeaf } from './svg-assets'
+import { getWhatsAppLink } from '@/lib/whatsapp'
 import type { ProductPageContent } from './product-page-data'
 import { ApproachSection } from './approach-section'
 import { Footer } from './footer'
@@ -64,13 +65,15 @@ export function ProductPage({ content, slugArr }: ProductPageProps) {
                 {content.summary}
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Link
-                  href="/consultation"
+                <a
+                  href={getWhatsAppLink(content.title)}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full bg-[#FFBE71] px-6 py-3 text-sm font-medium text-[#2B2F16] transition-transform duration-200 hover:-translate-y-0.5"
                 >
                   Request Consultation
                   <ArrowRight className="h-4 w-4" />
-                </Link>
+                </a>
                 {content.parent ? (
                   <Link
                     href={content.parent.href}
@@ -249,13 +252,15 @@ export function ProductPage({ content, slugArr }: ProductPageProps) {
               <p className="mt-4 max-w-xl font-sans font-light text-sm leading-relaxed text-white/78">
                 The ending stays product-like and conclusive, with enough visual weight to feel intentional.
               </p>
-              <Link
-                href="/consultation"
+              <a
+                href={getWhatsAppLink(content.title)}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#FFFFFF] px-5 py-3 text-sm font-medium text-[#454C23] transition-transform hover:-translate-y-0.5"
               >
                 Start the conversation
                 <ArrowRight className="h-4 w-4" />
-              </Link>
+              </a>
             </motion.div>
 
             <motion.div className="grid gap-4 sm:grid-cols-2" variants={container}>

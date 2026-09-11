@@ -1,9 +1,11 @@
 'use client'
 
+import { getWhatsAppLink } from '@/lib/whatsapp'
+
 export function WhatsAppFloat() {
   return (
     <a
-      href="https://wa.me/9779847519689"
+      href={getWhatsAppLink()}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"

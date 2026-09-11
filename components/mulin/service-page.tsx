@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { motion, type Variants } from 'framer-motion'
 import { ArrowRight, CheckIcon, MonsteraLeaf } from './svg-assets'
+import { getWhatsAppLink } from '@/lib/whatsapp'
 import type { ServicePageContent } from './service-page-data'
 import { ApproachSection } from './approach-section'
 import { Footer } from './footer'
@@ -65,13 +66,15 @@ export function ServicePage({ content, slugArr }: ServicePageProps) {
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">
-                <Link
-                  href="/consultation"
+                <a
+                  href={getWhatsAppLink(content.title)}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full bg-[#FFBE71] px-6 py-3 text-sm font-medium text-[#2B2F16] transition-transform duration-200 hover:-translate-y-0.5"
                 >
                   Request Consultation
                   <ArrowRight className="h-4 w-4" />
-                </Link>
+                </a>
                 <Link
                   href="/services"
                   className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm text-white/90 backdrop-blur-sm transition-colors hover:bg-white/15"
@@ -289,13 +292,15 @@ export function ServicePage({ content, slugArr }: ServicePageProps) {
               <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/76">
                 The page structure is intentionally calm so the content reads like a real project brief, even while the route is still being built out.
               </p>
-              <Link
-                href="/consultation"
+              <a
+                href={getWhatsAppLink(content.title)}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-medium text-[#454C23] transition-transform hover:-translate-y-0.5"
               >
                 Start the conversation
                 <ArrowRight className="h-4 w-4" />
-              </Link>
+              </a>
             </motion.div>
 
             <motion.div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3" variants={container}>

@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { motion, type Variants } from 'framer-motion'
 import { ArrowRight, MonsteraLeaf } from './svg-assets'
+import { getWhatsAppLink } from '@/lib/whatsapp'
 import { serviceHubItems } from './service-page-data'
 import { Footer } from './footer'
 import { Navigation } from './navigation'
@@ -67,13 +68,15 @@ export function ServicesHub() {
                 assessment, workshops, and long-term maintenance.
               </motion.p>
               <motion.div variants={item} className="mt-8 flex flex-wrap gap-3">
-                <Link
-                  href="/consultation"
+                <a
+                  href={getWhatsAppLink('Services')}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full bg-[#FFBE71] px-6 py-3 text-sm font-medium text-[#2B2F16] transition-transform duration-200 hover:-translate-y-0.5"
                 >
                   Request Consultation
                   <ArrowRight className="h-4 w-4" />
-                </Link>
+                </a>
                 <Link
                   href="/"
                   className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm text-white/90 backdrop-blur-sm transition-colors hover:bg-white/15"

@@ -7,6 +7,7 @@ import { ArrowRight, Leaf, MapPin, School, Users } from 'lucide-react'
 import { Navigation } from '@/components/mulin/navigation'
 import { Footer } from '@/components/mulin/footer'
 import { PageBreadcrumb } from '@/components/mulin/page-breadcrumb'
+import { getWhatsAppLink } from '@/lib/whatsapp'
 import { useEffect, useRef, useState } from 'react'
 import { Button } from '@/components/ui/button'
 
@@ -158,9 +159,9 @@ export default function CommunityPage() {
             </motion.p>
 
             <motion.div variants={rise} className="mt-10 flex flex-wrap gap-4">
-              <Link href="/consultation" className="rounded-full bg-[#FFBE71] px-7 py-3 text-sm tracking-[0.06em] text-[#454C23] transition-transform duration-300 hover:scale-[1.04]">
+              <a href={getWhatsAppLink('Community Partnership')} target="_blank" rel="noopener noreferrer" className="rounded-full bg-[#FFBE71] px-7 py-3 text-sm tracking-[0.06em] text-[#454C23] transition-transform duration-300 hover:scale-[1.04]">
                 Partner With Us
-              </Link>
+              </a>
               <Link href="/services" className="rounded-full border border-white/60 px-7 py-3 text-sm tracking-[0.06em] text-white transition-colors duration-300 hover:bg-white hover:text-[#454C23]">
                 Our Services
               </Link>
@@ -400,12 +401,14 @@ export default function CommunityPage() {
               viewport={{ once: true, amount: 0.8 }}
               transition={{ duration: 0.55, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             >
-              <Link
-                href="/consultation"
+              <a
+                href={getWhatsAppLink('Community Partnership')}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="rounded-full bg-[#FFBE71] px-7 py-3 text-sm tracking-[0.06em] text-[#454C23] transition-transform duration-300 hover:scale-[1.04]"
               >
                 Get Involved
-              </Link>
+              </a>
             </motion.div>
           </div>
         </motion.section>

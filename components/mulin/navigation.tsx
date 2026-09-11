@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { SproutIcon, MenuIcon, CloseIcon } from './svg-assets'
+import { getWhatsAppLink } from '@/lib/whatsapp'
 
 type DropdownItem = {
   label: string
@@ -198,15 +199,17 @@ export function Navigation() {
             </div>
 
             {/* CTA Button */}
-            <Link
-              href="/consultation"
+            <a
+              href={getWhatsAppLink()}
+              target="_blank"
+              rel="noopener noreferrer"
               className={`hidden lg:inline-flex items-center px-[22px] py-[10px] rounded-full text-sm tracking-[0.05em] border transition-all duration-300 ${scrolled
                 ? 'border-ink text-ink hover:bg-sage-dark hover:text-white hover:border-transparent'
                 : 'border-white text-white hover:bg-sage-dark hover:text-white hover:border-transparent'
                 }`}
             >
               Request Consultation →
-            </Link>
+            </a>
 
             {/* Mobile Menu Button */}
             <button
@@ -339,8 +342,10 @@ export function Navigation() {
 
           {/* Mobile CTA */}
           <div className="p-8 text-center">
-            <Link
-              href="/consultation"
+            <a
+              href={getWhatsAppLink()}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => {
                 setOpenMobileSubmenu(null)
                 setMobileMenuOpen(false)
@@ -348,7 +353,7 @@ export function Navigation() {
               className="inline-block px-8 py-4 bg-sage text-white rounded-full text-lg"
             >
               Request Consultation
-            </Link>
+            </a>
           </div>
         </div>
       </div>
