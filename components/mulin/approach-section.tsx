@@ -2,6 +2,7 @@
 
 import { motion, type Variants } from 'framer-motion'
 import type { ApproachItem } from './service-page-data'
+import { Lightbox, useLightbox } from './lightbox'
 
 const container: Variants = {
   hidden: { opacity: 0 },
@@ -30,6 +31,9 @@ type ApproachSectionProps = {
 }
 
 export function ApproachSection({ title, subtitle, items, accent = '#737F3C' }: ApproachSectionProps) {
+  const images = items.map((item) => ({ src: item.image, alt: item.alt }))
+  const lightbox = useLightbox(images)
+
   return (
     <section className="border-t border-[#d8ddd7] bg-[#FFFFFF]">
       <div className="mx-auto max-w-[1320px] px-[clamp(20px,5vw,80px)] py-[clamp(56px,7vw,96px)]">
@@ -92,7 +96,10 @@ export function ApproachSection({ title, subtitle, items, accent = '#737F3C' }: 
                 </p>
               </div>
 
-              <div className={`overflow-hidden rounded-[28px] border border-[#d8ddd7] bg-[#f7f9f5] shadow-[0_18px_40px_rgba(18,31,25,0.06)] ${index % 2 === 1 ? 'md:order-1' : ''}`}>
+              <div
+                className={`cursor-pointer overflow-hidden rounded-[28px] border border-[#d8ddd7] bg-[#f7f9f5] shadow-[0_18px_40px_rgba(18,31,25,0.06)] transition-transform hover:scale-[1.02] ${index % 2 === 1 ? 'md:order-1' : ''}`}
+                onClick={() => lightbox.open(index)}
+              >
                 <img
                   src={item.image}
                   alt={item.alt}
@@ -103,6 +110,15 @@ export function ApproachSection({ title, subtitle, items, accent = '#737F3C' }: 
           ))}
         </motion.div>
       </div>
+
+      <Lightbox
+        images={images}
+        index={lightbox.index}
+        isOpen={lightbox.isOpen}
+        onClose={lightbox.close}
+        onPrev={lightbox.prev}
+        onNext={lightbox.next}
+      />
     </section>
   )
 }

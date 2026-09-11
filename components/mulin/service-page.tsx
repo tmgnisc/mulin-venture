@@ -8,6 +8,7 @@ import { getProductWhatsAppLink } from '@/lib/whatsapp'
 import type { ServicePageContent } from './service-page-data'
 import { ApproachSection } from './approach-section'
 import { Footer } from './footer'
+import { Lightbox, useLightbox } from './lightbox'
 import { Navigation } from './navigation'
 import { PageBreadcrumb } from './page-breadcrumb'
 
@@ -38,6 +39,8 @@ const rise: Variants = {
 
 export function ServicePage({ content, slugArr }: ServicePageProps) {
   const breadcrumbSegments = slugArr ?? [content.slug]
+  const showcaseImages = content.showcase?.items.map((s) => ({ src: s.image, alt: s.alt })) ?? []
+  const showcaseLightbox = useLightbox(showcaseImages)
   return (
     <>
       <Navigation />
@@ -367,11 +370,12 @@ export function ServicePage({ content, slugArr }: ServicePageProps) {
                 viewport={{ once: true, amount: 0.1 }}
                 variants={container}
               >
-                {content.showcase.items.map((item) => (
+                {content.showcase.items.map((item, index) => (
                   <motion.div
                     key={item.title}
                     variants={rise}
-                    className="group relative overflow-hidden rounded-[20px] md:rounded-[28px]"
+                    className="group relative cursor-pointer overflow-hidden rounded-[20px] md:rounded-[28px] transition-transform hover:scale-[1.02]"
+                    onClick={() => showcaseLightbox.open(index)}
                   >
                     <img
                       src={item.image}
@@ -393,6 +397,15 @@ export function ServicePage({ content, slugArr }: ServicePageProps) {
             </div>
           </section>
         )}
+
+        <Lightbox
+          images={showcaseImages}
+          index={showcaseLightbox.index}
+          isOpen={showcaseLightbox.isOpen}
+          onClose={showcaseLightbox.close}
+          onPrev={showcaseLightbox.prev}
+          onNext={showcaseLightbox.next}
+        />
       </main>
       <Footer />
     </>
