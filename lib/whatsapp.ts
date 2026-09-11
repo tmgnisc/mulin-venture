@@ -7,8 +7,9 @@ export function getWhatsAppLink(): string {
   return `${base}?text=${text}`
 }
 
-export function getProductWhatsAppLink(item: string): string {
+export function getProductWhatsAppLink(item: string, path?: string): string {
   const base = `https://wa.me/${WHATSAPP_NUMBER}`
-  const text = encodeURIComponent(`Hi, I want to inquire about ${item}. ${SITE_URL}`)
+  const pageUrl = path ? `${SITE_URL}${path}` : SITE_URL
+  const text = encodeURIComponent(`Hi, I want to inquire about ${item}. ${pageUrl}`)
   return `${base}?text=${text}`
 }
