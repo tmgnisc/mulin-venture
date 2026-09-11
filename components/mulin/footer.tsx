@@ -187,6 +187,8 @@ export function Footer() {
               <a href="#" className="hover:text-gold transition-colors">Privacy</a>
               <span className="mx-2">|</span>
               <a href="#" className="hover:text-gold transition-colors">Terms</a>
+              <span className="mx-2">|</span>
+              Developed by <a href="https://nirvixtech.com" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">Nirvix Technology</a>
             </p>
           </div>
         </div>
