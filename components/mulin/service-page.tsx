@@ -39,6 +39,7 @@ const rise: Variants = {
 
 export function ServicePage({ content, slugArr }: ServicePageProps) {
   const breadcrumbSegments = slugArr ?? [content.slug]
+  const pagePath = breadcrumbSegments.length > 0 ? `/${breadcrumbSegments.join('/')}` : undefined
   const showcaseImages = content.showcase?.items.map((s) => ({ src: s.image, alt: s.alt })) ?? []
   const showcaseLightbox = useLightbox(showcaseImages)
   return (
@@ -70,7 +71,7 @@ export function ServicePage({ content, slugArr }: ServicePageProps) {
 
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
-                  href={getProductWhatsAppLink(content.title)}
+                  href={getProductWhatsAppLink(content.title, pagePath)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full bg-[#FFBE71] px-6 py-3 text-sm font-medium text-[#2B2F16] transition-transform duration-200 hover:-translate-y-0.5"
@@ -296,7 +297,7 @@ export function ServicePage({ content, slugArr }: ServicePageProps) {
                 The page structure is intentionally calm so the content reads like a real project brief, even while the route is still being built out.
               </p>
               <a
-                href={getProductWhatsAppLink(content.title)}
+                href={getProductWhatsAppLink(content.title, pagePath)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-medium text-[#454C23] transition-transform hover:-translate-y-0.5"
