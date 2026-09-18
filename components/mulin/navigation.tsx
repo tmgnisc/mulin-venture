@@ -46,8 +46,8 @@ const navLinks: ({ label: string; href: string; dropdownItems?: DropdownItem[] }
     label: 'About',
     href: '/about',
     dropdownItems: [
-      { label: 'About Us', href: '/about' },
       { label: 'Founder', href: '/about/founder' },
+      { label: 'About Us', href: '/about' },
     ],
   },
 ]

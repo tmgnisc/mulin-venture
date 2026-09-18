@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion, type Variants } from 'framer-motion'
-import { ArrowRight, CheckIcon, MonsteraLeaf } from './svg-assets'
+import { ArrowRight, CheckIcon } from './svg-assets'
 import { getProductWhatsAppLink } from '@/lib/whatsapp'
 import type { ServicePageContent } from './service-page-data'
 import { ApproachSection } from './approach-section'
@@ -115,9 +115,7 @@ export function ServicePage({ content, slugArr }: ServicePageProps) {
                         {content.heroNote}
                       </p>
                     </div>
-                    <div className="hidden h-14 w-14 rounded-full border border-white/20 bg-white/10 p-3 text-white/80 md:block">
-                      <MonsteraLeaf className="h-full w-full" />
-                    </div>
+
                   </div>
                 </div>
               </div>
@@ -286,9 +284,7 @@ export function ServicePage({ content, slugArr }: ServicePageProps) {
               variants={rise}
               className="relative overflow-hidden rounded-[28px] bg-[#454C23] p-8 text-white shadow-[0_22px_50px_rgba(18,31,25,0.18)]"
             >
-              <div className="absolute -right-10 -top-12 text-white/10">
-                <MonsteraLeaf className="h-44 w-44" />
-              </div>
+
               <p className="text-[11px] uppercase tracking-[0.22em] text-white/55">{content.outcomesTitle}</p>
               <h2 className="mt-3 max-w-md font-serif text-[clamp(2rem,3.2vw,3rem)] leading-[1.02]">
                 Practical outcomes, not abstract promises.

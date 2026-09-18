@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion, type Variants } from 'framer-motion'
-import { ArrowRight, CheckIcon, MonsteraLeaf } from './svg-assets'
+import { ArrowRight, CheckIcon } from './svg-assets'
 import { getProductWhatsAppLink } from '@/lib/whatsapp'
 import type { ProductPageContent } from './product-page-data'
 import { ApproachSection } from './approach-section'
@@ -310,9 +310,7 @@ export function ProductPage({ content, slugArr }: ProductPageProps) {
               variants={rise}
               className="relative overflow-hidden rounded-[44px] bg-[#454C23] p-8 text-[#FFFFFF] shadow-[0_22px_50px_rgba(18,26,20,0.14)]"
             >
-              <div className="absolute -right-8 -top-10 text-white/10">
-                <MonsteraLeaf className="h-44 w-44" />
-              </div>
+
               <p className="text-[11px] uppercase tracking-[0.2em] text-white/55">{content.outcomesTitle}</p>
               <h2 className="mt-3 max-w-md font-serif font-light text-[clamp(2rem,4vw,3.5rem)] leading-[1.02]">
                 Outcomes that feel like a finished product.

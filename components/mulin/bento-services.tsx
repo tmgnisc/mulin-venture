@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { ArrowRight, MonsteraLeaf } from './svg-assets'
+import { ArrowRight } from './svg-assets'
 
 const services = [
   {
@@ -118,11 +118,7 @@ export function BentoServices() {
                 </>
               )}
 
-              {service.tone !== 'image' && (
-                <div className="pointer-events-none absolute -right-8 -bottom-8 text-sage/10">
-                  <MonsteraLeaf className="w-32 h-32" />
-                </div>
-              )}
+
 
               <div className="relative z-10 flex h-full flex-col">
                 <div className="flex items-center justify-between">
