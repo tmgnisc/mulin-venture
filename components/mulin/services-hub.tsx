@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { motion, type Variants } from 'framer-motion'
-import { ArrowRight, MonsteraLeaf } from './svg-assets'
+import { ArrowRight } from './svg-assets'
 import { getWhatsAppLink } from '@/lib/whatsapp'
 import { serviceHubItems } from './service-page-data'
 import { Footer } from './footer'
@@ -102,7 +102,6 @@ export function ServicesHub() {
               <div className="col-span-3 rounded-2xl border border-white/10 bg-white/10 p-5">
                 <div className="flex items-center justify-between">
                   <p className="text-[11px] uppercase tracking-[0.22em] text-white/60">Navigation</p>
-                  <MonsteraLeaf className="h-7 w-7 text-white/70" />
                 </div>
                 <p className="mt-3 text-sm leading-relaxed text-white/80">
                   Each service opens into a dedicated page with context, process, and clear outcomes.
@@ -131,9 +130,7 @@ export function ServicesHub() {
                   background: `linear-gradient(180deg, ${service.accent}18 0%, rgba(251,250,245,0.95) 54%, rgba(251,250,245,1) 100%)`,
                 }}
               >
-                <div className="absolute -right-10 -top-12 text-[#454C23] opacity-[0.05] pointer-events-none">
-                  <MonsteraLeaf className="h-44 w-44" />
-                </div>
+
                 <div className="relative flex h-full min-h-64 flex-col justify-between">
                   <div className="flex items-start justify-between gap-4">
                     <div>

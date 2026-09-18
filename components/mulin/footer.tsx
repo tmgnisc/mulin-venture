@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import { useState } from 'react'
-import { GrowingPlantIcon, InstagramIcon, FacebookIcon, TikTokIcon, ArrowRight } from './svg-assets'
+import { InstagramIcon, FacebookIcon, TikTokIcon, ArrowRight } from './svg-assets'
 import { getWhatsAppLink } from '@/lib/whatsapp'
 
 const shopLinks = [
@@ -46,9 +46,8 @@ export function Footer() {
             />
             <span className="font-serif font-bold text-2xl tracking-[0.15em] text-white">Mulin Venture</span>
           </div>
-          <p className="font-serif text-lg tracking-[0.12em] uppercase text-white/60 flex items-center gap-3">
+          <p className="font-serif text-lg tracking-[0.12em] uppercase text-white/60">
             Nurture through Nature
-            <GrowingPlantIcon className="w-7 h-7 text-sage" />
           </p>
         </div>
 

@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { ArrowRight, MonsteraLeaf } from './svg-assets'
+import { ArrowRight } from './svg-assets'
 
 const highlights = [
   { title: 'Hands-On Plant Art', body: 'Create your own living plant art guided by our team and take it home.' },
@@ -31,10 +31,7 @@ export function WorkshopSection() {
                 </span>
               </div>
             </div>
-            {/* Decorative leaf */}
-            <div className="absolute -bottom-8 -left-8 text-sage opacity-[0.12] pointer-events-none hidden md:block">
-              <MonsteraLeaf className="w-36 h-36" />
-            </div>
+
           </div>
 
           {/* Content */}
