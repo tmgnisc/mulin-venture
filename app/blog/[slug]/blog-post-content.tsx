@@ -52,7 +52,7 @@ export function BlogPostContent({ post }: { post: BlogPost }) {
         <section className="relative pt-20 pb-16 md:pb-20 overflow-hidden bg-moss">
           <PageBreadcrumb segments={['blog', post.slug]} />
           <div className="absolute inset-0 opacity-20">
-            <Image src={post.image} alt="" fill className="object-cover" />
+            <Image src={post.image} alt={post.alt} fill className="object-cover" />
           </div>
           <div className="absolute inset-0 bg-linear-to-t from-moss via-moss/80 to-moss/60" />
           <div className="relative mx-auto max-w-[800px] px-[clamp(20px,5vw,80px)] text-center">

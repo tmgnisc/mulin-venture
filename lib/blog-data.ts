@@ -16,7 +16,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'wellness-workshop-kathmandu-kokedama',
     title: 'Eco Friendly Workshop Kathmandu: Kokedama & Wellbeing',
     excerpt:
-      'Join our eco friendly workshop in Kathmandu Valley: make a living kokedama plant and see how nature supports your mental wellbeing. Book your Saturday spot!',
+      'Join our eco friendly workshop in Kathmandu Valley: make a living kokedama and see how nature supports mental wellbeing. Book your Saturday spot!',
     content: `Most of us spend our days moving fast: phones, deadlines, traffic, noise. Somewhere in the middle of it, our minds forget how to rest. That is why we built an eco friendly workshop Kathmandu residents can reach easily: a few unhurried hours at a quiet table in Lalitpur, with your hands in soil and moss, shaping a living piece of plant art called kokedama. It is sustainable, creative and surprisingly calming, and you do not need any gardening experience.
 
 ## What is kokedama?
