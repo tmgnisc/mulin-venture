@@ -110,7 +110,7 @@ You don't need a forest to feel the benefits of nature. Sometimes it starts with
 Planning a team, school or organisation session? See our [plant art workshops](/services/plant-art-workshops) page.
 
 Nurture through Nature.`,
-    category: 'Wellness',
+    category: 'Plant Art Workshops',
     date: 'October 6, 2026',
     readTime: '5 min read',
     image: '/eco-friendly-workshop-kathmandu-kokedama.jpg',
@@ -211,7 +211,7 @@ This article was produced in collaboration with [Nirvix Technology](https://www.
 export const blogCategories = [
   'All',
   'Biophilic Design',
-  'Wellness',
+  'Plant Art Workshops',
 ]
 
 export function getBlogPost(slug: string) {
