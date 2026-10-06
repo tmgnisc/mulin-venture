@@ -83,6 +83,12 @@ export function WorkshopSection() {
               <span className="font-sans text-xs text-ink-soft">
                 Seats are limited — reserve yours early.
               </span>
+              <Link
+                href="/blog/wellness-workshop-kathmandu-kokedama"
+                className="font-sans text-xs text-sage hover:text-sage-dark underline underline-offset-4 transition-colors"
+              >
+                Read why we make kokedama →
+              </Link>
             </div>
           </div>
 
