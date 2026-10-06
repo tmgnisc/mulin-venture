@@ -13,6 +13,111 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'wellness-workshop-kathmandu-kokedama',
+    title: 'Eco Friendly Workshop Kathmandu: Kokedama & Wellbeing',
+    excerpt:
+      'Join our eco friendly workshop in Kathmandu Valley: make a living kokedama plant and see how nature supports your mental wellbeing. Book your Saturday spot!',
+    content: `Most of us spend our days moving fast: phones, deadlines, traffic, noise. Somewhere in the middle of it, our minds forget how to rest. That is why we built an eco friendly workshop Kathmandu residents can reach easily: a few unhurried hours at a quiet table in Lalitpur, with your hands in soil and moss, shaping a living piece of plant art called kokedama. It is sustainable, creative and surprisingly calming, and you do not need any gardening experience.
+
+## What is kokedama?
+
+Kokedama is a Japanese plant art form. The name means "moss ball": a plant's roots are wrapped in soil, covered with moss and bound with string. There is no pot, so no plastic and no waste. You can hang it, rest it on a dish or place it on a shelf.
+
+![Finished kokedama plants from the Mulin Venture workshop in Lalitpur](/kokedamas.png)
+
+## Why we run a sustainable workshop in Kathmandu Valley
+
+At Mulin Venture, our approach is nurture through nature. We design green spaces, teach biodiversity and bring plants into homes and offices. A sustainable art workshop felt like the natural next step, because people don't only want plants around them. They want to take part in caring for them.
+
+What makes our workshop eco friendly:
+
+- Natural materials: moss, soil, string and living plants
+- No plastic pots, and nothing thrown away
+- Plants chosen to suit our local climate
+- A hands-on lesson in caring for plants sustainably at home
+
+## How being close to plants supports mental wellbeing
+
+Researchers have studied the link between people and plants for decades, and the connection between nature and wellbeing sits at the heart of what we teach. These are the ideas we find most meaningful.
+
+**1. Plants give your attention a rest.**
+Environmental psychologists describe this as Attention Restoration Theory. Daily life demands constant, directed focus. Leaves, moss and soil hold our attention gently, which lets an overstimulated mind recover.
+
+**2. Working with your hands calms the body.**
+In one often-cited study, people who repotted an indoor plant showed lower stress responses than those who did a computer task. Slow, tactile work like pressing moss and winding string tends to settle racing thoughts.
+
+**3. Caring for something creates purpose.**
+Watering, checking the moss and noticing a new leaf are small acts of attention. They remind us we can nurture something, and that matters more than people expect.
+
+**4. Greenery makes spaces feel calmer.**
+Studies in hospitals and offices link plants and views of greenery with lower stress and better mood. We see the same in the offices we work with.
+
+**5. Making something is its own medicine.**
+There is no right or wrong kokedama. Every ball comes out a little different, and that imperfection is part of the charm.
+
+## What happens at our Kathmandu Valley workshop
+
+You don't need any experience. Our plant workshop in Lalitpur guides you from choosing your plant to caring for it at home, and the pace is slow on purpose.
+
+You will leave with:
+
+- Your own handmade kokedama
+- Simple care instructions
+- A calmer mind than when you arrived
+
+**When:** Every Saturday, 3 hours.
+
+**Where:** Hotel Harmony Bistro, Jhamsikhel, Lalitpur, easily reached from Kathmandu.
+
+**Price:** NPR 1,500 per person.
+
+**Includes:** your plant, moss, soil and string, all tools, step-by-step guidance and a printed care sheet.
+
+## Frequently asked questions
+
+**Do I need gardening experience?**
+
+No. This kokedama workshop in Nepal is designed for complete beginners, and you don't need to bring any tools or materials.
+
+**Where is the workshop held?**
+
+Hotel Harmony Bistro in Jhamsikhel, Lalitpur, easily reached from Kathmandu. Sessions run on Saturdays.
+
+**How long does it take?**
+
+Three hours, from the first handful of moss to the final care instructions.
+
+**What is included in the price?**
+
+NPR 1,500 per person covers your plant, moss, soil and string, all tools, guidance and a printed care sheet.
+
+**Can I bring friends, family or a team?**
+
+Yes. Friends and family are welcome at any session, and we arrange group and corporate sessions for teams. [Message us on WhatsApp](https://wa.me/9779847519689) and we will set a date.
+
+**How do I care for my kokedama at home?**
+
+We teach you at the workshop. In short, soak it in water when it feels light, give it bright indirect light, and keep the moss slightly damp.
+
+## Join our next eco friendly workshop Kathmandu this Saturday
+
+You don't need a forest to feel the benefits of nature. Sometimes it starts with a handful of moss and a quiet table.
+
+**Book your spot:** Saturday sessions are NPR 1,500 per person. [Register on our workshop form](https://docs.google.com/forms/d/e/1FAIpQLScm-Yxm_SAbAaLwAcw_qrb2XZHwlxdkGdFF_jJlu_AXdD4HJA/viewform), or contact us on [WhatsApp](https://wa.me/9779847519689) at +977 984-7519689 or by email at info@mulinventure.com.
+
+**Workshop location:** Hotel Harmony Bistro, Jhamsikhel, Lalitpur. [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Hotel+Harmony+Bistro+Jhamsikhel+Lalitpur)
+
+Planning a team, school or organisation session? See our [plant art workshops](/services/plant-art-workshops) page.
+
+Nurture through Nature.`,
+    category: 'Wellness',
+    date: 'October 6, 2026',
+    readTime: '5 min read',
+    image: '/eco-friendly-workshop-kathmandu-kokedama.jpg',
+    alt: 'Participant at an eco friendly workshop in Kathmandu shaping a kokedama moss ball — eco-friendly-workshop-kathmandu-kokedama',
+    author: 'Monica Neupane',
+  },
+  {
     slug: 'how-plants-in-office-help',
     title: 'How Plants in the Office Help: A Complete Guide to Workplace Well-Being',
     excerpt: 'Discover how introducing indoor plants into your office can improve air quality, boost productivity, and create a healthier work environment for your team.',
@@ -106,6 +211,7 @@ This article was produced in collaboration with [Nirvix Technology](https://www.
 export const blogCategories = [
   'All',
   'Biophilic Design',
+  'Wellness',
 ]
 
 export function getBlogPost(slug: string) {

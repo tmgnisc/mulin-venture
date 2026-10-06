@@ -16,11 +16,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!post) return {}
   return {
     title: { absolute: `${post.title} | Mulin Venture Nepal` },
-    description: `${post.excerpt} — Mulin Venture Nepal`,
+    description: post.excerpt,
     alternates: { canonical: `/blog/${slug}` },
     openGraph: {
       title: post.title,
-      description: `${post.excerpt} — Mulin Venture Nepal`,
+      description: post.excerpt,
       url: `https://www.mulinventure.com/blog/${slug}`,
       siteName: 'Mulin Venture',
       type: 'article',
@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     twitter: {
       card: 'summary_large_image',
       title: post.title,
-      description: `${post.excerpt} — Mulin Venture Nepal`,
+      description: post.excerpt,
       images: [post.image],
     },
     other: {

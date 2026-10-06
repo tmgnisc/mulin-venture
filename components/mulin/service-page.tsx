@@ -85,6 +85,15 @@ export function ServicePage({ content, slugArr }: ServicePageProps) {
                 >
                   Back to Services
                 </Link>
+                {pagePath === '/services/plant-art-workshops' && (
+                  <Link
+                    href="/blog/wellness-workshop-kathmandu-kokedama"
+                    className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm text-white/90 backdrop-blur-sm transition-colors hover:bg-white/15"
+                  >
+                    Read the Workshop Journal
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                )}
               </div>
 
               <div className="mt-10 grid grid-cols-3 gap-3">

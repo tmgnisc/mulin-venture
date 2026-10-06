@@ -22,7 +22,7 @@ export function BlogPostContent({ post }: { post: BlogPost }) {
     image: post.image,
     datePublished: new Date(post.date).toISOString(),
     author: {
-      '@type': 'Organization',
+      '@type': 'Person',
       name: post.author,
       url: SITE_URL,
     },
@@ -153,6 +153,19 @@ export function BlogPostContent({ post }: { post: BlogPost }) {
                   )
                 }
                 if (line.trim() === '') return <div key={i} className="h-4" />
+                const imageMatch = line.match(/^!\[([^\]]*)\]\(([^)]+)\)$/)
+                if (imageMatch) {
+                  return (
+                    <figure key={i} className="my-8">
+                      <div className="relative aspect-[16/10] rounded-xl overflow-hidden">
+                        <Image src={imageMatch[2]} alt={imageMatch[1]} fill className="object-cover" />
+                      </div>
+                      <figcaption className="mt-2 text-center font-sans text-xs text-ink-soft/60">
+                        {imageMatch[1]}
+                      </figcaption>
+                    </figure>
+                  )
+                }
                 const regex = /\*\*([^*]+)\*\*|\[([^\]]+)\]\(([^)]+)\)/g
                 const parts = []
                 let lastIndex = 0
@@ -168,8 +181,15 @@ export function BlogPostContent({ post }: { post: BlogPost }) {
                       </strong>
                     )
                   } else if (match[2]) {
+                    const href = match[3]
+                    const isExternal = /^https?:\/\//.test(href)
                     parts.push(
-                      <a key={`link-${i}-${match.index}`} href={match[3]} target="_blank" rel="noopener noreferrer" className="text-sage underline hover:text-sage-dark transition-colors">
+                      <a
+                        key={`link-${i}-${match.index}`}
+                        href={href}
+                        {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                        className="text-sage underline hover:text-sage-dark transition-colors"
+                      >
                         {match[2]}
                       </a>
                     )
