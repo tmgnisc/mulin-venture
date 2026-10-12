@@ -13,6 +13,61 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'kokedama-workshop-nepal',
+    title: 'Kokedama Workshop Nepal: Why We Make Potless Plant Art',
+    excerpt:
+      'See how our kokedama workshop Nepal skips the pot: a 99% biodegradable, plastic-free session in Lalitpur. Book your Saturday spot!',
+    content: `When we chose kokedama as the heart of our community workshops, it wasn't just because moss balls are beautiful — though they are. It's because a kokedama makes an argument before anyone says a word.
+
+That is the argument the kokedama workshop Nepal gathers around every Saturday. There's no pot. No plastic tray underneath, no glazed ceramic imported from somewhere far away. Just moss, soil, and root, held together by nothing but their own structure.
+
+That absence is the whole point. We wanted people to walk in holding a plant that asks a quiet question: what if the thing we thought was essential — the pot — never was?
+
+That's the symbol we build the whole workshop around: sustainability is not a hassle. It's a choice, and the first choice is often smaller than people expect.
+
+## A 99% bio workshop, on purpose
+
+We didn't set out to make a "green" workshop and call it a day. We built this one to be about 99% biodegradable — the moss, the thread, the soil, the packaging you take it home in. Every material in the room had to earn its place by answering one question: does this return to the earth, or does it outlive the person who used it?
+
+![Moss, soil and string laid out for a potless plant art session in Lalitpur](/plantartworkshop.jpg)
+
+That discipline is the lesson as much as the kokedama itself. People don't leave with a lecture. They leave with proof, sitting in their own hands, that an entire creative, joyful, three-hour experience can happen without reaching for a single-use plastic default.
+
+This is what a sustainable art workshop in the Kathmandu Valley looks like when the materials do the teaching. The same format runs in our [plant art workshops](/services/plant-art-workshops) for schools, teams and public sessions.
+
+## One item at a time
+
+We're not asking anyone to overhaul their life in an afternoon. That's not how sustainable habits actually take root — no pun intended. What we're asking is smaller, and because it's smaller, it's actually possible:
+
+**Why not try avoiding just one plastic item today?**
+
+Not every item. Not forever, starting now, with willpower as your only resource. Just one. The plastic wrap on your lunch. The straw you didn't need. The bag you could've skipped. One swap, repeated, is how a potless moss ball becomes a potless kitchen, becomes a different way of moving through the world.
+
+That's what we're nurturing — not perfection, just the next right-sized step.
+
+## Join our next kokedama workshop in Nepal
+
+You don't need a forest, a garden or a spare weekend. You need a table, a handful of moss and three unhurried hours.
+
+**Sessions:** Every Saturday, 3 hours, NPR 1,500 per person.
+
+**Includes:** your plant, moss, soil and string, all tools, guidance and a printed care sheet.
+
+**Workshop location:** Hotel Harmony Bistro, Jhamsikhel, Lalitpur — where our plant workshop in Lalitpur runs every Saturday. [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Hotel+Harmony+Bistro+Jhamsikhel+Lalitpur)
+
+**Book your spot:** [Register on our workshop form](https://docs.google.com/forms/d/e/1FAIpQLScm-Yxm_SAbAaLwAcw_qrb2XZHwlxdkGdFF_jJlu_AXdD4HJA/viewform), or message us on [WhatsApp](https://wa.me/9779847519689) at +977 984-7519689.
+
+This is part two of our workshop series. Part one: [Eco Friendly Workshop Kathmandu: Kokedama & Wellbeing](/blog/wellness-workshop-kathmandu-kokedama) — how being close to plants supports mental wellbeing, and why nature wellbeing in Kathmandu starts with something as small as a moss ball.
+
+Nurture through Nature.`,
+    category: 'Plant Art Workshops',
+    date: 'October 6, 2026',
+    readTime: '3 min read',
+    image: '/kokedama-workshop-nepal.png',
+    alt: 'Potless kokedama moss ball made at the kokedama workshop Nepal — kokedama-workshop-nepal',
+    author: 'Monica Neupane',
+  },
+  {
     slug: 'wellness-workshop-kathmandu-kokedama',
     title: 'Eco Friendly Workshop Kathmandu: Kokedama & Wellbeing',
     excerpt:
@@ -108,6 +163,8 @@ You don't need a forest to feel the benefits of nature. Sometimes it starts with
 **Workshop location:** Hotel Harmony Bistro, Jhamsikhel, Lalitpur. [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Hotel+Harmony+Bistro+Jhamsikhel+Lalitpur)
 
 Planning a team, school or organisation session? See our [plant art workshops](/services/plant-art-workshops) page.
+
+Part two of this series: [Why kokedama? Why potless?](/blog/kokedama-workshop-nepal) — the case for a plant that needs no pot.
 
 Nurture through Nature.`,
     category: 'Plant Art Workshops',
