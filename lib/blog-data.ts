@@ -61,7 +61,7 @@ This is part two of our workshop series. Part one: [Eco Friendly Workshop Kathma
 
 Nurture through Nature.`,
     category: 'Plant Art Workshops',
-    date: 'October 6, 2026',
+    date: 'October 12, 2026',
     readTime: '3 min read',
     image: '/kokedama-workshop-nepal.png',
     alt: 'Potless kokedama moss ball made at the kokedama workshop Nepal — kokedama-workshop-nepal',
