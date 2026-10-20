@@ -18,6 +18,11 @@ const nextConfig = {
         destination: '/blog/kokedama-workshop-nepal',
         permanent: true,
       },
+      {
+        source: '/kokedama-workshop-kathmandu',
+        destination: '/blog/kokedama-workshop-kathmandu',
+        permanent: true,
+      },
     ]
   },
 }

@@ -13,6 +13,105 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'kokedama-workshop-kathmandu',
+    title: 'Kokedama Workshop Kathmandu: A Calm, Sustainable Escape',
+    excerpt:
+      'The kokedama workshop Kathmandu city dwellers book for a calm, plant-filled afternoon — no garden or experience needed. Book your Saturday spot!',
+    content: `Kathmandu runs on noise, dust, traffic and screens. If you live in the city, you probably know the feeling of wanting to be near something green and quiet, without having to leave town for it.
+
+Our mental wellbeing workshop in Kathmandu Valley was designed with exactly that person in mind. It is a hands-on kokedama session in Lalitpur: a fun, sustainable way to slow down, calm your mind and spend a few hours close to nature.
+
+## The short answer
+
+This workshop is for city dwellers who want a fun, eco friendly way to calm their mind and feel closer to nature. You don't need a garden, a green thumb or any art experience.
+
+![Participant holding a finished kokedama at the kokedama workshop Kathmandu](/kokedama-workshop-kathmandu.jpg)
+
+## Is this kokedama workshop Kathmandu for you?
+
+If one or more of these sounds like you, it was made for you.
+
+**You live in an apartment or a small space**
+No garden, no problem. Kokedama is a pot-free plant that hangs by a window, sits on a dish or rests on a shelf, so it fits a flat, a rented room or a balcony corner. You leave with a living piece of nature that suits the space you actually have.
+
+**Your days are full of screens and deadlines**
+Many of us finish the day with tired eyes and a restless mind. The workshop is screen-free by design. Pressing moss, shaping soil and winding string keep your hands busy and give your attention somewhere gentle to rest.
+
+**You want a sustainable hobby**
+If you care about the planet but don't know where to start, this is a small, practical step. We work with natural materials like moss, soil, string and living plants, and there are no plastic pots. You also learn how to look after plants sustainably at home.
+
+**You love plants, but they keep struggling in your home**
+Plenty of people feel they have a "black thumb." We teach you how to choose a plant that suits your light, how to water it, and how to tell what it needs. You go home with confidence, not just a plant.
+
+**You're looking for something different to do**
+Tired of the same cafe meet-ups? The workshop is a relaxed activity for a solo afternoon, a date, friends or family. It's easy to talk while you work, and just as easy to stay quiet.
+
+**You lead or work in a team**
+Offices and groups use our sessions to take a real break together. Everyone makes something, nobody is graded, and the room tends to get calmer as the afternoon goes on. The same format runs in our [plant art workshops](/services/plant-art-workshops) for schools and organisations.
+
+## Why city life makes this kind of break matter
+
+Urban life means long stretches of concrete, noise and constant notifications, with very little contact with nature. Spending time around plants, moss and soil is one simple way to rebalance that. Researchers have linked time with greenery to lower stress and better mood, and making something with your hands adds a quiet sense of achievement on top.
+
+If you'd like the full picture, read our earlier post on [why we make kokedama and how plants support mental wellbeing](/blog/wellness-workshop-kathmandu-kokedama).
+
+## Fun, sustainable and calming: what that looks like
+
+**Fun:** you shape, press and wrap, and every kokedama comes out different. There is no right or wrong result.
+
+**Sustainable:** natural materials, no plastic pots, and plants chosen for our local climate.
+
+**Calming:** a slow pace, a quiet studio and no screens, so you can settle into the work.
+
+## An honest note
+
+This workshop is a gentle, enjoyable way to look after your wellbeing. It is not a replacement for professional mental health care. If you are going through a hard time, please reach out to a doctor or counsellor as well.
+
+## What to expect on the day
+
+You arrive, settle in and choose your plant. We guide you step by step, from preparing the soil to wrapping the moss and tying the string. The pace is slow on purpose. You leave with your own handmade kokedama, simple care instructions and, we hope, a calmer mind than when you arrived.
+
+## Frequently asked questions
+
+**Do I need a garden or outdoor space?**
+No. Kokedama is designed for small spaces. You can hang it near a window or keep it on a shelf or table.
+
+**I'm not creative. Can I still join?**
+Yes. There is no right or wrong result, and we guide you through every step. Complete beginners are very welcome.
+
+**Can I come alone?**
+Absolutely. Many people join on their own for a quiet afternoon, and it's easy to meet others if you'd like to.
+
+**Is it suitable for friends, families or teams?**
+Yes. Friends and family are welcome at any session, and we arrange group and corporate sessions for teams — [message us on WhatsApp](https://wa.me/9779847519689) and we will set a date.
+
+**How long does it take and what does it cost?**
+Three hours, NPR 1,500 per person. Your plant, moss, soil and string, all tools, guidance and a printed care sheet are included.
+
+**Where is the workshop held?**
+Hotel Harmony Bistro, Jhamsikhel, Lalitpur, easily reached from Kathmandu. Sessions run on Saturdays.
+
+## Give your mind a quiet afternoon
+
+Come as you are. Bring a friend or come alone. Leave with something living that you made yourself.
+
+**Sessions:** Every Saturday, 3 hours, NPR 1,500 per person.
+
+**Book your spot:** [Register on our workshop form](https://docs.google.com/forms/d/e/1FAIpQLScm-Yxm_SAbAaLwAcw_qrb2XZHwlxdkGdFF_jJlu_AXdD4HJA/viewform), or contact us at info@mulinventure.com or [+977 9847519689](tel:+9779847519689).
+
+**Workshop location:** Hotel Harmony Bistro, Jhamsikhel, Lalitpur. [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Hotel+Harmony+Bistro+Jhamsikhel+Lalitpur)
+
+Part two of this series: [Why kokedama? Why potless?](/blog/kokedama-workshop-nepal).
+
+Nurture through Nature.`,
+    category: 'Plant Art Workshops',
+    date: 'October 18, 2026',
+    readTime: '4 min read',
+    image: '/kokedama-workshop-kathmandu.jpg',
+    alt: 'Participant holding a finished kokedama at the kokedama workshop Kathmandu — kokedama-workshop-kathmandu',
+    author: 'Monica Neupane',
+  },
+  {
     slug: 'kokedama-workshop-nepal',
     title: 'Kokedama Workshop Nepal: Why We Make Potless Plant Art',
     excerpt:
@@ -57,7 +156,7 @@ You don't need a forest, a garden or a spare weekend. You need a table, a handfu
 
 **Book your spot:** [Register on our workshop form](https://docs.google.com/forms/d/e/1FAIpQLScm-Yxm_SAbAaLwAcw_qrb2XZHwlxdkGdFF_jJlu_AXdD4HJA/viewform), or message us on [WhatsApp](https://wa.me/9779847519689) at +977 984-7519689.
 
-This is part two of our workshop series. Part one: [Eco Friendly Workshop Kathmandu: Kokedama & Wellbeing](/blog/wellness-workshop-kathmandu-kokedama) — how being close to plants supports mental wellbeing, and why nature wellbeing in Kathmandu starts with something as small as a moss ball.
+This is part two of our workshop series. Part one: [Eco Friendly Workshop Kathmandu: Kokedama & Wellbeing](/blog/wellness-workshop-kathmandu-kokedama) — how being close to plants supports mental wellbeing, and why nature wellbeing in Kathmandu starts with something as small as a moss ball. Part three: [Who is our kokedama workshop for?](/blog/kokedama-workshop-kathmandu).
 
 Nurture through Nature.`,
     category: 'Plant Art Workshops',

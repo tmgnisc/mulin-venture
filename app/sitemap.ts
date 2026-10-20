@@ -9,6 +9,13 @@ const BASE_URL = 'https://www.mulinventure.com'
 
 const today = '2026-07-24'
 
+function localDate(value: string): string {
+  const date = new Date(value)
+  const month = String(date.getMonth() + 1).padStart(2, '0')
+  const day = String(date.getDate()).padStart(2, '0')
+  return `${date.getFullYear()}-${month}-${day}`
+}
+
 const pages: {
   path: string
   lastModified: string
@@ -20,7 +27,7 @@ const pages: {
   { path: '/blog', lastModified: today, changeFrequency: 'weekly', priority: 0.8 },
   ...blogPosts.map((post) => ({
     path: `/blog/${post.slug}`,
-    lastModified: new Date(post.date).toISOString().split('T')[0],
+    lastModified: localDate(post.date),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   })),
