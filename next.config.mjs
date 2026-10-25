@@ -23,6 +23,11 @@ const nextConfig = {
         destination: '/blog/kokedama-workshop-kathmandu',
         permanent: true,
       },
+      {
+        source: '/plant-art-workshop-lalitpur',
+        destination: '/blog/plant-art-workshop-lalitpur',
+        permanent: true,
+      },
     ]
   },
 }

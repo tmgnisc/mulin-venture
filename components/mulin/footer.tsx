@@ -171,7 +171,7 @@ export function Footer() {
             </form>
 
             <div className="space-y-2">
-              <p className="font-sans text-sm">Kathmandu, Nepal</p>
+              <p className="font-sans text-sm">Lalitpur, Nepal</p>
               <a
                 href="tel:+9779847519689"
                 className="block font-sans text-sm hover:text-gold transition-colors"
