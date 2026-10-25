@@ -13,6 +13,115 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'plant-art-workshop-lalitpur',
+    title: 'Plant Art Workshop Lalitpur: What to Expect',
+    excerpt:
+      'What happens at our plant art workshop in Lalitpur? Arrive, choose a plant, make your own kokedama and leave with care notes. Book your Saturday spot!',
+    content: `Trying something new can feel a little uncertain. Will I be any good at it? What happens when I arrive? Do I need to bring anything?
+
+If you're thinking about joining a plant art workshop in Lalitpur, here is a clear picture of what the session is like, from the moment you walk in to the moment you head home with something living in your hands.
+
+## The short answer
+
+You arrive, choose a plant, and make your own piece of plant art with our guidance at every step. You don't need any experience. You leave with what you made, simple care instructions and a calmer mind.
+
+![Group of participants holding their finished plant art after a workshop in Lalitpur](/plant-art-workshop-lalitpur.jpg)
+
+## Before you arrive
+
+There is nothing to prepare. We provide the materials and the guidance.
+
+- Wear comfortable clothes you don't mind getting a little soil on.
+- Come as you are. You don't need art skills or plant knowledge.
+- Bring a friend if you like, or come alone. Both are common.
+- Switch off your notifications if you can. The session works best when you are not checking your phone.
+
+**Arrival:** Sessions run on Saturdays at Hotel Harmony Bistro, Jhamsikhel, Lalitpur, easily reached from Kathmandu. Come a few minutes early so we can start together.
+
+## Step by step: how the session runs
+
+**1. Settle in**
+You arrive in Lalitpur and take a moment to settle. There is no rush. We start slowly on purpose.
+
+**2. Meet your materials**
+We introduce the materials: living plants, soil, moss and string. You choose the plant that appeals to you, and we explain what it needs so you understand what you are taking home.
+
+**3. Make**
+This is the main part of the session. In our kokedama workshop, you shape the soil, press the moss into place and wind the string around it. We guide you through each step and help whenever you need it. Every piece comes out a little different, and that is part of the charm.
+
+**4. Learn how to care for it**
+Before you leave, we show you how to look after your plant at home: how to water it, where to place it and what to watch for. You go home with confidence as well as a plant.
+
+**5. Take it home**
+You leave with your handmade piece, simple care instructions and, we hope, a calmer mind than when you arrived.
+
+## What you'll take home
+
+- Your own handmade living plant art
+- Simple care instructions so it keeps thriving
+- A few unhurried hours away from screens and noise
+
+## Which plant art workshop is right for you?
+
+We run several plant art formats in Lalitpur:
+
+- [Kokedama](/products/plant-art-products/kokedama): a Japanese moss-ball plant, made without a pot
+- Leaf printing: turning leaves into prints
+- Big nature canvas: large-scale art made with natural materials
+- Grass weaving: working with natural fibres using traditional techniques
+
+Dates and availability sit on our [plant art workshops](/services/plant-art-workshops) page.
+
+New to plant art? Kokedama is a good place to start, and it is the workshop we describe in this post.
+
+## Is the plant art workshop Lalitpur right for you?
+
+Most of our participants are city dwellers looking for a calm, sustainable way to spend an afternoon near nature. If that sounds like you, read [who our workshop is designed for](/blog/kokedama-workshop-kathmandu) or [why we make kokedama and how plants support mental wellbeing](/blog/wellness-workshop-kathmandu-kokedama).
+
+## Frequently asked questions
+
+**Do I need any experience?**
+No. The workshop is designed for complete beginners, and we guide you through every step.
+
+**What should I wear?**
+Comfortable clothes you don't mind getting a little soil on.
+
+**Can I come alone?**
+Yes. Many people join on their own for a quiet afternoon.
+
+**How long does the workshop take?**
+Three hours, with a slow, unhurried pace.
+
+**How much does it cost and what is included?**
+NPR 1,500 per person, covering your plant, moss, soil and string, all tools, guidance and a printed care sheet.
+
+**Can I bring a friend, family or my team?**
+Yes. Friends and family are welcome at any session, and we run group and corporate sessions for teams — [message us on WhatsApp](https://wa.me/9779847519689) and we will set a date.
+
+**Where exactly is the studio?**
+Hotel Harmony Bistro, Jhamsikhel, Lalitpur, easily reached from Kathmandu. [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Hotel+Harmony+Bistro+Jhamsikhel+Lalitpur)
+
+## Ready to join us?
+
+Come as you are. Leave with something living that you made yourself.
+
+**Sessions:** Every Saturday, 3 hours, NPR 1,500 per person.
+
+**Book your spot:** [Register on our workshop form](https://docs.google.com/forms/d/e/1FAIpQLScm-Yxm_SAbAaLwAcw_qrb2XZHwlxdkGdFF_jJlu_AXdD4HJA/viewform), or contact us at info@mulinventure.com or [+977 9847519689](tel:+9779847519689).
+
+**Workshop location:** Hotel Harmony Bistro, Jhamsikhel, Lalitpur.
+
+More in this series: [Why kokedama? Why potless?](/blog/kokedama-workshop-nepal).
+
+Nurture through Nature.`,
+    category: 'Plant Art Workshops',
+    date: 'October 24, 2026',
+    readTime: '5 min read',
+    image: '/plant-art-workshop-lalitpur.jpg',
+    alt: 'Participants holding their finished plant art at the plant art workshop Lalitpur — plant-art-workshop-lalitpur',
+    author: 'Monica Neupane',
+  },
+  {
     slug: 'kokedama-workshop-kathmandu',
     title: 'Kokedama Workshop Kathmandu: A Calm, Sustainable Escape',
     excerpt:
@@ -101,7 +210,7 @@ Come as you are. Bring a friend or come alone. Leave with something living that 
 
 **Workshop location:** Hotel Harmony Bistro, Jhamsikhel, Lalitpur. [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Hotel+Harmony+Bistro+Jhamsikhel+Lalitpur)
 
-Part two of this series: [Why kokedama? Why potless?](/blog/kokedama-workshop-nepal).
+Part two of this series: [Why kokedama? Why potless?](/blog/kokedama-workshop-nepal). More in the series: [what to expect at your plant art workshop](/blog/plant-art-workshop-lalitpur).
 
 Nurture through Nature.`,
     category: 'Plant Art Workshops',
