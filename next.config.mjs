@@ -28,6 +28,11 @@ const nextConfig = {
         destination: '/blog/plant-art-workshop-lalitpur',
         permanent: true,
       },
+      {
+        source: '/what-to-expect-plant-art-workshop-lalitpur',
+        destination: '/blog/what-to-expect-plant-art-workshop-lalitpur',
+        permanent: true,
+      },
     ]
   },
 }
