@@ -33,6 +33,11 @@ const nextConfig = {
         destination: '/blog/what-to-expect-plant-art-workshop-lalitpur',
         permanent: true,
       },
+      {
+        source: '/kokedama-care-guide',
+        destination: '/blog/kokedama-care-guide',
+        permanent: true,
+      },
     ]
   },
 }
