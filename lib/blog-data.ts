@@ -13,6 +13,151 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'kokedama-care-guide',
+    title: 'Kokedama Care Guide: Watering, Light & Moss Ball Health',
+    excerpt:
+      'Lift it, soak it, read the signs. A practical kokedama care guide for Nepal: watering by weight, the right light and seasonal fixes. Save it!',
+    content: `A kokedama is easy to love and, at first, easy to worry about. There is no pot to tell you how much water it has, and the moss hides what is going on inside.
+
+This kokedama care guide explains how to water it, where to place it and how to read what it is telling you, with tips for Nepal's changing seasons, so your moss ball stays healthy for a long time.
+
+## The short answer
+
+Water your kokedama when the ball feels light, by soaking it in a bowl for about ten minutes. Keep it in bright, indirect light, away from harsh sun and cold drafts. Mist the moss to keep it green, and adjust how often you water as the seasons change.
+
+![Healthy kokedama moss ball resting on a dish at home](/kokedama-care-guide.png)
+
+## Kokedama care guide: judge it by weight
+
+Because you can't see the soil, the best way to know when to water is to lift it.
+
+- Heavy and cool to the touch: it still has plenty of water. Wait.
+- Noticeably lighter, or the moss feels dry: it's time to water.
+- Pick it up every day or two for the first few weeks. After a while you will know its weight by feel, which is more reliable than following a fixed schedule.
+
+## How to water kokedama
+
+- Fill a bowl with room-temperature water.
+- Place the kokedama in the bowl, with the water reaching most of the way up the ball.
+- Let it soak for about ten minutes, until the ball feels heavy and stops releasing bubbles.
+- Lift it out and let it drain for a few minutes, so it doesn't sit in a puddle.
+- Return it to its dish, tray or hanging spot.
+
+**Which water?** If you collect rainwater, it is a gentle and eco friendly choice. Otherwise, tap or tank water that has stood for a few hours is fine for most plants.
+
+**Don't water only from above.** A watering can alone tends to run off the moss and leaves the centre dry.
+
+## Light: where to place your kokedama
+
+Most kokedama plants do best in bright, indirect light: near a window, but not in strong direct sun that scorches leaves and dries the moss fast.
+
+- In Nepal, a south-facing window gets the strongest light, so keep your kokedama a little back from the glass or behind a thin curtain.
+- East-facing windows give gentle morning light that most kokedama enjoy.
+- Dim corners slow growth. If your plant is stretching toward the light or its leaves are getting small and pale, move it somewhere brighter.
+- Turn it every so often so all sides get light.
+
+## Caring for kokedama through Nepal's seasons
+
+The weather changes how quickly your moss ball dries, so adjust your routine. These are general guidelines, so trust the weight test over any calendar.
+
+**Monsoon (roughly June to September)**
+Humid air keeps the ball damp for longer, so you will water less. Make sure there is airflow around it. Poor ventilation plus constant dampness invites mould and fungus gnats.
+
+**Autumn and winter (roughly October to February)**
+Growth slows and the ball dries out more slowly, so water less often. Mornings and nights can be cold in the valley, so keep your kokedama away from cold windows overnight and from heaters that dry the moss.
+
+**Spring (roughly March to May)**
+Warm, dry weather dries the moss quickly. Check the weight more often, and mist more regularly. This is also when your plant grows most, so it is the best time to feed it.
+
+In our Lalitpur studio we see that shift clearly: a ball that feels heavy for days in August can need soaking twice as often by March. This is why we teach the weight test before anything else, and why we check each plant by hand rather than by the calendar.
+
+## Dust and city air
+
+Kathmandu Valley can be dusty, and dust settles on leaves and moss. Every few weeks, gently wipe the leaves with a damp cloth and give the moss a light mist. Clean leaves take in light better, and the plant looks happier too.
+
+## Feeding your kokedama
+
+Because the ball is small, nutrients run out over time. In the growing season, add a very diluted liquid fertiliser to the soaking water about once a month. Less is better, and you can skip feeding in the cooler months.
+
+## Reading the signs: troubleshooting
+
+**Yellow leaves, soggy ball**
+Too much water. Let it dry until it feels light before the next soak, and improve airflow.
+
+**Drooping leaves, light and crumbly ball**
+Too dry. Soak it for longer, up to half an hour if the ball has dried out completely.
+
+**Brown, crispy moss**
+It's drying out or getting too much direct sun. Mist it and move it back from the window.
+
+**White fuzzy growth or a musty smell**
+The ball is staying too wet with too little airflow. Let it dry out more between soakings and move it somewhere airier.
+
+**Tiny flies around the moss**
+Fungus gnats like constantly damp soil. Let the ball dry a little more between soakings.
+
+**Ball is coming apart**
+The soil mix was too loose. Re-wrap it with fresh sticky soil, moss and string.
+
+**Roots poking through the moss**
+A sign that the plant is happy and growing. When it gets crowded, re-wrap it in a larger ball.
+
+## Going away for a few days?
+
+Give it a long soak just before you leave, and place it out of direct sun. Hanging kokedama dry faster than ones resting on a dish, so for longer trips, ask someone to soak it for you.
+
+## Quick care checklist
+
+- Lift it to check the weight every day or two.
+- Soak for about ten minutes when it feels light.
+- Bright, indirect light, away from harsh sun and cold drafts.
+- Mist the moss and wipe off dust now and then.
+- Feed lightly in the growing season only.
+- Re-wrap it when the plant outgrows its ball.
+
+## New to kokedama?
+
+If you haven't made one yet, our [plant art workshops](/services/plant-art-workshops) cover the basics hands-on, and you can read [what to expect at our plant art workshop in Lalitpur](/blog/what-to-expect-plant-art-workshop-lalitpur) before you come. If you'd like to see the plant behind the care guide, the [kokedama product page](/products/plant-art-products/kokedama) shows how each ball is shaped and finished by hand.
+
+## Frequently asked questions
+
+**How often should I water my kokedama?**
+There is no fixed schedule. Water when the ball feels light, which could be every few days in warm, dry weather and much less often during the monsoon or winter.
+
+**Can I overwater a kokedama?**
+Yes. Constant dampness with poor airflow leads to yellow leaves, mould and gnats. Let it dry slightly between soakings.
+
+**Should I mist or soak?**
+Soak to water the ball properly, and mist only to keep the moss green and the leaves fresh.
+
+**Why is my moss turning brown?**
+Usually because it is too dry or in too much direct sun. Mist it and move it somewhere with softer light.
+
+**Can I keep kokedama outdoors?**
+In a sheltered, shaded spot, yes, such as a covered balcony. Keep it out of strong sun and heavy rain, and bring it in on cold nights.
+
+**How long will it live?**
+With good care, a long time. When the plant outgrows its ball, re-wrap it with fresh soil and moss.
+
+## Want to learn kokedama with us?
+
+Join a workshop at our Lalitpur studio and leave with a kokedama you made yourself, plus the care know-how to keep it thriving.
+
+**Sessions:** Every Saturday, 3 hours, NPR 1,500 per person.
+
+**Book your spot:** [Register on our workshop form](https://docs.google.com/forms/d/e/1FAIpQLScm-Yxm_SAbAaLwAcw_qrb2XZHwlxdkGdFF_jJlu_AXdD4HJA/viewform), or contact us at info@mulinventure.com or [+977 9847519689](tel:+9779847519689).
+
+**Workshop location:** Hotel Harmony Bistro, Jhamsikhel, Lalitpur. [View on Google Maps](https://www.google.com/maps/search/?api=1&query=Hotel+Harmony+Bistro+Jhamsikhel+Lalitpur)
+
+Nurture through Nature.`,
+    category: 'Plant Art Workshops',
+    date: 'November 6, 2026',
+    readTime: '7 min read',
+    image: '/kokedama-care-guide.png',
+    alt: 'Healthy kokedama moss ball resting on a dish at home — kokedama-care-guide',
+    author: 'Monica Neupane',
+  },
+  {
     slug: 'what-to-expect-plant-art-workshop-lalitpur',
     title: 'What to Expect at Our Plant Art Workshop in Lalitpur',
     excerpt:
